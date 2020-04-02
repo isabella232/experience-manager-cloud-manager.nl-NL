@@ -1,5 +1,5 @@
 ---
-source-git-commit: a80615b7ed7dcf8c1743f7f12ecf0fd8c76d4cc5
+source-git-commit: a70b04bd5bb6ac6465a5da4b276e9faf1dc470ae
 translation-type: tm+mt
 
 ---
@@ -19,7 +19,7 @@ Hoewel we blij zijn met bijdragen om de AEM-documentatie te verbeteren, vragen w
 
 ## Contribute
 
-Wij willen het zo gemakkelijk mogelijk maken uw bijdragen in te dienen. U kunt op twee manieren bijdragen:
+We willen het zo eenvoudig mogelijk maken om uw bijdragen in te dienen. U kunt op twee manieren bijdragen:
 
 * [Een uitgave maken](#create-an-issue)
 * [Een pull-verzoek maken](#create-a-pull-request)
@@ -50,9 +50,9 @@ Bekijk de volgende video voor een snel overzicht van hoe u problemen kunt maken 
 
 ### Bijdragen van Adobe-werknemers
 
-Als u een Adobe-medewerker bent en een pull-verzoek wilt indienen, kunt u de privéopslagruimte op `https://git.corp.adobe.com/AdobeDocs`gebruiken.
+Als u een Adobe-medewerker bent en een bijdrage hebt, gebruikt u de `AdobeDocs` org in de bedrijfskit.
 
-Voor problemen kunt u altijd gebruikmaken van de openbare opslagplaatsen.
+Uiteraard zijn we blij met elke bijdrage en zullen we uw bijdrage beoordelen als deze wordt geleverd in de openbare opslagplaats. Het is echter gemakkelijker om aanvragen van Adobe-werknemers te verwerken en ze kunnen sneller worden goedgekeurd in het bedrijfsverslag. Zorg ervoor dat de bedrijfseigen informatie alleen wordt besproken in het bedrijfsantwoord.
 
 ## Aanvullende informatie
 
