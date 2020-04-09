@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: getting-started
 discoiquuid: 2221d1d5-dbc2-4175-8371-60344f932a82
 translation-type: tm+mt
-source-git-commit: 316ec3ec088271a6524d4c8fd4c84fd36e2ac4db
+source-git-commit: 16893b8bcd2b2d681a14bb6be3786e358e1952fb
 
 ---
 
@@ -38,7 +38,7 @@ De volgende video biedt een overzicht van programma&#39;s van de Manager van de 
 
 1. Selecteer het programma (bijvoorbeeld **We.Retail Global**) en klik op het pictogram linksboven om het te openen [!UICONTROL Cloud Manager].
 
-   ![](assets/screen_shot_2018-06-04at12611pm.png)
+   ![](assets/first-timea1.png)
 
 1. Het dashboard voor [!UICONTROL Cloud Manager] weergaven.
 
