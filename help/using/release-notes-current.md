@@ -4,7 +4,7 @@ seo-title: Opmerkingen bij de release van AEM Cloud Manager voor 2020.4.0
 description: Volg deze pagina voor informatie over Cloud Manager Release 2020.4.0
 seo-description: Volg deze pagina om informatie op te halen voor AEM Cloud Manager Release 2020.4.0
 translation-type: tm+mt
-source-git-commit: e7da473a22bec1d3d9b3d39bf654af0c596fe86d
+source-git-commit: ee7fc8a23dd0719eda84638c810842c2dc1772bb
 
 ---
 
@@ -18,9 +18,9 @@ De releasedatum voor [!UICONTROL Cloud Manager] versie 2020.4.0 is 9 april 2020.
 
 ## Nieuwe functies {#whats-new}
 
-* Hiermee wijzigt u de overzichtspagina voor navigatie-CM zodat de gebruiker het programma kan bewerken of van CM-overzichtspagina kan wisselen.
-* Hiermee kunnen wijzigingen worden aangebracht waardoor de gebruiker het programma kan bewerken vanaf de programmakaart op de CM-openingspagina.
-* De nieuwe pijpleidingsstatus &quot;Lopende Pijpleiding&quot;getoond tegen het milieu het met wordt geassocieerd.
+* Hiermee wijzigt u de overzichtspagina van Navigatie Cloud Manager zodat gebruikers het programma kunnen bewerken of van programma kunnen wisselen.
+* Wijzigingen die gebruikers toestaan om programma te bewerken vanaf de landingspagina van de programmakaart op de landingspagina van Cloud Manager.
+* De nieuwe pijpleiding van de **Pijpleiding** die tegen het milieu wordt getoond het met wordt geassocieerd.
 * Verbeteringen om de pagina van de pijpleidingsuitvoering begrijpelijk te maken. Dit omvat vertoning van de naam van de Pijpleiding (niet productiepijplijn slechts) en Type, en een badge om erop te wijzen of is de pijpleidingsstatus Bezig/Geannuleerd/Ontbroken.
 * Het proces dat wordt gebruikt om de wachtwoorden van de it te produceren is veerkrachtiger gemaakt aan kwesties in de onderliggende de dienstlaag.
 
