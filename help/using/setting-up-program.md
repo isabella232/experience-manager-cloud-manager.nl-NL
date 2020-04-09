@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: getting-started
 discoiquuid: c2393540-e852-4f7c-aafd-1427209065d2
 translation-type: tm+mt
-source-git-commit: 2c05eb4610e35d5126c6c67e44f4b71f3026c887
+source-git-commit: 16893b8bcd2b2d681a14bb6be3786e358e1952fb
 
 ---
 
@@ -34,7 +34,13 @@ Voer de onderstaande stappen uit om het programma in te stellen en KPI&#39;s te 
 
 1. Klik op **Installatieprogramma** om het installatieproces in te starten [!UICONTROL Cloud Manager].
 
-   ![](assets/SetUpProgram1.png)
+   ![image1](assets/set-up-program/setup1.png)
+
+   >[!NOTE]
+   > U kunt altijd schakelen, bewerken of een nieuw programma toevoegen vanuit de actiebalk, zoals in de onderstaande afbeelding wordt getoond.
+
+   ![image1](assets/set-up-program/setup2.png)
+
 
 1. Het scherm van het Programma **van de** Opstelling toont de Edit Informatie van het Programma.
 
