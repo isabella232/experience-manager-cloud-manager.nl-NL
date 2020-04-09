@@ -4,7 +4,7 @@ seo-title: Uw omgevingen bewaken
 description: 'null'
 seo-description: Volg deze pagina om meer te weten te komen over System Monitoring in Cloud Manager. Dit gebeurt door de afzonderlijke instanties binnen een omgeving te observeren en een aantal verschillende meetgegevens voor elke instantie te volgen.
 translation-type: tm+mt
-source-git-commit: 1edfbc0adb04026cd29ba93b4ba155d3b61439dc
+source-git-commit: 16893b8bcd2b2d681a14bb6be3786e358e1952fb
 
 ---
 
@@ -23,9 +23,9 @@ Het navigeren aan de eigenschap van de Controle van het Systeem kan op twee mani
 
    ![](assets/ProgramLanding.png)
 
-1. Klik op het derde pictogram op de programmakaart.
+1. Klik op het vierde pictogram op de programmakaart.
 
-   ![](assets/program-card.png)
+   ![](assets/first-timea1.png)
 
    *Of*,
 
