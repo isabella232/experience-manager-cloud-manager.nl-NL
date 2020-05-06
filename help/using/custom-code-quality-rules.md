@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: d2338c74-3278-49e6-a186-6ef62362509f
 translation-type: tm+mt
-source-git-commit: 4881ff8be97451aa90c3430259ce13faef182e4f
+source-git-commit: 278858465592482449080fedc3c0165805db223d
+workflow-type: tm+mt
+source-wordcount: '2289'
+ht-degree: 5%
 
 ---
 
@@ -639,7 +642,7 @@ Een veelvoorkomend probleem is het gebruik van knooppunten die `config` in compo
       + rtePlugins [nt:unstructured]
 ```
 
-### Pakketten mogen elkaar niet overlappen {#oakpal-no-overlap}
+#### Pakketten mogen elkaar niet overlappen {#oakpal-no-overlap}
 
 **Sleutel**: PackageOverlaps
 
@@ -650,3 +653,94 @@ Een veelvoorkomend probleem is het gebruik van knooppunten die `config` in compo
 **Sinds**: Versie 2019.6.0
 
 Gelijkaardig aan de *Pakketten zouden geen Dubbele OSGi Configuraties* moeten bevatten dit is een gemeenschappelijk probleem op complexe projecten waar de zelfde knoopweg aan door veelvoudige afzonderlijke inhoudspakketten wordt geschreven. Terwijl het gebruiken van inhoudspakketgebiedsdelen kan worden gebruikt om een verenigbaar resultaat te verzekeren, is het beter om overlappingen volledig te vermijden.
+
+#### OakPAL - De standaardontwerpmodus mag geen klassieke gebruikersinterface zijn {#oakpal-default-authoring}
+
+**Sleutel**: ClassicUIAuthoringMode
+
+**Type**: Code Smell
+
+**Ernst**: Klein
+
+**Sinds**: Versie 2020.5.0
+
+De configuratie OSGi `com.day.cq.wcm.core.impl.AuthoringUIModeServiceImpl` bepaalt de standaard auteurswijze binnen AEM. Aangezien Klassieke UI sinds AEM 6.4 is afgekeurd, zal een kwestie nu worden opgeheven wanneer de standaard auteurswijze aan Klassieke UI wordt gevormd.
+
+#### OakPal - Componenten met dialoogvensters moeten aanraakgebruikersdialoogvensters hebben {#oakpal-components-dialogs}
+
+**Sleutel**: ComponentWithOnlyClassicUIDialog
+
+**Type**: Code Smell
+
+**Ernst**: Klein
+
+**Sinds**: Versie 2020.5.0
+
+AEM-componenten die een Klassieke UI-dialoogvenster hebben, moeten altijd een corresponderend Touch UI-dialoogvenster hebben voor een optimale ontwerpervaring en compatibel zijn met het implementatiemodel van de Cloud Service, waarbij Klassieke UI niet wordt ondersteund. Deze regel verifieert de volgende scenario&#39;s:
+
+* Een component met een klassieke UI-dialoogvenster (dat wil zeggen een onderliggende dialoognode) moet een overeenkomend dialoogvenster Touch UI hebben (dat wil zeggen een `cq:dialog` onderliggende node).
+* Een component met een Klassieke UI-ontwerpdialoogvenster (d.w.z. een design_dialog-knooppunt) moet een overeenkomend dialoogvenster voor het aanraakinterface-ontwerp hebben (dat wil zeggen een `cq:design_dialog` onderliggende node).
+* Een component met zowel een dialoogvenster voor klassieke gebruikersinterface als een dialoogvenster voor klassieke gebruikersinterface moet zowel een corresponderend dialoogvenster voor aanraakinterface als een overeenkomstig dialoogvenster voor aanraakgebruikersinterface hebben.
+
+De documentatie van de Hulpmiddelen van de Modernisering AEM verstrekt documentatie en tooling voor hoe te om componenten van Klassieke UI in Aanraakinterface om te zetten. Raadpleeg [de moderniseringsinstrumenten](https://opensource.adobe.com/aem-modernize-tools/pages/tools.html) van AEM voor meer informatie.
+
+#### OakPAL - Pakketten mogen geen Meerdere en Onveranderbare inhoud mengen {#oakpal-packages-immutable}
+
+**Sleutel**: ImmutableMutableMixedPackage
+
+**Type**: Code Smell
+
+**Ernst**: Klein
+
+**Sinds**: Versie 2020.5.0
+
+Om compatibel te zijn met het implementatiemodel van de cloudservice, moeten afzonderlijke inhoudspakketten inhoud bevatten voor de onveranderlijke gebieden van de opslagplaats (dat wil zeggen, `/apps and /libs, although /libs` moeten ze niet worden gewijzigd door de code van de klant en veroorzaken ze een afzonderlijke schending) of het veranderbare gebied (dat wil zeggen alles anders), maar niet beide. Een pakket dat beide bevat, is bijvoorbeeld niet compatibel met Cloud Service en zorgt ervoor dat een probleem wordt gemeld. `/apps/myco/components/text and /etc/clientlibs/myco`
+
+Raadpleeg de [AEM-projectstructuur](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html) voor meer informatie.
+
+### OakPal - Reverse Replication Agents mogen niet worden gebruikt {#oakpal-reverse-replication}
+
+**Sleutel**: ReverseReplication
+
+**Type**: Code Smell
+
+**Ernst**: Klein
+
+**Sinds**: Versie 2020.5.0
+
+Ondersteuning voor omgekeerde replicatie is niet beschikbaar in implementaties van cloudservice, zoals beschreven in [Opmerkingen bij de release: Verwijderen van replicatieagents](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/release-notes/aem-cloud-changes.html#replication-agents).
+
+Klanten die omgekeerde replicatie gebruiken, moeten contact opnemen met Adobe voor alternatieve oplossingen.
+
+### SonarQube - Sling Scheduler mag niet worden gebruikt {#sonarqube-sling-scheduler}
+
+**Sleutel**: CQRules:AMSCORE-554
+
+**Type**: Code Smell
+
+**Ernst**: Klein
+
+**Sinds**: Versie 2020.5.0
+
+De Planner van de Verkoop moet niet voor taken worden gebruikt die een gewaarborgde uitvoering vereisen. Het verkopen van Geplande Banen garandeert uitvoering en beter geschikt voor zowel gegroepeerde als niet-gegroepeerde milieu&#39;s.
+
+Raadpleeg [Apache Sling Event en Job Handling](https://sling.apache.org/documentation/bundles/apache-sling-eventing-and-job-handling.html) voor meer informatie over de manier waarop saldertaken worden verwerkt in een geclusterde omgeving.
+
+### SonarQube - SonarQube - AEM Vervangen API&#39;s mogen niet worden gebruikt {#sonarqube-aem-deprecated}
+
+**Sleutel**: AMSCORE-553
+
+**Type**: Code Smell
+
+**Ernst**: Klein
+
+**Sinds**: Versie 2020.5.0
+
+Het AEM API-oppervlak wordt voortdurend herzien om te bepalen voor welke API&#39;s het gebruik wordt ontmoedigd en dus als afgekeurd wordt beschouwd.
+
+In veel gevallen worden deze API&#39;s vervangen door de standaard Java *@Deprecated* -annotatie en, als zodanig, zoals bepaald door `squid:CallToDeprecatedMethod`.
+
+Er zijn echter gevallen waarin een API afgekeurd is in de context van AEM, maar in andere contexten niet mag worden afgekeurd. Deze regel identificeert deze tweede klasse.
+
+
+
