@@ -10,7 +10,10 @@ topic-tags: using
 content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 translation-type: tm+mt
-source-git-commit: fb84c2d41c76c64fc0be1e9f86356ee0cb5bcf9c
+source-git-commit: 18b539951e286cb14d5c10404b42ba80682bbef0
+workflow-type: tm+mt
+source-wordcount: '1563'
+ht-degree: 1%
 
 ---
 
@@ -50,7 +53,7 @@ Alvorens u begint om uw code op te stellen, moet u uw pijpleidingsmontages van [
 >
 >U kunt de pijpleidingsmontages na aanvankelijke opstelling veranderen.
 
-### Het vormen van de Montages van de Pijpleiding van [!UICONTROL Cloud Manager]{#configuring-the-pipeline-settings-from-cloud-manager}
+### Het vormen van de Montages van de Pijpleiding van [!UICONTROL Cloud Manager] {#configuring-the-pipeline-settings-from-cloud-manager}
 
 Zodra u opstelling uw programma gebruikend [!UICONTROL Cloud Manager] UI hebt, bent u klaar om uw pijpleiding te installeren.
 
@@ -125,7 +128,7 @@ Het wordt dan getoond als afzonderlijke stap tijdens pijpleidingsuitvoering:
 
 **Validatie van verzending**
 
-Als Manager van de Plaatsing, hebt u de kans om een reeks wegen te vormen die of **ongeldig** of **leeggemaakt** van het geheime voorgeheugen van de Dispatcher AEM, terwijl vestiging of het uitgeven pijpleiding zullen zijn.
+Als Manager van de Plaatsing, hebt u de kans om een reeks inhoudspaden te vormen die of **ongeldig** of van het geheime voorgeheugen van de Verzender AEM zullen worden **leeggemaakt** , terwijl vestiging of het uitgeven pijpleiding.
 
 U kunt een afzonderlijke reeks wegen voor de plaatsing van het Stadium en van de Productie vormen. Indien gevormd, zullen deze geheim voorgeheugenacties als deel van de stap van de plaatsingspijpleiding worden uitgevoerd, enkel nadat om het even welke inhoudspakketten worden opgesteld. Deze instellingen gebruiken het standaardgedrag van AEM Dispatcher: invalidate voert een cachevalidatie uit, net als wanneer de inhoud van de auteur wordt geactiveerd om te publiceren. flush voert een geheim voorgeheugenschrapping uit.
 
