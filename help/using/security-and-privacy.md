@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: introduction
 discoiquuid: 67a54bae-99a9-4405-91e3-9a0a8b3ccc98
 translation-type: tm+mt
-source-git-commit: 7cbc42108a6ccc8f7303eb76fd8ca2e9027f49e0
+source-git-commit: e2187565e7f06d64841eb2af9b4b1a56feb5ebe4
+workflow-type: tm+mt
+source-wordcount: '231'
+ht-degree: 0%
 
 ---
 
@@ -27,7 +30,7 @@ Klanten die gebruikmaken van [!UICONTROL Cloud Manager] [!UICONTROL Cloud Manage
 
 ## Gegevensbeveiliging {#data-security}
 
-Code in [!UICONTROL Cloud Manager] wordt tijdens de doortocht versleuteld. De bindingen die de Bouwer van de Manager van de Wolk worden ook gecodeerd in doorreis en wanneer opgeslagen gecodeerd.
+Code in [!UICONTROL Cloud Manager] wordt tijdens de doortocht versleuteld. Binaire bestanden die in Cloud Manager worden gemaakt, worden ook tijdens de opslag versleuteld en versleuteld.
 
 Elke klant krijgt zijn eigen opslagplaats **van de** BewaarplaatsGit en zijn code is veilig en niet gedeeld met andere **Organisaties**.
 
