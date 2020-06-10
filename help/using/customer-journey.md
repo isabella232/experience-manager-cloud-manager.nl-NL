@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: introduction
 discoiquuid: bc9a0d63-ae6b-4fe9-81e5-bf9844f04e54
 translation-type: tm+mt
-source-git-commit: 15f75ca67c3d52ae511357c5b564daaa3d9def6b
+source-git-commit: 77b7e2fc81880a7f1878fa9553ce2ae8078d1b78
+workflow-type: tm+mt
+source-wordcount: '542'
+ht-degree: 0%
 
 ---
 
@@ -38,15 +41,15 @@ Als klant bent u mogelijk nieuw voor Adobe Experience Manager (AEM), dat momente
 
    Zie [Upgrade naar AEM 6.4 voor meer informatie over de voordelen van een upgrade naar AEM 6.4](https://helpx.adobe.com/experience-manager/6-4/sites/deploying/using/upgrade.html).
 
-## Toegang verkrijgen [!UICONTROL Cloud Manager]{#accessing-cloud-manager}
+## Toegang [!UICONTROL Cloud Manager] {#accessing-cloud-manager}
 
 U krijgt toegang tot [!UICONTROL Cloud Manager] en uw AEM-omgevingen door u eenvoudig aan te melden bij de [!UICONTROL Experience Cloud] bestemmingspagina, uw Adobe Identity Management-referenties te gebruiken en AEM te selecteren in de interface van de oplossingsswitch.
 
 Nadat u zich [!UICONTROL Cloud Manager] voor het eerst hebt aangemeld, hebt u rechtstreeks vanuit de [!UICONTROL Cloud Manager] gebruikersinterface toegang tot uw AEM-omgevingen. Op dit punt, bent u bereid om alle mogelijkheden van te onderzoeken [!UICONTROL Cloud Manager], zodra u uw eerste codesector klaar hebt om aan uw stadium en productiemilieu&#39;s worden opgesteld.
 
-Ga naar [!UICONTROL Cloud Manager]Eerste aanmelding om te verkennen en aan de slag te gaan [met](first-time-login.md). Zie [Aan de slag met AEM 6.4](https://helpx.adobe.com/experience-manager/6-4/sites/deploying/using/deploy.html)voor meer informatie over AEM. Raadpleeg ook [AEM-bronnen](https://www.adobe.com/marketing-cloud/experience-manager/resources.html?promoid=759X6WV8&mv=other) voor meer informatie.
+Ga naar [!UICONTROL Cloud Manager]Eerste aanmelding om te verkennen en aan de slag te gaan [met](first-time-login.md). Zie [Aan de slag met AEM 6.4](https://helpx.adobe.com/experience-manager/6-4/sites/deploying/using/deploy.html)voor meer informatie over AEM. Raadpleeg ook [AEM-bronnen](https://www.adobe.com/marketing-cloud/experience-manager/resources.html?promoid=759X6WV8&amp;mv=other) voor meer informatie.
 
-## Aan de slag met [!UICONTROL Cloud Manager]{#getting-started-with-cloud-manager}
+## Aan de slag met [!UICONTROL Cloud Manager] {#getting-started-with-cloud-manager}
 
 Zodra u het programma wordt geopend aan [!UICONTROL Cloud Manager], zal het eerste te doen ding aan opstelling uw milieu van de codebewaarplaats, dan uw team en rollen zijn. Specifiek, worden de rollidmaatschappen toegewezen door de gebruiker aan een [!UICONTROL Cloud Manager] profiel toe te voegen gebruikend Admin Console UI.
 
