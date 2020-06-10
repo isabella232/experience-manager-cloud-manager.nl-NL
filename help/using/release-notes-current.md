@@ -4,7 +4,7 @@ seo-title: Opmerkingen bij de release van AEM Cloud Manager voor 2020.6.0
 description: Volg deze pagina voor informatie over Cloud Manager Release 2020.6.0
 seo-description: Volg deze pagina om informatie op te halen voor AEM Cloud Manager Release 2020.6.0
 translation-type: tm+mt
-source-git-commit: 0652436ec0c1c95d270a06a600424dbfd0140b27
+source-git-commit: fddfc8cef28bc07fb32d7f8ca6a815e888beefef
 workflow-type: tm+mt
 source-wordcount: '177'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Opmerkingen bij de release 2020.6.0 {#release-notes-for}
 
-In de volgende sectie worden de algemene opmerkingen bij de release voor [!UICONTROL Cloud Manager] versie 2020.5.0 beschreven.
+In de volgende sectie worden de algemene opmerkingen bij de release voor [!UICONTROL Cloud Manager] versie 2020.6.0 beschreven.
 
 ## Releasedatum {#release-date}
 
@@ -33,9 +33,6 @@ De releasedatum voor [!UICONTROL Cloud Manager] versie 2020.6.0 is 4 juni 2020.
 
 ## Bug Fixes {#bug-fixes}
 
-
 * Wanneer het vormen van de productiepijpleiding, was de Geplande optie van de Plaatsing niet zichtbaar voor sommige klanten.
 
 * Bepaalde implementatieberichten zijn afgebroken.
-
-
