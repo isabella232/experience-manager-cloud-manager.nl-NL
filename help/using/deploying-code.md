@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: 832a4647-9b83-4a9d-b373-30fe16092b15
 translation-type: tm+mt
-source-git-commit: bc9454120c92181503efbf8270ce621af26801d9
+source-git-commit: ce3ed17e74a5cb7e798bb583ddd75b18518a59bd
+workflow-type: tm+mt
+source-wordcount: '953'
+ht-degree: 2%
 
 ---
 
@@ -114,7 +117,7 @@ Wanneer de Manager van de Wolk aan niet productietopologieën opstelt, is het do
 1. Het artefact van de verzender wordt als volgt op elke verzender geïmplementeerd:
 
    1. Er wordt een back-up gemaakt van de huidige configuraties en deze worden naar een tijdelijke locatie gekopieerd
-   1. Alle configuraties worden verwijderd, behalve de onveranderlijke bestanden. Raadpleeg Uw Dispatcher Configurations beheren voor meer informatie. Hierdoor worden de mappen gewist zodat er geen zwevende bestanden achterblijven.
+   1. Alle configuraties worden verwijderd, behalve de onveranderlijke bestanden. Raadpleeg Uw Dispatcher-configuraties beheren voor meer informatie. Hierdoor worden de mappen gewist zodat er geen zwevende bestanden achterblijven.
    1. Het artefact wordt geëxtraheerd naar de httpd-map.  Onveranderbare bestanden worden niet overschreven. Wijzigingen die u aanbrengt in onveranderlijke bestanden in uw it-opslagplaats, worden genegeerd op het moment van implementatie.  Deze bestanden vormen de kern van het AMS-verzenderframework en kunnen niet worden gewijzigd.
    1. Apache voert een configuratietest uit. Als er geen fouten worden gevonden, wordt de service opnieuw geladen. Als er een fout optreedt, worden de configuraties hersteld vanaf de back-up, wordt de service opnieuw geladen en wordt de fout gemeld aan Cloud Manager.
    1. Elk pad dat in de pijplijnconfiguratie is opgegeven, wordt ongeldig gemaakt of verwijderd uit het cachegeheugen van de verzender.
@@ -126,7 +129,7 @@ Wanneer de Manager van de Wolk aan niet productietopologieën opstelt, is het do
 
    >[!NOTE]
    >
-   >U kunt ladingsannulerveranderingen in ontwikkeling en werkgebiedplaatsingen overslaan, namelijk losmaken en stappen in zowel niet productiepijpleidingen, voor ontwikkelaarmilieu&#39;s, als de productiepijpleiding, voor werkgebiedmilieu&#39;s vastmaken.
+   >U kunt de veranderingen van de Balancer van de Lading in ontwikkeling en werkgebiedplaatsingen overslaan, namelijk losmaken en stappen in zowel niet productiepijpleidingen, voor ontwikkelaarmilieu&#39;s, als de productiepijplijn, voor werkgebiedmilieu&#39;s vastmaken.
 
 ### Implementatie naar productiefase {#deployment-production-phase}
 
