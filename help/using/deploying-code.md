@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: 832a4647-9b83-4a9d-b373-30fe16092b15
 translation-type: tm+mt
-source-git-commit: ce3ed17e74a5cb7e798bb583ddd75b18518a59bd
+source-git-commit: 509a74b2e85d5880bafa56cd0ab3bae9c57b0683
 workflow-type: tm+mt
-source-wordcount: '953'
+source-wordcount: '952'
 ht-degree: 2%
 
 ---
@@ -112,13 +112,13 @@ Wanneer de Manager van de Wolk aan niet productietopologieën opstelt, is het do
 
    >[!NOTE]
    >
-   >Alle AEM-artefacten worden zowel aan de auteur als aan de uitgevers geïmplementeerd. Runmodi moeten worden gebruikt wanneer knoopspecifieke configuraties vereist zijn. Voor meer informatie over hoe de runmodi u toestaan om uw AEM instantie voor een specifiek doel te stemmen, gelieve te verwijzen naar de Wijzen van de Looppas.
+   >Alle AEM-artefacten worden zowel aan de auteur als aan de uitgevers geïmplementeerd. Run-modes zouden hefboomwerking moeten zijn wanneer de knoop-specifieke configuraties worden vereist. Voor meer informatie over hoe u met de uitvoeringsmodi uw AEM-instantie voor een bepaald doel kunt afstemmen, raadpleegt u de uitvoeringsmodi.
 
 1. Het artefact van de verzender wordt als volgt op elke verzender geïmplementeerd:
 
    1. Er wordt een back-up gemaakt van de huidige configuraties en deze worden naar een tijdelijke locatie gekopieerd
    1. Alle configuraties worden verwijderd, behalve de onveranderlijke bestanden. Raadpleeg Uw Dispatcher-configuraties beheren voor meer informatie. Hierdoor worden de mappen gewist zodat er geen zwevende bestanden achterblijven.
-   1. Het artefact wordt geëxtraheerd naar de httpd-map.  Onveranderbare bestanden worden niet overschreven. Wijzigingen die u aanbrengt in onveranderlijke bestanden in uw it-opslagplaats, worden genegeerd op het moment van implementatie.  Deze bestanden vormen de kern van het AMS-verzenderframework en kunnen niet worden gewijzigd.
+   1. Het artefact wordt geëxtraheerd naar de `httpd` map.  Onveranderbare bestanden worden niet overschreven. Wijzigingen die u aanbrengt in onveranderlijke bestanden in uw it-opslagplaats, worden genegeerd op het moment van implementatie.  Deze bestanden vormen de kern van het AMS-verzenderframework en kunnen niet worden gewijzigd.
    1. Apache voert een configuratietest uit. Als er geen fouten worden gevonden, wordt de service opnieuw geladen. Als er een fout optreedt, worden de configuraties hersteld vanaf de back-up, wordt de service opnieuw geladen en wordt de fout gemeld aan Cloud Manager.
    1. Elk pad dat in de pijplijnconfiguratie is opgegeven, wordt ongeldig gemaakt of verwijderd uit het cachegeheugen van de verzender.
    >[!NOTE]
