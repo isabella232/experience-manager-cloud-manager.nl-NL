@@ -2,14 +2,14 @@
 title: Aangepaste regels voor codekwaliteit
 seo-title: Aangepaste regels voor codekwaliteit
 description: Volg deze pagina voor meer informatie over de regels voor de kwaliteit van aangepaste code die worden uitgevoerd door Cloud Manager.
-seo-description: Volg deze pagina om meer te weten te komen over de aangepaste regels voor codekwaliteit die worden uitgevoerd door Adobe Experience Manager Cloud Manager.
+seo-description: Volg deze pagina om meer te weten te komen over de regels voor de kwaliteit van aangepaste code die worden uitgevoerd door Adobe Experience Manager Cloud Manager.
 uuid: a7feb465-1982-46be-9e57-e67b59849579
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: d2338c74-3278-49e6-a186-6ef62362509f
 translation-type: tm+mt
-source-git-commit: 3663bd773c0043282359d690621de5023fa2974c
+source-git-commit: 8c651bcb187d911448475f6031c93bf956277e9f
 workflow-type: tm+mt
 source-wordcount: '2282'
 ht-degree: 5%
@@ -621,7 +621,8 @@ Een gemeenschappelijk probleem dat op complexe projecten voorkomt is waar de zel
 
 #### Niet-conforme code {#non-compliant-code-osgi}
 
-```+ apps
+```
++ apps
   + projectA
     + config
       + com.day.cq.commons.impl.ExternalizerImpl
@@ -632,7 +633,8 @@ Een gemeenschappelijk probleem dat op complexe projecten voorkomt is waar de zel
 
 #### Compatibele code {#compliant-code-osgi}
 
-```+ apps
+```
++ apps
   + shared-config
     + config
       + com.day.cq.commons.impl.ExternalizerImpl
@@ -705,7 +707,7 @@ De configuratie OSGi `com.day.cq.wcm.core.impl.AuthoringUIModeServiceImpl` bepaa
 
 **Sinds**: Versie 2020.5.0
 
-AEM-componenten die een Klassieke UI-dialoogvenster hebben, moeten altijd een corresponderend Touch UI-dialoogvenster hebben voor een optimale ontwerpervaring en compatibel zijn met het implementatiemodel van de Cloud Service, waarbij Klassieke UI niet wordt ondersteund. Deze regel verifieert de volgende scenario&#39;s:
+AEM Componenten die een Klassieke dialoog UI hebben zouden altijd een overeenkomstige dialoog van de Aanraking UI moeten hebben zowel om een optimale auteurservaring te verstrekken als met het de plaatsingsmodel van de Cloud Service compatibel te zijn, waar Klassieke UI niet wordt gesteund. Deze regel verifieert de volgende scenario&#39;s:
 
 * Een component met een klassieke UI-dialoogvenster (dat wil zeggen een onderliggende dialoognode) moet een overeenkomend dialoogvenster Touch UI hebben (dat wil zeggen een `cq:dialog` onderliggende node).
 * Een component met een Klassieke UI-ontwerpdialoogvenster (d.w.z. een design_dialog-knooppunt) moet een overeenkomend dialoogvenster voor het aanraakinterface-ontwerp hebben (dat wil zeggen een `cq:design_dialog` onderliggende node).
@@ -723,9 +725,9 @@ De documentatie van de Hulpmiddelen van de Modernisering AEM verstrekt documenta
 
 **Sinds**: Versie 2020.5.0
 
-Om compatibel te zijn met het implementatiemodel van de cloudservice, moeten afzonderlijke inhoudspakketten inhoud bevatten voor de onveranderlijke gebieden van de opslagplaats (dat wil zeggen, `/apps and /libs, although /libs` moeten ze niet worden gewijzigd door de code van de klant en veroorzaken ze een afzonderlijke schending) of het veranderbare gebied (dat wil zeggen alles anders), maar niet beide. Een pakket dat beide bevat, is bijvoorbeeld niet compatibel met Cloud Service en zorgt ervoor dat een probleem wordt gemeld. `/apps/myco/components/text and /etc/clientlibs/myco`
+Om compatibel te zijn met het implementatiemodel van de Cloud Service, moeten afzonderlijke inhoudspakketten ofwel inhoud bevatten voor de onveranderlijke gebieden van de opslagplaats (dat wil zeggen, niet `/apps and /libs, although /libs` moeten worden gewijzigd door de code van de klant en zullen ze een afzonderlijke schending veroorzaken), ofwel het veranderbare gebied (dat wil zeggen, alles anders), maar niet beide. Een pakket met beide componenten is bijvoorbeeld niet compatibel met de Cloud Service en zorgt ervoor dat een probleem wordt gerapporteerd. `/apps/myco/components/text and /etc/clientlibs/myco`
 
-Raadpleeg de [AEM-projectstructuur](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html) voor meer informatie.
+Refer to [AEM Project Structure](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html) for more details.
 
 ### Reverse Replication Agents mogen niet worden gebruikt {#oakpal-reverse-replication}
 
@@ -737,7 +739,7 @@ Raadpleeg de [AEM-projectstructuur](https://docs.adobe.com/content/help/en/exper
 
 **Sinds**: Versie 2020.5.0
 
-Ondersteuning voor omgekeerde replicatie is niet beschikbaar in implementaties van cloudservice, zoals beschreven in [Opmerkingen bij de release: Verwijderen van replicatieagents](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/release-notes/aem-cloud-changes.html#replication-agents).
+Ondersteuning voor omgekeerde replicatie is niet beschikbaar in implementaties van Cloud Servicen, zoals beschreven in [Opmerkingen bij de release: Verwijderen van replicatieagents](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/release-notes/aem-cloud-changes.html#replication-agents).
 
 Klanten die omgekeerde replicatie gebruiken, moeten contact opnemen met Adobe voor alternatieve oplossingen.
 
