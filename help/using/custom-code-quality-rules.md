@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: d2338c74-3278-49e6-a186-6ef62362509f
 translation-type: tm+mt
-source-git-commit: 8c651bcb187d911448475f6031c93bf956277e9f
+source-git-commit: 3bb435aae932b9446867c30b7dd6b0a8e0839ee2
 workflow-type: tm+mt
 source-wordcount: '2282'
 ht-degree: 5%
@@ -593,6 +593,7 @@ Er zijn echter gevallen waarin een API afgekeurd is in de context van AEM, maar 
 U vindt hieronder de OakPAL-controles die zijn uitgevoerd door Cloud Manager.
 
 >[!NOTE]
+>
 >OakPAL is een framework dat is ontwikkeld door een AEM-partner (en winnaar van 2019 AEM Rockstar North America) en dat inhoudspakketten valideert met behulp van een zelfstandige Oak-opslagplaats.
 
 ### Klantpakketten mogen geen knooppunten onder /libs maken of wijzigen {#oakpal-customer-package}
