@@ -4,7 +4,10 @@ seo-title: Toegang tot Git
 description: Op deze pagina wordt beschreven hoe u de Git-opslagplaats kunt openen en beheren.
 seo-description: Volg deze pagina voor meer informatie over het openen en beheren van uw Git-opslagplaats.
 translation-type: tm+mt
-source-git-commit: 027408326960153963d2e8604dc0ed33d921df66
+source-git-commit: 3bb435aae932b9446867c30b7dd6b0a8e0839ee2
+workflow-type: tm+mt
+source-wordcount: '152'
+ht-degree: 3%
 
 ---
 
@@ -28,6 +31,7 @@ Gebruik de knop **Git** beheren die beschikbaar is via de interface van Cloud Ma
    ![](assets/manage-git-new2.png)
 
 >[!NOTE]
+>
 >De optie **Git** beheren is zichtbaar voor gebruikers met de rol van ontwikkelaar of implementatiebeheerder. Als u op deze knop klikt, wordt een dialoogvenster geopend waarin de gebruiker de URL naar zijn of haar gegevensopslagruimte voor de Intel Health Care Management Suite kan vinden, samen met de gebruikersnaam en het wachtwoord.
 
 ![](assets/manage-git3.png)
