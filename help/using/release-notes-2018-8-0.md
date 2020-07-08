@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: release-notes
 discoiquuid: 9222ac3b-525e-47c1-b481-ac9d22e3d559
 translation-type: tm+mt
-source-git-commit: 15f75ca67c3d52ae511357c5b564daaa3d9def6b
+source-git-commit: cdf2c82192c2e9c375316ae6e28646594ba2a462
+workflow-type: tm+mt
+source-wordcount: '340'
+ht-degree: 0%
 
 ---
 
@@ -22,9 +25,9 @@ De [!UICONTROL Cloud Manager] Versie van 2018.8.0 voegt steun voor het teweegbre
 
 De releasedatum voor [!UICONTROL Cloud Manager] versie 2018.8.0 is 4 oktober 2018.
 
-## Nieuwe functies {#what-s-new}
+## What&#39;s New {#what-s-new}
 
-* **De Opstelling** van het programma - Nieuwe tovenaar om een toepassingsproject in git tot stand te brengen gebruikend het Archieftype van het Project AEM gelieve te verwijzen naar [Create een Project](create-an-application-project.md) van de Toepassing AEM om meer te leren.
+* **De Opstelling** van het programma - Nieuwe tovenaar om een toepassingsproject in git tot stand te brengen gebruikend het Archieftype van het Project AEM gelieve te verwijzen naar [Create een Project](/help/using/create-an-application-project.md) van de Toepassing AEM om meer te leren.
 
 * **CI/CD Pipeline** - De volgende veranderingen worden toegevoegd aan CI/CD Pijpleiding. Gelieve te verwijzen naar [vorm uw CI/CD Pijpleiding](configuring-pipeline.md) om meer te leren.
 
@@ -40,7 +43,7 @@ De releasedatum voor [!UICONTROL Cloud Manager] versie 2018.8.0 is 4 oktober 201
    * De verbinding van middelen in globale navigatie zal aan Runbook in Sharepoint navigeren.
    * Het menu Help is opnieuw ingedeeld en bevat meer [!UICONTROL Cloud Manager]specifieke inhoud.
 
-## Opgeloste problemen {#bug-fixes}
+## Bug Fixes {#bug-fixes}
 
 * Bepaalde details in het dialoogvenster Prestaties testen zijn niet zichtbaar in Firefox.
 * Time-outs tussen interne systemen zouden er soms toe leiden dat implementatiefouten worden gemeld.
