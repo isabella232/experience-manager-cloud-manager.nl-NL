@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: getting-started
 discoiquuid: 76c1a8e4-d66f-4a3b-8c0c-b80c9e17700e
 translation-type: tm+mt
-source-git-commit: 25edab26146d7d98ef5a38a45b4fe67b0d5e564e
+source-git-commit: c07e88564dc1419bd0305c9d25173a8e0e1f47cf
+workflow-type: tm+mt
+source-wordcount: '1514'
+ht-degree: 6%
 
 ---
 
@@ -18,7 +21,7 @@ source-git-commit: 25edab26146d7d98ef5a38a45b4fe67b0d5e564e
 
 ## Wizard gebruiken om een AEM-toepassingsproject te maken {#using-wizard-to-create-an-aem-application-project}
 
-Als klanten aan boord zijn van Cloud Manager, krijgen ze een lege git-opslagplaats. Huidige klanten van Adobe Managed Services (AMS) (of AEM-klanten op locatie die naar AMS migreren) hebben doorgaans al hun projectcode (of een ander versiecontrolesysteem) en zullen hun project importeren in de opslagplaats van Cloud Manager. Nieuwe klanten hebben echter geen bestaande projecten.
+Als klanten aan boord zijn van Cloud Manager, krijgen ze een lege git-opslagplaats. Huidige klanten van Adobe Managed Services (AMS) (of AEM-klanten op locatie die naar AMS migreren) hebben over het algemeen al hun projectcode in git (of een ander versiecontrolesysteem) en zullen hun project in de opslagplaats van de Manager van de Wolk invoeren. Nieuwe klanten hebben echter geen bestaande projecten.
 
 Om nieuwe klanten aan de slag te helpen, kan Cloud Manager nu een minimaal AEM-project maken als startpunt. Dit proces is gebaseerd op het [**AEM Project Archetype **](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype).
 
@@ -33,7 +36,8 @@ Voer de onderstaande stappen uit om een AEM-toepassingsproject te maken in Cloud
 
    * **Titel** - deze is standaard ingesteld op *Programmanaam*
 
-   * **Nieuwe Branch-naam** - standaard is dit *stramien*
+   * **Nieuwe Branch Name** - deze is standaard *master*
+
    ![](assets/screen_shot_2018-10-08at55825am.png)
 
    Het dialoogvenster heeft een lade die kan worden geopend door op de handgreep naar de onderkant van het dialoogvenster te klikken. In zijn uitgebreide vorm, toont de dialoog alle configuratieparameters voor Archetype. Veel van deze parameters hebben standaardwaarden die op de **Titel** worden geproduceerd.
@@ -61,7 +65,7 @@ Voor een correcte bouw en implementatie met Cloud Manager moeten bestaande AEM-p
 * U kunt verwijzingen naar extra bewaarplaatsen van het Artefact toevoegen Maven in uw *pom.xml* - dossiers. De toegang tot met een wachtwoord beveiligde of door het netwerk beveiligde gegevensopslagruimten voor artefacten wordt echter niet ondersteund.
 * Implementeerbare inhoudspakketten worden ontdekt door te zoeken naar *ZIP* -bestanden van inhoudspakketten die zich in een map met de naam *target* bevinden. Elk aantal submodules kan inhoudspakketten produceren.
 
-* Implementeerbare Dispatcher-artefacten worden gedetecteerd door te zoeken naar *ZIP* -bestanden (opnieuw opgenomen in een map met de naam *target*) met mappen met de naam *conf* en *conf.d*.
+* Inzetbare Dispatcher-artefacten worden ontdekt door te zoeken naar *ZIP* -bestanden (opnieuw opgenomen in een map met de naam *target*) met mappen met de naam *conf* en *conf.d*.
 
 * Als er meer dan één inhoudspakket is, wordt de volgorde van pakketimplementaties niet gegarandeerd. Als een specifieke orde nodig is, kunnen de gebiedsdelen van het inhoudspakket worden gebruikt om de orde te bepalen. Pakketten kunnen van plaatsing worden [overgeslagen](#skipping-content-packages) .
 
@@ -81,7 +85,7 @@ Cloud Manager bouwt en test uw code gebruikend een gespecialiseerde bouwstijlmil
 
 * De ontwikkelomgeving is gebaseerd op Linux en is afgeleid van Ubuntu 18.04.
 * Apache Maven 3.6.0 is geïnstalleerd.
-* De geïnstalleerde Java-versie is Oracle JDK 8u202.
+* De geïnstalleerde Java-versies zijn Oracle JDK 8u202 en 11.0.2.
 * Er zijn enkele extra systeempakketten geïnstalleerd die nodig zijn:
 
    * bzip2
@@ -95,6 +99,37 @@ Cloud Manager bouwt en test uw code gebruikend een gespecialiseerde bouwstijlmil
 * Maven wordt altijd uitgevoerd met de opdracht: *mvn —batch-mode clean org.jacoco:jacoco-maven-plugin:prepare-agent package*
 * Maven wordt geconfigureerd op systeemniveau met een bestand settings.xml dat automatisch de openbare Adobe **Artefact** -opslagplaats omvat. (Raadpleeg de [Adobe Public Maven Repository](https://repo.adobe.com/) voor meer informatie.)
 
+### Java 11 gebruiken {#using-java-11}
+
+Cloud Manager ondersteunt nu het maken van klantprojecten met zowel Java 8 als Java 11. Standaard worden projecten gemaakt met behulp van Java 8. Klanten die van plan zijn Java 11 in hun projecten te gebruiken, kunnen dit doen gebruikend de Insteekmodule van Toolketens [Apache Maven](https://maven.apache.org/plugins/maven-toolchains-plugin/).
+
+Hiervoor voegt u in het bestand pom.xml een `<plugin>` item toe dat er als volgt uitziet:
+
+```xml
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-toolchains-plugin</artifactId>
+            <version>1.1</version>
+            <executions>
+                <execution>
+                    <goals>
+                        <goal>toolchain</goal>
+                    </goals>
+                </execution>
+            </executions>
+            <configuration>
+                <toolchains>
+                    <jdk>
+                    <version>11</version>
+                    <vendor>oracle</vendor>
+                    </jdk>
+                </toolchains>
+            </configuration>
+        </plugin>
+```
+
+>[!NOTE]
+>De ondersteunde leveranciers zijn Oracle- en Sun Microsystems en de ondersteunde versies zijn 1,8, 1,11 en 11.
 
 ## Omgevingsvariabelen {#environment-variables}
 
@@ -116,29 +151,35 @@ Ter ondersteuning hiervan voegt Cloud Manager deze standaardomgevingsvariabelen 
 | CM_PROGRAM_NAME | De naam van het programma |
 | ARTIFACTS_VERSION | Voor een stadium of productiepijplijn, de synthetische versie die door Cloud Manager wordt geproduceerd |
 
-### Aangepaste omgevingsvariabelen {#custom-environ-variables}
+### Pipetvariabelen {#pipeline-variables}
 
-In sommige gevallen kan het constructieproces van een klant afhangen van specifieke configuratievariabelen die niet geschikt zijn om in de opslagplaats voor it te plaatsen. Cloud Manager staat voor deze variabelen toe om door een Ingenieur van het Succes van de Klant (CSE) op klant-door-klant basis worden gevormd. Deze variabelen worden opgeslagen in een veilige opslagplaats en zijn slechts zichtbaar in de bouwstijlcontainer voor de specifieke klant. Klanten die deze functie willen gebruiken, moeten contact opnemen met hun CSE om hun variabelen te configureren.
+In sommige gevallen kan het constructieproces van een klant afhangen van specifieke configuratievariabelen die niet geschikt zijn om in de opslagplaats voor it te plaatsen. Met Cloud Manager kunnen deze variabelen per pijpleiding worden geconfigureerd via de Cloud Manager API of Cloud Manager CLI. Variabelen kunnen worden opgeslagen als onbewerkte tekst of in rust worden versleuteld. In beide gevallen worden variabelen binnen de ontwikkelomgeving beschikbaar gemaakt als een omgevingsvariabele waarnaar vervolgens kan worden verwezen vanuit het bestand pom.xml of andere constructiescripts.
 
-Zodra gevormd, zullen deze variabelen als omgevingsvariabelen beschikbaar zijn. Als u deze eigenschappen als Maven-eigenschappen wilt gebruiken, kunt u ernaar verwijzen in het bestand pom.xml, mogelijk binnen een profiel zoals hierboven beschreven:
+Om een variabele te plaatsen die CLI gebruiken, stel een bevel als in werking:
+
+`$ aio cloudmanager:set-pipeline-variables PIPELINEID --variable MY_CUSTOM_VARIABLE test`
+
+Huidige variabelen kunnen worden weergegeven:
+
+`$ aio cloudmanager:list-pipeline-variables PIPELINEID`
+
+Namen van variabelen mogen alleen alfanumerieke tekens en onderstrepingstekens bevatten. Volgens de conventie moeten de namen allemaal hoofdletters zijn. Er geldt een limiet van 200 variabelen per pijpleiding. Elke naam moet uit minder dan 100 tekens bestaan en elke waarde moet uit minder dan 2048 tekens bestaan.
+
+Bij gebruik in een Maven pom.xml-bestand is het doorgaans handig om deze variabelen toe te wijzen aan Maven-eigenschappen met behulp van een soortgelijke syntaxis:
 
 ```xml
         <profile>
             <id>cmBuild</id>
             <activation>
-                  <property>
-                        <name>env.CM_BUILD</name>
-                  </property>
+            <property>
+                <name>env.CM_BUILD</name>
+            </property>
             </activation>
-            <properties>
-                  <my.custom.property>${env.MY_CUSTOM_PROPERTY}</my.custom.property>  
-            </properties>
+                <properties>
+                <my.custom.property>${env.MY_CUSTOM_VARIABLE}</my.custom.property> 
+                </properties>
         </profile>
 ```
-
->[!NOTE]
->
->Namen van omgevingsvariabelen mogen alleen alfanumerieke tekens en onderstrepingstekens (_) bevatten. Volgens de conventie moeten de namen allemaal hoofdletters zijn.
 
 ## GeMaven profielen activeren in Cloud Manager {#activating-maven-profiles-in-cloud-manager}
 
@@ -218,7 +259,6 @@ En als u een eenvoudig bericht wilt uitvoeren slechts wanneer de bouwstijl buite
         </profile>
 ```
 
-
 ## Extra systeempakketten installeren {#installing-additional-system-packages}
 
 Voor sommige builds moeten extra systeempakketten worden geïnstalleerd om volledig te kunnen functioneren. Een build kan bijvoorbeeld een Python- of ruby-script aanroepen en moet daarom een geschikte taalinterpreter hebben geïnstalleerd. Dit kan worden gedaan door de [exec-maven-stop](https://www.mojohaus.org/exec-maven-plugin/) aan te roepen APT. Deze uitvoering moet doorgaans worden opgenomen in een specifiek Maven-profiel voor Cloud Manager. Zo kunt u bijvoorbeeld python installeren:
@@ -278,7 +318,7 @@ Dezelfde techniek kan worden gebruikt om taalspecifieke pakketten te installeren
 
 >[!NOTE]
 >
->Als u een systeempakket op deze manier installeert, wordt dit **niet** geïnstalleerd in de runtimeomgeving die voor het uitvoeren van Adobe Experience Manager wordt gebruikt. Als u een systeempakket nodig hebt dat op de AEM-omgeving is geïnstalleerd, neemt u contact op met uw Customer Success Engineers (CSE).
+>Als u een systeempakket op deze manier installeert, wordt dit **niet** geïnstalleerd in de runtimeomgeving die wordt gebruikt voor het uitvoeren van Adobe Experience Manager. Als u een systeempakket nodig hebt dat op de AEM-omgeving is geïnstalleerd, neemt u contact op met uw Customer Success Engineers (CSE).
 
 ## Inhoudspakketten worden overgeslagen {#skipping-content-packages}
 
