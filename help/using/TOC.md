@@ -4,15 +4,15 @@ sub-product: Experience Manager-cloudbeheer
 archetype: administrator
 user-guide-title: Help bij Experience Manager Cloud Manager
 translation-type: tm+mt
-source-git-commit: 0652436ec0c1c95d270a06a600424dbfd0140b27
+source-git-commit: f673a7c6e0d8e0814101beab1ad529ea69350a2a
 workflow-type: tm+mt
-source-wordcount: '201'
+source-wordcount: '204'
 ht-degree: 17%
 
 ---
 
 
-# Help bij Experience Manager {#using}
+# Experience Manager Help {#using}
 
 + [Inleiding tot Cloud Manager](introduction-to-cloud-manager.md)
 + Overzicht {#overview}
@@ -32,7 +32,7 @@ ht-degree: 17%
    + [Uw programma instellen](setting-up-program.md)
    + [Een AEM-toepassingsproject maken](create-an-application-project.md)
    + [Configureer uw releasevertakkingen](configure-your-release-branches.md)
-   + [Uw Dispatcher-configuraties beheren](dispatcher-configurations.md)
+   + [Dispatcher-configuraties beheren](dispatcher-configurations.md)
 + Het gebruik {#how-to-use}
    + [Uw CI/CD-pijplijn configureren](configuring-pipeline.md)
    + [Uw code implementeren](deploying-code.md)
@@ -51,7 +51,8 @@ ht-degree: 17%
    + [Overzicht](overview-productupdate-wizard.md)
    + [Evaluatie](evaluation.md)
 + Release-opmerkingen {#release-notes}
-   + [Opmerkingen bij de huidige release (2020.6.0)](release-notes-current.md)
+   + [Huidige opmerkingen bij de release (2020.7.0)](release-notes-current.md)
+   + [Opmerkingen bij de release 2020.6.0](release-notes-2020-6-0.md)
    + [Opmerkingen bij de release 2020.5.0](release-notes-2020-5-0.md)
    + [Opmerkingen bij de release 2020.4.0](release-notes-2020-4-0.md)
    + [Opmerkingen bij de release 2020.3.0](release-notes-2020-3-0.md)
