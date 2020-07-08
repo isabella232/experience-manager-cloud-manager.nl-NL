@@ -1,38 +1,40 @@
 ---
-title: Opmerkingen bij de release 2020.6.0
-seo-title: Opmerkingen bij de release van AEM Cloud Manager voor 2020.6.0
-description: Volg deze pagina voor informatie over Cloud Manager Release 2020.6.0
-seo-description: Volg deze pagina om informatie op te halen voor AEM Cloud Manager Release 2020.6.0
+title: Opmerkingen bij de release 2020.7.0
+seo-title: Opmerkingen bij de release van AEM Cloud Manager voor 2020.7.0
+description: Volg deze pagina voor informatie over Cloud Manager Release 2020.7.0
+seo-description: Volg deze pagina om informatie op te halen voor de release 2020.7.0 van AEM Cloud Manager
 translation-type: tm+mt
-source-git-commit: fddfc8cef28bc07fb32d7f8ca6a815e888beefef
+source-git-commit: 26492dc02371d21670778f3cd60d26146439548e
 workflow-type: tm+mt
-source-wordcount: '177'
-ht-degree: 0%
+source-wordcount: '166'
+ht-degree: 1%
 
 ---
 
-# Opmerkingen bij de release 2020.6.0 {#release-notes-for}
+# Opmerkingen bij de release 2020.7.0 {#release-notes-for}
 
-In de volgende sectie worden de algemene opmerkingen bij de release voor [!UICONTROL Cloud Manager] versie 2020.6.0 beschreven.
+In de volgende sectie worden de algemene opmerkingen bij de release voor [!UICONTROL Cloud Manager] versie 2020.7.0 beschreven.
 
 ## Releasedatum {#release-date}
 
-De releasedatum voor [!UICONTROL Cloud Manager] versie 2020.6.0 is 4 juni 2020.
+De releasedatum voor [!UICONTROL Cloud Manager] versie 2020.6.0 is 9 juli 2020.
 
 ## What&#39;s New {#whats-new}
 
-* Op de landingspagina worden de aanvoermarkeringen aangebracht om de gebruiker te informeren en te informeren over de basisnavigatie.
+* Het losmaken en koppelen van de instanties van de verzender van de ladingsbalansen tijdens productieplaatsingen werkt nu op een consistentere manier.
 
-* Er is nu een pagina **LEREN** beschikbaar in Cloud Manager, die toegankelijk is via de bovenste navigatie. Deze pagina bevat bronnen die gebruikers helpen bij het leren van de meestgebruikte workflows die relevant zijn voor hun rollen die zijn toegewezen in Cloud Manager.
+* De buildcontainer van Cloud Manager ondersteunt nu zowel Java 8 als Java 11.
 
-* De maximale waarde voor de 95e Processorverwerkingstijd van activa is verhoogd tot 500 seconden.
-
-* Het logbestand Build bevat nu een lijst met ontdekte artefacten, waaronder overgeslagen inhoudspakketten.
-
-* De stap Build controleert nu of alle gegenereerde inhoudspakketten alle verplichte eigenschappen (naam, groep en versie) bevatten.
+* De pijpleidingen van de Manager van de wolk steunen nu klant-vastgestelde variabelen en geheimen.
 
 ## Bug Fixes {#bug-fixes}
 
-* Wanneer het vormen van de productiepijpleiding, was de Geplande optie van de Plaatsing niet zichtbaar voor sommige klanten.
+* De opties **Annuleren** en **Opslaan** op de pagina Bewerken zonder productiepijpleiding waren niet altijd zichtbaar.
 
-* Bepaalde implementatieberichten zijn afgebroken.
+* Bepaalde fouten in het proces van de codekwaliteit kunnen ertoe leiden dat het logbestand niet correct wordt gegenereerd.
+
+* Sommige logboeken van grote pijpleidingsstappen konden niet constant door het gebruikersinterface worden gedownload.
+
+## Bekende problemen {#known-issues}
+
+* Wanneer een milieu van AMS een reserve instantie bevat, verklaart het geregistreerde bericht dat de instantie neer in tegenstelling tot op standby wijze is.
