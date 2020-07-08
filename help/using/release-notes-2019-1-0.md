@@ -9,29 +9,32 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: release-notes
 discoiquuid: 85a1dcf3-2eef-4ba8-b4d1-09e4a88c7bd0
 translation-type: tm+mt
-source-git-commit: 12d787ef2f9b2dd229b8ed0f8c602fbf5c06aa80
+source-git-commit: cdf2c82192c2e9c375316ae6e28646594ba2a462
+workflow-type: tm+mt
+source-wordcount: '345'
+ht-degree: 0%
 
 ---
 
 
 # Opmerkingen bij de release 2019.1.0 {#release-notes-for}
 
-De [!UICONTROL Cloud Manager] Versie van 2018.9.0 voegt steun het testen programma&#39;s van Activa AEM evenals extra pijpleidingstypes toe die de bouw en de stappen van de codekwaliteit in werking stellen, naar keuze opstellend aan een niet productiemilieu.
+De [!UICONTROL Cloud Manager] Versie van 2018.9.0 voegt steun het testen AEM Assets programma&#39;s evenals extra pijpleidingstypes toe die de bouw en de stappen van de codekwaliteit in werking stellen, naar keuze opstellend aan een niet productiemilieu.
 
 ## Releasedatum {#release-date}
 
 De releasedatum voor [!UICONTROL Cloud Manager] versie 2019.1.0 is 17 januari 2019.
 
-## Nieuwe functies {#whats-new}
+## What&#39;s New {#whats-new}
 
-* Extra ondersteuning voor het testen van prestaties van AEM Assets. Gelieve te verwijzen om uw [CI/CD](configuring-pipeline.md)Pijler voor meer details te vormen.
+* Extra ondersteuning voor het testen van de prestaties van AEM Assets. Gelieve te verwijzen om uw [CI/CD](configuring-pipeline.md)Pijler voor meer details te vormen.
 * Toegevoegde ondersteuning voor pijpleidingen die alleen stappen van de bouw- en codekwaliteit uitvoeren en voor pijpleidingen die worden geïmplementeerd in niet-productieomgevingen. Gelieve te verwijzen naar **niet-Productie &amp; de sectie van de Kwaliteit van de Code slechts Pijpleidingen** in [Vorm uw CI/CD pijpleiding](configuring-pipeline.md) voor meer details.
-* Extra ondersteuning voor aangepaste omgevingsvariabelen in de ontwikkelomgeving. Raadpleeg [Een AEM-toepassingsproject](create-an-application-project.md) maken voor meer informatie.
+* Extra ondersteuning voor aangepaste omgevingsvariabelen in de ontwikkelomgeving. Zie Een AEM-toepassingsproject [](/help/using/create-an-application-project.md) maken voor meer informatie.
 * Voor klanten met veelvoudige stadium of productiemilieu&#39;s, is de selectie van welk milieu als deel van de productiepijplijn zal worden opgesteld beschikbaar in [Vorm uw Cc/CD pagina van de Pijpleiding](configuring-pipeline.md) .
 * httxt2dbm is toegevoegd om container te bouwen.
 * Met alle Help-menu-items wordt een nieuw tabblad geopend.
 
-## Opgeloste problemen {#bug-fixes}
+## Bug Fixes {#bug-fixes}
 
 * Tijdens het bewerken van een programma kon de selectie van alle paginasets ongedaan worden gemaakt.
 * De goedkeuringsstap heeft een onjuiste naam.
