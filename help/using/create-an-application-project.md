@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: getting-started
 discoiquuid: 76c1a8e4-d66f-4a3b-8c0c-b80c9e17700e
 translation-type: tm+mt
-source-git-commit: c07e88564dc1419bd0305c9d25173a8e0e1f47cf
+source-git-commit: 02515ac6e3ac54909e23a276a78f571ea5c249c4
 workflow-type: tm+mt
-source-wordcount: '1514'
+source-wordcount: '1518'
 ht-degree: 6%
 
 ---
@@ -153,13 +153,15 @@ Ter ondersteuning hiervan voegt Cloud Manager deze standaardomgevingsvariabelen 
 
 ### Pipetvariabelen {#pipeline-variables}
 
-In sommige gevallen kan het constructieproces van een klant afhangen van specifieke configuratievariabelen die niet geschikt zijn om in de opslagplaats voor it te plaatsen. Met Cloud Manager kunnen deze variabelen per pijpleiding worden geconfigureerd via de Cloud Manager API of Cloud Manager CLI. Variabelen kunnen worden opgeslagen als onbewerkte tekst of in rust worden versleuteld. In beide gevallen worden variabelen binnen de ontwikkelomgeving beschikbaar gemaakt als een omgevingsvariabele waarnaar vervolgens kan worden verwezen vanuit het bestand pom.xml of andere constructiescripts.
+In sommige gevallen kan het constructieproces van een klant afhangen van specifieke configuratievariabelen die niet geschikt zijn om in de Git-opslagplaats te plaatsen. Met Cloud Manager kunnen deze variabelen per pijpleiding worden geconfigureerd via de Cloud Manager API of Cloud Manager CLI.
 
-Om een variabele te plaatsen die CLI gebruiken, stel een bevel als in werking:
+Variabelen kunnen worden opgeslagen als onbewerkte tekst of in rust worden versleuteld. In beide gevallen worden variabelen binnen de ontwikkelomgeving beschikbaar gemaakt als een omgevingsvariabele waarnaar vervolgens kan worden verwezen vanuit het bestand pom.xml of andere constructiescripts.
+
+Gebruik hieronder het bevel om een variabele te plaatsen gebruikend CLI:
 
 `$ aio cloudmanager:set-pipeline-variables PIPELINEID --variable MY_CUSTOM_VARIABLE test`
 
-Huidige variabelen kunnen worden weergegeven:
+U kunt de huidige variabelen weergeven, zoals hieronder wordt getoond:
 
 `$ aio cloudmanager:list-pipeline-variables PIPELINEID`
 
