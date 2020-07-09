@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: getting-started
 discoiquuid: 76c1a8e4-d66f-4a3b-8c0c-b80c9e17700e
 translation-type: tm+mt
-source-git-commit: 02515ac6e3ac54909e23a276a78f571ea5c249c4
+source-git-commit: 33aeba59c149e5ba3300b9d798356ec5e9bcd4b8
 workflow-type: tm+mt
-source-wordcount: '1518'
+source-wordcount: '1479'
 ht-degree: 6%
 
 ---
@@ -137,7 +137,7 @@ Hiervoor voegt u in het bestand pom.xml een `<plugin>` item toe dat er als volgt
 
 In sommige gevallen, vinden de klanten het noodzakelijk om het bouwstijlproces te variëren dat op informatie over het programma of de pijpleiding wordt gebaseerd.
 
-Als bijvoorbeeld JavaScript-miniaturen tijdens de build worden geminimaliseerd via een tool als gulp, kan het nodig zijn een ander miniatuurniveau te gebruiken bij het bouwen voor een ontwikkelomgeving in plaats van voor het bouwen voor het werkgebied en de productie.
+Als bijvoorbeeld JavaScript-miniaturen tijdens het bouwen worden gemaakt met een tool als gulp, is het mogelijk dat u een ander Minificatieniveau wilt gebruiken bij het bouwen voor een ontwikkelomgeving in plaats van voor het bouwen voor het werkgebied en de productie.
 
 Ter ondersteuning hiervan voegt Cloud Manager deze standaardomgevingsvariabelen voor elke uitvoering toe aan de container voor de build.
 
@@ -151,37 +151,30 @@ Ter ondersteuning hiervan voegt Cloud Manager deze standaardomgevingsvariabelen 
 | CM_PROGRAM_NAME | De naam van het programma |
 | ARTIFACTS_VERSION | Voor een stadium of productiepijplijn, de synthetische versie die door Cloud Manager wordt geproduceerd |
 
-### Pipetvariabelen {#pipeline-variables}
+### Aangepaste omgevingsvariabelen {#custom-variables}
 
-In sommige gevallen kan het constructieproces van een klant afhangen van specifieke configuratievariabelen die niet geschikt zijn om in de Git-opslagplaats te plaatsen. Met Cloud Manager kunnen deze variabelen per pijpleiding worden geconfigureerd via de Cloud Manager API of Cloud Manager CLI.
+In sommige gevallen kan het constructieproces van een klant afhangen van specifieke configuratievariabelen die niet geschikt zijn om in de opslagplaats voor it te plaatsen. Cloud Manager staat voor deze variabelen toe om door een Ingenieur van het Succes van de Klant (CSE) op klant-door-klant basis worden gevormd.
 
-Variabelen kunnen worden opgeslagen als onbewerkte tekst of in rust worden versleuteld. In beide gevallen worden variabelen binnen de ontwikkelomgeving beschikbaar gemaakt als een omgevingsvariabele waarnaar vervolgens kan worden verwezen vanuit het bestand pom.xml of andere constructiescripts.
+Deze variabelen worden opgeslagen in een veilige opslagplaats en zijn slechts zichtbaar in de bouwstijlcontainer voor de specifieke klant. Klanten die deze functie willen gebruiken, moeten contact opnemen met hun CSE om hun variabelen te configureren.
+Zodra gevormd, zullen deze variabelen als omgevingsvariabelen beschikbaar zijn. Als u deze eigenschappen als Maven-eigenschappen wilt gebruiken, kunt u ernaar verwijzen in het bestand pom.xml, mogelijk binnen een profiel zoals hierboven beschreven:
 
-Gebruik hieronder het bevel om een variabele te plaatsen gebruikend CLI:
-
-`$ aio cloudmanager:set-pipeline-variables PIPELINEID --variable MY_CUSTOM_VARIABLE test`
-
-U kunt de huidige variabelen weergeven, zoals hieronder wordt getoond:
-
-`$ aio cloudmanager:list-pipeline-variables PIPELINEID`
-
-Namen van variabelen mogen alleen alfanumerieke tekens en onderstrepingstekens bevatten. Volgens de conventie moeten de namen allemaal hoofdletters zijn. Er geldt een limiet van 200 variabelen per pijpleiding. Elke naam moet uit minder dan 100 tekens bestaan en elke waarde moet uit minder dan 2048 tekens bestaan.
-
-Bij gebruik in een Maven pom.xml-bestand is het doorgaans handig om deze variabelen toe te wijzen aan Maven-eigenschappen met behulp van een soortgelijke syntaxis:
 
 ```xml
         <profile>
             <id>cmBuild</id>
             <activation>
-            <property>
-                <name>env.CM_BUILD</name>
-            </property>
+                  <property>
+                        <name>env.CM_BUILD</name>
+                  </property>
             </activation>
-                <properties>
-                <my.custom.property>${env.MY_CUSTOM_VARIABLE}</my.custom.property> 
-                </properties>
+            <properties>
+                  <my.custom.property>${env.MY_CUSTOM_PROPERTY}</my.custom.property>  
+            </properties>
         </profile>
 ```
+
+>[!NOTE]
+>Namen van omgevingsvariabelen mogen alleen alfanumerieke tekens en onderstrepingstekens (_) bevatten. Volgens de conventie moeten de namen allemaal hoofdletters zijn.
 
 ## GeMaven profielen activeren in Cloud Manager {#activating-maven-profiles-in-cloud-manager}
 
