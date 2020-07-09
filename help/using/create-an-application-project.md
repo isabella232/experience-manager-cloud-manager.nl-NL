@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: getting-started
 discoiquuid: 76c1a8e4-d66f-4a3b-8c0c-b80c9e17700e
 translation-type: tm+mt
-source-git-commit: 33aeba59c149e5ba3300b9d798356ec5e9bcd4b8
+source-git-commit: dd223d678450565c1c9e8f35503eda7e5444c674
 workflow-type: tm+mt
-source-wordcount: '1479'
+source-wordcount: '1476'
 ht-degree: 6%
 
 ---
@@ -120,8 +120,8 @@ Hiervoor voegt u in het bestand pom.xml een `<plugin>` item toe dat er als volgt
             <configuration>
                 <toolchains>
                     <jdk>
-                    <version>11</version>
-                    <vendor>oracle</vendor>
+                        <version>11</version>
+                        <vendor>oracle</vendor>
                     </jdk>
                 </toolchains>
             </configuration>
@@ -129,7 +129,7 @@ Hiervoor voegt u in het bestand pom.xml een `<plugin>` item toe dat er als volgt
 ```
 
 >[!NOTE]
->De ondersteunde leveranciers zijn Oracle- en Sun Microsystems en de ondersteunde versies zijn 1,8, 1,11 en 11.
+>De ondersteunde `vendor` waarden zijn `oracle` en `sun` en de ondersteunde `version` waarden zijn `1.8`, `1.11`en `11`.
 
 ## Omgevingsvariabelen {#environment-variables}
 
