@@ -4,7 +4,7 @@ seo-title: Opmerkingen bij de release van AEM Cloud Manager voor 2020.7.0
 description: Volg deze pagina voor informatie over Cloud Manager Release 2020.7.0
 seo-description: Volg deze pagina om informatie op te halen voor de release 2020.7.0 van AEM Cloud Manager
 translation-type: tm+mt
-source-git-commit: 33aeba59c149e5ba3300b9d798356ec5e9bcd4b8
+source-git-commit: a0917f5cecbe552807d9147cd20316e02c2dd1a0
 workflow-type: tm+mt
 source-wordcount: '157'
 ht-degree: 1%
@@ -24,7 +24,6 @@ De releasedatum voor [!UICONTROL Cloud Manager] versie 2020.7.0 is 9 juli 2020.
 * Het losmaken en koppelen van de instanties van de verzender van de ladingsbalansen tijdens productieplaatsingen werkt nu op een consistentere manier.
 
 * De buildcontainer van Cloud Manager ondersteunt nu zowel Java 8 als Java 11.
-
 
 ## Bug Fixes {#bug-fixes}
 
