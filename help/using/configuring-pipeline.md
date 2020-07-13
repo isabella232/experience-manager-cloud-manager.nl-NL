@@ -10,9 +10,9 @@ topic-tags: using
 content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 translation-type: tm+mt
-source-git-commit: 18b539951e286cb14d5c10404b42ba80682bbef0
+source-git-commit: afbb9a9f9f227309946f0d1891172a89d15de7a7
 workflow-type: tm+mt
-source-wordcount: '1563'
+source-wordcount: '1634'
 ht-degree: 1%
 
 ---
@@ -81,6 +81,7 @@ Selecteer de Git-vertakking en klik op **Volgende**.
 
    * **Bij de Veranderingen** van het Git - begint de pijpleiding CI/CD wanneer er toezeggingen aan de gevormde git tak worden toegevoegd. Zelfs als u deze optie selecteert, kunt u de pijpleiding altijd manueel beginnen.
    * **Handmatig** - de UI gebruikt manueel begint de pijpleiding.
+
    Tijdens pijpleidingsopstelling of geef uit, heeft de Manager van de Plaatsing de optie om het gedrag van de pijpleiding te bepalen wanneer een belangrijke mislukking in om het even welke kwaliteitscates zoals de Kwaliteit van de Code, het Testen van de Veiligheid, en het Testen van Prestaties wordt ontmoet.
 
    Dit is handig voor klanten die meer geautomatiseerde processen willen. De beschikbare opties zijn:
@@ -126,21 +127,21 @@ Het wordt dan getoond als afzonderlijke stap tijdens pijpleidingsuitvoering:
 >
 >**Goedkeuren na de implementatie** van het werkgebied werkt net als de goedkeuring vóór de implementatie van de productie, maar vindt plaats onmiddellijk na de implementatiestap van het werkgebied, dat wil zeggen voordat tests worden uitgevoerd, in vergelijking met de goedkeuring vóór de implementatie van de productie, die wordt uitgevoerd nadat alle tests zijn voltooid.
 
-**Validatie van verzending**
+**Dispatcher-validatie**
 
-Als Manager van de Plaatsing, hebt u de kans om een reeks inhoudspaden te vormen die of **ongeldig** of van het geheime voorgeheugen van de Verzender AEM zullen worden **leeggemaakt** , terwijl vestiging of het uitgeven pijpleiding.
+Als Manager van de Plaatsing, hebt u de kans om een reeks inhoudspaden te vormen die of **ongeldig** of uit het geheime voorgeheugen van AEM Dispatcher zullen worden **gespoeld** , terwijl het opzetten of het uitgeven pijpleiding.
 
-U kunt een afzonderlijke reeks wegen voor de plaatsing van het Stadium en van de Productie vormen. Indien gevormd, zullen deze geheim voorgeheugenacties als deel van de stap van de plaatsingspijpleiding worden uitgevoerd, enkel nadat om het even welke inhoudspakketten worden opgesteld. Deze instellingen gebruiken het standaardgedrag van AEM Dispatcher: invalidate voert een cachevalidatie uit, net als wanneer de inhoud van de auteur wordt geactiveerd om te publiceren. flush voert een geheim voorgeheugenschrapping uit.
+U kunt een afzonderlijke reeks wegen voor de plaatsing van het Stadium en van de Productie vormen. Indien gevormd, zullen deze geheim voorgeheugenacties als deel van de stap van de plaatsingspijpleiding worden uitgevoerd, enkel nadat om het even welke inhoudspakketten worden opgesteld. Bij deze instellingen wordt standaard AEM Dispatcher-gedrag gebruikt. Bij invalidate wordt een cachevalidatie uitgevoerd, net als wanneer de inhoud van de auteur wordt geactiveerd om te publiceren. flush voert een geheim voorgeheugenschrapping uit.
 
 Over het algemeen verdient het de voorkeur de actie voor invalideren te gebruiken, maar in sommige gevallen is flushing vereist, met name bij gebruik van AEM HTML Client Libraries.
 
 >[!NOTE]
 >
->Raadpleeg [Overzicht](dispatcher-configurations.md) van verzender voor meer informatie over het in cache plaatsen van verzenders.
+>Raadpleeg het overzicht [van](dispatcher-configurations.md) Dispatcher voor meer informatie over het in cache plaatsen van Dispatcher.
 
-Voer de onderstaande stappen uit om validaties voor Dispatcher te configureren:
+Voer de onderstaande stappen uit om Dispatcher-validaties te configureren:
 
-1. Klik **vormen** onder de rubriek van de Configuratie van de Verzender
+1. Klik op **Configureren** onder de kop Dispatcher Configuration
 
    ![](assets/image2018-8-7_14-53-24.png)
 
@@ -159,22 +160,27 @@ Voer de onderstaande stappen uit om validaties voor Dispatcher te configureren:
 
    Nu, kunt u de parameters van de prestatietest vormen.
 
-   U kunt *AEM-sites* en AEM Assets ** Performance Testing configureren, afhankelijk van de producten waarvoor u een licentie hebt.
+   U kunt *AEM Sites* en het Testen van Prestaties van *AEM Assets* vormen, afhankelijk van welke producten u vergunning hebt gegeven.
 
    **AEM Sites:**
 
-   Cloud Manager voert het testen van de prestaties voor de programma&#39;s van Plaatsen van AEM uit door pagina&#39;s (als niet voor authentiek verklaarde gebruiker) op de het publiceren server van het stadium voor een 30 minieme testperiode aan te vragen en de reactietijd voor elke pagina evenals diverse systeem-vlakke metriek te meten.De pagina&#39;s worden geselecteerd door drie **paginasets**. u kunt kiezen uit een van de drie sets. De verdeling van verkeer is gebaseerd op het aantal geselecteerde reeksen, dat wil zeggen, als alle drie worden geselecteerd, 33% van de totale paginameningen in de richting van elke reeks wordt gezet; als er twee zijn geselecteerd, gaat 50% naar elke set; als er één wordt geselecteerd , gaat 100 % van het verkeer naar die set .
+   Cloud Manager voert het testen van de prestaties voor AEM Sites programma&#39;s uit door pagina&#39;s (als niet-geverifieerde gebruiker) op de publicatieserver van het werkgebied aan te vragen voor een testperiode van 30 minuten en de responstijd voor elke pagina en verschillende maatstaven op systeemniveau te meten.
+
+   Vóór het begin van de testperiode van 30 minuten, zal de Manager van de Wolk de milieu van het Stadium kruipen gebruikend een reeks van één of meerdere *zaad* URLs die door de Ingenieur van het Succes van de Klant wordt gevormd. Vanaf deze URL&#39;s wordt de HTML van elke pagina gecontroleerd en worden koppelingen doorlopen op een wijze die begint met het doorlopen van de breedte. Dit schuifproces is beperkt tot maximaal 5000 pagina&#39;s. De verzoeken van de kruipper hebben een vaste onderbreking van 10 seconden.
+
+   Pagina&#39;s worden geselecteerd door drie **paginasets**; u kunt kiezen uit een van de drie sets. De verdeling van verkeer is gebaseerd op het aantal geselecteerde reeksen, dat wil zeggen, als alle drie worden geselecteerd, 33% van de totale paginameningen in de richting van elke reeks wordt gezet; als er twee zijn geselecteerd, gaat 50% naar elke set; als er één wordt geselecteerd , gaat 100 % van het verkeer naar die set .
 
    Stel bijvoorbeeld dat er een splitsing is van 50%/50% tussen de set Actieve pagina&#39;s populair en Nieuwe pagina&#39;s (in dit voorbeeld wordt Andere actieve pagina&#39;s niet gebruikt) en dat de set Nieuwe pagina&#39;s 3000 pagina&#39;s bevat. De paginaweergaven per minuut KPI is ingesteld op 200. Gedurende de testperiode van 30 minuten:
 
    * Elk van de 25 pagina&#39;s in de Populaire live paginaset wordt 240 keer - (200 * 0,5) / 25) * 30 = 120
 
    * Elk van de 3000 pagina&#39;s in de set Nieuwe pagina&#39;s wordt één keer geraakt - (200 * 0,5) / 3000) * 30 = 1
+
    ![](assets/Configuring_Pipeline_AEM-Sites.png)
 
    **AEM Assets:**
 
-   Cloud Manager voert de prestatietests voor AEM Assets-programma&#39;s uit door elementen gedurende een testperiode van 30 minuten herhaaldelijk te uploaden en de verwerkingstijd voor elk element en verschillende metingen op systeemniveau te meten. Met deze functie kunt u zowel afbeeldingen als PDF-documenten uploaden. De verdeling van hoeveel activa van elk type per minuut worden geupload wordt geplaatst in de Opstelling of geeft het scherm van de Pijpleiding uit.
+   Cloud Manager voert prestatietests voor AEM Assets-programma&#39;s uit door elementen gedurende een testperiode van 30 minuten herhaaldelijk te uploaden en de verwerkingstijd voor elk element en verschillende maatstaven op systeemniveau te meten. Met deze functie kunt u zowel afbeeldingen als PDF-documenten uploaden. De verdeling van hoeveel activa van elk type per minuut worden geupload wordt geplaatst in de Opstelling of geeft het scherm van de Pijpleiding uit.
 
    Als bijvoorbeeld een splitsing van 70/30 wordt gebruikt, zoals in de onderstaande afbeelding wordt getoond. Er worden 10 elementen per minuut geüpload, 7 afbeeldingen worden per minuut geüpload en 3 documenten.
 
@@ -194,7 +200,7 @@ Voer de onderstaande stappen uit om validaties voor Dispatcher te configureren:
 
 ## Uitsluitend pijplijnen zonder productie en codekwaliteit
 
-Naast de hoofdpijpleiding die zich naar het stadium en de productie ontwikkelt, kunnen klanten extra pijpleidingen opzetten, die **niet-productiepijpleidingen** worden genoemd. Deze pijpleidingen voeren altijd de bouw en de stappen van de codekwaliteit uit. Ze kunnen optioneel ook worden geïmplementeerd in de omgeving van Adobe Managed Services.
+Naast de hoofdpijpleiding die zich naar het stadium en de productie ontwikkelt, kunnen klanten extra pijpleidingen opzetten, die **niet-productiepijpleidingen** worden genoemd. Deze pijpleidingen voeren altijd de bouw en de stappen van de codekwaliteit uit. Ze kunnen optioneel ook worden geïmplementeerd in de Adobe Managed Services-omgeving.
 
 ## Videozelfstudie {#video-tutorial-two}
 
@@ -221,6 +227,7 @@ Op het thuisscherm worden deze pijpleidingen op een nieuwe kaart vermeld:
    * **Bewerken** - hiermee kunt u de pijpleidinginstellingen bewerken
    * **Detail** - toont de laatste pijpleidingsuitvoering (als er één is)
    * **Build** - navigeert aan de uitvoeringspagina, waarvan de pijpleiding kan worden uitgevoerd
+
    ![](assets/Non-prod-2.png)
 
    >[!NOTE]
