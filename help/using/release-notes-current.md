@@ -4,9 +4,9 @@ seo-title: Opmerkingen bij de release van AEM Cloud Manager voor 2020.7.0
 description: Volg deze pagina voor informatie over Cloud Manager Release 2020.7.0
 seo-description: Volg deze pagina om informatie op te halen voor de release 2020.7.0 van AEM Cloud Manager
 translation-type: tm+mt
-source-git-commit: a0917f5cecbe552807d9147cd20316e02c2dd1a0
+source-git-commit: a4ea83c0b64515915871956c1cd3e53606f1c26b
 workflow-type: tm+mt
-source-wordcount: '157'
+source-wordcount: '194'
 ht-degree: 1%
 
 ---
@@ -36,3 +36,5 @@ De releasedatum voor [!UICONTROL Cloud Manager] versie 2020.7.0 is 9 juli 2020.
 ## Bekende problemen {#known-issues}
 
 * Wanneer een milieu van AMS een reserve instantie bevat, verklaart het geregistreerde bericht dat de instantie neer in tegenstelling tot op standby wijze is.
+
+* Als gevolg van een wijziging in de manier waarop de codedekking wordt berekend, is de _minimale_ versie van de Jacoco-plug-in nu 0.7.5.201505241946 (uitgebracht in mei 2015). Klanten die expliciet verwijzen naar een oudere versie ontvangen een foutbericht in het proces voor de kwaliteit van de code.
