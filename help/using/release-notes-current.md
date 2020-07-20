@@ -4,10 +4,10 @@ seo-title: Opmerkingen bij de release van AEM Cloud Manager voor 2020.7.0
 description: Volg deze pagina voor informatie over Cloud Manager Release 2020.7.0
 seo-description: Volg deze pagina om informatie op te halen voor de release 2020.7.0 van AEM Cloud Manager
 translation-type: tm+mt
-source-git-commit: a4ea83c0b64515915871956c1cd3e53606f1c26b
+source-git-commit: 0d46abc386460ccbaf7ba10b93286bc8e4af2395
 workflow-type: tm+mt
-source-wordcount: '194'
-ht-degree: 1%
+source-wordcount: '210'
+ht-degree: 0%
 
 ---
 
@@ -24,6 +24,9 @@ De releasedatum voor [!UICONTROL Cloud Manager] versie 2020.7.0 is 9 juli 2020.
 * Het losmaken en koppelen van de instanties van de verzender van de ladingsbalansen tijdens productieplaatsingen werkt nu op een consistentere manier.
 
 * De buildcontainer van Cloud Manager ondersteunt nu zowel Java 8 als Java 11.
+
+* De pijpleidingen van de Manager van de wolk steunen nu klant-vastgestelde variabelen en geheimen.
+Raadpleeg [Pipetvariabelen](/help/using/create-an-application-project.md#pipeline-variables) voor meer informatie.
 
 ## Bug Fixes {#bug-fixes}
 
