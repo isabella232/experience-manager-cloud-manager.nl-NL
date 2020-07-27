@@ -3,8 +3,9 @@ product: adobe experience manager
 sub-product: Experience Manager-cloudbeheer
 archetype: administrator
 user-guide-title: Help bij Experience Manager Cloud Manager
+user-guide-description: Learn to use Adobe Managed Cloud Services to self-manage Experience Manager in the cloud.
 translation-type: tm+mt
-source-git-commit: f673a7c6e0d8e0814101beab1ad529ea69350a2a
+source-git-commit: ebd5496a33d86e577b1db857c6ae6fff92e2331a
 workflow-type: tm+mt
 source-wordcount: '204'
 ht-degree: 17%
@@ -50,7 +51,7 @@ ht-degree: 17%
 + Wizard Productupdates {#product-update-wizard}
    + [Overzicht](overview-productupdate-wizard.md)
    + [Evaluatie](evaluation.md)
-+ Release-opmerkingen {#release-notes}
++ Releaseopmerkingen {#release-notes}
    + [Huidige opmerkingen bij de release (2020.7.0)](release-notes-current.md)
    + [Opmerkingen bij de release 2020.6.0](release-notes-2020-6-0.md)
    + [Opmerkingen bij de release 2020.5.0](release-notes-2020-5-0.md)
