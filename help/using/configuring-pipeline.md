@@ -2,7 +2,7 @@
 title: Uw CI/CD-pijplijn configureren
 seo-title: Uw CI/CD-pijplijn configureren
 description: Volg deze pagina om uw pijpleidingsmontages van de Manager van de Wolk te vormen.
-seo-description: 'Voordat u de code gaat implementeren, moet u de pijpleidinginstellingen configureren via AEM Cloud Manager. '
+seo-description: 'Voordat u begint met het implementeren van uw code, moet u de pijpleidinginstellingen configureren in AEM Cloud Manager. '
 uuid: 35fd56ac-dc9c-4aca-8ad6-36c29c4ec497
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
@@ -10,10 +10,10 @@ topic-tags: using
 content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 translation-type: tm+mt
-source-git-commit: afbb9a9f9f227309946f0d1891172a89d15de7a7
+source-git-commit: 3be958aa21d5423ddf371c286825d01afd554c4b
 workflow-type: tm+mt
-source-wordcount: '1634'
-ht-degree: 1%
+source-wordcount: '1755'
+ht-degree: 0%
 
 ---
 
@@ -102,7 +102,7 @@ Selecteer de Git-vertakking en klik op **Volgende**.
 
 >[!NOTE]
 >
->Als de **Geplande** optie wordt geselecteerd, kunt u uw productieplaatsing aan de pijpleiding **na** de werkgebiedplaatsing (en **Gebruik GoLive Goedkeuring**, als dat is toegelaten) plannen om op een te plaatsen programma te wachten. De gebruiker kan er ook voor kiezen om de productieimplementatie onmiddellijk uit te voeren.
+>Als de **Geplande** optie wordt geselecteerd, kunt u uw productieleiding aan de pijpleiding **na** de werkgebiedplaatsing plannen (en de Goedkeuring **van GoLive van het** Gebruik, als dat) is toegelaten om op een te plaatsen programma te wachten. De gebruiker kan er ook voor kiezen om de productieimplementatie onmiddellijk uit te voeren.
 >
 >Gelieve te verwijzen naar [**opstellen uw Code **](deploying-code.md), om het plaatsingsprogramma te plaatsen of de productie onmiddellijk uit te voeren.
 
@@ -127,21 +127,21 @@ Het wordt dan getoond als afzonderlijke stap tijdens pijpleidingsuitvoering:
 >
 >**Goedkeuren na de implementatie** van het werkgebied werkt net als de goedkeuring vóór de implementatie van de productie, maar vindt plaats onmiddellijk na de implementatiestap van het werkgebied, dat wil zeggen voordat tests worden uitgevoerd, in vergelijking met de goedkeuring vóór de implementatie van de productie, die wordt uitgevoerd nadat alle tests zijn voltooid.
 
-**Dispatcher-validatie**
+**Validatie van verzending**
 
-Als Manager van de Plaatsing, hebt u de kans om een reeks inhoudspaden te vormen die of **ongeldig** of uit het geheime voorgeheugen van AEM Dispatcher zullen worden **gespoeld** , terwijl het opzetten of het uitgeven pijpleiding.
+Als Manager van de Plaatsing, hebt u de kans om een reeks inhoudspaden te vormen die of **ongeldig** of **gespoeld** van het geheime voorgeheugen van de AEM Dispatcher, terwijl vestiging of het uitgeven pijpleiding zal zijn.
 
-U kunt een afzonderlijke reeks wegen voor de plaatsing van het Stadium en van de Productie vormen. Indien gevormd, zullen deze geheim voorgeheugenacties als deel van de stap van de plaatsingspijpleiding worden uitgevoerd, enkel nadat om het even welke inhoudspakketten worden opgesteld. Bij deze instellingen wordt standaard AEM Dispatcher-gedrag gebruikt. Bij invalidate wordt een cachevalidatie uitgevoerd, net als wanneer de inhoud van de auteur wordt geactiveerd om te publiceren. flush voert een geheim voorgeheugenschrapping uit.
+U kunt een afzonderlijke reeks wegen voor de plaatsing van het Stadium en van de Productie vormen. Indien gevormd, zullen deze geheim voorgeheugenacties als deel van de stap van de plaatsingspijpleiding worden uitgevoerd, enkel nadat om het even welke inhoudspakketten worden opgesteld. Deze instellingen gebruiken het standaardgedrag AEM Dispatcher: invalidate voert een cachevalidatie uit, net als wanneer de inhoud van de auteur wordt geactiveerd om te publiceren. flush voert een geheim voorgeheugenschrapping uit.
 
-Over het algemeen verdient het de voorkeur de actie voor invalideren te gebruiken, maar in sommige gevallen is flushing vereist, met name bij gebruik van AEM HTML Client Libraries.
+Over het algemeen verdient het de voorkeur de actie voor invalideren te gebruiken, maar in bepaalde gevallen is leegmaken vereist, met name bij het gebruik van AEM HTML-clientbibliotheken.
 
 >[!NOTE]
 >
->Raadpleeg het overzicht [van](dispatcher-configurations.md) Dispatcher voor meer informatie over het in cache plaatsen van Dispatcher.
+>Raadpleeg [Overzicht](dispatcher-configurations.md) van verzender voor meer informatie over het in cache plaatsen van verzenders.
 
-Voer de onderstaande stappen uit om Dispatcher-validaties te configureren:
+Voer de onderstaande stappen uit om validaties voor Dispatcher te configureren:
 
-1. Klik op **Configureren** onder de kop Dispatcher Configuration
+1. Klik **vormen** onder de rubriek van de Configuratie van de Verzender
 
    ![](assets/image2018-8-7_14-53-24.png)
 
@@ -160,11 +160,11 @@ Voer de onderstaande stappen uit om Dispatcher-validaties te configureren:
 
    Nu, kunt u de parameters van de prestatietest vormen.
 
-   U kunt *AEM Sites* en het Testen van Prestaties van *AEM Assets* vormen, afhankelijk van welke producten u vergunning hebt gegeven.
+   U kunt *AEM Sites* en *AEM Assets* Performance Testing configureren, afhankelijk van de producten waarvoor u een licentie hebt.
 
    **AEM Sites:**
 
-   Cloud Manager voert het testen van de prestaties voor AEM Sites programma&#39;s uit door pagina&#39;s (als niet-geverifieerde gebruiker) op de publicatieserver van het werkgebied aan te vragen voor een testperiode van 30 minuten en de responstijd voor elke pagina en verschillende maatstaven op systeemniveau te meten.
+   Cloud Manager voert het testen van de prestaties voor AEM Sites-programma&#39;s uit door pagina&#39;s (als een niet-geverifieerde gebruiker standaard) op de publicatieserver van het werkgebied aan te vragen voor een testperiode van 30 minuten en de responstijd voor elke pagina en verschillende metingen op systeemniveau te meten.
 
    Vóór het begin van de testperiode van 30 minuten, zal de Manager van de Wolk de milieu van het Stadium kruipen gebruikend een reeks van één of meerdere *zaad* URLs die door de Ingenieur van het Succes van de Klant wordt gevormd. Vanaf deze URL&#39;s wordt de HTML van elke pagina gecontroleerd en worden koppelingen doorlopen op een wijze die begint met het doorlopen van de breedte. Dit schuifproces is beperkt tot maximaal 5000 pagina&#39;s. De verzoeken van de kruipper hebben een vaste onderbreking van 10 seconden.
 
@@ -178,9 +178,12 @@ Voer de onderstaande stappen uit om Dispatcher-validaties te configureren:
 
    ![](assets/Configuring_Pipeline_AEM-Sites.png)
 
+
+   Raadpleeg [Authenticated Sites Performance Testing](configuring-pipeline.md#authenticated-sites-performance) voor meer informatie over het verifiëren van AEM Sites-prestatietests.
+
    **AEM Assets:**
 
-   Cloud Manager voert prestatietests voor AEM Assets-programma&#39;s uit door elementen gedurende een testperiode van 30 minuten herhaaldelijk te uploaden en de verwerkingstijd voor elk element en verschillende maatstaven op systeemniveau te meten. Met deze functie kunt u zowel afbeeldingen als PDF-documenten uploaden. De verdeling van hoeveel activa van elk type per minuut worden geupload wordt geplaatst in de Opstelling of geeft het scherm van de Pijpleiding uit.
+   Cloud Manager voert de prestatietests voor AEM Assets-programma&#39;s uit door elementen gedurende een testperiode van 30 minuten herhaaldelijk te uploaden en de verwerkingstijd voor elk element en verschillende metingen op systeemniveau te meten. Met deze functie kunt u zowel afbeeldingen als PDF-documenten uploaden. De verdeling van hoeveel activa van elk type per minuut worden geupload wordt geplaatst in de Opstelling of geeft het scherm van de Pijpleiding uit.
 
    Als bijvoorbeeld een splitsing van 70/30 wordt gebruikt, zoals in de onderstaande afbeelding wordt getoond. Er worden 10 elementen per minuut geüpload, 7 afbeeldingen worden per minuut geüpload en 3 documenten.
 
@@ -188,7 +191,7 @@ Voer de onderstaande stappen uit om Dispatcher-validaties te configureren:
 
    >[!NOTE]
    >
-   >Er is een standaardafbeelding en PDF-document, maar in de meeste gevallen willen klanten hun eigen elementen uploaden. Dit kan van de Opstelling van de Pijpleiding of het Edit scherm worden gedaan. Algemene afbeeldingsindelingen, zoals JPEG, PNG, GIF en BMP, worden samen met Photoshop-, Illustrator- en Postscript-bestanden ondersteund.
+   >Er is een standaardafbeelding en PDF-document, maar in de meeste gevallen willen klanten hun eigen elementen uploaden. Dit kan van de Opstelling van de Pijpleiding of het Edit scherm worden gedaan. Algemene afbeeldingsindelingen, zoals JPEG, PNG, GIF en BMP, worden ondersteund in combinatie met Photoshop-, Illustrator- en Postscript-bestanden.
 
 1. Klik **sparen** om de opstelling van pijpleidingsproces te voltooien.
 
@@ -198,9 +201,25 @@ Voer de onderstaande stappen uit om Dispatcher-validaties te configureren:
 
    ![](assets/Production-Pipeline.png)
 
+### Voor authentiek verklaarde Plaatsen het Testen van Prestaties {#authenticated-sites-performance}
+
+Klanten van Adobe Managed Services (AMS) met geverifieerde sites kunnen een gebruikersnaam en wachtwoord opgeven die door Cloud Manager worden gebruikt om toegang te krijgen tot de website tijdens het testen van Sites-prestaties.
+
+De gebruikersbenaming en het wachtwoord worden gespecificeerd als Variabelen van de Pijpleiding met de namen `CM_PERF_TEST_BASIC_USERNAME` en `CM_PERF_TEST_BASIC_PASSWORD` .
+
+>[!NOTE]
+> Hoewel niet strikt vereist, wordt het geadviseerd om het type van koordvariabele voor de gebruikersbenaming en het geheimString veranderlijke type voor het wachtwoord te gebruiken. Als beide van deze worden gespecificeerd, zal elk verzoek van de kruipper van de prestatietest en de test virtuele gebruikers deze geloofsbrieven als Basisauthentificatie van HTTP bevatten.
+
+Voer de volgende handelingen uit om deze variabelen in te stellen met de CLI van Cloud Manager:
+
+`$ aio cloudmanager:set-pipeline-variables <pipeline id> --variable CM_PERF_TEST_BASIC_USERNAME <username> --secret CM_PERF_TEST_BASIC_PASSWORD <password>`
+
+
+
+
 ## Uitsluitend pijplijnen zonder productie en codekwaliteit
 
-Naast de hoofdpijpleiding die zich naar het stadium en de productie ontwikkelt, kunnen klanten extra pijpleidingen opzetten, die **niet-productiepijpleidingen** worden genoemd. Deze pijpleidingen voeren altijd de bouw en de stappen van de codekwaliteit uit. Ze kunnen optioneel ook worden geïmplementeerd in de Adobe Managed Services-omgeving.
+Naast de hoofdpijpleiding die zich naar het stadium en de productie ontwikkelt, kunnen klanten extra pijpleidingen opzetten, die **niet-productiepijpleidingen** worden genoemd. Deze pijpleidingen voeren altijd de bouw en de stappen van de codekwaliteit uit. Ze kunnen optioneel ook worden geïmplementeerd in de omgeving van Adobe Managed Services.
 
 ## Videozelfstudie {#video-tutorial-two}
 
