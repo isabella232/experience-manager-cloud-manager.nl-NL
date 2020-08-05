@@ -4,9 +4,9 @@ seo-title: Opmerkingen bij de release AEM Cloud Manager voor 2020.8.0
 description: Volg deze pagina om informatie op te halen voor Cloud Manager Release 2020.8.0
 seo-description: Volg deze pagina om informatie op te halen voor AEM Cloud Manager Release 2020.8.0
 translation-type: tm+mt
-source-git-commit: 68330a3a6d9e1f95782418dbd72cbc0e6ee7362c
+source-git-commit: c0881ccf602a14b00b7cc68c3d1fc60e7b6954ed
 workflow-type: tm+mt
-source-wordcount: '253'
+source-wordcount: '191'
 ht-degree: 0%
 
 ---
@@ -43,8 +43,3 @@ De releasedatum voor [!UICONTROL Cloud Manager] versie 2020.8.0 is 6 augustus 20
 
 * Er is een kleurfout opgetreden op de overzichtspagina.
 
-## Bekende problemen {#known-issues}
-
-* Wanneer een milieu van AMS een reserve instantie bevat, verklaart het geregistreerde bericht dat de instantie neer in tegenstelling tot op standby wijze is.
-
-* Als gevolg van een wijziging in de manier waarop de codedekking wordt berekend, is de _minimale_ versie van de Jacoco-plug-in nu 0.7.5.201505241946 (uitgebracht in mei 2015). Klanten die expliciet verwijzen naar een oudere versie ontvangen een foutbericht in het proces voor de kwaliteit van de code.
