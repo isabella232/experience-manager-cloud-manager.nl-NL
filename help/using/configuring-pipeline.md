@@ -10,9 +10,9 @@ topic-tags: using
 content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 translation-type: tm+mt
-source-git-commit: 3be958aa21d5423ddf371c286825d01afd554c4b
+source-git-commit: 68330a3a6d9e1f95782418dbd72cbc0e6ee7362c
 workflow-type: tm+mt
-source-wordcount: '1755'
+source-wordcount: '1759'
 ht-degree: 0%
 
 ---
@@ -131,7 +131,7 @@ Het wordt dan getoond als afzonderlijke stap tijdens pijpleidingsuitvoering:
 
 Als Manager van de Plaatsing, hebt u de kans om een reeks inhoudspaden te vormen die of **ongeldig** of **gespoeld** van het geheime voorgeheugen van de AEM Dispatcher, terwijl vestiging of het uitgeven pijpleiding zal zijn.
 
-U kunt een afzonderlijke reeks wegen voor de plaatsing van het Stadium en van de Productie vormen. Indien gevormd, zullen deze geheim voorgeheugenacties als deel van de stap van de plaatsingspijpleiding worden uitgevoerd, enkel nadat om het even welke inhoudspakketten worden opgesteld. Deze instellingen gebruiken het standaardgedrag AEM Dispatcher: invalidate voert een cachevalidatie uit, net als wanneer de inhoud van de auteur wordt geactiveerd om te publiceren. flush voert een geheim voorgeheugenschrapping uit.
+U kunt een afzonderlijke reeks wegen voor de plaatsing van het Stadium en van de Productie vormen. Indien gevormd, zullen deze geheim voorgeheugenacties als deel van de stap van de plaatsingspijpleiding worden uitgevoerd, enkel nadat om het even welke inhoudspakketten worden opgesteld. Deze instellingen gebruiken het standaardgedrag AEM Dispatcher - ongeldig maken voert een cachevalidatie uit, net als wanneer de inhoud van de auteur wordt geactiveerd om te publiceren. flush voert een geheim voorgeheugenschrapping uit.
 
 Over het algemeen verdient het de voorkeur de actie voor invalideren te gebruiken, maar in bepaalde gevallen is leegmaken vereist, met name bij het gebruik van AEM HTML-clientbibliotheken.
 
@@ -205,17 +205,14 @@ Voer de onderstaande stappen uit om validaties voor Dispatcher te configureren:
 
 Klanten van Adobe Managed Services (AMS) met geverifieerde sites kunnen een gebruikersnaam en wachtwoord opgeven die door Cloud Manager worden gebruikt om toegang te krijgen tot de website tijdens het testen van Sites-prestaties.
 
-De gebruikersbenaming en het wachtwoord worden gespecificeerd als Variabelen van de Pijpleiding met de namen `CM_PERF_TEST_BASIC_USERNAME` en `CM_PERF_TEST_BASIC_PASSWORD` .
+De gebruikersbenaming en het wachtwoord worden gespecificeerd als Variabelen [van de](create-an-application-project.md#pipeline-variables) Pijpleiding met de namen `CM_PERF_TEST_BASIC_USERNAME` en `CM_PERF_TEST_BASIC_PASSWORD` .
 
 >[!NOTE]
 > Hoewel niet strikt vereist, wordt het geadviseerd om het type van koordvariabele voor de gebruikersbenaming en het geheimString veranderlijke type voor het wachtwoord te gebruiken. Als beide van deze worden gespecificeerd, zal elk verzoek van de kruipper van de prestatietest en de test virtuele gebruikers deze geloofsbrieven als Basisauthentificatie van HTTP bevatten.
 
-Voer de volgende handelingen uit om deze variabelen in te stellen met de CLI van Cloud Manager:
+Voer de volgende handelingen uit om deze variabelen in te stellen met de CLI van [Cloud Manager](https://github.com/adobe/aio-cli-plugin-cloudmanager):
 
 `$ aio cloudmanager:set-pipeline-variables <pipeline id> --variable CM_PERF_TEST_BASIC_USERNAME <username> --secret CM_PERF_TEST_BASIC_PASSWORD <password>`
-
-
-
 
 ## Uitsluitend pijplijnen zonder productie en codekwaliteit
 
