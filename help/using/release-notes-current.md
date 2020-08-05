@@ -4,9 +4,9 @@ seo-title: Opmerkingen bij de release AEM Cloud Manager voor 2020.8.0
 description: Volg deze pagina om informatie op te halen voor Cloud Manager Release 2020.8.0
 seo-description: Volg deze pagina om informatie op te halen voor AEM Cloud Manager Release 2020.8.0
 translation-type: tm+mt
-source-git-commit: 3be958aa21d5423ddf371c286825d01afd554c4b
+source-git-commit: 68330a3a6d9e1f95782418dbd72cbc0e6ee7362c
 workflow-type: tm+mt
-source-wordcount: '243'
+source-wordcount: '253'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ De releasedatum voor [!UICONTROL Cloud Manager] versie 2020.8.0 is 6 augustus 20
 
 * Het Testen van de Prestaties van Plaatsen steunt nu het facultatieve gebruik van authentificatie.
 
-   Zie voor meer informatie.
+   Raadpleeg [Authenticated Sites Performance Testing](configuring-pipeline.md#authenticated-sites-performance) voor meer informatie over het verifiëren van AEM Sites-prestatietests.
 
 * Verificatie-gebonden Private Maven Repositories worden nu ondersteund.
 
