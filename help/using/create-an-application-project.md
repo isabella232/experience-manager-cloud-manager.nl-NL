@@ -2,16 +2,16 @@
 title: Een AEM-toepassingsproject maken
 seo-title: Een AEM-toepassingsproject maken
 description: 'null'
-seo-description: Volg deze pagina voor meer informatie over het instellen van een AEM-project wanneer u aan de slag gaat met Cloud Manager.
+seo-description: Volg deze pagina voor meer informatie over het instellen van een AEM project wanneer u aan de slag gaat met Cloud Manager.
 uuid: 7b976ebf-5358-49d8-a58d-0bae026303fa
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: getting-started
 discoiquuid: 76c1a8e4-d66f-4a3b-8c0c-b80c9e17700e
 translation-type: tm+mt
-source-git-commit: 0fda91c2fe319fb58b3a6dd09f75eac7a60d9038
+source-git-commit: 200057885f068ff8df889601a401e06d89981209
 workflow-type: tm+mt
-source-wordcount: '1705'
+source-wordcount: '1721'
 ht-degree: 5%
 
 ---
@@ -19,20 +19,20 @@ ht-degree: 5%
 
 # Create an AEM Application Project {#create-an-aem-application-project}
 
-## Wizard gebruiken om een AEM-toepassingsproject te maken {#using-wizard-to-create-an-aem-application-project}
+## Het gebruiken van Tovenaar om een Project van de AEMToepassing te creëren {#using-wizard-to-create-an-aem-application-project}
 
-Als klanten aan boord zijn van Cloud Manager, krijgen ze een lege git-opslagplaats. Huidige klanten van Adobe Managed Services (AMS) (of AEM-klanten op locatie die naar AMS migreren) hebben over het algemeen al hun projectcode in git (of een ander versiecontrolesysteem) en zullen hun project in de opslagplaats van de Manager van de Wolk invoeren. Nieuwe klanten hebben echter geen bestaande projecten.
+Als klanten aan boord zijn van Cloud Manager, krijgen ze een lege git-opslagplaats. Huidige klanten van Adobe Managed Services (AMS) (of on-premise AEM klanten die naar AMS migreren) hebben doorgaans al hun projectcode in git (of een ander versiecontrolesysteem) en zullen hun project importeren in de opslagplaats van Cloud Manager. Nieuwe klanten hebben echter geen bestaande projecten.
 
-Om nieuwe klanten aan de slag te helpen, kan Cloud Manager nu een minimaal AEM-project maken als startpunt. Dit proces is gebaseerd op het [**AEM Project Archetype **](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype).
+Om nieuwe klanten aan de slag te helpen, kan Cloud Manager nu een minimaal AEM project maken als startpunt. Dit proces is gebaseerd op het [**AEM Project Archetype **](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype).
 
 
-Voer de onderstaande stappen uit om een AEM-toepassingsproject te maken in Cloud Manager:
+Voer de onderstaande stappen uit om een AEM toepassingsproject te maken in Cloud Manager:
 
 1. Nadat u zich hebt aangemeld bij Cloud Manager en de basisconfiguratie van het programma is voltooid, wordt een speciale aanroep naar een actiekaart weergegeven op het scherm **Overzicht** als de opslagplaats leeg is.
 
    ![](assets/image2018-10-3_14-29-44.png)
 
-1. Klik op **** Maken om een dialoogvenster te openen waarin de gebruiker de parameters kan opgeven die vereist zijn voor het AEM-projectarchetype. In zijn standaardvorm, vraagt de dialoogdoos twee waarden:
+1. Klik op **Maken om** een dialoogvenster te openen waarin de gebruiker de parameters kan opgeven die vereist zijn voor het AEM Projectarchetype. In zijn standaardvorm, vraagt de dialoogdoos twee waarden:
 
    * **Titel** - deze is standaard ingesteld op *Programmanaam*
 
@@ -57,7 +57,7 @@ Voer de onderstaande stappen uit om een AEM-toepassingsproject te maken in Cloud
 
 ### Details projectinstelling wijzigen {#modifying-project-setup-details}
 
-Voor een correcte bouw en implementatie met Cloud Manager moeten bestaande AEM-projecten zich aan een aantal basisregels houden:
+Om te kunnen worden gebouwd en geïmplementeerd met Cloud Manager, moeten bestaande AEM projecten zich aan een aantal basisregels houden:
 
 * Projecten moeten worden gebouwd met Apache Maven.
 * Er moet een *pom.xml* -bestand aanwezig zijn in de hoofdmap van de Git-opslagplaats. Dit *pom.xml* -bestand kan verwijzen naar zoveel submodules (die op hun beurt weer andere submodules kunnen hebben, enzovoort) indien nodig.
@@ -65,7 +65,7 @@ Voor een correcte bouw en implementatie met Cloud Manager moeten bestaande AEM-p
 * U kunt verwijzingen naar extra bewaarplaatsen van het Artefact toevoegen Maven in uw *pom.xml* - dossiers. Toegang tot met [wachtwoord beveiligde gegevensopslagruimten](#password-protected-maven-repositories) voor artefacten wordt ondersteund wanneer dit is geconfigureerd. Toegang tot door het netwerk beveiligde gegevensbestanden voor artefacten wordt echter niet ondersteund.
 * Implementeerbare inhoudspakketten worden ontdekt door te zoeken naar *ZIP* -bestanden van inhoudspakketten die zich in een map met de naam *target* bevinden. Elk aantal submodules kan inhoudspakketten produceren.
 
-* Inzetbare Dispatcher-artefacten worden ontdekt door te zoeken naar *ZIP* -bestanden (opnieuw opgenomen in een map met de naam *target*) met mappen met de naam *conf* en *conf.d*.
+* Implementeerbare Dispatcher-artefacten worden gedetecteerd door te zoeken naar *ZIP* -bestanden (opnieuw opgenomen in een map met de naam *target*) met mappen met de naam *conf* en *conf.d*.
 
 * Als er meer dan één inhoudspakket is, wordt de volgorde van pakketimplementaties niet gegarandeerd. Als een specifieke orde nodig is, kunnen de gebiedsdelen van het inhoudspakket worden gebruikt om de orde te bepalen. Pakketten kunnen van plaatsing worden [overgeslagen](#skipping-content-packages) .
 
@@ -97,7 +97,7 @@ Cloud Manager bouwt en test uw code gebruikend een gespecialiseerde bouwstijlmil
 * Andere pakketten kunnen worden geïnstalleerd tijdens het samenstellen zoals [hieronder](#installing-additional-system-packages)wordt beschreven.
 * Elke bouw wordt gedaan op een ongerepte milieu; de bouwstijlcontainer houdt geen staat tussen uitvoeringen.
 * Maven wordt altijd uitgevoerd met de opdracht: *mvn —batch-mode clean org.jacoco:jacoco-maven-plugin:prepare-agent package*
-* Maven wordt geconfigureerd op systeemniveau met een bestand settings.xml dat automatisch de openbare Adobe **Artefact** -opslagplaats omvat. (Raadpleeg de [Adobe Public Maven Repository](https://repo.adobe.com/) voor meer informatie.)
+* Maven wordt gevormd op systeemniveau met een settings.xml- dossier dat automatisch de openbare bewaarplaats van het **Artefact** van de Adobe omvat. (Zie [Adobe Public Maven Repository](https://repo.adobe.com/) voor meer informatie.)
 
 >[!NOTE]
 >Hoewel in Cloud Manager geen specifieke versie van de versie wordt gedefinieerd, moet de gebruikte versie minstens `jacoco-maven-plugin``0.7.5.201505241946`zijn.
@@ -266,7 +266,7 @@ En als u een eenvoudig bericht wilt uitvoeren slechts wanneer de bouwstijl buite
 
 ## Ondersteuning voor met wachtwoord beveiligde gegevensopslagruimte {#password-protected-maven-repositories}
 
-Als u een met een wachtwoord beveiligde gegevensopslagruimte vanuit Cloud Manager wilt gebruiken, geeft u het wachtwoord (en eventueel de gebruikersnaam) op als een geheime [Pipeline-variabele](#pipeline-variables) en verwijst u naar dat geheim in een bestand dat in de gegevensopslagruimte `.cloudmanager/maven/settings.xml` is genoemd. Dit bestand volgt het schema [Maven Settings File](https://maven.apache.org/settings.html) . Wanneer het buildproces van Cloud Manager wordt gestart, wordt het `<servers>` `settings.xml` element in dit bestand samengevoegd met het standaardbestand dat wordt geleverd door Cloud Manager. Als dit bestand is geïnstalleerd, wordt er vanuit een `<repository>` en/of `<pluginRepository>` element in het `pom.xml` bestand naar de server-id verwezen. Over het algemeen worden deze `<repository>` en/of `<pluginRepository>` elementen opgenomen in een specifiek profiel [voor]{#activating-maven-profiles-in-cloud-manager}Cloud Manager, hoewel dat niet strikt noodzakelijk is.
+Als u een met een wachtwoord beveiligde gegevensopslagruimte vanuit Cloud Manager wilt gebruiken, geeft u het wachtwoord (en eventueel de gebruikersnaam) op als een geheime [Pipeline-variabele](#pipeline-variables) en verwijst u naar dat geheim in een bestand dat in de gegevensopslagruimte `.cloudmanager/maven/settings.xml` is genoemd. Dit bestand volgt het schema [Maven Settings File](https://maven.apache.org/settings.html) . Wanneer het buildproces van Cloud Manager wordt gestart, wordt het `<servers>` `settings.xml` element in dit bestand samengevoegd met het standaardbestand dat wordt geleverd door Cloud Manager. Server-id&#39;s die beginnen met `adobe` en `cloud-manager` worden beschouwd als gereserveerd en mogen niet worden gebruikt door aangepaste servers. Als dit bestand is geïnstalleerd, wordt er vanuit een `<repository>` en/of `<pluginRepository>` element in het `pom.xml` bestand naar de server-id verwezen. Over het algemeen worden deze `<repository>` en/of `<pluginRepository>` elementen opgenomen in een specifiek profiel [voor]{#activating-maven-profiles-in-cloud-manager}Cloud Manager, hoewel dat niet strikt noodzakelijk is.
 
 Stel bijvoorbeeld dat de gegevensopslagruimte zich bevindt op https://repository.myco.com/maven2, dat de gebruikersnaam is ingesteld op Cloud Manager `cloudmanager` en dat het wachtwoord is `secretword`.
 
@@ -392,7 +392,7 @@ Dezelfde techniek kan worden gebruikt om taalspecifieke pakketten te installeren
 
 >[!NOTE]
 >
->Als u een systeempakket op deze manier installeert, wordt dit **niet** geïnstalleerd in de runtimeomgeving die wordt gebruikt voor het uitvoeren van Adobe Experience Manager. Als u een systeempakket nodig hebt dat op de AEM-omgeving is geïnstalleerd, neemt u contact op met uw Customer Success Engineers (CSE).
+>Als u een systeempakket op deze manier installeert, wordt dit **niet** geïnstalleerd in de runtimeomgeving die voor het uitvoeren van Adobe Experience Manager wordt gebruikt. Als u een systeempakket nodig hebt dat op de AEM-omgeving is geïnstalleerd, neemt u contact op met uw Customer Success Engineers (CSE).
 
 ## Inhoudspakketten worden overgeslagen {#skipping-content-packages}
 
@@ -433,4 +433,4 @@ Met de insteekmodule voor het verpakken van inhoud is deze vergelijkbaar:
 
 ## Ontwikkel uw Code die op Beste praktijken wordt gebaseerd {#develop-your-code-based-on-best-practices}
 
-Adobe Engineering- en Consulting-teams hebben een [uitgebreide set met best practices ontwikkeld voor AEM-ontwikkelaars](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/best-practices.html).
+De teams van de Techniek en van het Raadpleging van Adobe hebben een [uitvoerige reeks beste praktijken voor AEM ontwikkelaars](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/best-practices.html)ontwikkeld.
