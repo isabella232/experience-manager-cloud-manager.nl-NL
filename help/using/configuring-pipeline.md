@@ -10,10 +10,10 @@ topic-tags: using
 content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 translation-type: tm+mt
-source-git-commit: cff6f23a674fda2f57ea481d89644de9be3f5722
+source-git-commit: c2f5caf50f2e20c07807369aee7914c17fded4de
 workflow-type: tm+mt
-source-wordcount: '1636'
-ht-degree: 1%
+source-wordcount: '1751'
+ht-degree: 0%
 
 ---
 
@@ -104,7 +104,7 @@ Selecteer de Git-vertakking en klik op **Volgende**.
 >
 >Als de **Geplande** optie wordt geselecteerd, kunt u uw productieleiding aan de pijpleiding **na** de werkgebiedplaatsing plannen (en de Goedkeuring **van GoLive van het** Gebruik, als dat) is toegelaten om op een te plaatsen programma te wachten. De gebruiker kan er ook voor kiezen om de productieimplementatie onmiddellijk uit te voeren.
 >
->Gelieve te verwijzen naar [**opstellen uw Code **](deploying-code.md), om het plaatsingsprogramma te plaatsen of de productie onmiddellijk uit te voeren.
+>Gelieve te verwijzen naar [**opstellen uw Code**](deploying-code.md), om het plaatsingsprogramma te plaatsen of de productie onmiddellijk uit te voeren.
 
 ![](assets/configure-pipeline3.png)
 
@@ -129,9 +129,9 @@ Het wordt dan getoond als afzonderlijke stap tijdens pijpleidingsuitvoering:
 
 **Validatie van verzending**
 
-Als Manager van de Plaatsing, hebt u de kans om een reeks inhoudspaden te vormen die of **ongeldig** of **gespoeld** van het geheime voorgeheugen van de AEM Dispatcher, terwijl vestiging of het uitgeven pijpleiding zal zijn.
+Als Manager van de Plaatsing, hebt u de kans om een reeks inhoudspaden te vormen die of **ongeldig** of **gespoeld** van het geheime voorgeheugen van de AEM Dispatcher voor te publiceren instanties zullen zijn, terwijl vestiging of het uitgeven pijpleiding.
 
-U kunt een afzonderlijke reeks wegen voor de plaatsing van het Stadium en van de Productie vormen. Indien gevormd, zullen deze geheim voorgeheugenacties als deel van de stap van de plaatsingspijpleiding worden uitgevoerd, enkel nadat om het even welke inhoudspakketten worden opgesteld. Deze instellingen gebruiken het standaardgedrag AEM Dispatcher - ongeldig maken voert een cachevalidatie uit, net als wanneer de inhoud van de auteur wordt geactiveerd om te publiceren. flush voert een geheim voorgeheugenschrapping uit.
+U kunt een afzonderlijke reeks wegen voor de plaatsing van het Stadium en van de Productie vormen. Indien gevormd, zullen deze geheim voorgeheugenacties als deel van de stap van de plaatsingspijpleiding worden uitgevoerd, enkel nadat om het even welke inhoudspakketten worden opgesteld. Deze instellingen gebruiken het standaardgedrag AEM Dispatcher: invalidate voert een cachevalidatie uit, net als wanneer de inhoud van de auteur wordt geactiveerd om te publiceren. flush voert een geheim voorgeheugenschrapping uit.
 
 Over het algemeen verdient het de voorkeur de actie voor invalideren te gebruiken, maar in bepaalde gevallen is leegmaken vereist, met name bij het gebruik van AEM HTML-clientbibliotheken.
 
@@ -178,6 +178,8 @@ Voer de onderstaande stappen uit om validaties voor Dispatcher te configureren:
 
    ![](assets/Configuring_Pipeline_AEM-Sites.png)
 
+   Raadpleeg [Authenticated Performance Testing](#authenticated-performance-testing) voor meer informatie.
+
    **AEM Assets:**
 
    Cloud Manager voert de prestatietests voor AEM Assets-programma&#39;s uit door elementen gedurende een testperiode van 30 minuten herhaaldelijk te uploaden en de verwerkingstijd voor elk element en verschillende metingen op systeemniveau te meten. Met deze functie kunt u zowel afbeeldingen als PDF-documenten uploaden. De verdeling van hoeveel activa van elk type per minuut worden geupload wordt geplaatst in de Opstelling of geeft het scherm van de Pijpleiding uit.
@@ -198,6 +200,17 @@ Voer de onderstaande stappen uit om validaties voor Dispatcher te configureren:
 
    ![](assets/Production-Pipeline.png)
 
+### Geverifieerde prestaties testen {#authenticated-performance-testing}
+
+AMS-klanten met geverifieerde sites kunnen een gebruikersnaam en wachtwoord opgeven die door Cloud Manager worden gebruikt voor toegang tot de website tijdens het testen van de Sites-prestaties.
+
+De gebruikersbenaming en het wachtwoord worden gespecificeerd als Variabelen [van de](/help/using/create-an-application-project.md#pipeline-variables) Pijpleiding met de namen `CM_PERF_TEST_BASIC_USERNAME` en `CM_PERF_TEST_BASIC_PASSWORD`.
+
+Hoewel niet strikt vereist, wordt het geadviseerd om het type van koordvariabele voor de gebruikersbenaming en het geheimString veranderlijke type voor het wachtwoord te gebruiken. Als beide van deze worden gespecificeerd, zal elk verzoek van de kruipper van de prestatietest en de test virtuele gebruikers deze geloofsbrieven als Basisauthentificatie van HTTP bevatten.
+
+Voer de volgende handelingen uit om deze variabelen in te stellen met de CLI van [Cloud Manager](https://github.com/adobe/aio-cli-plugin-cloudmanager):
+
+`$ aio cloudmanager:set-pipeline-variables <pipeline id> --variable CM_PERF_TEST_BASIC_USERNAME <username> --secret CM_PERF_TEST_BASIC_PASSWORD <password>`
 
 ## Uitsluitend pijplijnen zonder productie en codekwaliteit
 
