@@ -4,9 +4,9 @@ seo-title: Opmerkingen bij de release AEM Cloud Manager voor 2020.8.0
 description: Volg deze pagina om informatie op te halen voor Cloud Manager Release 2020.8.0
 seo-description: Volg deze pagina om informatie op te halen voor AEM Cloud Manager Release 2020.8.0
 translation-type: tm+mt
-source-git-commit: cff6f23a674fda2f57ea481d89644de9be3f5722
+source-git-commit: c2f5caf50f2e20c07807369aee7914c17fded4de
 workflow-type: tm+mt
-source-wordcount: '166'
+source-wordcount: '192'
 ht-degree: 0%
 
 ---
@@ -37,5 +37,9 @@ Verificatie-gebonden Private Maven Repositories worden nu ondersteund.
 
 * De knopinfo op de programmakaarten was niet consistent correct.
 
-* Er is een kleurfout opgetreden op de overzichtspagina.
+* Er is een kleurfout opgetreden op de pagina **Overzicht** .
+
+* Het Testen van de Prestaties van Plaatsen steunt nu het facultatieve gebruik van authentificatie.
+
+* De caches van de verzender voor auteurinstanties worden automatisch leeggemaakt wanneer de berichtconfiguraties door de Manager van de Wolk worden opgesteld.
 
