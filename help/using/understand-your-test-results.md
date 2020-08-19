@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: 83299ed8-4b7a-4b1c-bd56-1bfc7e7318d4
 translation-type: tm+mt
-source-git-commit: f062ee126ad12d164c36b2e1535ee709f43b6900
+source-git-commit: 1143e58d4c3a02d85676f94fc1a30cc1c2856222
 workflow-type: tm+mt
-source-wordcount: '1461'
+source-wordcount: '1544'
 ht-degree: 2%
 
 ---
@@ -43,7 +43,15 @@ Voor elk van deze poorten is er een structuur met drie niveaus voor emissies die
 
 ## Testen van de codekwaliteit {#code-quality-testing}
 
-Als deel van de pijpleiding wordt de broncode gescand om ervoor te zorgen dat de plaatsingen aan bepaalde kwaliteitscriteria voldoen. Momenteel wordt dit geïmplementeerd door een combinatie van SonarQube en inhoudspakketonderzoek met gebruik van OakPAL. Er zijn meer dan 100 regels die generieke Java-regels en AEM-specifieke regels combineren. In de volgende tabel wordt de classificatie voor testcriteria samengevat:
+Deze stap evalueert de kwaliteit van uw toepassingscode. Het is de kerndoelstelling van een code-Kwaliteit enige pijpleiding en wordt uitgevoerd onmiddellijk na de bouwstap in alle niet-productie en productiepijpleidingen. Verwijs naar het [Vormen van uw CI-CD Pijpleiding](/help/using/configuring-pipeline.md) om meer over verschillende types van pijpleidingen te leren.
+
+### Codekwaliteit testen {#understanding-code-quality-testing}
+
+In het Testen van de Kwaliteit van de Code, wordt de broncode gescand om ervoor te zorgen dat het plaatsingen aan bepaalde kwaliteitscriteria voldoet. Momenteel wordt dit geïmplementeerd door een combinatie van SonarQube en inhoudspakketonderzoek met gebruik van OakPAL. Er zijn meer dan 100 regels die generieke Java-regels en AEM-specifieke regels combineren. Enkele AEM-specifieke regels worden gecreeerd gebaseerd op beste praktijken van AEM Techniek en worden bedoeld als Regels [van de Kwaliteit van de](/help/using/custom-code-quality-rules.md)Code van de Douane.
+
+U kunt de lijst met regels [hier](/help/using/assets/CodeQuality-rules-latest.xlsx)downloaden.
+
+De resultaten van deze stap worden geleverd als *Classificatie*. De onderstaande tabel geeft een overzicht van de beoordelingen voor verschillende testcriteria:
 
 | Naam | Definitie | Categorie | Drempel voor fout |
 |--- |--- |--- |--- |
@@ -54,14 +62,12 @@ Als deel van de pijpleiding wordt de broncode gescand om ervoor te zorgen dat de
 | Overgeslagen eenheidstests | Aantal overgeslagen eenheidstests. | Info | > 1 |
 | Problemen openen | Algemene uitgiftypen - Vulnerabilities, Bugs en Codefragmenten | Info | > 0 |
 | Gedupliceerde lijnen | Aantal lijnen betrokken bij gedupliceerde blokken. <br/>Een codeblok dat als gedupliceerd moet worden beschouwd: <br/><ul><li>**Niet-Java-projecten:**</li><li>Er moeten ten minste 100 opeenvolgende en gedupliceerde tokens zijn.</li><li>Deze tokens moeten ten minste op: </li><li>30 regels code voor COBOL </li><li>20 coderegels voor ABAP </li><li>10 coderegels voor andere talen</li><li>**Java-projecten:**</li><li> Er moeten minstens tien opeenvolgende en gedupliceerde verklaringen zijn, ongeacht het aantal tokens en lijnen.</li></ul> <br/>Verschillen in inspringing en in letterlijke tekenreeksen worden genegeerd bij het detecteren van duplicaten. | Info | > 1% |
-| Compatibiliteit met cloudservice | Aantal geïdentificeerde compatibiliteitsproblemen met de cloudservice. | Info | > 0 |
+| Compatibiliteit met Cloud Service | Aantal geïdentificeerde kwesties van de Verenigbaarheid van de Cloud Service. | Info | > 0 |
 
 
 >[!NOTE]
 >
 >Zie [Metrische definities](https://docs.sonarqube.org/display/SONAR/Metric+Definitions) voor meer gedetailleerde definities.
-
-U kunt de lijst met regels hier downloaden [code-quality-rules.xlsx](/help/using/assets/CodeQuality-rules-latest.xlsx)
 
 >[!NOTE]
 >
@@ -73,7 +79,7 @@ Het kwaliteitscontroleproces is niet perfect en zal soms ten onrechte problemen 
 
 In deze gevallen kan de broncode worden geannoteerd met de standaard-Java- `@SuppressWarnings` annotatie die de regel-id opgeeft als het annotatiekenmerk. Een veelvoorkomend probleem is bijvoorbeeld dat de SonarQube-regel voor het detecteren van gecodeerde wachtwoorden agressief kan zijn ten aanzien van de manier waarop een gecodeerd wachtwoord wordt geïdentificeerd.
 
-Om naar een specifiek voorbeeld te kijken, zou deze code vrij gemeenschappelijk in een project zijn AEM dat code heeft om met één of andere externe dienst te verbinden:
+Om naar een specifiek voorbeeld te kijken, zou deze code vrij gemeenschappelijk in een AEM project zijn dat code heeft om met één of andere externe dienst te verbinden:
 
 ```java
 @Property(label = "Service Password")
@@ -103,7 +109,7 @@ Dan is de correcte oplossing het hardcoded wachtwoord te verwijderen.
 
 ## Beveiligingstests {#security-testing}
 
-[!UICONTROL Cloud Manager] stelt de bestaande Controle ****** van de Gezondheid van de Veiligheid AEM op stadium na de plaatsing in werking en rapporteert de status door UI. De resultaten worden samengevoegd van alle AEM-instanties in de omgeving.
+[!UICONTROL Cloud Manager] stelt de bestaande controles ***van de Gezondheid van de*** AEMVeiligheid op stadium na de plaatsing in werking en rapporteert de status door UI. De resultaten worden samengevoegd van alle AEM in de omgeving.
 
 Als een van de **Instanties** meldt dat een bepaalde gezondheidscontrole is mislukt, mislukt het hele **milieu** die gezondheidscontrole. Net als bij het testen van de kwaliteit en prestaties van de code, worden deze gezondheidscontroles in categorieën ingedeeld en gerapporteerd met behulp van het drielagige gatingsysteem. Het enige verschil is dat er geen drempelwaarde is voor het testen van de veiligheid. Alle gezondheidscontroles worden gewoon goedgekeurd of gefaald.
 
@@ -116,13 +122,13 @@ In de volgende tabel worden de huidige controles weergegeven:
 | De firewall voor deserialization wordt geladen | Firewall voor deserialisatie geladen | Kritiek |
 | AuthorizableNodeName de implementatie stelt toegelaten identiteitskaart in de knoopnaam/de weg niet bloot. | Authorizable Node Name Generation | Kritiek |
 | Standaardwachtwoorden zijn gewijzigd | Standaardaanmeldingsaccounts | Kritiek |
-| De verkoop standaard krijgt servlet wordt beschermd tegen DOS aanvallen. | Sling Get Servlet | Kritiek |
+| Standaard GET-servlet wordt beveiligd tegen DOS-aanvallen. | Sling Get Servlet | Kritiek |
 | De Sling Java Script Handler is op de juiste wijze geconfigureerd | JavaScript-handler afspelen | Kritiek |
 | De Sling JSP Scripthandler is op de juiste wijze geconfigureerd | JSP-scripthandler afspelen | Kritiek |
 | SSL is correct geconfigureerd | SSL-configuratie | Kritiek |
 | Geen duidelijk onveilig beleid voor gebruikersprofielen gevonden | Standaardtoegang gebruikersprofiel | Kritiek |
 | Het filter van de Verschuiver wordt gevormd om aanvallen te verhinderen CSRF | Filter Verschuivingsverwijzing | Belangrijk |
-| Adobe Granite HTML Library Manager is op de juiste wijze geconfigureerd | Config. HTML-bibliotheekbeheer CQ | Belangrijk |
+| De Adobe Granite HTML Library Manager is op de juiste wijze geconfigureerd | Config. HTML-bibliotheekbeheer CQ | Belangrijk |
 | CRXDE-ondersteuningsbundel is uitgeschakeld | CRXDE-ondersteuning | Belangrijk |
 | Sling DavEx-bundel en -servlet zijn uitgeschakeld | DavEx Health Check | Belangrijk |
 | Voorbeeldinhoud is niet geïnstalleerd | Voorbeelden van inhoudspakketten | Belangrijk |
