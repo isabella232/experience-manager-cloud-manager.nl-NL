@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: 83299ed8-4b7a-4b1c-bd56-1bfc7e7318d4
 translation-type: tm+mt
-source-git-commit: 1143e58d4c3a02d85676f94fc1a30cc1c2856222
+source-git-commit: d38b6da61c552a3e9ad03dac49a64553f0cb00b4
 workflow-type: tm+mt
 source-wordcount: '1544'
 ht-degree: 2%
@@ -19,7 +19,7 @@ ht-degree: 2%
 
 # Inzicht in de testresultaten {#understand-your-test-results}
 
-Tijdens het proces van de **Pijpleiding** , wordt een aantal metriek gevangen en vergeleken bij of de Belangrijkste Indicatoren van Prestaties (KPIs) die door de bedrijfseigenaar worden bepaald, of normen die door de Beheerde Diensten van Adobe worden geplaatst.
+Tijdens de uitvoering van de pijpleiding, wordt een aantal metriek gevangen en vergeleken bij of de Belangrijkste Indicatoren van Prestaties (KPIs) die door de bedrijfseigenaar worden bepaald, of normen die door de Beheerde Diensten van Adobe worden geplaatst.
 
 Deze worden gerapporteerd met behulp van het drielagige gatingsysteem zoals gedefinieerd in deze sectie.
 
@@ -47,11 +47,12 @@ Deze stap evalueert de kwaliteit van uw toepassingscode. Het is de kerndoelstell
 
 ### Codekwaliteit testen {#understanding-code-quality-testing}
 
-In het Testen van de Kwaliteit van de Code, wordt de broncode gescand om ervoor te zorgen dat het plaatsingen aan bepaalde kwaliteitscriteria voldoet. Momenteel wordt dit geïmplementeerd door een combinatie van SonarQube en inhoudspakketonderzoek met gebruik van OakPAL. Er zijn meer dan 100 regels die generieke Java-regels en AEM-specifieke regels combineren. Enkele AEM-specifieke regels worden gecreeerd gebaseerd op beste praktijken van AEM Techniek en worden bedoeld als Regels [van de Kwaliteit van de](/help/using/custom-code-quality-rules.md)Code van de Douane.
+Bij het testen van de kwaliteit van de code, wordt de broncode gescand om ervoor te zorgen dat het aan bepaalde kwaliteitscriteria voldoet. Momenteel wordt dit geïmplementeerd door een combinatie van SonarQube en inhoudspakketonderzoek met gebruik van OakPAL. Er zijn meer dan 100 regels die generieke Java-regels en AEM-specifieke regels combineren. Enkele AEM-specifieke regels worden gecreeerd gebaseerd op beste praktijken van AEM Techniek en worden bedoeld als Regels [van de Kwaliteit van de](/help/using/custom-code-quality-rules.md)Code van de Douane.
 
-U kunt de lijst met regels [hier](/help/using/assets/CodeQuality-rules-latest.xlsx)downloaden.
+>[!NOTE]
+>U kunt de volledige lijst met regels [hier](/help/using/assets/CodeQuality-rules-latest.xlsx)downloaden.
 
-De resultaten van deze stap worden geleverd als *Classificatie*. De onderstaande tabel geeft een overzicht van de beoordelingen voor verschillende testcriteria:
+De resultaten van deze stap worden geleverd als *Classificatie*. De onderstaande tabel geeft een overzicht van de scores voor verschillende testcriteria:
 
 | Naam | Definitie | Categorie | Drempel voor fout |
 |--- |--- |--- |--- |
