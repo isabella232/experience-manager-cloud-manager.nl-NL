@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: 832a4647-9b83-4a9d-b373-30fe16092b15
 translation-type: tm+mt
-source-git-commit: d38b6da61c552a3e9ad03dac49a64553f0cb00b4
+source-git-commit: ace032fbb26235d87d61552a11996ec2bb42abce
 workflow-type: tm+mt
 source-wordcount: '953'
 ht-degree: 0%
@@ -75,7 +75,7 @@ Nadat u de productiepijpleiding hebt geconfigureerd (opslagruimte, omgeving en t
    >De Plaatsing **van de Productie van het** Programma wordt toegelaten terwijl het vormen van de pijpleiding.
    >
    >
-   >Met deze optie kunt u de productieimplementatie plannen of op **Nu** klikken om de productieimplementatie direct uit te voeren.
+   >Met deze optie kunt u de productieimplementatie plannen of op **Nu** klikken om de productieimplementatie onmiddellijk uit te voeren.
    >
    >
    >De geplande datum en tijd worden gespecificeerd in termen van de tijdzone van de gebruiker.
@@ -127,20 +127,18 @@ Wanneer de Manager van de Wolk aan niet productietopologieën opstelt, is het do
    1. Elk pad dat in de pijplijnconfiguratie is opgegeven, wordt ongeldig gemaakt of verwijderd uit het cachegeheugen van de verzender.
 
    >[!NOTE]
-   >
    >Cloud Manager verwacht dat het artefact van de verzender de volledige bestandsset bevat.  Alle Dispatcher-configuratiebestanden moeten aanwezig zijn in de it-opslagplaats. Ontbrekende bestanden of mappen leiden tot een implementatiefout.
 
 1. Nadat alle AEM- en verzendingspakketten naar alle knooppunten zijn geïmplementeerd, worden de verzenders weer toegevoegd aan het taakverdelingsmechanisme en is de implementatie voltooid.
 
    >[!NOTE]
-   >
    >U kunt de veranderingen van de Balancer van de Lading in ontwikkeling en werkgebiedplaatsingen overslaan, namelijk losmaken en stappen in zowel niet productiepijpleidingen, voor ontwikkelaarmilieu&#39;s, als de productiepijplijn, voor werkgebiedmilieu&#39;s vastmaken.
 
 ### Implementatie naar productiefase {#deployment-production-phase}
 
 Het proces voor het opstellen aan productietopologieën verschilt lichtjes om effect aan AEM bezoekers van de Plaats te minimaliseren.
 
-Productieimplementaties volgen doorgaans dezelfde stappen als hierboven, maar op een voortschrijdende manier:
+Productie-implementaties volgen doorgaans dezelfde stappen als hierboven, maar op doorlopende wijze:
 
 1. Implementeer AEM pakketten naar de auteur.
 1. Dispatcher1 loskoppelen van het taakverdelingsmechanisme.
