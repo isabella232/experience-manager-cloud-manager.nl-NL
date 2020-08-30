@@ -8,7 +8,7 @@ contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 discoiquuid: ebcc91a5-be9e-4684-8146-d88f4013d4d1
 translation-type: tm+mt
-source-git-commit: 3bb435aae932b9446867c30b7dd6b0a8e0839ee2
+source-git-commit: ace032fbb26235d87d61552a11996ec2bb42abce
 workflow-type: tm+mt
 source-wordcount: '289'
 ht-degree: 0%
@@ -21,11 +21,11 @@ ht-degree: 0%
 De eerste fase in de tovenaar van de Update van het Product is **[!UICONTROL Evaluation]** fase.
 Hier kunt u de complexiteit van de upgrade beoordelen met de patroondetector die u rechtstreeks vanuit de wizard kunt gebruiken. Aan het einde van deze stap hebt u toegang tot het evaluatieverslag.
 
-Met het gegenereerde rapport kunt u de instantie Auteur controleren op upgradebaarheid door patronen te detecteren die:
+Met het gegenereerde rapport kunt u de instantie Auteur controleren op een upgrade door patronen te detecteren die:
 
 * Overtreed bepaalde regels en wordt uitgevoerd op gebieden die door de upgrade worden beïnvloed of overschreven.
 
-* Gebruik een AEM 6.x-functie of een API die niet achterwaarts compatibel is met de nieuwe AEM en die na de upgrade mogelijk kan worden verbroken.
+* Gebruik een AEM 6.x-functie of een API die niet achterwaarts compatibel is met de nieuwe AEM en die na de upgrade mogelijk kan worden onderbroken.
 
 Dit dient als een beoordeling van de ontwikkelingsinspanningen die gepaard gaan met de opwaardering tot Adobe Experience Manager (AEM) 6.5.
 
