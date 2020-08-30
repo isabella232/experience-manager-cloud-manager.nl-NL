@@ -1,6 +1,6 @@
 ---
-title: Dispatcher-configuraties beheren
-seo-title: Dispatcher-configuraties beheren
+title: Uw Dispatcher-configuraties beheren
+seo-title: Uw Dispatcher-configuraties beheren
 description: 'null'
 seo-description: Volg deze pagina voor meer informatie over het configureren van dispatcher.
 uuid: 3ecd8ca3-5241-4811-87fd-3284a8012eda
@@ -9,31 +9,31 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: getting-started
 discoiquuid: 8888dd80-d908-464e-927d-779db1a832a4
 translation-type: tm+mt
-source-git-commit: cdf2c82192c2e9c375316ae6e28646594ba2a462
+source-git-commit: ace032fbb26235d87d61552a11996ec2bb42abce
 workflow-type: tm+mt
-source-wordcount: '603'
+source-wordcount: '597'
 ht-degree: 0%
 
 ---
 
 
-# Dispatcher-configuraties beheren {#manage-your-dispatcher-configurations}
+# Uw Dispatcher-configuraties beheren {#manage-your-dispatcher-configurations}
 
-## Dispatcher-configuratiebestanden implementeren met Cloud Manager {#using-cloud-manager-to-deploy-dispatcher-configuration-files}
+## Cloud Manager gebruiken om Dispatcher-configuratiebestanden te implementeren {#using-cloud-manager-to-deploy-dispatcher-configuration-files}
 
 Cloud Manager kan webserver- en Dispatcher-configuratiebestanden implementeren als deze zijn opgeslagen in de **Git Repository**, naast de normale AEM-inhoudspakketten.
 
-Als u van deze mogelijkheid gebruik wilt maken, moet de Maven-build een ZIP-bestand maken dat ten minste twee mappen bevat: ***conf*** en ***conf.d***. Dit ZIP-bestand kan worden gemaakt met de gefabriceerde insteekmodule. De projecten die door de Manager van de Wolk gebruikend de ingebouwde [tovenaar](/help/using/create-an-application-project.md) worden geproduceerd hebben de correcte Maven die projectstructuur als deel van de projectverwezenlijking wordt gecreeerd. Dit is de geadviseerde weg voor nieuwe Beheerde klanten van de Diensten.
+Als u van deze mogelijkheid gebruik wilt maken, moet de Maven-build een ZIP-bestand maken dat ten minste twee mappen bevat: ***conf*** en ***conf.d***. Dit ZIP-bestand kan worden gemaakt met de gefabriceerde insteekmodule. De projecten die door de Manager van de Wolk gebruikend de ingebouwde [tovenaar](/help/using/create-an-application-project.md) worden geproduceerd hebben de correcte Maven die projectstructuur als deel van de projectverwezenlijking wordt gecreeerd. Dit is het aanbevolen pad voor nieuwe Managed Services-klanten.
 
-Bij plaatsing aan een **Instantie** van de dispatcher, zal de inhoud van deze folders de inhoud van deze folders op de instantie van Dispatcher beschrijven. Aangezien webserver- en Dispatcher-configuratiebestanden vaak specifieke informatie over de omgeving vereisen, moet u eerst samenwerken met uw Customer Success Engineers (CSE) om deze omgevingsvariabelen in te stellen in ***/etc/sysconfig/httpd***.
+Bij plaatsing aan een **Instantie** van de dispatcher, zal de inhoud van deze folders de inhoud van deze folders op de instantie van de Verzender beschrijven. Aangezien de de configuratiedossiers van de Webserver en van de Verzender regelmatig milieu-specifieke informatie vereisen, om dit vermogen te gebruiken correct, zult u eerst met uw Ingenieurs van het Succes van de Klant (CSE) moeten werken om deze omgevingsvariabelen in te stellen `/etc/sysconfig/httpd`.
 
-### Stappen voor het Vormen Dispatcher voor Bestaande Beheerde Klanten van de Diensten {#steps-for-configuring-dispatcher}
+### Stappen voor het configureren van Dispatcher voor bestaande Managed Services-klanten {#steps-for-configuring-dispatcher}
 
-Voer de onderstaande stappen uit om het initiële proces bij het configureren van Dispatcher te voltooien:
+Voer de onderstaande stappen uit om het eerste proces voor de configuratie van Dispatcher te voltooien:
 
 1. Haal huidige productieconfiguratiebestanden op van uw CSE.
 1. Verwijder hard-gecodeerde milieu-specifieke gegevens (bijvoorbeeld, publiceer renderer IP) en vervang met variabelen.
-1. Definieer vereiste variabelen in sleutelwaardeparen voor elk doel-Dispatcher en verzoek uw CSE om aan ***/etc/sysconfig/httpd*** op elke instantie toe te voegen.
+1. Definieer vereiste variabelen in sleutel-waardeparen voor elk doelDispatcher en verzoek uw CSE aan `/etc/sysconfig/httpd` op elke instantie toe te voegen.
 1. Test de bijgewerkte configuraties in uw werkgebiedomgeving en verzoek uw CSE om deze te implementeren in productie.
 1. Bestanden toewijzen aan **Git Repository**.
 
@@ -45,14 +45,14 @@ Voer de onderstaande stappen uit om het initiële proces bij het configureren va
 
 ### Voorbeeld {#example}
 
-De specifieke bestands- en mapstructuur kan variëren op basis van de specificaties van uw project, maar dit voorbeeld moet een concrete gids bevatten voor de structuur van uw project, zodat Apache en Dispatcher Configurations worden opgenomen.
+De specifieke bestands- en mapstructuur kan variëren op basis van de specificaties van uw project, maar dit voorbeeld moet een concrete gids bevatten voor de structuur van uw project, zodat Apache- en Dispatcher Configurations worden opgenomen.
 
 1. Maak een submap met de naam `dispatcher`.
 
    >[!NOTE]
    U kunt hier geen naam gebruiken, maar de mapnaam die in deze stap wordt gemaakt, moet gelijk zijn aan de naam die in Stap 6 wordt gebruikt.
 
-1. Deze subdirectory bevat een module Maven die het zip-bestand van Dispatcher maakt met de plug-in Maven Assembly. Om dit te beginnen, in de `dispatcher` folder, creeer een `pom.xml` dossier met deze inhoud, veranderend de ouderverwijzing, artfactId, en naam zonodig.
+1. Deze subdirectory zal een Geweven module bevatten die het ZIP dossier van de Verzender gebruikend de Geweven Insteekmodule van de Assemblage bouwt. Om dit te beginnen, in de `dispatcher` folder, creeer een `pom.xml` dossier met deze inhoud, veranderend de ouderverwijzing, artfactId, en naam zonodig.
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
