@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: introduction
 discoiquuid: b702dfc0-3534-4d90-af19-8559d8baf6a6
 translation-type: tm+mt
-source-git-commit: aa4ff4eb2f3292fe4cb0baf8087b4d0213443cf4
+source-git-commit: ace032fbb26235d87d61552a11996ec2bb42abce
+workflow-type: tm+mt
+source-wordcount: '345'
+ht-degree: 0%
 
 ---
 
@@ -18,7 +21,7 @@ source-git-commit: aa4ff4eb2f3292fe4cb0baf8087b4d0213443cf4
 
 Op deze pagina vindt u een overzicht van enkele basisterminologie die in Cloud Manager wordt gebruikt. We raden u ten zeerste aan deze pagina te lezen voordat u de rest van de documentatie van Cloud Manager controleert.
 
-**De toepassing** de reeks aanpassingen en configuraties die door een klant (of hun klant) worden gecreeerd om de onderliggende oplossing voor hun specifieke gebruiksgevallen en behoeften aan te passen. Een toepassing is een logische eenheid die kan bestaan uit meerdere artefacten.
+**De toepassing** de reeks aanpassingen en configuraties die door een klant worden gecreeerd om de onderliggende oplossing voor hun specifieke gebruiksgevallen en behoeften aan te passen. Een toepassing is een logische eenheid die kan bestaan uit meerdere artefacten.
 
 Bijvoorbeeld *We.Retail*.
 
@@ -26,17 +29,17 @@ Bijvoorbeeld *We.Retail*.
 
 **Artefactopslaglocatie** Een opslaglocatie waar klantspecifieke artefacten worden opgeslagen en beveiligd.
 
-**Omgeving** Een enkele cluster virtuele machines binnen een programma. Voor AEM, is dit samengesteld uit een auteursinstantie (naar keuze met een extra koude stand-by auteursinstantie), nul of meer publicatieinstanties, één of meerdere instanties van de verzender, en een taakverdelingsmechanisme.
+**Omgeving** Een enkele cluster virtuele machines binnen een programma. AEM bestaat deze uit een auteurinstantie (optioneel met een extra koude stand-by auteurinstantie), nul of meer publicatieinstanties, één of meerdere dispatcherinstanties, en een taakverdelingsmechanisme.
 
 **Git Repository** Een locatie waar klantspecifieke broncode wordt opgeslagen, toegankelijk via het Git-protocol.
 
-**Instantie** een specifieke virtuele server waarop de AEM-oplossing wordt uitgevoerd. De instanties vertegenwoordigen één enkele logische eenheid vanuit een plaatsingsperspectief.
+**Instantie** een specifieke virtuele server waarop de AEM oplossing wordt uitgevoerd. De instanties vertegenwoordigen één enkele logische eenheid vanuit een plaatsingsperspectief.
 
-**Organisatie** Adobe-construct die een Enterprise-klant vertegenwoordigt. Eén bedrijf kan meerdere organisaties hebben, afhankelijk van de manier waarop deze oorspronkelijk waren ingericht in het Identity Management System van Adobe.
+**Organisatie** -Adobe-construct die een Enterprise-klant vertegenwoordigt. Eén bedrijf kan meerdere organisaties hebben, afhankelijk van de manier waarop ze oorspronkelijk waren ingericht in Identity Management System.
 
 **De pijpleiding** een reeks plaatsingsstappen die in opeenvolging worden uitgevoerd.
 
-**Product** Een specifieke reeks functionaliteit binnen een oplossing die door een organisatie wordt toegelaten. Verschillende programma&#39;s binnen een organisatie kunnen recht hebben op verschillende productgroepen. Bijvoorbeeld Sites, Elementen van Forms.
+**Product** Een specifieke reeks functionaliteit binnen een oplossing die door een organisatie wordt toegelaten. Verschillende programma&#39;s binnen een organisatie kunnen recht hebben op verschillende productgroepen. Bijvoorbeeld Sites, Assets van Forms.
 
 **Programma** Een reeks milieu&#39;s die een logische groepering van klanteninitiatieven steunen, gewoonlijk die aan een gekochte Overeenkomsten van het Niveau van de Dienst (SLA) beantwoorden. Elk programma heeft precies één productieomgeving en kan vele niet-productieomgevingen hebben.
 
