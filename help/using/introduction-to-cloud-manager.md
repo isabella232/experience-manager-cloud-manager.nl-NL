@@ -2,23 +2,26 @@
 title: Inleiding tot Cloud Manager
 seo-title: Inleiding tot Cloud Manager
 description: 'Deze pagina fungeert als beginpunt voor meer informatie over Cloud Manager. '
-seo-description: 'Deze pagina fungeert als beginpunt voor meer informatie over Adobe AEM Cloud Manager en markeert de voordelen en belangrijkste functies. '
+seo-description: 'Deze pagina dient als uitgangspunt voor het leren over Adobe AEM Cloud Manager en benadrukt de voordelen en belangrijkste functies. '
 uuid: 62d68e79-c2ba-4d8b-ba7d-33709014d5b6
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: introduction
 discoiquuid: ebcc91a5-be9e-4684-8146-d88f4013d4d1
 translation-type: tm+mt
-source-git-commit: d7c9ab3795fb3df02ab7dffd1328760ccd914a18
+source-git-commit: ace032fbb26235d87d61552a11996ec2bb42abce
+workflow-type: tm+mt
+source-wordcount: '660'
+ht-degree: 4%
 
 ---
 
 
-# Inleiding tot [!UICONTROL Cloud Manager]{#introduction-to-cloud-manager}
+# Introduction to [!UICONTROL Cloud Manager]{#introduction-to-cloud-manager}
 
 ## Inleiding {#introduction}
 
-[!UICONTROL Cloud Manager], die deel uitmaakt van de Adobe Managed Cloud Services, stelt organisaties in staat zelf Experience Manager in de cloud te beheren. Het omvat een ononderbroken integratie en ononderbroken levering (CI/CD) kader dat de teams van IT en implementatiepartners de levering van aanpassingen of updates zonder prestaties of veiligheid te compromitteren laat versnellen.
+[!UICONTROL Cloud Manager], onderdeel van de Adobe Managed Services, stelt organisaties in staat zelf Experience Manager in de cloud te beheren. Cloud Manager biedt een kader voor doorlopende integratie en levering (CI/CD) waarmee IT-teams en implementatiepartners sneller hun updates en wijzigingen kunnen doorvoeren, zonder verlies in prestaties of veiligheid.
 
 Met behulp van het [!UICONTROL Cloud Manager] zelfbedieningsportaal voor klanten kunnen **organisaties** het volgende uitvoeren/benutten:
 
@@ -31,15 +34,15 @@ De volgende afbeelding illustreert de verwerkingsstroom CI/CD die wordt gebruikt
 
 ![](assets/screen_shot_2018-05-12at73843pm.png)
 
-## Belangrijke functies in [!UICONTROL Cloud Manager]{#key-features-in-cloud-manager}
+## Belangrijke functies in [!UICONTROL Cloud Manager] {#key-features-in-cloud-manager}
 
 Organisaties kunnen de volgende functies benutten, met [!UICONTROL Cloud Manager]:
 
 ### Self-Service Interface {#self-service-interface}
 
-De gebruikersinterface (UI) voor [!UICONTROL Cloud Manager] stelt klanten in staat om tot het wolkenmilieu en de pijpleiding CI/CD voor hun toepassingen van de Manager van de Ervaring gemakkelijk toegang te hebben en te beheren.
+De gebruikersinterface (UI) voor [!UICONTROL Cloud Manager] stelt klanten in staat om tot het wolkenmilieu en de pijpleiding CI/CD voor hun Experience Manager toepassingen gemakkelijk toegang te hebben en te beheren.
 
-Klanten definiëren toepassingsspecifieke KPI&#39;s (Key Performance Indicators) - piekpaginaweergaven per minuut en verwachte responstijd voor een paginabelasting, die uiteindelijk de basis vormen voor het meten van een geslaagde implementatie. Rollen en machtigingen voor verschillende teamleden kunnen eenvoudig worden gedefinieerd. Hoewel de nieuwe interface voor zelfbediening de controle weer in handen krijgt, biedt deze ook koppelingen naar aanbevolen procedures en toegang tot experts binnen Adobe die de nodige instructies kunnen geven.
+Klanten definiëren toepassingsspecifieke KPI&#39;s (Key Performance Indicators) - piekpaginaweergaven per minuut en verwachte responstijd voor een paginabelasting, die uiteindelijk de basis vormen voor het meten van een geslaagde implementatie. Rollen en machtigingen voor verschillende teamleden kunnen eenvoudig worden gedefinieerd. Terwijl de nieuwe zelf-dienst interface de controle in uw handen zet, biedt het ook verbindingen aan beste praktijken en toegang tot deskundigen binnen Adobe die de noodzakelijke begeleiding kunnen verstrekken zoals nodig.
 
 Om te onderzoeken en begonnen met UI van [!UICONTROL Cloud Manager]s, zie [Eerste Login](https://helpx.adobe.com/experience-manager/cloud-manager/using/first-time-login.html).
 
