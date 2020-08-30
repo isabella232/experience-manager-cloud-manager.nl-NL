@@ -9,7 +9,10 @@ topic-tags: release-notes
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 discoiquuid: b64bf9ab-27ed-4f33-adc8-d73d34094f1b
 translation-type: tm+mt
-source-git-commit: b78c29520414726ad2bbf86e5b7f8e65710c7f75
+source-git-commit: ace032fbb26235d87d61552a11996ec2bb42abce
+workflow-type: tm+mt
+source-wordcount: '350'
+ht-degree: 0%
 
 ---
 
@@ -24,7 +27,7 @@ In de volgende sectie wordt de release [!UICONTROL Cloud Manager] 2018.7.0 besch
 
 De releasedatum voor [!UICONTROL Cloud Manager] versie 2018.7.0 is 10 september 2018.
 
-## Nieuwe functies {#what-s-new}
+## What&#39;s New {#what-s-new}
 
 * **Levering** - [!UICONTROL Cloud Manager] zal nu de capaciteit hebben autoscale de productiemilieu op het klantenprogramma door horizontaal uit te schrapen met de segmenten van de Verzender/van de Publicatie. Nieuw in UI is de sectie van de Levering in de Opstelling van het Programma die zal tonen als autoscaling op het klantenprogramma wordt toegelaten. Gelieve te verwijzen naar [Opstelling uw Programma](setting-up-program.md) om meer te leren.
 
@@ -32,11 +35,11 @@ De releasedatum voor [!UICONTROL Cloud Manager] versie 2018.7.0 is 10 september 
 
 * **Codekwaliteitsanalyse** - Nieuwe regel om onjuist API-gebruik te identificeren. Raadpleeg de kwaliteitsregels voor [aangepaste code](custom-code-quality-rules.md) voor meer informatie.
 
-* **Prestaties testen** - Tijdens het bekijken van de resultaten van prestatietests zijn grafieken voor CPU-gebruik, schijf-I/O-wachttijd, Paginafout snelheid, schijfbandbreedtegebruik, Netwerkbandbreedtegebruik, Piek-pagina responstijd en responstijd van 95e percentiele pagina beschikbaar. Raadpleeg de sectie *Prestaties testen *op de pagina [Testresultaten](understand-your-test-results.md) begrijpen.
+* **Prestaties testen** - Tijdens het bekijken van de resultaten van prestatietests zijn grafieken voor CPU-gebruik, schijf-I/O-wachttijd, Paginafout snelheid, schijfbandbreedtegebruik, Netwerkbandbreedtegebruik, Piek-pagina responstijd en responstijd van 95e percentiele pagina beschikbaar. Raadpleeg de sectie *Prestaties testen* op de pagina [Testresultaten](understand-your-test-results.md) begrijpen.
 
-* **Prestatietesten** - Tijdens het bekijken van de testresultaten voor de prestaties kan de lijst met paginafouten en trage aanvragen worden gedownload. Raadpleeg de sectie *Prestaties testen *op de pagina [Testresultaten](understand-your-test-results.md) begrijpen.
+* **Prestatietesten** - Tijdens het bekijken van de testresultaten voor de prestaties kan de lijst met paginafouten en trage aanvragen worden gedownload. Raadpleeg de sectie *Prestaties testen* op de pagina [Testresultaten](understand-your-test-results.md) begrijpen.
 
-## Opgeloste problemen {#bug-fixes}
+## Bug Fixes {#bug-fixes}
 
 * In bepaalde omstandigheden is interne systeemsynchronisatie onjuist mislukt, wat leidt tot inconsistente weergaven van gegevens.
 * In sommige gevallen is de handmatige trigger voor de pijplijn niet automatisch geselecteerd, wat leidt tot validatieproblemen.
