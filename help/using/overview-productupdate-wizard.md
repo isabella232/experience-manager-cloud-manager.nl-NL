@@ -8,7 +8,7 @@ contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 discoiquuid: ebcc91a5-be9e-4684-8146-d88f4013d4d1
 translation-type: tm+mt
-source-git-commit: 3bb435aae932b9446867c30b7dd6b0a8e0839ee2
+source-git-commit: ace032fbb26235d87d61552a11996ec2bb42abce
 workflow-type: tm+mt
 source-wordcount: '202'
 ht-degree: 1%
@@ -20,7 +20,7 @@ ht-degree: 1%
 
 De wizard Productupdates is een begeleide, stapsgewijze ervaring voor klanten van Cloud Manager die een upgrade uitvoeren naar de nieuwste Adobe Experience Manager (AEM) 6.5. Het stroomlijnt het end-to-end proces, verzekert naleving van AEM beste praktijken gebruikend het kader van CI/CD van de Manager van de Wolk en ingebouwde geautomatiseerde tests.
 
-De wizard bevat vijf fasen die de gebruiker begeleiden tijdens een AEM-productupdate:
+De wizard bevat vijf fasen die de gebruiker tijdens een AEM productupdate begeleiden:
 
 * **Evaluatie**
 * **Herstel**
@@ -33,7 +33,7 @@ De wizard bevat vijf fasen die de gebruiker begeleiden tijdens een AEM-productup
 
 >[!NOTE]
 >
->Klanten die zijn aangemeld bij Cloud Manager en in aanmerking komen voor een upgrade naar AEM 6.5, kunnen de wizard Productupdates gebruiken. Neem voor meer informatie contact op met uw Customer Success Engineer (CSE).
+>Klanten die zijn aangemeld bij Cloud Manager en die in aanmerking komen voor een upgrade naar AEM 6.5, kunnen de wizard Productupdates gebruiken. Neem voor meer informatie contact op met uw Customer Success Engineer (CSE).
 
 1. U ontvangt een pulsmelding via Cloud Manager met de mededeling dat AEM 6.5 beschikbaar is voor uw programma.
 
