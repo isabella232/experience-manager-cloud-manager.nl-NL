@@ -4,7 +4,7 @@ seo-title: Opmerkingen bij de release AEM Cloud Manager voor 2020.9.0
 description: Volg deze pagina voor informatie over Cloud Manager Release 2020.9.0
 seo-description: Volg deze pagina om informatie op te halen voor AEM Cloud Manager Release 2020.9.0
 translation-type: tm+mt
-source-git-commit: c1d07c95088a279376ef495001a5165c7e459642
+source-git-commit: 988cebcb0503725946d33751d111e10f28f09ce7
 workflow-type: tm+mt
 source-wordcount: '99'
 ht-degree: 0%
@@ -17,7 +17,7 @@ In de volgende sectie worden de algemene opmerkingen bij de release voor [!UICON
 
 ## Releasedatum {#release-date}
 
-De releasedatum voor [!UICONTROL Cloud Manager] versie 2020.8.0 is 3 september 2020.
+De releasedatum voor [!UICONTROL Cloud Manager] versie 2020.9.0 is 3 september 2020.
 
 ## What&#39;s New {#whats-new}
 
