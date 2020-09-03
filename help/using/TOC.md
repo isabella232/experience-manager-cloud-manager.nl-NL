@@ -5,9 +5,9 @@ archetype: administrator
 user-guide-title: Help bij Experience Manager Cloud Manager
 user-guide-description: Learn to use Adobe Managed Services to self-manage Experience Manager in the cloud.
 translation-type: tm+mt
-source-git-commit: ace032fbb26235d87d61552a11996ec2bb42abce
+source-git-commit: c1d07c95088a279376ef495001a5165c7e459642
 workflow-type: tm+mt
-source-wordcount: '207'
+source-wordcount: '218'
 ht-degree: 16%
 
 ---
@@ -31,7 +31,9 @@ ht-degree: 16%
 + Aan de slag {#getting-started}
    + [Eerste aanmelding](first-time-login.md)
    + [Uw programma instellen](setting-up-program.md)
-   + [Een AEM-toepassingsproject maken](create-an-application-project.md)
+   + Create an AEM Application Project {#create-application-project}
+      + [Een AEM-toepassingsproject maken](create-an-application-project.md)
+      + [De wizard gebruiken](using-the-wizard.md)
    + [Configureer uw releasevertakkingen](configure-your-release-branches.md)
    + [Uw Dispatcher-configuraties beheren](dispatcher-configurations.md)
 + Het gebruik {#how-to-use}
@@ -52,7 +54,8 @@ ht-degree: 16%
    + [Overzicht](overview-productupdate-wizard.md)
    + [Evaluatie](evaluation.md)
 + Releaseopmerkingen {#release-notes}
-   + [Huidige opmerkingen bij de release (2020.8.0)](release-notes-current.md)
+   + [Huidige opmerkingen bij de release (2020.9.0)](release-notes-current.md)
+   + [Opmerkingen bij de release 2020.8.0](release-notes-2020-8-0.md)
    + [Opmerkingen bij de release 2020.7.0](release-notes-2020-7-0.md)
    + [Opmerkingen bij de release 2020.6.0](release-notes-2020-6-0.md)
    + [Opmerkingen bij de release 2020.5.0](release-notes-2020-5-0.md)
