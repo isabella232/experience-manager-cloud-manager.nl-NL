@@ -1,45 +1,28 @@
 ---
-title: Opmerkingen bij de release 2020.8.0
-seo-title: Opmerkingen bij de release AEM Cloud Manager voor 2020.8.0
-description: Volg deze pagina om informatie op te halen voor Cloud Manager Release 2020.8.0
-seo-description: Volg deze pagina om informatie op te halen voor AEM Cloud Manager Release 2020.8.0
+title: Opmerkingen bij de release 2020.9.0
+seo-title: Opmerkingen bij de release AEM Cloud Manager voor 2020.9.0
+description: Volg deze pagina voor informatie over Cloud Manager Release 2020.9.0
+seo-description: Volg deze pagina om informatie op te halen voor AEM Cloud Manager Release 2020.9.0
 translation-type: tm+mt
-source-git-commit: c2f5caf50f2e20c07807369aee7914c17fded4de
+source-git-commit: c1d07c95088a279376ef495001a5165c7e459642
 workflow-type: tm+mt
-source-wordcount: '192'
+source-wordcount: '99'
 ht-degree: 0%
 
 ---
 
-# Opmerkingen bij de release 2020.8.0 {#release-notes-for}
+# Opmerkingen bij de release 2020.9.0 {#release-notes-for}
 
-In de volgende sectie worden de algemene opmerkingen bij de release voor [!UICONTROL Cloud Manager] versie 2020.8.0 beschreven.
+In de volgende sectie worden de algemene opmerkingen bij de release voor [!UICONTROL Cloud Manager] versie 2020.9.0 beschreven.
 
 ## Releasedatum {#release-date}
 
-De releasedatum voor [!UICONTROL Cloud Manager] versie 2020.8.0 is 6 augustus 2020.
+De releasedatum voor [!UICONTROL Cloud Manager] versie 2020.8.0 is 3 september 2020.
 
 ## What&#39;s New {#whats-new}
 
-Verificatie-gebonden Private Maven Repositories worden nu ondersteund.
+* Het bouwstijlproces is gescheiden in drie afzonderlijke Maven bevelen.
+* Als de gegevensopslagruimte niet kan worden gekloond, wordt deze wel drie keer opnieuw gemaakt.
+* Er is nu een indicator op de pagina van de details van de pijpleidingsuitvoering wanneer de authentificatie tijdens prestaties het testen wordt gebruikt
 
-## Bug Fixes {#bug-fixes}
-
-* Enkele onnodige en ongewenste SonarQube-plug-ins werden uitgevoerd als onderdeel van het scannen van codekwaliteit.
-
-* Op de pagina van de pijpleiding uitvoerde, was de taknaam onjuist geformatteerd.
-
-* Wanneer het opstellen aan topologieën met één enkele publiceren, één enkele verzender en een koude stand-by auteur, werd de verzender fout verwijderd uit het ladingsverdelingsmechanisme.
-
-* In sommige gevallen werden voltooide executies van pijpleidingen niet met succes geregistreerd als voltooid, waardoor nieuwe executies van de pijpleiding werden voorkomen.
-
-* De executies van pijpleidingen zouden af en toe *vastzitten* als gevolg van interne communicatieproblemen.
-
-* De knopinfo op de programmakaarten was niet consistent correct.
-
-* Er is een kleurfout opgetreden op de pagina **Overzicht** .
-
-* Het Testen van de Prestaties van Plaatsen steunt nu het facultatieve gebruik van authentificatie.
-
-* De caches van de verzender voor auteurinstanties worden automatisch leeggemaakt wanneer de berichtconfiguraties door de Manager van de Wolk worden opgesteld.
 
