@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: 832a4647-9b83-4a9d-b373-30fe16092b15
 translation-type: tm+mt
-source-git-commit: ace032fbb26235d87d61552a11996ec2bb42abce
+source-git-commit: c35398110e9d8311bf58f217efdd082cf0cfd90a
 workflow-type: tm+mt
-source-wordcount: '953'
+source-wordcount: '952'
 ht-degree: 0%
 
 ---
@@ -48,7 +48,7 @@ Nadat u de productiepijpleiding hebt geconfigureerd (opslagruimte, omgeving en t
    De **Fase-implementatie** omvat de volgende stappen:
 
    * Validatie: Deze stap zorgt ervoor dat de pijpleiding wordt gevormd om de momenteel beschikbare middelen te gebruiken, bijvoorbeeld, dat de gevormde tak bestaat, zijn de milieu&#39;s beschikbaar.
-   * Testen van build en eenheid: Deze stap stelt een containerized bouwstijlproces in werking. Zie [Creeer een Project](create-an-application-project.md) van de Toepassing van de AEM voor details op het bouwstijlmilieu.
+   * Testen van build en eenheid: Deze stap stelt een containerized bouwstijlproces in werking. Zie het [Begrip van het Milieu](/help/using/build-environment-details.md) van de Bouwstijl voor details op het bouwstijlmilieu.
    * Codescannen: Deze stap evalueert de kwaliteit van uw toepassingscode. Zie [De testresultaten](understand-your-test-results.md) begrijpen voor meer informatie over het testproces.
    * Distribueren naar werkgebied
 
