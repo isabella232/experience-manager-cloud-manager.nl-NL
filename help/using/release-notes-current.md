@@ -4,7 +4,7 @@ seo-title: Opmerkingen bij de release AEM Cloud Manager voor 2020.9.0
 description: Volg deze pagina voor informatie over Cloud Manager Release 2020.9.0
 seo-description: Volg deze pagina om informatie op te halen voor AEM Cloud Manager Release 2020.9.0
 translation-type: tm+mt
-source-git-commit: 988cebcb0503725946d33751d111e10f28f09ce7
+source-git-commit: 92249cbb7134082fcc66455c90dda8bdcb9dbf1d
 workflow-type: tm+mt
 source-wordcount: '99'
 ht-degree: 0%
@@ -23,6 +23,6 @@ De releasedatum voor [!UICONTROL Cloud Manager] versie 2020.9.0 is 3 september 2
 
 * Het bouwstijlproces is gescheiden in drie afzonderlijke Maven bevelen.
 * Als de gegevensopslagruimte niet kan worden gekloond, wordt deze wel drie keer opnieuw gemaakt.
-* Er is nu een indicator op de pagina van de details van de pijpleidingsuitvoering wanneer de authentificatie tijdens prestaties het testen wordt gebruikt
+* Er is nu een indicator op de pagina van de details van de pijpleidingsuitvoering wanneer de authentificatie tijdens prestaties het testen wordt gebruikt.
 
 
