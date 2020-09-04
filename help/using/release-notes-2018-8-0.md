@@ -1,17 +1,17 @@
 ---
 title: Opmerkingen bij de release 2018.8.0
-seo-title: Opmerkingen bij de release van AEM Cloud Manager voor 2018.8.0
+seo-title: Opmerkingen bij de release AEM Cloud Manager voor 2018.8.0
 description: Volg deze pagina voor informatie over Cloud Manager Release 2018.8.0.
-seo-description: Volg deze pagina om informatie op te halen voor AEM Cloud Manager Release 2018.8.0.
+seo-description: Volg deze pagina voor informatie over AEM Cloud Manager Release 2018.8.0.
 uuid: e8aaba32-89b4-4bc5-b295-09b753252612
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: release-notes
 discoiquuid: 9222ac3b-525e-47c1-b481-ac9d22e3d559
 translation-type: tm+mt
-source-git-commit: cdf2c82192c2e9c375316ae6e28646594ba2a462
+source-git-commit: c35398110e9d8311bf58f217efdd082cf0cfd90a
 workflow-type: tm+mt
-source-wordcount: '340'
+source-wordcount: '329'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # Opmerkingen bij de release 2018.8.0 {#release-notes-for}
 
-De [!UICONTROL Cloud Manager] Versie van 2018.8.0 voegt steun voor het teweegbrengen van de pijpleiding toe CI/CD automatisch op git begaat en een nieuwe tovenaar voor het creëren van toepassingsprojecten in git die op het Archieftype van het Project AEM wordt gebaseerd.
+De [!UICONTROL Cloud Manager] Versie van 2018.8.0 voegt steun voor het teweegbrengen van de pijpleiding toe CI/CD automatisch op git begaat en een nieuwe tovenaar voor het creëren van toepassingsprojecten in git die op het Archetype van het AEM Project wordt gebaseerd.
 
 ## Releasedatum {#release-date}
 
@@ -27,7 +27,7 @@ De releasedatum voor [!UICONTROL Cloud Manager] versie 2018.8.0 is 4 oktober 201
 
 ## What&#39;s New {#what-s-new}
 
-* **De Opstelling** van het programma - Nieuwe tovenaar om een toepassingsproject in git tot stand te brengen gebruikend het Archieftype van het Project AEM gelieve te verwijzen naar [Create een Project](/help/using/create-an-application-project.md) van de Toepassing AEM om meer te leren.
+* **De Opstelling** van het programma - Nieuwe tovenaar om een toepassingsproject in git tot stand te brengen gebruikend het Archetype van het Project van de AEM
 
 * **CI/CD Pipeline** - De volgende veranderingen worden toegevoegd aan CI/CD Pijpleiding. Gelieve te verwijzen naar [vorm uw CI/CD Pijpleiding](configuring-pipeline.md) om meer te leren.
 
