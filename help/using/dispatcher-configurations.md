@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: getting-started
 discoiquuid: 8888dd80-d908-464e-927d-779db1a832a4
 translation-type: tm+mt
-source-git-commit: ace032fbb26235d87d61552a11996ec2bb42abce
+source-git-commit: 2ada697ca21acd0c73dbce2bce3e9481ac50272c
 workflow-type: tm+mt
 source-wordcount: '597'
 ht-degree: 0%
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 Cloud Manager kan webserver- en Dispatcher-configuratiebestanden implementeren als deze zijn opgeslagen in de **Git Repository**, naast de normale AEM-inhoudspakketten.
 
-Als u van deze mogelijkheid gebruik wilt maken, moet de Maven-build een ZIP-bestand maken dat ten minste twee mappen bevat: ***conf*** en ***conf.d***. Dit ZIP-bestand kan worden gemaakt met de gefabriceerde insteekmodule. De projecten die door de Manager van de Wolk gebruikend de ingebouwde [tovenaar](/help/using/create-an-application-project.md) worden geproduceerd hebben de correcte Maven die projectstructuur als deel van de projectverwezenlijking wordt gecreeerd. Dit is het aanbevolen pad voor nieuwe Managed Services-klanten.
+Als u van deze mogelijkheid gebruik wilt maken, moet de Maven-build een ZIP-bestand maken dat ten minste twee mappen bevat: ***conf*** en ***conf.d***. Dit ZIP-bestand kan worden gemaakt met de gefabriceerde insteekmodule. De projecten die door de Manager van de Wolk gebruikend de ingebouwde [tovenaar](/help/using/using-the-wizard.md) worden geproduceerd hebben de correcte Maven die projectstructuur als deel van de projectverwezenlijking wordt gecreeerd. Dit is het aanbevolen pad voor nieuwe Managed Services-klanten.
 
 Bij plaatsing aan een **Instantie** van de dispatcher, zal de inhoud van deze folders de inhoud van deze folders op de instantie van de Verzender beschrijven. Aangezien de de configuratiedossiers van de Webserver en van de Verzender regelmatig milieu-specifieke informatie vereisen, om dit vermogen te gebruiken correct, zult u eerst met uw Ingenieurs van het Succes van de Klant (CSE) moeten werken om deze omgevingsvariabelen in te stellen `/etc/sysconfig/httpd`.
 
