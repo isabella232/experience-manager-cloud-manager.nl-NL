@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: 83299ed8-4b7a-4b1c-bd56-1bfc7e7318d4
 translation-type: tm+mt
-source-git-commit: d38b6da61c552a3e9ad03dac49a64553f0cb00b4
+source-git-commit: 39e6af753cdd43da96746c7609a8f502b3ac9e77
 workflow-type: tm+mt
 source-wordcount: '1544'
 ht-degree: 2%
@@ -129,7 +129,7 @@ In de volgende tabel worden de huidige controles weergegeven:
 | SSL is correct geconfigureerd | SSL-configuratie | Kritiek |
 | Geen duidelijk onveilig beleid voor gebruikersprofielen gevonden | Standaardtoegang gebruikersprofiel | Kritiek |
 | Het filter van de Verschuiver wordt gevormd om aanvallen te verhinderen CSRF | Filter Verschuivingsverwijzing | Belangrijk |
-| De Adobe Granite HTML Library Manager is op de juiste wijze geconfigureerd | Config. HTML-bibliotheekbeheer CQ | Belangrijk |
+| De Adobe Granite HTML Library Manager is op de juiste wijze geconfigureerd | Config. HTML Library Manager | Belangrijk |
 | CRXDE-ondersteuningsbundel is uitgeschakeld | CRXDE-ondersteuning | Belangrijk |
 | Sling DavEx-bundel en -servlet zijn uitgeschakeld | DavEx Health Check | Belangrijk |
 | Voorbeeldinhoud is niet geïnstalleerd | Voorbeelden van inhoudspakketten | Belangrijk |
@@ -162,7 +162,7 @@ In de volgende tabel wordt een overzicht gegeven van de prestatietestmatrix met 
 | Paginaweergaven per minuut | Belangrijk | &lt; KPI op programmaniveau |
 | Gebruik van schijfbandbreedte | Belangrijk | >= 90% |
 | Netwerkbandbreedtegebruik | Belangrijk | >= 90% |
-| Aanvragen per minuut | Info | &lt; 6000 |
+| Aanvragen per minuut | Info | >= 6000 |
 
 ### Resultaten van het testen van prestaties Grafieken {#performance-testing-results-graphs}
 
