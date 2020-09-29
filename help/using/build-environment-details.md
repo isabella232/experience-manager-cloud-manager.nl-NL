@@ -2,9 +2,9 @@
 title: Inzicht in de omgeving van de build
 description: Volg deze pagina voor meer informatie over omgevingen
 translation-type: tm+mt
-source-git-commit: f73ea3db4bc50891518bebbe5da2d69dd2890a81
+source-git-commit: 57a99792e151bd5fe69c8372b6a9d3b100036a51
 workflow-type: tm+mt
-source-wordcount: '663'
+source-wordcount: '709'
 ht-degree: 0%
 
 ---
@@ -69,6 +69,9 @@ Hiervoor voegt u in het bestand pom.xml een `<plugin>` item toe dat er als volgt
 
 >[!NOTE]
 >De ondersteunde `vendor` waarden zijn `oracle` en `sun` en de ondersteunde `version` waarden zijn `1.8`, `1.11`en `11`.
+
+>[!NOTE]
+>De bouwstijl van het project van de Manager van de Wolk gebruikt nog Java 8 om Geweven aan te halen, daarom het controleren van of het handhaven van de versie van Java die in de toolchain stop in [wordt gevormd door stop-ins zoals de Plug](https://maven.apache.org/enforcer/maven-enforcer-plugin/) van Apache Maven Enforcer werkt niet en dergelijke stop-ins moeten niet worden gebruikt.
 
 ## Omgevingsvariabelen {#environment-variables}
 
