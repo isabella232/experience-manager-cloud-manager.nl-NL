@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: introduction
 discoiquuid: ebcc91a5-be9e-4684-8146-d88f4013d4d1
 translation-type: tm+mt
-source-git-commit: ace032fbb26235d87d61552a11996ec2bb42abce
+source-git-commit: 4838de3d6c78884333d8088eb38f388fbcd0e707
 workflow-type: tm+mt
-source-wordcount: '660'
+source-wordcount: '680'
 ht-degree: 4%
 
 ---
@@ -70,4 +70,4 @@ Meer over het opstellen van code en kwaliteitscontroles leren, zie [opstellen uw
 
 Tijdens een autoscaling-gebeurtenis wordt het inrichtingsproces voor automatisch schalen [!UICONTROL Cloud Manager] automatisch geactiveerd, wordt een melding van de gebeurtenis voor automatisch schalen verzonden en wordt de extra capaciteit binnen minuten online geplaatst. De extra capaciteit wordt geleverd in de productieomgeving, in dezelfde regio of regio&#39;s en overeenkomstig dezelfde systeemspecificaties als de actieve Dispatcher/Publish-knooppunten.
 
-De functie voor automatisch schalen is alleen van toepassing op de laag Dispatcher/Publiceren en wordt altijd uitgevoerd met een horizontale schaalmethode, met minimaal één extra segment van een paar Dispatcher/Publish en maximaal tien segmenten. Eventuele extra capaciteit die wordt geleverd, wordt handmatig geschaald binnen een periode van tien werkdagen, zoals bepaald door de CSE (Customer Success Engineer).
+De functie voor automatisch schalen is alleen van toepassing op de laag Dispatcher/Publiceren en wordt altijd uitgevoerd met een horizontale schaalmethode, met minimaal één extra segment van een paar Dispatcher/Publish en maximaal tien segmenten. Eventuele extra capaciteit die wordt geleverd, wordt handmatig geschaald binnen een periode van tien werkdagen, zoals bepaald door de CSE (Customer Success Engineer). Klanten die willen nagaan of Autoscaling geschikt is voor hun toepassing, moeten contact opnemen met hun CSE of Adobe-vertegenwoordiger.
