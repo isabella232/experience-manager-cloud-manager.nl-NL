@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: introduction
 discoiquuid: ebcc91a5-be9e-4684-8146-d88f4013d4d1
 translation-type: tm+mt
-source-git-commit: 2005b7e7689d3bc0656f92ecdbe368519f0d52a9
+source-git-commit: d3f17b1fd4fcc1c75836c9dd67d54e22422db120
 workflow-type: tm+mt
 source-wordcount: '680'
 ht-degree: 4%
@@ -73,4 +73,4 @@ Tijdens een autoscaling-gebeurtenis wordt het inrichtingsproces voor automatisch
 De functie voor automatisch schalen is alleen van toepassing op de laag Dispatcher/Publiceren en wordt altijd uitgevoerd met een horizontale schaalmethode, met minimaal één extra segment van een paar Dispatcher/Publish en maximaal tien segmenten. Eventuele extra capaciteit die wordt geleverd, wordt handmatig geschaald binnen een periode van tien werkdagen, zoals bepaald door de CSE (Customer Success Engineer).
 
 >[!NOTE]
->Klanten die willen nagaan of Autoscaling geschikt is voor hun toepassing, moeten contact opnemen met hun CSE of Adobe-vertegenwoordiger.
+>Klanten die willen nagaan of autoscaling geschikt is voor hun toepassing, moeten contact opnemen met hun CSE of Adobe-vertegenwoordiger.
