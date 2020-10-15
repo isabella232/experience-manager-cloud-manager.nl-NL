@@ -2,9 +2,9 @@
 title: Inzicht in de omgeving van de build
 description: Volg deze pagina voor meer informatie over omgevingen
 translation-type: tm+mt
-source-git-commit: 57a99792e151bd5fe69c8372b6a9d3b100036a51
+source-git-commit: 000843f902a180181981de2b1307fd2777d32994
 workflow-type: tm+mt
-source-wordcount: '709'
+source-wordcount: '723'
 ht-degree: 0%
 
 ---
@@ -107,7 +107,7 @@ Huidige variabelen kunnen worden weergegeven:
 
 `$ aio cloudmanager:list-pipeline-variables PIPELINEID`
 
-Namen van variabelen mogen alleen alfanumerieke tekens en onderstrepingstekens (_) bevatten. Volgens de conventie moeten de namen allemaal hoofdletters zijn. Er geldt een limiet van 200 variabelen per pijpleiding. Elke naam moet uit minder dan 100 tekens bestaan en elke waarde moet uit minder dan 2048 tekens bestaan.
+Namen van variabelen mogen alleen alfanumerieke tekens en onderstrepingstekens (_) bevatten. Volgens de conventie moeten de namen allemaal hoofdletters zijn. Er is een grens van 200 variabelen per pijpleiding, moet elke naam minder dan 100 karakters zijn en elke waarde moet minder dan 2048 karakters in het geval van koordtypevariabelen en 500 karakters in het geval van geheimString typevariabelen zijn.
 
 Wanneer deze variabelen in een `Maven pom.xml` bestand worden gebruikt, is het doorgaans handig om deze variabelen aan de hand van een vergelijkbare syntaxis toe te wijzen aan de eigenschappen Maven:
 
@@ -183,5 +183,4 @@ Voor sommige builds moeten extra systeempakketten worden geïnstalleerd om volle
 Dezelfde techniek kan worden gebruikt om taalspecifieke pakketten te installeren, d.w.z. `gem` voor RubyGems of `pip` voor Python Packages.
 
 >[!NOTE]
->
->Als u een systeempakket op deze manier installeert, wordt dit **niet** geïnstalleerd in de runtimeomgeving die voor het uitvoeren van Adobe Experience Manager wordt gebruikt. Als u een systeempakket nodig hebt dat op de AEM-omgeving is geïnstalleerd, neemt u contact op met uw Customer Success Engineers (CSE).
+>Als u een systeempakket op deze manier installeert, wordt dit **niet** geïnstalleerd in de runtimeomgeving die voor het uitvoeren van Adobe Experience Manager wordt gebruikt. Als u een systeempakket nodig hebt dat op de AEM-omgeving is geïnstalleerd, neemt u contact op met uw Adobe-vertegenwoordiger.
