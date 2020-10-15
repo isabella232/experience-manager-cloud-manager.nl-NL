@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: getting-started
 discoiquuid: 2221d1d5-dbc2-4175-8371-60344f932a82
 translation-type: tm+mt
-source-git-commit: 16893b8bcd2b2d681a14bb6be3786e358e1952fb
+source-git-commit: 2005b7e7689d3bc0656f92ecdbe368519f0d52a9
+workflow-type: tm+mt
+source-wordcount: '247'
+ht-degree: 6%
 
 ---
 
@@ -19,20 +22,19 @@ source-git-commit: 16893b8bcd2b2d681a14bb6be3786e358e1952fb
 Zodra u opstelling de algemene configuraties voor hebt, bent u bereid om het Gebruikersinterface (UI) voor te gebruiken [!UICONTROL Cloud Manager][!UICONTROL Cloud Manager].
 
 >[!NOTE]
->
 >Afhankelijk van de rollen die binnen worden toegewezen [!UICONTROL Cloud Manager] en de staat van de toepassing, zult u verschillende schermen zien terwijl het gebruiken van [!UICONTROL Cloud Manager] UI.
 
 ## Videozelfstudie {#video-tutorial-one}
 
 ### Cloud Manager-programma&#39;s {#programs-video}
 
-De volgende video biedt een overzicht van programma&#39;s van de Manager van de Wolk die reeksen milieu&#39;s vertegenwoordigen van AEM die logische reeksen bedrijfsinitiatieven steunen, typisch die aan een gekochte Overeenkomst van het Niveau van de Dienst (SLA) beantwoorden.
+De volgende video biedt een overzicht van programma&#39;s van de Manager van de Wolk die reeksen AEM milieu&#39;s vertegenwoordigen die logische reeksen bedrijfsinitiatieven steunen, typisch die aan een gekochte Overeenkomst van het Niveau van de Dienst (SLA) beantwoorden.
 
 >[!VIDEO](https://video.tv.adobe.com/v/26313/)
 
 ## Aanmelden voor de eerste keer {#logging-in-for-the-first-time}
 
-1. Meld u aan bij **Adobe[!UICONTROL Experience Cloud]**en de lijst met** programma&#39;s **wordt weergegeven.
+1. Meld u aan bij de **Adobe[!UICONTROL Experience Cloud]** en u ziet de lijst met **programma&#39;s**.
 
    ![](assets/screen_shot_2018-06-04at120643pm.png)
 
