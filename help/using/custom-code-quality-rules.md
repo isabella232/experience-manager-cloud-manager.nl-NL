@@ -2,17 +2,17 @@
 title: Aangepaste regels voor codekwaliteit
 seo-title: Aangepaste regels voor codekwaliteit
 description: Volg deze pagina voor meer informatie over de regels voor de kwaliteit van aangepaste code die worden uitgevoerd door Cloud Manager.
-seo-description: Volg deze pagina om meer te weten te komen over de regels voor de kwaliteit van aangepaste code die worden uitgevoerd door Adobe Experience Manager Cloud Manager.
+seo-description: Volg deze pagina voor meer informatie over de regels voor de aangepaste codekwaliteit die worden uitgevoerd door Adobe Experience Manager Cloud Manager.
 uuid: a7feb465-1982-46be-9e57-e67b59849579
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: d2338c74-3278-49e6-a186-6ef62362509f
 translation-type: tm+mt
-source-git-commit: 3bb435aae932b9446867c30b7dd6b0a8e0839ee2
+source-git-commit: a8cd1ac2448b9f875c1d925c62e7fe42c8ceec2a
 workflow-type: tm+mt
-source-wordcount: '2282'
-ht-degree: 5%
+source-wordcount: '2296'
+ht-degree: 6%
 
 ---
 
@@ -22,8 +22,7 @@ ht-degree: 5%
 Op deze pagina worden de kwaliteitsregels voor aangepaste code beschreven die worden uitgevoerd door Cloud Manager en die zijn gemaakt op basis van de beste werkwijzen van AEM Engineering.
 
 >[!NOTE]
->
->De hier opgegeven codevoorbeelden dienen slechts ter illustratie.
+>De hier opgegeven codevoorbeelden dienen slechts ter illustratie. Zie [Concepten](https://docs.sonarqube.org/7.4/user-guide/concepts/) om over concepten SonarQube en kwaliteitsregels te leren.
 
 ## SonarQube-regels {#sonarqube-rules}
 
@@ -120,7 +119,7 @@ protected void doPost(SlingHttpServletRequest request, SlingHttpServletResponse 
 
 **Sinds**: Versie 2018.6.0
 
-Wanneer het uitvoeren van HTTP- verzoeken van binnen een toepassing AEM, is het kritiek om ervoor te zorgen dat juiste onderbrekingen worden gevormd om onnodige draadconsumptie te vermijden. Jammer genoeg, is het standaardgedrag van zowel de standaardHTTP Cliënt van Java (java.net.HttpUrlConnection) als de algemeen gebruikte cliënt van de Componenten van Apache HTTP aan nooit onderbreking, zodat moeten de onderbrekingen uitdrukkelijk worden geplaatst. Bovendien zouden deze onderbrekingen, als beste praktijken, niet meer dan 60 seconden moeten zijn.
+Wanneer het uitvoeren van HTTP- verzoeken van binnen een AEM toepassing, is het kritiek om ervoor te zorgen dat juiste onderbrekingen worden gevormd om onnodige draadconsumptie te vermijden. Jammer genoeg, is het standaardgedrag van zowel de standaardHTTP Cliënt van Java (java.net.HttpUrlConnection) als de algemeen gebruikte cliënt van de Componenten van Apache HTTP aan nooit onderbreking, zodat moeten de onderbrekingen uitdrukkelijk worden geplaatst. Bovendien zouden deze onderbrekingen, als beste praktijken, niet meer dan 60 seconden moeten zijn.
 
 #### Niet-compatibele code {#non-compliant-code-2}
 
@@ -202,7 +201,7 @@ De AEM-API bevat Java-interfaces en -klassen die alleen door aangepaste code mog
 
 Wanneer nieuwe methoden aan deze interfaces worden toegevoegd, beïnvloeden deze aanvullende methoden geen bestaande code die deze interfaces gebruikt en daardoor wordt de toevoeging van nieuwe methoden aan deze interfaces beschouwd als compatibel met eerdere versies. Als echter door aangepaste code één van deze interfaces ***wordt geïmplementeerd***, heeft deze aangepaste code een risico voor compatibiliteit met eerdere versies voor de klant geïntroduceerd.
 
-Interfaces (en klassen) die alleen bedoeld zijn om door AEM te worden geïmplementeerd, zijn voorzien van een annotatie met *org.osgi.annotation.versioning.ProviderType* (of, in sommige gevallen, een vergelijkbare oudere annotatie *Qute.bnd.annotation.ProviderType*). Deze regel identificeert de gevallen waarin een dergelijke interface wordt uitgevoerd (of een klasse wordt uitgebreid) door douanecode.
+Interfaces (en klassen) die alleen bedoeld zijn om door AEM te worden geïmplementeerd, zijn voorzien van een annotatie met *org.osgi.annotation.versioning.ProviderType* (of, in sommige gevallen, een vergelijkbare oudere annotatie *aQute.bnd.annotation.ProviderType*). Deze regel identificeert de gevallen waarin een dergelijke interface wordt uitgevoerd (of een klasse wordt uitgebreid) door douanecode.
 
 #### Niet-compatibele code {#non-compliant-code-3}
 
@@ -356,7 +355,7 @@ public void doThis() throws Exception {
 }
 ```
 
-### Meld u niet aan bij INFO bij het verwerken van GET- of HEAD-verzoeken {#avoid-logging-at-info-when-handling-get-or-head-requests}
+### Meld u niet aan bij INFO wanneer u GET- of HEAD-verzoeken afhandelt {#avoid-logging-at-info-when-handling-get-or-head-requests}
 
 **Sleutel**: CQRules:CQBP-44—LogInfoInGetOrHeadRequests
 
@@ -364,7 +363,7 @@ public void doThis() throws Exception {
 
 **Ernst**: Klein
 
-In het algemeen, zou het INFO logboekniveau moeten worden gebruikt om belangrijke acties te afbakenen en, door gebrek, wordt AEM gevormd om bij het INFO niveau of boven te registreren. GET en HEAD mogen nooit alleen-lezen-operaties zijn en vormen dus geen belangrijke acties. Het registreren op het niveau INFO in antwoord op GET of HEAD verzoeken zal waarschijnlijk tot significante logboeklawaai leiden daardoor het moeilijker maken om nuttige informatie in logboekdossiers te identificeren. Het registreren wanneer het behandelen van KRIJGT of HEAD verzoeken zou of op de WARN of FOUTniveaus moeten zijn wanneer iets verkeerd is gegaan of op de DEBUG of niveaus van het SPOOR als de diepere het oplossen van problemeninformatie nuttig zou zijn.
+In het algemeen, zou het INFO logboekniveau moeten worden gebruikt om belangrijke acties te afbakenen en, door gebrek, AEM wordt gevormd om bij het INFO niveau of boven te registreren. GET- en HEAD-methoden mogen nooit alleen-lezen zijn en vormen dus geen belangrijke acties. Het registreren op het niveau INFO in antwoord op GET of HEAD verzoeken zal waarschijnlijk tot significante logboeklawaai leiden daardoor het moeilijker maken om nuttige informatie in logboekdossiers te identificeren. Het registreren wanneer de behandeling van GET of HEAD- verzoeken of op de niveaus van de WAARSCHUWING of van de FOUT zou moeten zijn wanneer iets verkeerd is gegaan of op de niveaus DEBUG of van de TRACE als de diepere het oplossen van problemeninformatie nuttig zou zijn.
 
 >[!CAUTION]
 >
@@ -468,7 +467,7 @@ public void doThis() {
 
 **Sinds**: Versie 2018.4.0
 
-Zoals vermeld, is de context kritiek wanneer het begrip van logboekberichten. Wanneer u Exception.printStackTrace() gebruikt, wordt **alleen** de stacktracering uitgevoerd naar de standaardfoutenstream, waardoor alle context verloren gaat. Bovendien kunnen in een toepassing met meerdere threads, zoals AEM, als meerdere uitzonderingen parallel met deze methode worden afgedrukt, de stacksporen elkaar overlappen, wat tot aanzienlijke verwarring leidt. De uitzonderingen zouden door het registrerenkader slechts moeten worden geregistreerd.
+Zoals vermeld, is de context kritiek wanneer het begrip van logboekberichten. Wanneer u Exception.printStackTrace() gebruikt, wordt **alleen** de stacktracering uitgevoerd naar de standaardfoutenstream, waardoor alle context verloren gaat. Bovendien kunnen in een multithread-toepassing, zoals AEM, meerdere uitzonderingen parallel met deze methode worden afgedrukt, de stacksporen ervan overlappen, wat tot grote verwarring leidt. De uitzonderingen zouden door het registrerenkader slechts moeten worden geregistreerd.
 
 #### Niet-compatibele code {#non-compliant-code-11}
 
@@ -572,7 +571,7 @@ De Planner van de Verkoop moet niet voor taken worden gebruikt die een gewaarbor
 
 Raadpleeg [Apache Sling Event en Job Handling](https://sling.apache.org/documentation/bundles/apache-sling-eventing-and-job-handling.html) voor meer informatie over de manier waarop saldertaken worden verwerkt in een geclusterde omgeving.
 
-### Vervangen API&#39;s van AEM mogen niet worden gebruikt {#sonarqube-aem-deprecated}
+### Verouderde API&#39;s AEM niet mogen worden gebruikt {#sonarqube-aem-deprecated}
 
 **Sleutel**: AMSCORE-553
 
@@ -594,7 +593,7 @@ U vindt hieronder de OakPAL-controles die zijn uitgevoerd door Cloud Manager.
 
 >[!NOTE]
 >
->OakPAL is een framework dat is ontwikkeld door een AEM-partner (en winnaar van 2019 AEM Rockstar North America) en dat inhoudspakketten valideert met behulp van een zelfstandige Oak-opslagplaats.
+>OakPAL is een kader dat door een AEM Partner (en winnaar van 2019 AEM Rockstar North America) wordt ontwikkeld die inhoudspakketten valideert met behulp van een standalone Oak-opslagplaats.
 
 ### Klantpakketten mogen geen knooppunten onder /libs maken of wijzigen {#oakpal-customer-package}
 
@@ -606,7 +605,7 @@ U vindt hieronder de OakPAL-controles die zijn uitgevoerd door Cloud Manager.
 
 **Sinds**: Versie 2019.6.0
 
-Het is al lang een goede praktijk dat de /libs inhoudsboom in de AEM inhoudsbewaarplaats als read-only door klanten zou moeten worden beschouwd. Als knooppunten en eigenschappen onder */libs* worden gewijzigd, ontstaat een aanzienlijk risico voor belangrijke en kleine updates. Wijzigingen in */bibliotheken* mogen alleen via officiële kanalen door Adobe worden aangebracht.
+Het is een al lang bestaande beste praktijk geweest dat de /libs inhoudsboom in de AEM inhoudsbewaarplaats als read-only door klanten zou moeten worden beschouwd. Als knooppunten en eigenschappen onder */libs* worden gewijzigd, ontstaat een aanzienlijk risico voor belangrijke en kleine updates. Wijzigingen in */libs* mogen alleen via officiële kanalen door Adobe worden aangebracht.
 
 ### Pakketten mogen geen dubbele OSGi-configuraties bevatten {#oakpal-package-osgi}
 
@@ -708,13 +707,13 @@ De configuratie OSGi `com.day.cq.wcm.core.impl.AuthoringUIModeServiceImpl` bepaa
 
 **Sinds**: Versie 2020.5.0
 
-AEM Componenten die een Klassieke dialoog UI hebben zouden altijd een overeenkomstige dialoog van de Aanraking UI moeten hebben zowel om een optimale auteurservaring te verstrekken als met het de plaatsingsmodel van de Cloud Service compatibel te zijn, waar Klassieke UI niet wordt gesteund. Deze regel verifieert de volgende scenario&#39;s:
+AEM Componenten die een Klassieke UI dialoog hebben zouden altijd een overeenkomstige dialoog van de Aanraking UI moeten hebben zowel om een optimale auteurservaring te verstrekken als met het de plaatsingsmodel van de Cloud Service compatibel te zijn, waar Klassieke UI niet wordt gesteund. Deze regel verifieert de volgende scenario&#39;s:
 
 * Een component met een klassieke UI-dialoogvenster (dat wil zeggen een onderliggende dialoognode) moet een overeenkomend dialoogvenster Touch UI hebben (dat wil zeggen een `cq:dialog` onderliggende node).
 * Een component met een Klassieke UI-ontwerpdialoogvenster (d.w.z. een design_dialog-knooppunt) moet een overeenkomend dialoogvenster voor het aanraakinterface-ontwerp hebben (dat wil zeggen een `cq:design_dialog` onderliggende node).
 * Een component met zowel een dialoogvenster voor klassieke gebruikersinterface als een dialoogvenster voor klassieke gebruikersinterface moet zowel een corresponderend dialoogvenster voor aanraakinterface als een overeenkomstig dialoogvenster voor aanraakgebruikersinterface hebben.
 
-De documentatie van de Hulpmiddelen van de Modernisering AEM verstrekt documentatie en tooling voor hoe te om componenten van Klassieke UI in Aanraakinterface om te zetten. Raadpleeg [de moderniseringsinstrumenten](https://opensource.adobe.com/aem-modernize-tools/pages/tools.html) van AEM voor meer informatie.
+De documentatie van de Hulpmiddelen van de Modernisering van de AEM verstrekt documentatie en tooling voor hoe te om componenten van Klassieke UI in Aanraakinterface om te zetten. Raadpleeg [de AEM moderniseringsinstrumenten](https://opensource.adobe.com/aem-modernize-tools/pages/tools.html) voor meer informatie.
 
 ### Pakketten mogen geen MIP-bestand en onveranderbare inhoud mengen {#oakpal-packages-immutable}
 
@@ -742,7 +741,7 @@ Refer to [AEM Project Structure](https://docs.adobe.com/content/help/en/experien
 
 Ondersteuning voor omgekeerde replicatie is niet beschikbaar in implementaties van Cloud Servicen, zoals beschreven in [Opmerkingen bij de release: Verwijderen van replicatieagents](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/release-notes/aem-cloud-changes.html#replication-agents).
 
-Klanten die omgekeerde replicatie gebruiken, moeten contact opnemen met Adobe voor alternatieve oplossingen.
+De klanten die omgekeerde replicatie gebruiken zouden Adobe voor alternatieve oplossingen moeten contacteren.
 
 
 
