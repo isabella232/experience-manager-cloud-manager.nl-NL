@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: d2338c74-3278-49e6-a186-6ef62362509f
 translation-type: tm+mt
-source-git-commit: a8cd1ac2448b9f875c1d925c62e7fe42c8ceec2a
+source-git-commit: 71a760997ec2a0873a7f39d206086a8b4fd6854e
 workflow-type: tm+mt
-source-wordcount: '2296'
+source-wordcount: '2314'
 ht-degree: 6%
 
 ---
@@ -225,7 +225,7 @@ public class DontDoThis implements Page {
 
 ResourceResolver-objecten die zijn verkregen van de ResourceResolverFactory gebruiken systeembronnen. Hoewel er maatregelen op zijn plaats zijn om deze middelen terug te winnen wanneer een ResourceResolver niet meer in gebruik is, is het efficiënter om om het even welke geopende voorwerpen uitdrukkelijk te sluiten ResourceResolver door de close () methode te roepen.
 
-Eén relatief gebruikelijke misvatting is dat ResourceResolver-objecten die zijn gemaakt met een bestaande JCR-sessie, niet expliciet moeten worden gesloten of dat de onderliggende JCR-sessie hierdoor wordt gesloten. Dit is niet het geval - ongeacht hoe een ResourceResolver wordt geopend, zou het moeten worden gesloten wanneer niet meer gebruikt. Aangezien ResourceResolver de Closeable interface uitvoert, is het ook mogelijk om de poging-met-middelen syntaxis te gebruiken in plaats van uitdrukkelijk het aanhalen van close().
+Eén relatief gebruikelijke misvatting is dat ResourceResolver-objecten die zijn gemaakt met een bestaande JCR-sessie, niet expliciet moeten worden gesloten of dat de onderliggende JCR-sessie hierdoor wordt gesloten. Dit is niet het geval - ongeacht hoe een ResourceResolver wordt geopend, zou het moeten worden gesloten wanneer niet meer gebruikt. Aangezien ResourceResolver de Closeable interface uitvoert, is het ook mogelijk om de poging-met-middelen syntaxis in plaats van uitdrukkelijk te gebruiken close().
 
 #### Niet-compatibele code {#non-compliant-code-4}
 
@@ -561,7 +561,7 @@ public void doThis(Resource resource) {
 
 **Sleutel**: CQRules:AMSCORE-554
 
-**Type**: Code Smell
+**Type**: Compatibiliteit van code met Cloud Service/Smal
 
 **Ernst**: Klein
 
@@ -575,7 +575,7 @@ Raadpleeg [Apache Sling Event en Job Handling](https://sling.apache.org/document
 
 **Sleutel**: AMSCORE-553
 
-**Type**: Code Smell
+**Type**: Compatibiliteit van code met Cloud Service/Smal
 
 **Ernst**: Klein
 
@@ -689,7 +689,7 @@ Gelijkaardig aan de *Pakketten zouden geen Dubbele OSGi Configuraties* moeten be
 
 **Sleutel**: ClassicUIAuthoringMode
 
-**Type**: Code Smell
+**Type**: Compatibiliteit van code met Cloud Service/Smal
 
 **Ernst**: Klein
 
@@ -701,7 +701,7 @@ De configuratie OSGi `com.day.cq.wcm.core.impl.AuthoringUIModeServiceImpl` bepaa
 
 **Sleutel**: ComponentWithOnlyClassicUIDialog
 
-**Type**: Code Smell
+**Type**: Compatibiliteit van code met Cloud Service/Smal
 
 **Ernst**: Klein
 
@@ -719,7 +719,7 @@ De documentatie van de Hulpmiddelen van de Modernisering van de AEM verstrekt do
 
 **Sleutel**: ImmutableMutableMixedPackage
 
-**Type**: Code Smell
+**Type**: Compatibiliteit van code met Cloud Service/Smal
 
 **Ernst**: Klein
 
@@ -733,7 +733,7 @@ Refer to [AEM Project Structure](https://docs.adobe.com/content/help/en/experien
 
 **Sleutel**: ReverseReplication
 
-**Type**: Code Smell
+**Type**: Compatibiliteit van code met Cloud Service/Smal
 
 **Ernst**: Klein
 
