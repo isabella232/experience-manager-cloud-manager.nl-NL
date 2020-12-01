@@ -19,23 +19,23 @@ ht-degree: 0%
 
 # Beveiliging en privacy {#security-and-privacy}
 
-[!UICONTROL Cloud Manager] heeft pre-gevormde rollen met aangewezen toestemmingen. In deze sectie worden de beveiliging en privacy van uw elementen (code/artefacten) gemarkeerd met AEM Cloud Manager. Bovendien, [!UICONTROL Cloud Manager] heeft pre-gevormde rollen met aangewezen toestemmingen.
+[!UICONTROL Cloud Manager] heeft pre-gevormde rollen met aangewezen toestemmingen. In deze sectie worden de beveiliging en privacy van uw elementen (code/artefacten) gemarkeerd met AEM Cloud Manager. Bovendien [!UICONTROL Cloud Manager] heeft pre-gevormde rollen met aangewezen toestemmingen.
 
-Raadpleeg Op [rol gebaseerde machtigingen voor](/help/using/role-based-permissions.md)informatie over de mogelijke rollen die u kunt toewijzen in de beheerconsole en gebruikersrolmachtigingen.
+Om over de mogelijke rollen te leren u in de Admin Console en gebruikersroltoestemmingen kunt toewijzen, verwijs naar [Op rol gebaseerde Toestemmingen](/help/using/role-based-permissions.md).
 
 
 ## Bronisolatie {#resource-isolation}
 
-Klanten die gebruikmaken van [!UICONTROL Cloud Manager] [!UICONTROL Cloud Manager] zullen hun IMS-referenties nodig hebben om te worden geverifieerd, aangezien alle machtigingen die aan hen zijn gekoppeld, worden geconfigureerd en gekoppeld aan hun IMS-organisatie. Tijdens het aan boord gaan proces, zorgt het provisioningteam ervoor dat de middelisolatie binnen wordt afgedwongen [!UICONTROL Cloud Manager].
+Klanten die [!UICONTROL Cloud Manager] gebruiken, hebben hun IMS-referenties nodig om te worden geverifieerd, aangezien alle machtigingen die aan [!UICONTROL Cloud Manager] zijn gekoppeld, worden geconfigureerd en gekoppeld aan hun IMS-organisatie. Tijdens het aan boord gaan proces, zorgt het provisioningteam ervoor dat de middelisolatie in [!UICONTROL Cloud Manager] wordt afgedwongen.
 
 ## Gegevensbeveiliging {#data-security}
 
-Code in [!UICONTROL Cloud Manager] wordt tijdens de doortocht versleuteld. Binaire bestanden die in Cloud Manager worden gemaakt, worden ook tijdens de opslag versleuteld en versleuteld.
+De code in [!UICONTROL Cloud Manager] wordt gecodeerd in transit. Binaire bestanden die in Cloud Manager worden gemaakt, worden ook tijdens de opslag versleuteld en versleuteld.
 
-Elke klant krijgt zijn eigen opslagplaats **van de** BewaarplaatsGit en zijn code is veilig en niet gedeeld met andere **Organisaties**.
+Elke klant krijgt zijn eigen **Git Repository** en zijn code is veilig en wordt niet gedeeld met andere **Organisaties**.
 
 ## Gegevensprivacy {#data-privacy}
 
-[!UICONTROL Cloud Manager] volgt de privacybeginselen die door Adobe zijn gedefinieerd. Ontwikkelaars drukken code veilig in de gegevensopslagruimte van de **it** via HTTPS.
+[!UICONTROL Cloud Manager] zich houdt aan de privacybeginselen die door Adobe zijn gedefinieerd. Ontwikkelaars drukken code veilig in de **Git Repository** via HTTPS.
 
-De gebruikersinterface (UI) voor [!UICONTROL Cloud Manager] wordt gebouwd bovenop de diensten die aan een gemeenschappelijk controlekader voldoen dat door Adobe wordt bepaald. Gebruikersinterface voor [!UICONTROL Cloud Manager] gebruik van beveiligde services van verschillende cloudproviders.
+De gebruikersinterface (UI) voor [!UICONTROL Cloud Manager] wordt gebouwd bovenop de diensten die aan een gemeenschappelijk controlekader voldoen dat door Adobe wordt bepaald. Gebruikersinterface voor [!UICONTROL Cloud Manager] gebruikt beveiligde services van verschillende cloudproviders.
