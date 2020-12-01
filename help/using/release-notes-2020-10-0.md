@@ -13,13 +13,13 @@ ht-degree: 0%
 
 # Opmerkingen bij de release 2020.10.0 {#release-notes-for}
 
-In de volgende sectie worden de algemene opmerkingen bij de release weergegeven voor [!UICONTROL Cloud Manager] versie 2020.10.0.
+In de volgende sectie worden de algemene opmerkingen bij de release voor [!UICONTROL Cloud Manager] Release 2020.10.0 beschreven.
 
 ## Releasedatum {#release-date}
 
-De releasedatum voor [!UICONTROL Cloud Manager] versie 2020.10.0 is 1 oktober 2020.
+De Releasedatum voor [!UICONTROL Cloud Manager] Versie 2020.10.0 is 1 oktober 2020.
 
-## Bug Fixes {#bug-fixes}
+## Opgeloste problemen {#bug-fixes}
 
 * Crawler die voor prestaties het testen wordt gebruikt beschouwde verkeerd bepaalde middeltypes als geldige Webverbindingen.
 
