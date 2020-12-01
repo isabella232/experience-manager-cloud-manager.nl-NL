@@ -18,9 +18,9 @@ ht-degree: 0%
 ---
 
 
-# Configure your CI/CD Pipeline {#configure-your-ci-cd-pipeline}
+# Uw CI/CD pijpleiding {#configure-your-ci-cd-pipeline} vormen
 
-De volgende pagina verklaart hoe te om de **Pijpleiding** te vormen. Om meer conceptuele informatie over te herzien hoe de pijpleiding de [CI/CD pijpleiding overzicht](ci-cd-pipeline.md)ziet.
+De volgende pagina verklaart hoe te om **Pipeline** te vormen. Meer conceptuele informatie over bekijken hoe de pijpleiding [CI/CD pijpleiding overzicht](ci-cd-pipeline.md) ziet.
 
 ## Videozelfstudie {#video-tutorial-one}
 
@@ -31,7 +31,7 @@ De configuratie van de Pijpleiding van de Productie CI/CD bepaalt de trekker die
 >[!VIDEO](https://video.tv.adobe.com/v/26314/)
 
 
-## De stroom begrijpen {#understanding-the-flow}
+## De stroom {#understanding-the-flow} begrijpen
 
 U kunt uw pipeline configureren vanaf de tegel **Pipelines** in de [!UICONTROL Cloud Manager]-gebruikersinterface.
 
@@ -45,9 +45,9 @@ De Manager van de Plaatsing is verantwoordelijk voor vestiging de pijpleiding. A
 
 >[!CAUTION]
 >
->De pijpleiding kan niet opstelling zijn tot de bewaarplaats van het Git minstens één tak heeft en de Opstelling [van het](setting-up-program.md) Programma volledig is.
+>De pijpleiding kan niet worden opstelling tot de bewaarplaats van de Git minstens één tak heeft en [Opstelling van het Programma](setting-up-program.md) volledig is.
 
-Alvorens u begint om uw code op te stellen, moet u uw pijpleidingsmontages van [!UICONTROL Cloud Manager]vormen.
+Alvorens u begint om uw code op te stellen, moet u uw pijpleidingsmontages van [!UICONTROL Cloud Manager] vormen.
 
 >[!NOTE]
 >
@@ -59,13 +59,13 @@ Zodra u opstelling uw programma gebruikend [!UICONTROL Cloud Manager] UI hebt, b
 
 Voer de volgende stappen uit om het gedrag en de voorkeuren voor uw pijplijn te configureren:
 
-1. Klik de Pijpleiding **van de** Opstelling aan opstelling en vorm uw pijpleiding.
+1. Klik **De Pijpleiding van de Opstelling** om uw pijpleiding te installeren en te vormen.
 
    ![](assets/Setup-Pipeline.png)
 
-1. De het schermvertoningen van de Pijpleiding van de **Opstelling** .
+1. De **Setup Pipeline** schermvertoningen.
 
-   Met de wizard met drie stappen kunt u uw **vertakking**, **omgevingen** en **testomgeving** instellen.
+   Met de wizard in drie stappen kunt u uw **Branch**, **Environment** en **Testing**-omgeving instellen.
 Selecteer de Git-vertakking en klik op **Volgende**.
 
    >[!NOTE]
@@ -75,36 +75,36 @@ Selecteer de Git-vertakking en klik op **Volgende**.
    ![](assets/Configure_ci-cd-2.png)
 
 
-1. Open het tabblad **Omgevingen** om de opties voor **werkgebied** en **productie** te selecteren.
+1. Open het tabblad **Omgevingen** om de opties **Stage** en **Production** te selecteren.
 
    U kunt de trekker bepalen om de pijpleiding te beginnen:
 
-   * **Bij de Veranderingen** van het Git - begint de pijpleiding CI/CD wanneer er toezeggingen aan de gevormde git tak worden toegevoegd. Zelfs als u deze optie selecteert, kunt u de pijpleiding altijd manueel beginnen.
-   * **Handmatig** - de UI gebruikt manueel begint de pijpleiding.
+   * **Bij de Veranderingen**  van het Git - begint de pijpleiding CI/CD wanneer er toezeggingen aan de gevormde git tak worden toegevoegd. Zelfs als u deze optie selecteert, kunt u de pijpleiding altijd manueel beginnen.
+   * **Handmatig**  - de UI gebruikt manueel begint de pijpleiding.
 
    Tijdens pijpleidingsopstelling of geef uit, heeft de Manager van de Plaatsing de optie om het gedrag van de pijpleiding te bepalen wanneer een belangrijke mislukking in om het even welke kwaliteitscates zoals de Kwaliteit van de Code, het Testen van de Veiligheid, en het Testen van Prestaties wordt ontmoet.
 
    Dit is handig voor klanten die meer geautomatiseerde processen willen. De beschikbare opties zijn:
 
-* **Telkens** vragen - Dit is de standaardinstelling en u moet handmatig ingrijpen bij elke belangrijke fout.
-* **Onmiddellijk** afbreken - Als deze optie is geselecteerd, wordt de pijplijn geannuleerd wanneer een belangrijke fout optreedt. Dit is in feite het emuleren van een gebruiker die elke fout handmatig afwijst.
-* **Ga onmiddellijk** verder - als geselecteerd, zal de pijpleiding automatisch te werk wanneer een Belangrijke mislukking voorkomt. Dit emuleert hoofdzakelijk een gebruiker manueel goedkeurend elke mislukking.
+* **Telkens**  vragen - Dit is de standaardinstelling en u moet handmatig ingrijpen bij elke belangrijke fout.
+* **Onmiddellijk**  afbreken - Als deze optie is geselecteerd, wordt de pijplijn geannuleerd wanneer een belangrijke fout optreedt. Dit is in feite het emuleren van een gebruiker die elke fout handmatig afwijst.
+* **Ga onmiddellijk**  verder - als geselecteerd, zal de pijpleiding automatisch te werk wanneer een Belangrijke mislukking voorkomt. Dit emuleert hoofdzakelijk een gebruiker manueel goedkeurend elke mislukking.
 
    Nu definieert u de parameters die de productieimplementatie bepalen. De drie beschikbare opties zijn als volgt:
 
-* **Gebruik Live goedkeuring** - een implementatie moet handmatig worden goedgekeurd door een bedrijfseigenaar, projectmanager of implementatiebeheerder via de [!UICONTROL Cloud Manager] gebruikersinterface.
-* **CSE-overzicht** gebruiken - Een CSE is betrokken om de implementatie daadwerkelijk te starten. Tijdens pijpleidingsopstelling of geef uit wanneer CSE Toezicht wordt toegelaten, heeft de Manager van de Plaatsing de optie om te selecteren:
+* **Gebruik Live goedkeuring**  - Een implementatie moet handmatig worden goedgekeurd door een bedrijfseigenaar, projectmanager of implementatiebeheerder via de  [!UICONTROL Cloud Manager] gebruikersinterface.
+* **Het Toezicht**  van CSE van het gebruik - CSE wordt betrokken om de plaatsing daadwerkelijk te beginnen. Tijdens pijpleidingsopstelling of geef uit wanneer CSE Toezicht wordt toegelaten, heeft de Manager van de Plaatsing de optie om te selecteren:
 
    * **Elke CSE**: verwijst naar elke beschikbare CSE
    * **Mijn CSE**: verwijst naar specifieke CSE die aan de klant of hun steun wordt toegewezen, als CSE uit het bureau is
 
-* **Gepland** - Deze optie staat de gebruiker toe om de geplande productie plaatsing toe te laten.
+* **Gepland**  - Deze optie staat de gebruiker toe om de geplande productie plaatsing toe te laten.
 
 >[!NOTE]
 >
->Als de **Geplande** optie wordt geselecteerd, kunt u uw productieleiding aan de pijpleiding **na** de werkgebiedplaatsing plannen (en de Goedkeuring **van GoLive van het** Gebruik, als dat) is toegelaten om op een te plaatsen programma te wachten. De gebruiker kan er ook voor kiezen om de productieimplementatie onmiddellijk uit te voeren.
+>Als **Gepland** optie wordt geselecteerd, kunt u uw productiesplaatsing aan de pijpleiding **na** de werkgebiedplaatsing (en **Gebruik GoLive Goedkeuring**, als dat is toegelaten) plannen om op een te plaatsen programma te wachten. De gebruiker kan er ook voor kiezen om de productieimplementatie onmiddellijk uit te voeren.
 >
->Gelieve te verwijzen naar [**opstellen uw Code**](deploying-code.md), om het plaatsingsprogramma te plaatsen of de productie onmiddellijk uit te voeren.
+>Raadpleeg [**Uw code implementeren**](deploying-code.md) om het implementatieschema in te stellen of de productie direct uit te voeren.
 
 ![](assets/configure-pipeline3.png)
 
@@ -114,8 +114,8 @@ Selecteer de Git-vertakking en klik op **Volgende**.
 
 **Goedkeuren na implementatie van werkgebied**
 
-Er is een facultatieve stap **goedkeuren na de Plaatsing** van het Stadium die in de Pijpleiding van de Productie kan worden gevormd.
-Dit wordt toegelaten in een nieuwe optie op het **Pijpleiding geeft** scherm uit:
+Er is een optionele stap **Goedkeuren na implementatie van werkgebied** die kan worden geconfigureerd in de productiepijpleiding.
+Dit wordt toegelaten in een nieuwe optie op **Pijpleiding geeft** scherm uit:
 
 ![](assets/post_deployment1.png)
 
@@ -125,11 +125,11 @@ Het wordt dan getoond als afzonderlijke stap tijdens pijpleidingsuitvoering:
 
 >[!NOTE]
 >
->**Goedkeuren na de implementatie** van het werkgebied werkt net als de goedkeuring vóór de implementatie van de productie, maar vindt plaats onmiddellijk na de implementatiestap van het werkgebied, dat wil zeggen voordat tests worden uitgevoerd, in vergelijking met de goedkeuring vóór de implementatie van de productie, die wordt uitgevoerd nadat alle tests zijn voltooid.
+>**Goedkeuren na** implementatie van het werkgebied is vergelijkbaar met de goedkeuringsfuncties vóór de implementatie van de productie, maar vindt direct plaats na de implementatiestap van het werkgebied, dat wil zeggen voordat er tests worden uitgevoerd, in vergelijking met de goedkeuring vóór de implementatie van de productie, die wordt uitgevoerd nadat alle tests zijn voltooid.
 
 **Validatie van verzending**
 
-Als Manager van de Plaatsing, hebt u de kans om een reeks inhoudspaden te vormen die of **ongeldig** of **gespoeld** van het geheime voorgeheugen van de AEM Dispatcher voor te publiceren instanties zullen zijn, terwijl vestiging of het uitgeven pijpleiding.
+Als Manager van de Plaatsing, hebt u de kans om een reeks inhoudspaden te vormen die of **ongeldig** of **flushed** van het geheime voorgeheugen van de AEM Dispatcher voor publicatie instanties zullen zijn, terwijl het opzetten of het uitgeven pijpleiding.
 
 U kunt een afzonderlijke reeks wegen voor de plaatsing van het Stadium en van de Productie vormen. Indien gevormd, zullen deze geheim voorgeheugenacties als deel van de stap van de plaatsingspijpleiding worden uitgevoerd, enkel nadat om het even welke inhoudspakketten worden opgesteld. Deze instellingen gebruiken het standaardgedrag AEM Dispatcher: invalidate voert een cachevalidatie uit, net als wanneer de inhoud van de auteur wordt geactiveerd om te publiceren. flush voert een geheim voorgeheugenschrapping uit.
 
@@ -137,36 +137,36 @@ Over het algemeen verdient het de voorkeur de actie voor invalideren te gebruike
 
 >[!NOTE]
 >
->Raadpleeg [Overzicht](dispatcher-configurations.md) van verzender voor meer informatie over het in cache plaatsen van verzenders.
+>Raadpleeg [Overzicht van Dispatcher](dispatcher-configurations.md) voor meer informatie over het in cache plaatsen van Dispatcher.
 
 Voer de onderstaande stappen uit om validaties voor Dispatcher te configureren:
 
-1. Klik **vormen** onder de rubriek van de Configuratie van de Verzender
+1. Klik **Configureer** onder de kop Configuratie van Dispatcher
 
    ![](assets/image2018-8-7_14-53-24.png)
 
-1. Voer het pad in, selecteer de actie van **Tekst** en klik op **Toevoegen**. U kunt maximaal 100 paden per omgeving opgeven. Nadat u de paden hebt toegevoegd, klikt u op **Toepassen**.
+1. Ga de weg in, selecteer de actie van **Type**, en klik **Add**. U kunt maximaal 100 paden per omgeving opgeven. Nadat u de paden hebt toegevoegd, klikt u op **Toepassen**.
 
    ![](assets/image2018-8-7_14-58-11.png)
 
-1. Als u weer op de pagina Instellingen **** pijplijn staat, wordt een bijgewerkte samenvatting van de selecties weergegeven.
+1. Zodra u op **de pagina van de Montages van de Pijpleiding** bent, zult u een bijgewerkt overzicht van de selecties zien.
 
-   Klik op **Opslaan** om deze configuratie voort te zetten.
+   Klik **Save** om deze configuratie voort te zetten.
 
    ![](assets/image2018-8-7_15-4-30.png)
 
 
-1. Open het tabblad **Testen** om de testcriteria voor uw programma te definiëren.
+1. Open het tabblad **Testen** om uw testcriteria voor uw programma te definiëren.
 
    Nu, kunt u de parameters van de prestatietest vormen.
 
-   U kunt *AEM Sites* en *AEM Assets* Performance Testing configureren, afhankelijk van de producten waarvoor u een licentie hebt.
+   U kunt *AEM Sites* en *AEM Assets* het Testen van Prestaties vormen, afhankelijk van welke producten u vergunning hebt gegeven.
 
    **AEM Sites:**
 
    Cloud Manager voert het testen van de prestaties voor AEM Sites-programma&#39;s uit door pagina&#39;s (als een niet-geverifieerde gebruiker standaard) op de publicatieserver van het werkgebied aan te vragen voor een testperiode van 30 minuten en de responstijd voor elke pagina en verschillende metingen op systeemniveau te meten. Deze verzoeken worden gemaakt van een reeks bekende, specifieke adressen. De adreswaaiers kunnen van uw Ingenieur van het Succes van de Klant of Adobe worden verkregen.
 
-   Vóór het begin van de testperiode van 30 minuten, zal de Manager van de Wolk de milieu van het Stadium kruipen gebruikend een reeks van één of meerdere *zaad* URLs die door de Ingenieur van het Succes van de Klant wordt gevormd. Vanaf deze URL&#39;s wordt de HTML van elke pagina gecontroleerd en worden koppelingen doorlopen op een wijze die begint met het doorlopen van de breedte. Dit schuifproces is beperkt tot maximaal 5000 pagina&#39;s. De verzoeken van de kruipper hebben een vaste onderbreking van 10 seconden.
+   Vóór het begin van de testperiode van 30 minuten, zal de Manager van de Wolk de milieu van het Stadium kruipen gebruikend een reeks van één of meerdere *zaad* URLs die door de Ingenieur van het Succes van de Klant worden gevormd. Vanaf deze URL&#39;s wordt de HTML van elke pagina gecontroleerd en worden koppelingen doorlopen op een wijze die begint met het doorlopen van de breedte. Dit schuifproces is beperkt tot maximaal 5000 pagina&#39;s. De verzoeken van de kruipper hebben een vaste onderbreking van 10 seconden.
 
    Pagina&#39;s worden geselecteerd door drie **paginasets**; u kunt kiezen uit een van de drie sets. De verdeling van verkeer is gebaseerd op het aantal geselecteerde reeksen, dat wil zeggen, als alle drie worden geselecteerd, 33% van de totale paginameningen in de richting van elke reeks wordt gezet; als er twee zijn geselecteerd, gaat 50% naar elke set; als er één wordt geselecteerd , gaat 100 % van het verkeer naar die set .
 
@@ -196,29 +196,29 @@ Voer de onderstaande stappen uit om validaties voor Dispatcher te configureren:
 
    >[!NOTE]
    >
-   >Bovendien, zodra u opstelling de pijpleiding hebt, kunt u montages voor het zelfde nog uitgeven gebruikend de tegel van de Montages **van de Pijpleiding van de** Productie van de [!UICONTROL Cloud Manager] UI.
+   >Bovendien, zodra u opstelling de pijpleiding hebt, kunt u montages voor het zelfde nog uitgeven gebruikend **de tegel van de Pijpleiding van de Productie** van [!UICONTROL Cloud Manager] UI.
 
    ![](assets/Production-Pipeline.png)
 
-### Geverifieerde prestaties testen {#authenticated-performance-testing}
+### Voor authentiek verklaarde Prestaties het Testen {#authenticated-performance-testing}
 
 AMS-klanten met geverifieerde sites kunnen een gebruikersnaam en wachtwoord opgeven die door Cloud Manager worden gebruikt voor toegang tot de website tijdens het testen van de Sites-prestaties.
 
-De gebruikersbenaming en het wachtwoord worden gespecificeerd als Variabelen [van de](/help/using/build-environment-details.md#pipeline-variables) Pijpleiding met de namen `CM_PERF_TEST_BASIC_USERNAME` en `CM_PERF_TEST_BASIC_PASSWORD`.
+De gebruikersnaam en het wachtwoord worden opgegeven als [Pipeline Variables](/help/using/build-environment-details.md#pipeline-variables) met de namen `CM_PERF_TEST_BASIC_USERNAME` en `CM_PERF_TEST_BASIC_PASSWORD`.
 
 Hoewel niet strikt vereist, wordt het geadviseerd om het type van koordvariabele voor de gebruikersbenaming en het geheimString veranderlijke type voor het wachtwoord te gebruiken. Als beide van deze worden gespecificeerd, zal elk verzoek van de kruipper van de prestatietest en de test virtuele gebruikers deze geloofsbrieven als Basisauthentificatie van HTTP bevatten.
 
-Voer de volgende handelingen uit om deze variabelen in te stellen met de CLI van [Cloud Manager](https://github.com/adobe/aio-cli-plugin-cloudmanager):
+Als u deze variabelen wilt instellen met de [Cloud Manager CLI](https://github.com/adobe/aio-cli-plugin-cloudmanager), voert u het volgende uit:
 
 `$ aio cloudmanager:set-pipeline-variables <pipeline id> --variable CM_PERF_TEST_BASIC_USERNAME <username> --secret CM_PERF_TEST_BASIC_PASSWORD <password>`
 
 ## Uitsluitend pijplijnen zonder productie en codekwaliteit
 
-Naast de hoofdpijpleiding die zich naar het stadium en de productie ontwikkelt, kunnen klanten extra pijpleidingen opzetten, die **niet-productiepijpleidingen** worden genoemd. Deze pijpleidingen voeren altijd de bouw en de stappen van de codekwaliteit uit. Ze kunnen optioneel ook worden geïmplementeerd in de omgeving van Adobe Managed Services.
+Naast de hoofdpijpleiding die zich naar het stadium en de productie ontwikkelt, kunnen klanten extra pijpleidingen opzetten, die als **Niet-productiepijpleidingen** worden bedoeld. Deze pijpleidingen voeren altijd de bouw en de stappen van de codekwaliteit uit. Ze kunnen optioneel ook worden geïmplementeerd in de omgeving van Adobe Managed Services.
 
 ## Videozelfstudie {#video-tutorial-two}
 
-### Uitsluitend pijplijnen voor beheer van wolken zonder productie en kwaliteit van code {#non-prod-video}
+### Uitsluitend pijplijnen {#non-prod-video} voor beheer van wolken zonder productie en kwaliteit van code
 
 CI/CD de niet productiepijpleidingen zijn verdeeld in twee categorieën, de pijpleidingen van de Kwaliteit van de Code, en de pijpleidingen van de Plaatsing. Codekwaliteitpijplijnen zorgen ervoor dat alle code van een Git-vertakking wordt samengesteld en wordt geëvalueerd op basis van de codescanfunctie van Cloud Manager.
 
@@ -226,7 +226,7 @@ CI/CD de niet productiepijpleidingen zijn verdeeld in twee categorieën, de pijp
 
 Op het thuisscherm worden deze pijpleidingen op een nieuwe kaart vermeld:
 
-1. Open de tegel **Niet-productiepijplijnen** vanuit het startscherm van Cloud Manager.
+1. Open de tegel **Niet-productiepijpleidingen** vanuit het startscherm van Cloud Manager.
 
    ![](assets/Non-Production-Pipeline.png)
 
@@ -238,18 +238,18 @@ Op het thuisscherm worden deze pijpleidingen op een nieuwe kaart vermeld:
 
 1. Klik **sparen** en de pijpleiding wordt getoond op de kaart op het huisscherm met drie acties:
 
-   * **Bewerken** - hiermee kunt u de pijpleidinginstellingen bewerken
-   * **Detail** - toont de laatste pijpleidingsuitvoering (als er één is)
-   * **Build** - navigeert aan de uitvoeringspagina, waarvan de pijpleiding kan worden uitgevoerd
+   * **Bewerken**  - staat het uitgeven van de pijpleidingsmontages toe
+   * **Detail**  - toont de laatste pijpleidingsuitvoering (als er één is)
+   * **Build**  - navigeert aan de uitvoeringspagina, waarvan de pijpleiding kan worden uitgevoerd
 
    ![](assets/Non-prod-2.png)
 
    >[!NOTE]
    >
-   >Terwijl de pijpleiding loopt, wordt de huidige stap getoond en slechts is de actie van **Details** beschikbaar.
+   >Terwijl de pijpleiding loopt, wordt de huidige stap getoond en slechts is de **Details** actie beschikbaar.
 
 ## De volgende stappen {#the-next-steps}
 
 Zodra u de pijpleiding hebt gevormd, moet u uw code opstellen.
 
-Zie [Uw code](deploying-code.md) implementeren voor meer informatie.
+Zie [Uw code implementeren](deploying-code.md) voor meer informatie.
