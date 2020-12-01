@@ -10,7 +10,7 @@ discoiquuid: ebcc91a5-be9e-4684-8146-d88f4013d4d1
 translation-type: tm+mt
 source-git-commit: 8d1a100420129d234fe21911f165621405a04a9b
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '289'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ Dit dient als een beoordeling van de ontwikkelingsinspanningen die gepaard gaan 
 >
 >Als u meer wilt weten over patroondetector, raadpleegt u [De upgradecomplexiteit beoordelen met de patroondetector](https://helpx.adobe.com/experience-manager/6-4/sites/deploying/using/pattern-detector.html)
 
-## De evaluator uitvoeren {#running-evaluator}
+## Evaluator {#running-evaluator} uitvoeren
 
 Voer de onderstaande stappen uit om een evaluatieverslag te genereren:
 
@@ -45,13 +45,13 @@ Voer de onderstaande stappen uit om een evaluatieverslag te genereren:
 
    ![](assets/Run-Evaluation.png)
 
-1. De wizard informeert u over de status van uw handeling. Wanneer het evaluatierapport wordt gegenereerd, wordt u op de hoogte gebracht van **Bezig** of **Voltooid** .
+1. De wizard informeert u over de status van uw handeling. U zult **Bezig** of **completed** zoals toepasselijk merken wanneer het evaluatierapport wordt geproduceerd.
 
-   Nadat het rapport is gegenereerd, kunt u klikken **[!UICONTROL Download report]** om een kopie op te slaan.
+   Nadat het rapport is gegenereerd, kunt u op **[!UICONTROL Download report]** klikken om een kopie op te slaan.
 
    ![](assets/Evaluation-1.png)
 
 
    >[!NOTE]
    >
-   >De huidige versie van de wizard Productupdates in Cloud Manager ondersteunt alleen de **evaluatiefase** . De andere vier fasen, te weten **herstel**, **uitvoering**, **validatie** en **voltooiing** , komen binnenkort.
+   >De huidige versie van de tovenaar van de Update van het Product in de Manager van de Wolk steunt **Evaluatie** slechts fase. De andere vier fasen, te weten **Remediation**, **Execution**, **Validation** en **Completion**, komen binnenkort.
