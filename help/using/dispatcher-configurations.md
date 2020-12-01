@@ -17,31 +17,31 @@ ht-degree: 0%
 ---
 
 
-# Uw Dispatcher-configuraties beheren {#manage-your-dispatcher-configurations}
+# Uw Dispatcher Configurations beheren {#manage-your-dispatcher-configurations}
 
-## Cloud Manager gebruiken om Dispatcher-configuratiebestanden te implementeren {#using-cloud-manager-to-deploy-dispatcher-configuration-files}
+## Cloud Manager gebruiken om Dispatcher Configuration Files {#using-cloud-manager-to-deploy-dispatcher-configuration-files} te implementeren
 
 Cloud Manager kan webserver- en Dispatcher-configuratiebestanden implementeren als deze zijn opgeslagen in de **Git Repository**, naast de normale AEM-inhoudspakketten.
 
-Als u van deze mogelijkheid gebruik wilt maken, moet de Maven-build een ZIP-bestand maken dat ten minste twee mappen bevat: ***conf*** en ***conf.d***. Dit ZIP-bestand kan worden gemaakt met de gefabriceerde insteekmodule. De projecten die door de Manager van de Wolk gebruikend de ingebouwde [tovenaar](/help/using/using-the-wizard.md) worden geproduceerd hebben de correcte Maven die projectstructuur als deel van de projectverwezenlijking wordt gecreeerd. Dit is het aanbevolen pad voor nieuwe Managed Services-klanten.
+Als u van deze mogelijkheid gebruik wilt maken, moet de Maven-build een ZIP-bestand maken dat ten minste twee mappen bevat: ***conf*** en ***conf.d***. Dit ZIP-bestand kan worden gemaakt met de gefabriceerde insteekmodule. Projecten die door de Manager van de Wolk worden geproduceerd gebruikend ingebouwde [tovenaar](/help/using/using-the-wizard.md) hebben de correcte Maven projectstructuur die als deel van de projectverwezenlijking wordt gecreeerd. Dit is het aanbevolen pad voor nieuwe Managed Services-klanten.
 
-Bij plaatsing aan een **Instantie** van de dispatcher, zal de inhoud van deze folders de inhoud van deze folders op de instantie van de Verzender beschrijven. Aangezien de de configuratiedossiers van de Webserver en van de Verzender regelmatig milieu-specifieke informatie vereisen, om dit vermogen te gebruiken correct, zult u eerst met uw Ingenieurs van het Succes van de Klant (CSE) moeten werken om deze omgevingsvariabelen in te stellen `/etc/sysconfig/httpd`.
+Bij plaatsing aan een verzender **Instantie**, zal de inhoud van deze folders de inhoud van deze folders op de instantie van de Verzender beschrijven. Aangezien de de configuratiedossiers van de Webserver en van de Verzender regelmatig milieu-specifieke informatie vereisen, om dit vermogen te gebruiken correct, zult u eerst met uw Ingenieurs van het Succes van de Klant (CSE) moeten werken om deze omgevingsvariabelen in `/etc/sysconfig/httpd` te plaatsen.
 
-### Stappen voor het configureren van Dispatcher voor bestaande Managed Services-klanten {#steps-for-configuring-dispatcher}
+### Stappen voor het Vormen van Verzender voor Bestaande Klanten van Managed Services {#steps-for-configuring-dispatcher}
 
 Voer de onderstaande stappen uit om het eerste proces voor de configuratie van Dispatcher te voltooien:
 
 1. Haal huidige productieconfiguratiebestanden op van uw CSE.
 1. Verwijder hard-gecodeerde milieu-specifieke gegevens (bijvoorbeeld, publiceer renderer IP) en vervang met variabelen.
-1. Definieer vereiste variabelen in sleutel-waardeparen voor elk doelDispatcher en verzoek uw CSE aan `/etc/sysconfig/httpd` op elke instantie toe te voegen.
+1. Definieer vereiste variabelen in sleutel-waardeparen voor elk doelDispatcher en verzoek uw CSE om aan `/etc/sysconfig/httpd` op elke instantie toe te voegen.
 1. Test de bijgewerkte configuraties in uw werkgebiedomgeving en verzoek uw CSE om deze te implementeren in productie.
-1. Bestanden toewijzen aan **Git Repository**.
+1. Bestanden toewijzen aan **Bewaarplaats voor it**.
 
 1. Implementeer via Cloud Manager.
 
 >[!NOTE]
 >
->Het migreren van Dispatcher- en webserverconfiguraties naar **Git Repository** kan plaatsvinden tijdens het instappen van Cloud Manager, maar kan ook op een later tijdstip worden uitgevoerd.
+>Dispatcher- en webserverconfiguraties migreren naar **Git Repository** kan worden uitgevoerd tijdens inboarding van Cloud Manager, maar kan ook op een later tijdstip worden uitgevoerd.
 
 ### Voorbeeld {#example}
 
@@ -52,7 +52,7 @@ De specifieke bestands- en mapstructuur kan variëren op basis van de specificat
    >[!NOTE]
    U kunt hier geen naam gebruiken, maar de mapnaam die in deze stap wordt gemaakt, moet gelijk zijn aan de naam die in Stap 6 wordt gebruikt.
 
-1. Deze subdirectory zal een Geweven module bevatten die het ZIP dossier van de Verzender gebruikend de Geweven Insteekmodule van de Assemblage bouwt. Om dit te beginnen, in de `dispatcher` folder, creeer een `pom.xml` dossier met deze inhoud, veranderend de ouderverwijzing, artfactId, en naam zonodig.
+1. Deze subdirectory zal een Geweven module bevatten die het ZIP dossier van de Verzender gebruikend de Geweven Insteekmodule van de Assemblage bouwt. Om dit te beginnen, in de `dispatcher` folder, creeer een `pom.xml` dossier met deze inhoud, die de ouderverwijzing, artfactId, en naam zonodig verandert.
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -93,9 +93,9 @@ De specifieke bestands- en mapstructuur kan variëren op basis van de specificat
    ```
 
    >[!NOTE]
-   Zoals in Stap 1, kunnen artefactId en de naam hier andere waarden zijn als u wilt. `dispatcher` hier slechts een voorbeeld dat voor eenvoud wordt gebruikt.
+   Zoals in Stap 1, kunnen artefactId en de naam hier andere waarden zijn als u wilt. `dispatcher` hier slechts een voorbeeld gebruikt voor eenvoud.
 
-1. Voor de insteekmodule Geweven verzameling is een *descriptor* nodig om te definiëren hoe het ZIP-bestand wordt gemaakt. Maak een bestand (opnieuw in de `dispatcher` submap) met de naam `assembly.xml`van deze inhoud om deze descriptor te maken. Op regel 26 in het bovenstaande `pom.xml` bestand wordt naar deze bestandsnaam verwezen.
+1. Voor de insteekmodule Geweven verzameling is een *descriptor* vereist om te definiëren hoe het ZIP-bestand wordt gemaakt. Als u deze descriptor wilt maken, maakt u een bestand met de naam `assembly.xml`met deze inhoud (opnieuw in de submap `dispatcher`). Op regel 26 in het bovenstaande bestand `pom.xml` wordt naar deze bestandsnaam verwezen.
 
    ```xml
    <assembly xmlns="http://maven.apache.org/ASSEMBLY/2.0.0"
@@ -118,8 +118,8 @@ De specifieke bestands- en mapstructuur kan variëren op basis van de specificat
    </assembly>
    ```
 
-1. Maak nu een submap met de naam `src` (waarnaar in de verzamelingsbeschrijving hierboven op regel 11 wordt verwezen) in de submap dispatcher om de werkelijke Apache- en Dispatcher-configuraties op te slaan. Maak binnen deze `src` map mappen met de naam `conf`, `conf.d`, `conf.dispatcher.d`en `conf.modules.d`.
-1. Nu kunt u de `conf`, `conf.d`, `conf.dispatcher.d`, en `conf.modules.d` folders met uw configuratiedossiers bevolken. De standaardconfiguratie bestaat bijvoorbeeld uit deze bestanden en symbolische koppelingen.
+1. Maak nu een submap met de naam `src` (zoals vermeld in de verzamelingsbeschrijving hierboven op regel 11) in de submap dispatcher om de werkelijke Apache- en Dispatcher-configuraties op te slaan. Maak binnen deze `src`-map mappen de mappen `conf`, `conf.d`, `conf.dispatcher.d` en `conf.modules.d`.
+1. Nu kunt u de mappen `conf`, `conf.d`, `conf.dispatcher.d` en `conf.modules.d` vullen met uw configuratiebestanden. De standaardconfiguratie bestaat bijvoorbeeld uit deze bestanden en symbolische koppelingen.
 
    ```
    dispatcher
@@ -218,7 +218,7 @@ De specifieke bestands- en mapstructuur kan variëren op basis van de specificat
    ```
 
    >[!NOTE]
-   Zoals opgemerkt in Stap 1, `<module>` moet **de waarde van het** element overeenkomen met de gemaakte mapnaam.
+   Zoals vermeld in Stap 1, moet de waarde van `<module>` element **must** de gemaakte foldernaam aanpassen.
 
 1. Tot slot om te testen, stel mvn schoon pakket in de folder van de projectwortel in werking. Dit soort lijnen moet u in de uitvoer zien
 
