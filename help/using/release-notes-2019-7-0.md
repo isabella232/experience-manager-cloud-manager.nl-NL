@@ -1,24 +1,27 @@
 ---
 title: Opmerkingen bij de release 2019.7.0
-seo-title: Opmerkingen bij de release van AEM Cloud Manager voor 2019.7.0
+seo-title: Opmerkingen bij de release AEM Cloud Manager voor 2019.7.0
 description: Volg deze pagina voor informatie over Cloud Manager Release 2019.7.0.
 seo-description: Volg deze pagina voor informatie over AEM Cloud Manager Release 2019.7.0.
 translation-type: tm+mt
 source-git-commit: 365cd6dfe65059c0c529f774bbcda946d47b0db5
+workflow-type: tm+mt
+source-wordcount: '157'
+ht-degree: 1%
 
 ---
 
-# Opmerkingen bij de release 2019.7.0 {#release-notes-for}
+# Opmerkingen bij de release voor 2019.7.0 {#release-notes-for}
 
-Met de [!UICONTROL Cloud Manager] release van 2019.7.0 worden updates toegevoegd aan de meldingen van Experience Cloud en worden verbeteringen aangebracht als opgeloste problemen. Volg de onderstaande secties voor meer informatie.
+De [!UICONTROL Cloud Manager] Versie 2019.7.0 voegt updates aan Experience Cloud berichten en verbeteringen als insectenmoeilijke situaties toe. Volg de onderstaande secties voor meer informatie.
 
 ## Releasedatum {#release-date}
 
 De releasedatum voor [!UICONTROL Cloud Manager] versie 2019.7.0 is 18 juli 2019.
 
-## Nieuwe functies {#whats-new}
+## Wat is er nieuw?{#whats-new}
 
-Er wordt nu een Experience Cloud-melding verzonden bij het starten van een productieimplementatie.
+Er wordt nu een Experience Cloud-melding verzonden bij het begin van een productieplaatsing.
 
 ## Opgeloste problemen {#bug-fixes}
 
