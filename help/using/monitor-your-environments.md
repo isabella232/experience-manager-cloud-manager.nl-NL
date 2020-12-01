@@ -5,21 +5,24 @@ description: 'null'
 seo-description: Volg deze pagina om meer te weten te komen over System Monitoring in Cloud Manager. Dit gebeurt door de afzonderlijke instanties binnen een omgeving te observeren en een aantal verschillende meetgegevens voor elke instantie te volgen.
 translation-type: tm+mt
 source-git-commit: 16893b8bcd2b2d681a14bb6be3786e358e1952fb
+workflow-type: tm+mt
+source-wordcount: '958'
+ht-degree: 0%
 
 ---
 
 
 # Systeembewaking {#system-monitoring}
 
-Systeemcontrole in [!UICONTROL Cloud Manager] wordt uitgevoerd door de afzonderlijke instanties binnen een omgeving te observeren en een verscheidenheid aan meetgegevens voor elke instantie te volgen. Elke meting heeft twee bepaalde drempels - een *waarschuwingsdrempel* en een *kritieke drempel*.
+Systeemcontrole in [!UICONTROL Cloud Manager] wordt uitgevoerd door de afzonderlijke instanties binnen een omgeving te observeren en een verscheidenheid aan metriek voor elke instantie te volgen. Elke metrische waarde heeft twee gedefinieerde drempelwaarden: een *waarschuwingsdrempel* en een *kritieke drempelwaarde*.
 
 Als een metrische waarde boven zijn kritische drempel ligt, wordt deze geacht zich in een kritieke toestand te bevinden; als een metrische waarde boven de waarschuwingsdrempel (maar onder de kritische drempel) ligt, wordt hij geacht zich in een waarschuwingsstatus te bevinden. De drempelwaarden worden ingesteld door Adobe Managed Services en kunnen worden weergegeven in [!UICONTROL Cloud Manager]. In de meeste gevallen zijn drempels consistent tussen klanten, maar er zijn gevallen waarin Adobe Managed Services drempelwaarden aanpast aan specifieke klantenvereisten. Vragen over de drempelwaarden moeten worden gericht aan uw Customer Success Engineer (CSE).
 
-## Navigeren naar System Monitoring {#navigating-system-monitoring}
+## Navigeren naar Systeemcontrole {#navigating-system-monitoring}
 
 Het navigeren aan de eigenschap van de Controle van het Systeem kan op twee manieren worden gedaan.
 
-1. Meld u aan bij **Beheerde services - bestemmingspagina van programma** &#39;s.
+1. Meld u aan bij **Managed Services - Programma&#39;s**-bestemmingspagina.
 
    ![](assets/ProgramLanding.png)
 
@@ -29,7 +32,7 @@ Het navigeren aan de eigenschap van de Controle van het Systeem kan op twee mani
 
    *Of*,
 
-* Navigeer naar de landingspagina **System Monitoring** via de menuoptie **Reports** global navigation in [!UICONTROL Cloud Manager].
+* Navigeer naar de **Systeemcontrole**-landingspagina via de globale navigatiemenu-item **Reports** in [!UICONTROL Cloud Manager].
 
 
 ## Overzichtspagina voor systeemcontrole {#system-monitoring-overview-page}
@@ -51,9 +54,9 @@ De status in elke categorie is een overzicht van individuele metriek - als om he
 
 ## Videozelfstudie {#video-tutorial}
 
-### Overzicht van rapporten in Cloud Manager {#reports-video}
+### Overzicht van rapporten van Cloud Manager {#reports-video}
 
-Cloud Manager-rapporten bieden een weergave van de omgevingen en AEM-instanties van het programma aan de hand van een set grafieken die een aantal verschillende meetgegevens voor elke AEM-instantie rapporteren en bijhouden.
+Cloud Manager-rapporten bieden een weergave van de omgevingen en AEM van het programma aan de hand van een set grafieken die een aantal verschillende meetgegevens voor elke AEM melden en bijhouden.
 Raadpleeg de onderstaande video voor meer informatie.
 
 >[!VIDEO](https://video.tv.adobe.com/v/26315/)
@@ -90,12 +93,12 @@ Als u bijvoorbeeld op de waarschuwingsdrempelreeks klikt, ziet u alleen de kriti
 
 **Netwerk**
 
-* Controle CQ-poort: De responstijd in seconden voor toegang tot de AEM- of Dispatcher-poort. Er zijn verschillende meetgegevens voor auteur, publicatie en verzender.
+* Controle CQ-poort: De reactietijd in seconden om tot de AEM of de haven van de Verzender toegang te hebben. Er zijn verschillende meetgegevens voor auteur, publicatie en verzender.
 
 **Opslag**
 
 * Schijfruimte: De gebruikte schijfruimte (in megabytes) voor elk koppelingspunt op de gastheer. Er zijn verschillende meetwaarden voor elk koppelingspunt. Minstens, zult u metriek voor &quot;/&quot;en &quot;/mnt&quot;zien, maar de extra metriek van het koppelingspunt kan afhankelijk van de specifieke instantieconfiguratie beschikbaar zijn.
-* Mapgrootte: AEM-segmentwinkel: De gebruikte schijfruimte (in gigabytes) voor de AEM Segment Store.
+* Mapgrootte: Opslag AEM segment: De gebruikte schijfruimte (in gigabytes) voor de AEM Segment Store.
 
 **Toepassing**
 
@@ -104,7 +107,7 @@ Als u bijvoorbeeld op de waarschuwingsdrempelreeks klikt, ziet u alleen de kriti
 
 ## SLA-rapportage {#sla-reporting}
 
-Klanten kunnen de prestaties van hun productie-AEM-omgeving zien in verhouding tot hun contractuele Service Level Agreement (SLA). Dit is beschikbaar door een submenu op het scherm van Rapporten.
+Klanten kunnen de prestaties van hun productie AEM omgeving zien in verhouding tot hun contractuele Service Level Agreement (SLA). Dit is beschikbaar door een submenu op het scherm van Rapporten.
 De onderstaande grafiek toont bijvoorbeeld het maandelijkse SLA-resultaat voor 2018.
 
 ![](assets/SLA-Reports-one.png)
@@ -121,12 +124,12 @@ In het gedeelte Gebeurtenisanalyse onder deze grafiek ziet u de reeks incidenten
 
 * **Auteurscontract**: Dit is de SLA die is gedefinieerd in uw contract met Adobe Managed Services voor de auteurslaag.
 
-* **AMS-auteur SLA**: Dit is de gemeten uptime van de door Adobe of onze leveranciers veroorzaakte voorvallen met betrekking tot laagfactoring van de productiefunctie.
+* **AMS-auteur SLA**: Dit is de gemeten uptime van de productiefabrikant van de rij die door Adobe of onze verkopers wordt veroorzaakt.
 
 * **SLA** van auteur: Dit is de gemeten uptime van de auteurslaag die geplande onderbreking zoals onderhoudsvensters negeert.
 
 * **Eindgebruikerscontract**: Dit is de SLA die is gedefinieerd in uw contract met Adobe Managed Services voor de publicatielijst.
 
-* **SLA** eindgebruiker AMS: Dit is de gemeten uptime van de productie publiceer lijstfactoring incidenten die door Adobe of onze verkopers worden veroorzaakt.
+* **SLA** eindgebruiker AMS: Dit is de gemeten uptime van de productie publiceer lijst die incidenten door Adobe of onze verkopers worden veroorzaakt.
 
 * **SLA** eindgebruiker: Dit is de gemeten uptime van de publicatielaag die geplande downtime, zoals onderhoudsvensters, negeert.
