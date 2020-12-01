@@ -17,18 +17,18 @@ ht-degree: 0%
 ---
 
 
-# Ingevoerde omgevingen {#environments-provisioned}
+# Voorziene omgevingen {#environments-provisioned}
 
 ## Inrichting {#provisioning}
 
-Tijdens het instapproces van de klant worden alle AEM cloudomgevingen die door een klant worden aangeschaft automatisch door Adobe ingericht en aan hun programma in gekoppeld [!UICONTROL Cloud Manager]. Deze AEM cloud- **omgevingen** zijn inbegrepen bij elk abonnement op Adobe Managed Services en bestaan gewoonlijk uit ten minste één productieomgeving, één werkgebiedomgeving en eventueel een of meer ontwikkelings- of testomgevingen.
+Tijdens het instapproces van de klant worden alle AEM cloudomgevingen die door een klant worden aangeschaft automatisch door Adobe ingericht en in [!UICONTROL Cloud Manager] aan hun programma gekoppeld. Deze AEM **Omgevingen** zijn inbegrepen in elk abonnement van de Beheerde Diensten van Adobe, en zijn gewoonlijk samengesteld uit minstens één productiemilieu, één fasemilieu, en naar keuze één of meerdere ontwikkelings of testmilieu&#39;s.
 
 ## Welkom-e-mail {#welcome-email}
 
-Na voltooiing van het proces van de milieulevering, ontvangt de aangewezen klantenbeheerder een **welkome e-mail** met de bevestiging zij toegang tot de Adobe hebben gekregen [!UICONTROL Experience Cloud]. De e-mail bevat gedetailleerde informatie over hoe u aan de slag kunt met de [!UICONTROL Experience Cloud] services, de [!UICONTROL AEM Managed Services] cloudomgevingen en het [!UICONTROL Cloud Manager] zelfbedieningsportaal. Bovendien bevat de e-mail belangrijke informatie zoals de contactgegevens van de technicus van de Klant van het Succes van de Klant, waar te voor de Middelen van de Steun, Forums, of Veelgestelde vragen, en veel meer. In de lijst met bronnen die in de e-mail worden vermeld, krijgt u ook informatie over hoe u toegang kunt krijgen tot [!UICONTROL Cloud Manager] of uw AEM cloudomgevingen.
+Na voltooiing van het proces van omgevingsprovisioning ontvangt de aangewezen klantbeheerder een **welkomste-mail** met de bevestiging dat hun toegang tot de Adobe is verleend [!UICONTROL Experience Cloud]. De e-mail bevat gedetailleerde informatie over hoe u aan de slag kunt met de [!UICONTROL Experience Cloud]-services, de [!UICONTROL AEM Managed Services]-cloudomgevingen en het [!UICONTROL Cloud Manager]-zelfserviceportaal. Bovendien bevat de e-mail belangrijke informatie zoals de contactgegevens van de technicus van de Klant van het Succes van de Klant, waar te voor de Middelen van de Steun, Forums, of Veelgestelde vragen, en veel meer. In de lijst met bronnen die in de e-mail worden vermeld, krijgt u ook informatie over hoe u toegang krijgt tot [!UICONTROL Cloud Manager] of uw AEM cloudomgevingen.
 
 ## Volgende stappen {#next-steps}
 
-Nadat u de welkomste-mail hebt ontvangen, kunt u zich aanmelden [!UICONTROL Cloud Manager] als beheerder, met uw Adobe IMS-referenties. Nadat u zich hebt aangemeld, kunt u controleren of uw AEM cloudproductie- en niet-productieomgevingen beschikbaar zijn en correct worden uitgevoerd.
+Nadat u de welkomstmail hebt ontvangen, kunt u zich als beheerder aanmelden bij [!UICONTROL Cloud Manager] met uw Adobe IMS-referenties. Nadat u zich hebt aangemeld, kunt u controleren of uw AEM cloudproductie- en niet-productieomgevingen beschikbaar zijn en correct worden uitgevoerd.
 
-Deze AEM wolkenmilieu&#39;s zullen door worden gebruikt [!UICONTROL Cloud Manager] om de CBI/CD pijpleiding uit te voeren wanneer het opstellen van uw code, die van de opslagplaats van de Git van [!UICONTROL Cloud Manager]de Git, door het het opvoeren **Milieu**, en tot uw AEM productiemilieu begint. U kunt ook rechtstreeks vanuit AEM cloudomgevingen toegang krijgen [!UICONTROL Cloud Manager]wanneer u klaar bent om digitale ervaringen voor uw wegeigenschappen te maken.
+Deze AEM wolkenmilieu&#39;s zullen door [!UICONTROL Cloud Manager] worden gebruikt om de CI/CD pijpleiding uit te voeren wanneer het opstellen van uw code, beginnend van de Opslagplaats van de Git van [!UICONTROL Cloud Manager], door het opvoeren **Milieu**, en tot uw AEM productiemilieu. U hebt ook rechtstreeks vanuit [!UICONTROL Cloud Manager] toegang tot uw AEM cloudomgevingen wanneer u klaar bent om digitale ervaringen voor uw wegeigenschappen te maken.
