@@ -14,7 +14,7 @@ ht-degree: 14%
 ---
 
 
-# Handleiding voor Cloud Manager {#using}
+# Handleiding voor wolkenbeheer {#using}
 
 + [Inleiding tot Cloud Manager](introduction-to-cloud-manager.md)
 + Overzicht {#overview}
@@ -32,7 +32,7 @@ ht-degree: 14%
 + Aan de slag {#getting-started}
    + [Eerste aanmelding](first-time-login.md)
    + [Uw programma instellen](setting-up-program.md)
-   + Create an AEM Application Project {#create-application-project}
+   + Een AEM toepassingsproject maken {#create-application-project}
       + [De wizard gebruiken](using-the-wizard.md)
       + [Uw project instellen](setting-up-project.md)
       + [Inzicht in de omgeving van de build](build-environment-details.md)
@@ -48,7 +48,7 @@ ht-degree: 14%
    + [Cloud Manager CLI](https://github.com/adobe/aio-cli-plugin-cloudmanager/blob/master/README.md)
    + [Meldingen](notifications.md)
    + [Aangepaste regels voor codekwaliteit](custom-code-quality-rules.md)
-+ Uw code beheren {#managing-code}
++ Uw code {#managing-code} beheren
    + [Maven-projectversiebeheer](activating-maven-project.md)
    + [Toegang tot Git](accessing-git.md)
    + [Integreren met Git](setup-cloud-manager-git-integration.md)
