@@ -14,7 +14,7 @@ ht-degree: 7%
 
 # Maven-projectversiebeheer {#project-version}
 
-## Understanding Maven Project Version Handling {#understanding-project-version}
+## Werken met beheerde projectversiebeheer {#understanding-project-version}
 
 Voor stage- en productieimplementaties genereert Cloud Manager een unieke, incrementele versie.
 
@@ -26,9 +26,9 @@ Als de oorspronkelijke versie wel aan deze criteria voldoet, wordt de gegenereer
 
 | **Versie** | **versie in pom.xml** | **Opmerking** |
 |---|---|---|
-| 1.0.0 | 1.0.0.2019_0926_121356_0000020490 | Oorspronkelijke versie met de juiste indeling |
-| 1.0.0-MOMENTOPNAME | 2019.926.121356.0000020490 | Opnameversie, overschreven |
-| 1 | 2019.926.121356.0000020490 | Onvolledige versie, overschreven |
+| 1.0.0. | 1.0.0.2019_0926_121356_000020490 | Oorspronkelijke versie met de juiste indeling |
+| 1.0.0-MOMENTOPNAME | 2019 926 121356 0000020490 | Opnameversie, overschreven |
+| 1 | 2019 926 121356 0000020490 | Onvolledige versie, overschreven |
 
 >[!NOTE]
 >
