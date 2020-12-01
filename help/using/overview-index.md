@@ -19,15 +19,15 @@ ht-degree: 0%
 
 [!UICONTROL Cloud Manager] is een raamwerk van hulpmiddelen en technologieën beschikbaar aan alle klanten van de Beheerde Diensten van Adobe.
 
-Deze sectie verstrekt de mening op hoog niveau van de lijst van middelen die u met laat beginnen [!UICONTROL Cloud Manager].
+Deze sectie verstrekt de mening op hoog niveau van de lijst van middelen die u met [!UICONTROL Cloud Manager] laat beginnen.
 
-Volg de hieronder middelen om met uw reis voor het gebruiken te beginnen, van het begrijpen van de belangrijkste concepten en de terminologie aan opstellingsconfiguraties (pre-veelheden), die u eindelijk laat beginnen met [!UICONTROL Cloud Manager][!UICONTROL Cloud Manager].
+Volg de hieronder middelen om uw reis voor het gebruiken van [!UICONTROL Cloud Manager], van het begrip van de belangrijkste concepten en de terminologieën aan opstellingsconfiguraties (pre-veelheden) te beginnen, die u eindelijk met [!UICONTROL Cloud Manager] laat beginnen.
 
-In de onderstaande afbeelding ziet u de routekaart naar uw kennis van [!UICONTROL Cloud Manager]:
+De onderstaande afbeelding illustreert de routekaart voor uw kennis van [!UICONTROL Cloud Manager]:
 
 ![](assets/screen_shot_2018-05-04at94510pm.png)
 
-Volg de middelen in de sectie van het Overzicht om een inleiding te krijgen aan [!UICONTROL Cloud Manager]:
+Volg de middelen in de sectie van het Overzicht om een inleiding aan [!UICONTROL Cloud Manager] te krijgen:
 
 * **[Inleiding tot[!UICONTROL Cloud Manager]](introduction-to-cloud-manager.md)**
 * **[Belangrijke concepten](key-concepts.md)**
