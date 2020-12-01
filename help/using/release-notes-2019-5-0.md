@@ -1,17 +1,20 @@
 ---
 title: Opmerkingen bij de release 2019.5.0
-seo-title: Opmerkingen bij de release van AEM Cloud Manager voor 2019.5.0
+seo-title: Opmerkingen bij de release AEM Cloud Manager voor 2019.5.0
 description: Volg deze pagina voor informatie over Cloud Manager Release 2019.5.0.
-seo-description: Volg deze pagina om informatie op te halen voor AEM Cloud Manager Release 2019.5.0.
+seo-description: Volg deze pagina voor informatie over AEM Cloud Manager Release 2019.5.0.
 translation-type: tm+mt
 source-git-commit: 75563d3f4b2a27d943c052993c97d830338ead9c
+workflow-type: tm+mt
+source-wordcount: '115'
+ht-degree: 0%
 
 ---
 
 
-# Opmerkingen bij de release 2019.5.0 {#release-notes-for}
+# Opmerkingen bij de release voor 2019.5.0 {#release-notes-for}
 
-De release [!UICONTROL Cloud Manager] 2019.5.0 bevat geen significante functionele wijzigingen. Volg de onderstaande secties voor meer informatie.
+De [!UICONTROL Cloud Manager] 2019.5.0-release bevat geen significante functionele wijzigingen. Volg de onderstaande secties voor meer informatie.
 
 ## Releasedatum {#release-date}
 
