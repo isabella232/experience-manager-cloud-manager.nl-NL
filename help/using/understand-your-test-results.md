@@ -23,7 +23,7 @@ Tijdens de uitvoering van de pijpleiding, wordt een aantal metriek gevangen en v
 
 Deze worden gerapporteerd met behulp van het drielagige gatingsysteem zoals gedefinieerd in deze sectie.
 
-## Drievoudige Gates terwijl het runnen van een Pijpleiding  {#three-tier-gates-while-running-a-pipeline}
+## Drievoudige poorten bij het uitvoeren van een pijplijn {#three-tier-gates-while-running-a-pipeline}
 
 Er liggen drie poorten in de pijplijn:
 
@@ -33,52 +33,52 @@ Er liggen drie poorten in de pijplijn:
 
 Voor elk van deze poorten is er een structuur met drie niveaus voor emissies die door de poort worden geïdentificeerd.
 
-* **Kritiek** - Dit zijn kwesties die door de poort worden geïdentificeerd die een directe mislukking van de pijpleiding veroorzaken.
-* **Belangrijk** - Dit zijn kwesties die door de poort worden geïdentificeerd die de pijpleiding ertoe brengen om een gepauzeerde staat in te gaan. Een plaatsingsmanager, projectmanager, of bedrijfseigenaar kunnen of de kwesties met voeten treden, waarin de pijpleiding te werk gaat, of zij kunnen de kwesties goedkeuren, in welk geval de pijpleiding met een mislukking stopt.
-* **Info** - Dit zijn kwesties die door de poort worden geïdentificeerd en die uitsluitend ter informatie worden verstrekt en geen invloed hebben op de uitvoering van de pijpleiding.
+* **Kritiek**  - Dit zijn kwesties die door de poort worden geïdentificeerd die een directe mislukking van de pijpleiding veroorzaken.
+* **Belangrijk**  - Dit zijn kwesties die door de poort worden geïdentificeerd die de pijpleiding veroorzaken om een gepauzeerde staat in te gaan. Een plaatsingsmanager, projectmanager, of bedrijfseigenaar kunnen of de kwesties met voeten treden, waarin de pijpleiding te werk gaat, of zij kunnen de kwesties goedkeuren, in welk geval de pijpleiding met een mislukking stopt.
+* **Info**  - Dit zijn kwesties die door de poort worden geïdentificeerd en die uitsluitend ter informatie worden verstrekt en geen invloed hebben op de uitvoering van de pijpleiding.
 
 >[!NOTE]
 >
 >In een slechts pijpleiding van de Kwaliteit van de Code, kunnen de Belangrijke mislukkingen in de het Testen van de Kwaliteit van de Code de Testende stap van de Code niet worden met voeten getreden aangezien de het testen van de Kwaliteit van de Code de laatste stap in de pijpleiding is.
 
-## Testen van de codekwaliteit {#code-quality-testing}
+## Testen van de kwaliteit van de code {#code-quality-testing}
 
-Deze stap evalueert de kwaliteit van uw toepassingscode. Het is de kerndoelstelling van een code-Kwaliteit enige pijpleiding en wordt uitgevoerd onmiddellijk na de bouwstap in alle niet-productie en productiepijpleidingen. Verwijs naar het [Vormen van uw CI-CD Pijpleiding](/help/using/configuring-pipeline.md) om meer over verschillende types van pijpleidingen te leren.
+Deze stap evalueert de kwaliteit van uw toepassingscode. Het is de kerndoelstelling van een code-Kwaliteit enige pijpleiding en wordt uitgevoerd onmiddellijk na de bouwstap in alle niet-productie en productiepijpleidingen. Raadpleeg [Uw CI-CD Pipeline](/help/using/configuring-pipeline.md) configureren voor meer informatie over verschillende soorten pijpleidingen.
 
-### Codekwaliteit testen {#understanding-code-quality-testing}
+### Testen van codekwaliteit {#understanding-code-quality-testing}
 
-Bij het testen van de kwaliteit van de code, wordt de broncode gescand om ervoor te zorgen dat het aan bepaalde kwaliteitscriteria voldoet. Momenteel wordt dit geïmplementeerd door een combinatie van SonarQube en inhoudspakketonderzoek met gebruik van OakPAL. Er zijn meer dan 100 regels die generieke Java-regels en AEM-specifieke regels combineren. Enkele AEM-specifieke regels worden gecreeerd gebaseerd op beste praktijken van AEM Techniek en worden bedoeld als Regels [van de Kwaliteit van de](/help/using/custom-code-quality-rules.md)Code van de Douane.
+Bij het testen van de kwaliteit van de code, wordt de broncode gescand om ervoor te zorgen dat het aan bepaalde kwaliteitscriteria voldoet. Momenteel wordt dit geïmplementeerd door een combinatie van SonarQube en inhoudspakketonderzoek met gebruik van OakPAL. Er zijn meer dan 100 regels die generieke Java-regels en AEM-specifieke regels combineren. Enkele AEM-specifieke regels worden gecreeerd gebaseerd op beste praktijken van AEM Techniek en worden bedoeld als [Regels van de Kwaliteit van de Code van de Douane](/help/using/custom-code-quality-rules.md).
 
 >[!NOTE]
->U kunt de volledige lijst met regels [hier](/help/using/assets/CodeQuality-rules-latest.xlsx)downloaden.
+>U kunt de volledige lijst met regels [hier](/help/using/assets/CodeQuality-rules-latest.xlsx) downloaden.
 
 De resultaten van deze stap worden geleverd als *Classificatie*. De onderstaande tabel geeft een overzicht van de scores voor verschillende testcriteria:
 
 | Naam | Definitie | Categorie | Drempel voor fout |
 |--- |--- |--- |--- |
-| Beveiligingsbeoordeling | A = 0 Kwetsbaarheid <br/>B = ten minste 1 Kleine Kwetsbaarheid<br/> C = ten minste 1 Ernstige Kwetsbaarheid <br/>D = ten minste 1 Kritieke Kwetsbaarheid <br/>E = ten minste 1 Kwetsbaarheid | Kritiek | &lt; B |
-| Betrouwbaarheidsbeoordeling | A = 0 Bug <br/>B = ten minste 1 kleine bug <br/>C = ten minste 1 groot probleem <br/>D = ten minste 1 kritisch<br/>probleemE = ten minste 1 | Belangrijk | &lt; C |
-| Onderhoudsverklaring | Uitstaande herstelkosten voor codegeuren zijn: <br/><ul><li>&lt;=5% van de tijd die al in de toepassing is ingegaan, is de rating A </li><li>tussen 6 en 10% is de rating een B </li><li>tussen 11 en 20% is de rating een C </li><li>tussen 21 en 50% is de rating een D</li><li>iets meer dan 50% is een E</li></ul> | Belangrijk | &lt; A |
-| Dekking | Een combinatie van de dekking van de meetlijn en de toestand volgens deze formule: <br/>`Coverage = (CT + CF + LC)/(2*B + EL)`  <br/>waarbij: CT = voorwaarden die ten minste één keer zijn geëvalueerd op &#39;true&#39; tijdens het uitvoeren van eenheidstests <br/>CF = voorwaarden die ten minste één keer zijn geëvalueerd op &#39;false&#39; tijdens het uitvoeren van eenheidstests <br/>LC = gedekte lijnen = lines_to_cover - uncoverlines <br/><br/> B = totaal aantal voorwaarden <br/>EL = totaal aantal uitvoerbare lijnen (lines_to_cover) | Belangrijk | &lt; 50% |
+| Beveiligingsbeoordeling | A = 0 Kwetsbaarheid <br/>B = ten minste 1 Kleinere kwetsbaarheid<br/> C = ten minste 1 Ernstige kwetsbaarheid <br/>D = ten minste 1 Kritieke kwetsbaarheid <br/>E = ten minste 1 Blokkeerkwetsbaarheid | Kritiek | &lt; B |
+| Betrouwbaarheidsbeoordeling | A = 0 Bug <br/>B = ten minste 1 kleine bug <br/>C = ten minste 1 groot probleem <br/>D = ten minste 1 kritisch probleem<br/>E = ten minste 1 blokkeerprobleem | Belangrijk | &lt; C |
+| Onderhoudsverklaring | Uitstaande herstelkosten voor codegeuren zijn: <br/><ul><li>&lt;> </li><li>tussen 6 en 10% is de rating een B </li><li>tussen 11 en 20% is de rating een C </li><li>tussen 21 en 50% is de rating een D</li><li>iets meer dan 50% is een E</li></ul> | Belangrijk | &lt; A |
+| Dekking | Een combinatie van de dekking van de meetlijn en de toestand volgens deze formule: <br/>`Coverage = (CT + CF + LC)/(2*B + EL)` <br/>waarbij: CT = voorwaarden die ten minste eenmaal zijn geëvalueerd op &#39;true&#39; bij het uitvoeren van eenheidstests <br/>CF = voorwaarden die ten minste eenmaal zijn geëvalueerd op &#39;false&#39; bij het uitvoeren van eenheidstests <br/>LC = gedekte lijnen = lines_to_cover - uncoverlines <br/><br/> B = totaal aantal voorwaarden <br/>EL = totaal aantal uitvoerbare lijnen (lines_to_cover) | Belangrijk | &lt; 50=&quot;&quot;> |
 | Overgeslagen eenheidstests | Aantal overgeslagen eenheidstests. | Info | > 1 |
 | Problemen openen | Algemene uitgiftypen - Vulnerabilities, Bugs en Codefragmenten | Info | > 0 |
-| Gedupliceerde lijnen | Aantal lijnen betrokken bij gedupliceerde blokken. <br/>Een codeblok dat als gedupliceerd moet worden beschouwd: <br/><ul><li>**Niet-Java-projecten:**</li><li>Er moeten ten minste 100 opeenvolgende en gedupliceerde tokens zijn.</li><li>Deze tokens moeten ten minste op: </li><li>30 regels code voor COBOL </li><li>20 coderegels voor ABAP </li><li>10 coderegels voor andere talen</li><li>**Java-projecten:**</li><li> Er moeten minstens tien opeenvolgende en gedupliceerde verklaringen zijn, ongeacht het aantal tokens en lijnen.</li></ul> <br/>Verschillen in inspringing en in letterlijke tekenreeksen worden genegeerd bij het detecteren van duplicaten. | Info | > 1% |
+| Gedupliceerde lijnen | Aantal lijnen betrokken bij gedupliceerde blokken. <br/>Een codeblok dat als gedupliceerd moet worden beschouwd:  <br/><ul><li>**Niet-Java-projecten:**</li><li>Er moeten ten minste 100 opeenvolgende en gedupliceerde tokens zijn.</li><li>Deze tokens moeten ten minste op: </li><li>30 regels code voor COBOL </li><li>20 coderegels voor ABAP </li><li>10 coderegels voor andere talen</li><li>**Java-projecten:**</li><li> Er moeten minstens tien opeenvolgende en gedupliceerde verklaringen zijn, ongeacht het aantal tokens en lijnen.</li></ul> <br/>Verschillen in inspringing en in letterlijke tekenreeksen worden genegeerd bij het detecteren van duplicaten. | Info | > 1% |
 | Compatibiliteit met Cloud Service | Aantal geïdentificeerde kwesties van de Verenigbaarheid van de Cloud Service. | Info | > 0 |
 
 
 >[!NOTE]
 >
->Zie [Metrische definities](https://docs.sonarqube.org/display/SONAR/Metric+Definitions) voor meer gedetailleerde definities.
+>Raadpleeg [Metrische definities](https://docs.sonarqube.org/display/SONAR/Metric+Definitions) voor gedetailleerdere definities.
 
 >[!NOTE]
 >
->Voor meer informatie over de regels voor de kwaliteit van aangepaste code die worden uitgevoerd door [!UICONTROL Cloud Manager], raadpleegt u [Aangepaste regels](custom-code-quality-rules.md)voor codekwaliteit.
+>Als u meer wilt weten over de regels voor de kwaliteit van aangepaste code die worden uitgevoerd door [!UICONTROL Cloud Manager], raadpleegt u [Aangepaste regels voor de kwaliteit van code](custom-code-quality-rules.md).
 
-### Werken met valse positieven {#dealing-with-false-positives}
+### Omgaan met valse positieven {#dealing-with-false-positives}
 
 Het kwaliteitscontroleproces is niet perfect en zal soms ten onrechte problemen identificeren die eigenlijk niet problematisch zijn. Dit wordt een &quot;vals-positief&quot; genoemd.
 
-In deze gevallen kan de broncode worden geannoteerd met de standaard-Java- `@SuppressWarnings` annotatie die de regel-id opgeeft als het annotatiekenmerk. Een veelvoorkomend probleem is bijvoorbeeld dat de SonarQube-regel voor het detecteren van gecodeerde wachtwoorden agressief kan zijn ten aanzien van de manier waarop een gecodeerd wachtwoord wordt geïdentificeerd.
+In deze gevallen kan de broncode worden geannoteerd met de standaard-Java `@SuppressWarnings`-annotatie die de regel-id opgeeft als het annotatiekenmerk. Een veelvoorkomend probleem is bijvoorbeeld dat de SonarQube-regel voor het detecteren van gecodeerde wachtwoorden agressief kan zijn ten aanzien van de manier waarop een gecodeerd wachtwoord wordt geïdentificeerd.
 
 Om naar een specifiek voorbeeld te kijken, zou deze code vrij gemeenschappelijk in een AEM project zijn dat code heeft om met één of andere externe dienst te verbinden:
 
@@ -106,13 +106,13 @@ Dan is de correcte oplossing het hardcoded wachtwoord te verwijderen.
 
 >[!NOTE]
 >
->Het is weliswaar aan te raden de `@SuppressWarnings` annotatie zo specifiek mogelijk te maken, d.w.z. alleen de specifieke instructie of het specifieke blok dat de uitgave veroorzaakt, aan te brengen, maar het is wel mogelijk om een annotatie op klasseniveau te maken.
+>Hoewel het aan te raden is om de `@SuppressWarnings`-annotatie zo specifiek mogelijk te maken, dat wil zeggen alleen de specifieke instructie of het specifieke blok dat de uitgave veroorzaakt, van annotatie te voorzien op klasseniveau.
 
 ## Beveiligingstests {#security-testing}
 
-[!UICONTROL Cloud Manager] stelt de bestaande controles ***van de Gezondheid van de*** AEMVeiligheid op stadium na de plaatsing in werking en rapporteert de status door UI. De resultaten worden samengevoegd van alle AEM in de omgeving.
+[!UICONTROL Cloud Manager] stelt het bestaande  ***AEM het stadium van de Controle van de*** Gezondheid van de Veiligheid na de plaatsing in werking en rapporteert de status door UI. De resultaten worden samengevoegd van alle AEM in de omgeving.
 
-Als een van de **Instanties** meldt dat een bepaalde gezondheidscontrole is mislukt, mislukt het hele **milieu** die gezondheidscontrole. Net als bij het testen van de kwaliteit en prestaties van de code, worden deze gezondheidscontroles in categorieën ingedeeld en gerapporteerd met behulp van het drielagige gatingsysteem. Het enige verschil is dat er geen drempelwaarde is voor het testen van de veiligheid. Alle gezondheidscontroles worden gewoon goedgekeurd of gefaald.
+Als om het even welk **Instanties** een mislukking voor een bepaalde gezondheidscontrole melden, ontbreekt het volledige **Milieu** die gezondheidscontrole. Net als bij het testen van de kwaliteit en prestaties van de code, worden deze gezondheidscontroles in categorieën ingedeeld en gerapporteerd met behulp van het drielagige gatingsysteem. Het enige verschil is dat er geen drempelwaarde is voor het testen van de veiligheid. Alle gezondheidscontroles worden gewoon goedgekeurd of gefaald.
 
 In de volgende tabel worden de huidige controles weergegeven:
 
@@ -138,17 +138,17 @@ In de volgende tabel worden de huidige controles weergegeven:
 | De webserver is geconfigureerd om te voorkomen dat er wordt geklikt | Webserverconfiguratie | Belangrijk |
 | Replicatie maakt geen gebruik van de gebruiker &#39;admin&#39; | Replicatie- en transportgebruikers | Info |
 
-## Prestatietesten {#performance-testing}
+## Prestaties testen {#performance-testing}
 
-*De prestatietests* in [!UICONTROL Cloud Manager] worden uitgevoerd met een test van 30 minuten.
+*Prestatietests* worden  [!UICONTROL Cloud Manager] uitgevoerd met een test van 30 minuten.
 
 Tijdens pijpleidingsopstelling, kan de plaatsingsmanager beslissen hoeveel verkeer aan elk emmertje te leiden.
 
-U kunt meer over bandcontroles leren, van [Vorm uw CI/CD Pijpleiding](configuring-pipeline.md).
+U kunt meer over bandcontroles leren, van [vorm uw CI/CD Pijpleiding](configuring-pipeline.md).
 
 >[!NOTE]
 >
->Om uw programma te opstelling en uw KPIs te bepalen, zie [Opstelling uw Programma](setting-up-program.md).
+>Om uw programma in te stellen en uw KPIs te bepalen, zie [Opstelling uw Programma](setting-up-program.md).
 
 In de volgende tabel wordt een overzicht gegeven van de prestatietestmatrix met behulp van het drielagige gatingsysteem:
 
@@ -159,7 +159,7 @@ In de volgende tabel wordt een overzicht gegeven van de prestatietestmatrix met 
 | Wachttijd schijf-IO | Kritiek | >= 50% |
 | 95 Percentage van de responstijd | Belangrijk | >= KPI op programmaniveau |
 | Piekresponstijd | Belangrijk | >= 18 seconden |
-| Paginaweergaven per minuut | Belangrijk | &lt; KPI op programmaniveau |
+| Paginaweergaven per minuut | Belangrijk | &lt; Program-level=&quot;&quot; KPI=&quot;&quot;> |
 | Gebruik van schijfbandbreedte | Belangrijk | >= 90% |
 | Netwerkbandbreedtegebruik | Belangrijk | >= 90% |
 | Aanvragen per minuut | Info | >= 6000 |
@@ -170,7 +170,7 @@ Er zijn nieuwe grafieken en downloadopties toegevoegd aan het dialoogvenster Pre
 
 Wanneer u het dialoogvenster Prestatietest opent, kunnen de metrische deelvensters worden uitgevouwen om een grafiek weer te geven, een koppeling naar een download of beide weer te geven.
 
-Voor [!UICONTROL Cloud Manager] versie 2018.7.0 is deze functionaliteit beschikbaar voor de volgende metriek:
+Voor [!UICONTROL Cloud Manager] Release 2018.7.0 is deze functionaliteit beschikbaar voor de volgende metriek:
 
 * **CPU-gebruik**
    * Een grafiek van het gebruik van cpu tijdens de testperiode.
