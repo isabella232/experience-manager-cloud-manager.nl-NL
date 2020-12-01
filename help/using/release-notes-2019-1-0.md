@@ -12,29 +12,29 @@ translation-type: tm+mt
 source-git-commit: c35398110e9d8311bf58f217efdd082cf0cfd90a
 workflow-type: tm+mt
 source-wordcount: '335'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
 
-# Opmerkingen bij de release 2019.1.0 {#release-notes-for}
+# Opmerkingen bij de release voor 2019.1.0 {#release-notes-for}
 
-De [!UICONTROL Cloud Manager] Versie van 2018.9.0 voegt steun het testen van de programma&#39;s van AEM Assets evenals extra pijpleidingstypes toe die de bouw en de stappen van de codekwaliteit in werking stellen, naar keuze opstellend aan een niet productiemilieu.
+De [!UICONTROL Cloud Manager] Versie van 2018.9.0 voegt steun het testen AEM Assets programma&#39;s evenals extra pijpleidingstypes toe die de bouw en de stappen van de codekwaliteit in werking stellen, naar keuze opstellend aan een niet productiemilieu.
 
 ## Releasedatum {#release-date}
 
 De releasedatum voor [!UICONTROL Cloud Manager] versie 2019.1.0 is 17 januari 2019.
 
-## What&#39;s New {#whats-new}
+## Wat is er nieuw?{#whats-new}
 
-* Extra ondersteuning voor het testen van prestaties van AEM Assets. Gelieve te verwijzen om uw [CI/CD](configuring-pipeline.md)Pijler voor meer details te vormen.
-* Toegevoegde ondersteuning voor pijpleidingen die alleen stappen van de bouw- en codekwaliteit uitvoeren en voor pijpleidingen die worden geïmplementeerd in niet-productieomgevingen. Gelieve te verwijzen naar **niet-Productie &amp; de sectie van de Kwaliteit van de Code slechts Pijpleidingen** in [Vorm uw CI/CD pijpleiding](configuring-pipeline.md) voor meer details.
+* Extra ondersteuning voor het testen van prestaties van AEM Assets. Gelieve te verwijzen om uw [CI/CD Pijpleiding](configuring-pipeline.md)voor meer details te vormen.
+* Toegevoegde ondersteuning voor pijpleidingen die alleen stappen van de bouw- en codekwaliteit uitvoeren en voor pijpleidingen die worden geïmplementeerd in niet-productieomgevingen. Gelieve te verwijzen naar **Niet-Productie &amp; de Kwaliteit van de Code slechts Pijpleidingen** sectie in [vorm uw CI/CD Pijpleiding](configuring-pipeline.md) voor meer details.
 * Extra ondersteuning voor aangepaste omgevingsvariabelen in de ontwikkelomgeving.
-* Voor klanten met veelvoudige stadium of productiemilieu&#39;s, is de selectie van welk milieu als deel van de productiepijplijn zal worden opgesteld beschikbaar in [Vorm uw Cc/CD pagina van de Pijpleiding](configuring-pipeline.md) .
+* Voor klanten met veelvoudige stadium of productiemilieu&#39;s, is de selectie van welke milieu als deel van de productiepijplijn zal worden opgesteld beschikbaar in [vorm uw Cd-/Pijpleiding](configuring-pipeline.md) pagina.
 * httxt2dbm is toegevoegd om container te bouwen.
 * Met alle Help-menu-items wordt een nieuw tabblad geopend.
 
-## Bug Fixes {#bug-fixes}
+## Opgeloste problemen {#bug-fixes}
 
 * Tijdens het bewerken van een programma kon de selectie van alle paginasets ongedaan worden gemaakt.
 * De goedkeuringsstap heeft een onjuiste naam.
@@ -48,4 +48,4 @@ De releasedatum voor [!UICONTROL Cloud Manager] versie 2019.1.0 is 17 januari 20
 
 ## Bekende problemen {#known-issues}
 
-* Wanneer het openen van een programma dat Plaatsen, maar niet Activa heeft, geplaatst KPIs, zien alle gebruikers een vraag aan actiekaart met een knoop van het Programma **van de** Opstelling. Nochtans, slechts kunnen de gebruikers in de rol Bedrijfs van de Eigenaar eigenlijk op de knoop van het Programma **van de** Opstelling klikken.
+* Wanneer het openen van een programma dat Plaatsen, maar niet Activa heeft, geplaatst KPIs, zien alle gebruikers een vraag aan actiekaart met een **knoop van het Programma van de Opstelling**. Nochtans, slechts kunnen de gebruikers in de rol Bedrijfs van de Eigenaar eigenlijk op **Programma van de Opstelling** knoop klikken.
