@@ -12,24 +12,24 @@ translation-type: tm+mt
 source-git-commit: c35398110e9d8311bf58f217efdd082cf0cfd90a
 workflow-type: tm+mt
 source-wordcount: '329'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
 
-# Opmerkingen bij de release 2018.8.0 {#release-notes-for}
+# Opmerkingen bij de release voor 2018.8.0 {#release-notes-for}
 
-De [!UICONTROL Cloud Manager] Versie van 2018.8.0 voegt steun voor het teweegbrengen van de pijpleiding toe CI/CD automatisch op git begaat en een nieuwe tovenaar voor het creëren van toepassingsprojecten in git die op het Archetype van het AEM Project wordt gebaseerd.
+De [!UICONTROL Cloud Manager] Versie 2018.8.0 voegt steun voor het teweegbrengen van de pijpleiding toe CI/CD automatisch op git begaat en een nieuwe tovenaar voor het creëren van toepassingsprojecten in git die op het AEM Archieftype van Project wordt gebaseerd.
 
 ## Releasedatum {#release-date}
 
 De releasedatum voor [!UICONTROL Cloud Manager] versie 2018.8.0 is 4 oktober 2018.
 
-## What&#39;s New {#what-s-new}
+## Wat is er nieuw?{#what-s-new}
 
-* **De Opstelling** van het programma - Nieuwe tovenaar om een toepassingsproject in git tot stand te brengen gebruikend het Archetype van het Project van de AEM
+* **De Opstelling**  van het programma - Nieuwe tovenaar om een toepassingsproject in git tot stand te brengen gebruikend het Archetype van het Project van de AEM
 
-* **CI/CD Pipeline** - De volgende veranderingen worden toegevoegd aan CI/CD Pijpleiding. Gelieve te verwijzen naar [vorm uw CI/CD Pijpleiding](configuring-pipeline.md) om meer te leren.
+* **CI/CD Pipeline**  - De volgende veranderingen worden toegevoegd aan CI/CD Pijpleiding. Gelieve te verwijzen naar [vorm uw CI/CD Pijpleiding](configuring-pipeline.md) om meer te leren.
 
    * Bij de Trekker van de Veranderingen van het Git, die de pijpleiding CI/CD begint wanneer er toezeggingen aan de gevormde git tak worden toegevoegd.
    * Kaarten op het huisscherm verbinden nu diep in specifieke secties van de pagina van de pijpleidingsuitvoering.
@@ -38,12 +38,12 @@ De releasedatum voor [!UICONTROL Cloud Manager] versie 2018.8.0 is 4 oktober 201
    * De pagina voor het uitvoeren van de pijpleiding geeft nu de versie/tagnaam weer die voor de uitvoering is gemaakt.
    * Apache Maven-versie bijgewerkt naar 3.5.3.
 
-* **Navigatie** - De volgende wijzigingen worden toegevoegd aan de [!UICONTROL Cloud Manager]code.
+* **Navigatie**  - De volgende wijzigingen worden toegevoegd aan de  [!UICONTROL Cloud Manager]code.
 
    * De verbinding van middelen in globale navigatie zal aan Runbook in Sharepoint navigeren.
-   * Het menu Help is opnieuw ingedeeld en bevat meer [!UICONTROL Cloud Manager]specifieke inhoud.
+   * Het menu Help is gereorganiseerd en bevat nu meer [!UICONTROL Cloud Manager]-specifieke inhoud.
 
-## Bug Fixes {#bug-fixes}
+## Opgeloste problemen {#bug-fixes}
 
 * Bepaalde details in het dialoogvenster Prestaties testen zijn niet zichtbaar in Firefox.
 * Time-outs tussen interne systemen zouden er soms toe leiden dat implementatiefouten worden gemeld.
@@ -54,5 +54,5 @@ De releasedatum voor [!UICONTROL Cloud Manager] versie 2018.8.0 is 4 oktober 201
 ## Bekende problemen {#known-issues}
 
 * De takken die gebruikend de Tovenaar van het Project van de Toepassing worden gecreeerd kunnen geen streepjes bevatten.
-* Meldingen worden mogelijk niet consistent geladen op de [!UICONTROL Experience Cloud] berichtzijbalk. Meldingen zijn echter wel zichtbaar in de map [!UICONTROL Experience Cloud] en worden, indien geconfigureerd, nog steeds verzonden via e-mail.
+* De meldingszijbalk [!UICONTROL Experience Cloud] laadt meldingen mogelijk niet consistent. Meldingen zijn echter zichtbaar in [!UICONTROL Experience Cloud] en worden, indien geconfigureerd, nog steeds verzonden via e-mail.
 
