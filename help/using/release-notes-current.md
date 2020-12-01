@@ -13,7 +13,7 @@ ht-degree: 1%
 
 # Opmerkingen bij de release 2020.11.0 {#release-notes-for}
 
-In de volgende sectie worden de algemene opmerkingen bij de release 2020.11.0 beschreven. [!UICONTROL Cloud Manager]
+In de volgende sectie worden de algemene opmerkingen bij de release voor [!UICONTROL Cloud Manager] Release 2020.11.0 beschreven.
 
 ## Releasedatum {#release-date}
 
@@ -23,7 +23,7 @@ De datum van de Versie voor [!UICONTROL Cloud Manager] Versie 2020.11.0 is 12 no
 
 * Het tabblad **Leren** in Cloud Manager wordt vernieuwd met nieuwe afbeeldingen in de gebruikersinterface.
 
-## Bug Fixes {#bug-fixes}
+## Opgeloste problemen {#bug-fixes}
 
 * Bepaalde door de klant veroorzaakte implementatiefouten worden nu expliciet opgehaald in de implementatielogboeken.
 
