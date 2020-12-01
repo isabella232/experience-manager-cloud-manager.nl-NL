@@ -10,13 +10,16 @@ topic-tags: using
 discoiquuid: c5b39de2-3a9b-437f-98e8-e6e6249a5b3a
 translation-type: tm+mt
 source-git-commit: c81243708d938a8bffdec8a35f32a2cf552c1c95
+workflow-type: tm+mt
+source-wordcount: '265'
+ht-degree: 0%
 
 ---
 
 
 # Uw omgevingen beheren {#manage-your-environments}
 
-De pagina **Overzicht** van Cloud Manager bevat de tegel **Omgevingen** met alle beheerde AEM-omgevingen.
+De **Overview**-pagina van Cloud Manager bevat de **tile**-tegel die alle beheerde AEM weergeeft.
 
 In elk van de vermelde omgevingen wordt de bijbehorende status weergegeven.
 
@@ -24,7 +27,7 @@ In elk van de vermelde omgevingen wordt de bijbehorende status weergegeven.
 
 ## Videozelfstudie {#video-tutorial}
 
-### Overzicht van Cloud Manager-omgeving {#environ-video}
+### Overzicht van de omgevingstemperatuur in Cloud Manager {#environ-video}
 
 De volgende video biedt een overzicht van de omgevingen van Cloud Manager die bestaan uit instanties van AEM-auteurs, AEM-publicaties en Dispatcher.
 
@@ -32,7 +35,7 @@ De volgende video biedt een overzicht van de omgevingen van Cloud Manager die be
 
 ## Toegang tot omgevingen in Cloud Manager {#accessing-environments-in-cloud-manager}
 
-In het onderdeel **Omgevingen** worden de productie- en werkgebiedomgevingen weergegeven die in uw programma zijn opgenomen, samen met de status.
+De **Omgevingen** tegel toont de Productie en de milieu&#39;s van het Stadium die in uw programma samen met de status worden voorzien.
 
 De status is de toestand van het opgerold vermogen over de knooppunten in de omgeving. Het is groen als alle knopen lopen, rood als zelfs één knoop wordt tegengehouden, blauw als zelfs één knoop omhoog komt, en geel als zelfs één knoop een machtstoestand niet beschikbaar (in deze orde van prioriteit) heeft.
 
@@ -40,12 +43,12 @@ De status is de toestand van het opgerold vermogen over de knooppunten in de omg
 
 ### Omgevingen {#environments}
 
-Klik op **Beheren** om het scherm **Omgevingen** weer te geven.
+Klik **Beheren** om het scherm **Omgevingen** weer te geven.
 
-In het scherm **Omgevingen** wordt elk een kaart weergegeven voor *Productie* - en *Stage* -omgevingen (indien van toepassing) in uw programma. De naam van de omgeving wordt boven elke kaart weergegeven. De kaart omvat een lijst van knopen in het milieu samen met de t-shirtgrootte van cpu, de opslag, het gebied, en de status.
+In het scherm **Omgevingen** wordt een kaart weergegeven voor elke *Productie*- en *Stage*-omgeving (indien van toepassing) in uw programma. De naam van de omgeving wordt boven elke kaart weergegeven. De kaart omvat een lijst van knopen in het milieu samen met de t-shirtgrootte van cpu, de opslag, het gebied, en de status.
 
 >[!NOTE]
 >
->De **STATUS** van het knooppunt vertegenwoordigt de energiestatus van de VM en geeft niet de status van AEM op de server weer. De status kan **Running** (groene cirkel) zijn, **Gestopt** (rode cirkel), **Voorkomend** (blauwe cirkel) of **Niet beschikbaar** (gele cirkel).
+>De **STATUS** van het knooppunt vertegenwoordigt de energietoestand van de VM en geeft niet de status van AEM op de server weer. De status kan **Running** (groene cirkel), **Gestopt** (rode cirkel), **Komend omhoog** (blauwe cirkel) of **Niet beschikbaar** (gele cirkel) zijn.
 
 ![](assets/Environments-tab.png)
