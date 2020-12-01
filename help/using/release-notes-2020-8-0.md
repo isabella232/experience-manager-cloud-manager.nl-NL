@@ -7,23 +7,23 @@ translation-type: tm+mt
 source-git-commit: c1d07c95088a279376ef495001a5165c7e459642
 workflow-type: tm+mt
 source-wordcount: '192'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
-# Opmerkingen bij de release 2020.8.0 {#release-notes-for}
+# Opmerkingen bij de release voor 2020.8.0 {#release-notes-for}
 
-In de volgende sectie worden de algemene opmerkingen bij de release voor [!UICONTROL Cloud Manager] versie 2020.8.0 beschreven.
+In de volgende sectie worden de algemene opmerkingen bij de release voor [!UICONTROL Cloud Manager] Release 2020.8.0 beschreven.
 
 ## Releasedatum {#release-date}
 
-De releasedatum voor [!UICONTROL Cloud Manager] versie 2020.8.0 is 6 augustus 2020.
+De datum van de Versie voor [!UICONTROL Cloud Manager] Versie 2020.8.0 is Augustus 06, 2020.
 
-## What&#39;s New {#whats-new}
+## Wat is er nieuw?{#whats-new}
 
 Verificatie-gebonden Private Maven Repositories worden nu ondersteund.
 
-## Bug Fixes {#bug-fixes}
+## Opgeloste problemen {#bug-fixes}
 
 * Enkele onnodige en ongewenste SonarQube-plug-ins werden uitgevoerd als onderdeel van het scannen van codekwaliteit.
 
@@ -33,11 +33,11 @@ Verificatie-gebonden Private Maven Repositories worden nu ondersteund.
 
 * In sommige gevallen werden voltooide executies van pijpleidingen niet met succes geregistreerd als voltooid, waardoor nieuwe executies van de pijpleiding werden voorkomen.
 
-* De executies van pijpleidingen zouden af en toe *vastzitten* als gevolg van interne communicatieproblemen.
+* Uitvoeringen van pijpleidingen zouden soms *geplakt* worden als gevolg van interne communicatieproblemen.
 
 * De knopinfo op de programmakaarten was niet consistent correct.
 
-* Er is een kleurfout opgetreden op de pagina **Overzicht** .
+* Er is een kleurfout opgetreden op de pagina **Overzicht**.
 
 * Het Testen van de Prestaties van Plaatsen steunt nu het facultatieve gebruik van authentificatie.
 
