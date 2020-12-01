@@ -10,15 +10,18 @@ topic-tags: getting-started
 discoiquuid: 53807ea6-9464-429d-9322-85c9f405dff6
 translation-type: tm+mt
 source-git-commit: 9c0df236c1e800802d62dea09996bb8e1e7033f7
+workflow-type: tm+mt
+source-wordcount: '307'
+ht-degree: 0%
 
 ---
 
 
-# Configureer uw releasevertakkingen {#configure-your-release-branches}
+# Configureer uw releasetak {#configure-your-release-branches}
 
-## De eerste vertakking instellen in Git {#setting-up-your-first-branch-in-git}
+## Uw eerste vertakking instellen in Git {#setting-up-your-first-branch-in-git}
 
-Voor elk programma dat in Cloud Manager wordt gestart, wordt één, aanvankelijk lege **Git Repository** ingericht. Deze opslagplaats kan zo vele (of slechts weinig) takken bevatten aangezien uw ontwikkelingsproces volgt, maar er moet minstens één tak zijn die door de pijpleiding CI/CD wordt gebruikt om toepassingscode aan stadium en productie op te stellen. De beste manier is om als naam van deze vertakking te gebruiken `master` . Dit is handig het standaardgedrag van Git-clients wanneer u nieuwe projecten instelt.
+Eén **Git Repository** is in eerste instantie leeg en is bestemd voor elk programma dat in Cloud Manager wordt uitgevoerd. Deze opslagplaats kan zo vele (of slechts weinig) takken bevatten aangezien uw ontwikkelingsproces volgt, maar er moet minstens één tak zijn die door de pijpleiding CI/CD wordt gebruikt om toepassingscode aan stadium en productie op te stellen. De beste praktijken moeten `master` als naam van deze tak gebruiken. Dit is handig het standaardgedrag van Git-clients wanneer u nieuwe projecten instelt.
 
 Als u bijvoorbeeld een nieuw project instelt, voert u een set opdrachten als deze uit:
 
@@ -54,9 +57,9 @@ $ git commit -m "initial commit"
 >
 >Het is geen vereiste om de bevel-lijn cliënt te gebruiken. Er zijn een verscheidenheid van grafische cliënten van Git beschikbaar of als standalone toepassingen of als deel van een Geïntegreerde Ontwikkelomgeving (winde) zoals Eclipse of IntelliJ. Zolang de clienttoepassing het gebruik van HTTPS ondersteunt, moet deze compatibel zijn met [!UICONTROL Cloud Manager].
 
-## De eerste vertakking duwen {#pushing-your-first-branch}
+## Het duwen van Uw Eerste Tak {#pushing-your-first-branch}
 
-Nadat u ten minste één revisie hebt vastgelegd, kunt u de [!UICONTROL Cloud Manager] opslagplaats toevoegen als een **externe** opslagruimte en vervolgens uw verplichtingen nakomen:
+Nadat u ten minste één revisie hebt vastgelegd, kunt u de [!UICONTROL Cloud Manager]-opslagplaats toevoegen als een **extern** en vervolgens uw verbintenissen nakomen:
 
 ```shell
 $ git remote add adobe <url>
@@ -72,12 +75,12 @@ To <url>
 
 >[!NOTE]
 >
->De specifieke URL, samen met uw referenties, wordt tijdens het [!UICONTROL Cloud Manager] instappen aan uw klant geleverd door de Succesengineering van de klant.
+>De specifieke URL, samen met uw referenties, wordt tijdens [!UICONTROL Cloud Manager] on boarding door uw Success Engineering van de Klant verstrekt.
 
 ## Aanvullende vertakkingen {#additional-branches}
 
-Een enkele `master` tak kan voldoende zijn voor zeer eenvoudige projecten, maar in de meeste gevallen is een complexere vertakkingsstrategie vereist. Vele klanten volgen een proces waar de ontwikkelingsactiviteiten van dag tot dag op een geroepen tak worden uitgevoerd `develop` en de ontwikkeltak in de `master` tak wordt samengevoegd wanneer het tijd voor een plaatsing is.
+Een enkele `master` tak kan volstaan voor zeer eenvoudige projecten, maar in de meeste gevallen is een complexere vertakkingsstrategie vereist. Vele klanten volgen een proces waar de de ontwikkelingsactiviteiten van dag tot dag op een tak worden uitgevoerd genoemd `develop` en de ontwikkeltak wordt samengevoegd in `master` tak wanneer het tijd voor een plaatsing is.
 
 >[!NOTE]
 >
->Zie het [Git Cheat Sheet](https://github.github.com/training-kit/downloads/github-git-cheat-sheet)voor informatie over de algemene git-opdrachten.
+>Zie [Cheat Sheet plaatsen](https://github.github.com/training-kit/downloads/github-git-cheat-sheet) om de algemene git-opdrachten weer te geven.
