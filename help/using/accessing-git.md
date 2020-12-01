@@ -16,23 +16,23 @@ ht-degree: 3%
 
 U kunt de Git Repository openen en beheren met Self-Service Git Account Management vanuit de interface van Cloud Manager.
 
-## Het gebruik van Self-Service Git Account Management {#self-service-git}
+## Het gebruiken van Zelfinhoud Account Management {#self-service-git}
 
-Gebruik de knop **Git** beheren die beschikbaar is via de interface van Cloud Manager. Dit is het meest opvallend op de pijplijnkaart.
+Gebruik de **knoop van de Beheren** beschikbaar bij de UI van de Manager van de Wolk, het meest opvallend op de pijpleidingskaart.
 
-1. Navigeer naar de overzichtspagina *van uw* programma en naar de Pipelinekaart.
+1. Navigeer naar de pagina *Overzicht van het programma* en naar de Pipelinekaart.
 
-1. U ziet de optie **Git** beheren voor toegang tot en beheer van uw Git-opslagplaats.
+1. U zult **Git beheren** optie bekijken om tot uw Bewaarplaats van de Git toegang te hebben en te beheren.
 
    ![](assets/manage-git1.png)
 
-   Bovendien, als u het **Non-Production** pijpleidingslusje selecteert, zult u de **Manage optie van de Git** ook daar bekijken.
+   Als u bovendien het **Niet-productie** pijplijnlusje selecteert, zult u **Git beheren** ook daar bekijken.
 
    ![](assets/manage-git-new2.png)
 
 >[!NOTE]
 >
->De optie **Git** beheren is zichtbaar voor gebruikers met de rol van ontwikkelaar of implementatiebeheerder. Als u op deze knop klikt, wordt een dialoogvenster geopend waarin de gebruiker de URL naar zijn of haar gegevensopslagruimte voor de Intel Health Care Management Suite kan vinden, samen met de gebruikersnaam en het wachtwoord.
+>De optie **Git beheren** is zichtbaar voor gebruikers in de rol van ontwikkelaar of implementatiebeheer. Als u op deze knop klikt, wordt een dialoogvenster geopend waarin de gebruiker de URL naar zijn of haar gegevensopslagruimte voor de Intel Health Care Management Suite kan vinden, samen met de gebruikersnaam en het wachtwoord.
 
 ![](assets/manage-git3.png)
 
