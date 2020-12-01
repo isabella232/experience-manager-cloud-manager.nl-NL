@@ -1,29 +1,32 @@
 ---
 title: Opmerkingen bij de release 2019.11.0
-seo-title: Opmerkingen bij de release van AEM Cloud Manager voor 2019.11.0
+seo-title: Opmerkingen bij de release AEM Cloud Manager voor 2019.11.0
 description: Volg deze pagina voor informatie over Cloud Manager Release 2019.11.0.
 seo-description: Volg deze pagina voor informatie over AEM Cloud Manager Release 2019.11.0.
 translation-type: tm+mt
 source-git-commit: 1f31e654272afa60cac3376ce4dc3bc76f0d9dda
+workflow-type: tm+mt
+source-wordcount: '150'
+ht-degree: 1%
 
 ---
 
-# Opmerkingen bij de release 2019.11.0 {#release-notes-for}
+# Opmerkingen bij de release voor 2019.11.0 {#release-notes-for}
 
-De volgende sectie schetst de algemene Nota&#39;s van de Versie voor [!UICONTROL Cloud Manager] Versie 2019.11.0 en voegt updates aan het proces van de pijpleidingsbevestiging en verbeteringen aan activa het testen van de prestaties toe.
+In de volgende sectie worden de algemene opmerkingen bij de release voor [!UICONTROL Cloud Manager] Release 2019.11.0 beschreven en worden updates toegevoegd aan het validatieproces van de pijplijn en verbeteringen in het testen van de prestaties van elementen.
 Volg de onderstaande secties voor meer informatie.
 
 ## Releasedatum {#release-date}
 
-De releasedatum voor [!UICONTROL Cloud Manager] versie 2019.11.0 is 7 november 2019.
+De datum van de Versie voor [!UICONTROL Cloud Manager] Versie 2019.11.0 is November 07, 2019.
 
-## Nieuwe functies {#whats-new}
+## Wat is er nieuw?{#whats-new}
 
 * Als de validate pijpleidingsstap ontbreekt, toont het nu de specifieke vastgestelde bevestigingsfout.
 * Het mechanisme voor het verwijderen van elementen tijdens het testen van de prestaties van elementen is verbeterd.
-* De *Pipelines* en de kaarten van *Milieu* op de pagina van het **Overzicht** zijn visueel verfrist.
-* De programmaschakeler is verplaatst (deze bevindt zich nu onder het logo van Adobe Experience Manager).
+* De *Pipelines* en *Environments* kaarten op de **Overview** pagina zijn visueel vernieuwd.
+* De programmaschakeler is verplaatst (deze bevindt zich nu onder het Adobe Experience Manager-logo).
 
 ## Opgeloste problemen {#bug-fixes}
 
-* In sommige situaties werd deze optie niet ingeschakeld wanneer u de optie Wijzigingen **** taakverdeling overslaan op niet-productiepijpleidingen selecteerde.
+* In sommige situaties werd deze optie niet ingeschakeld wanneer u de optie **Load Balancer Changes** op niet-productiepijpleidingen hebt geselecteerd.
