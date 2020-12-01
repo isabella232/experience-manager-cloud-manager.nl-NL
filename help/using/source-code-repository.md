@@ -1,6 +1,6 @@
 ---
 title: Broncodeopslagplaats
-seo-title: Inschrijving als broncode voor Adobe AEM Cloud Manager
+seo-title: Inschrijving van broncode voor Adobe AEM Cloud Manager
 description: Volg deze pagina voor meer informatie over de git-opslagplaats die is ingericht voor elk programma dat u hebt in Cloud Manager.
 seo-description: Volg deze pagina voor meer informatie over de git-opslagplaats die is ingericht voor elk programma dat u hebt in Adobe AEM Cloud Manager.
 uuid: 2c42775f-8703-43f7-bad2-7dc086ea9dd7
@@ -10,21 +10,24 @@ topic-tags: requirements
 discoiquuid: f90f0f4c-c1ff-47f6-8d97-ff5018561bf2
 translation-type: tm+mt
 source-git-commit: 697311cd00ef96568f6befd2fe76febafc27961e
+workflow-type: tm+mt
+source-wordcount: '279'
+ht-degree: 2%
 
 ---
 
 
 # Broncodeopslagplaats {#source-code-repository}
 
-## Opslagplaats voor wolkenbeheer {#cloud-manager-repository}
+## Opslagplaats voor cloudbeheer {#cloud-manager-repository}
 
-Uw [!UICONTROL AEM Managed Services] abonnement bevat een opslagplaats voor broncode die is ingericht en beheerd door Adobe. Aan het programma van elke klant wordt één en unieke **Git Repository** toegewezen, waar uw bijbehorende code wordt opgeslagen en beveiligd.
+Uw [!UICONTROL AEM Managed Services]-abonnement bevat een bronopslagplaats voor code die is ingericht en beheerd door Adobe. Aan elk programma van de klant wordt één en uniek **Git Repository** toegewezen, waar uw bijbehorende code wordt opgeslagen en beveiligd.
 
 Als beste praktijken, zou u altijd de Bewaarplaats van de Bewaarplaats van de Bezit van de Bediener van de Bediener van de Bediener van de Manager van de Wolk moeten gebruiken, die leeg zonder enige gevormde takken of steekproefprojecten komt. Als u de Git Repository van Cloud Manager wilt gebruiken, ontvangt u een **privétoegangstoken** waarmee u elke met Git compatibele client kunt gebruiken om vertakkingen te maken, uw code op te slaan en op te halen, de geschiedenis van de commit weer te geven, enz.
 
-Voor meer informatie over hoe te opstellingstakken in Git, zie het [Vormen van uw Tanden](configure-your-release-branches.md)van de Versie.
+Voor meer informatie over hoe te om takken in Git te plaatsen, zie [Vormend uw Vertakkingen van de Versie](configure-your-release-branches.md).
 
-Voor meer informatie over hoe te om de Bewaarplaats van de Bewaarplaats **van de Bezit van de Bediener van de Bediener van de Bediener van de** Bediener [van de Bediener van de Bediener van de Bediener van de Wolk met CI/CD te gebruiken, zie het](configuring-pipeline.md)Vormen van uw pijpleidingCI/CD.
+Voor meer informatie over hoe te om de **Bewaarplaats van de Bewaarplaats van de Wolk** met de pijpleiding te gebruiken CI/CD, zie [Het vormen van uw CI/CD pijpleiding](configuring-pipeline.md).
 
 ## Bewaarplaats op locatie {#on-premise-repository}
 
@@ -32,5 +35,5 @@ In sommige gevallen hebt u een bestaande Git Repository en wilt u deze blijven g
 
 >[!NOTE]
 >
->Zie het [stramienblad](https://education.github.com/git-cheat-sheet-education.pdf)voor informatie over de algemene opdrachten voor Git.
+>Als u de algemene opdrachten voor Git wilt weergeven, raadpleegt u [Git Cheat Sheet](https://education.github.com/git-cheat-sheet-education.pdf).
 
