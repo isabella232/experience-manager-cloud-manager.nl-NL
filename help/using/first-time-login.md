@@ -19,10 +19,10 @@ ht-degree: 6%
 
 # Eerste aanmelding {#first-time-login}
 
-Zodra u opstelling de algemene configuraties voor hebt, bent u bereid om het Gebruikersinterface (UI) voor te gebruiken [!UICONTROL Cloud Manager][!UICONTROL Cloud Manager].
+Als u de algemene configuraties voor [!UICONTROL Cloud Manager] hebt ingesteld, kunt u de gebruikersinterface (UI) voor [!UICONTROL Cloud Manager] gebruiken.
 
 >[!NOTE]
->Afhankelijk van de rollen die binnen worden toegewezen [!UICONTROL Cloud Manager] en de staat van de toepassing, zult u verschillende schermen zien terwijl het gebruiken van [!UICONTROL Cloud Manager] UI.
+>Afhankelijk van de rollen die in [!UICONTROL Cloud Manager] en de staat van de toepassing worden toegewezen, zult u verschillende schermen zien terwijl het gebruiken van [!UICONTROL Cloud Manager] UI.
 
 ## Videozelfstudie {#video-tutorial-one}
 
@@ -34,15 +34,15 @@ De volgende video biedt een overzicht van programma&#39;s van de Manager van de 
 
 ## Aanmelden voor de eerste keer {#logging-in-for-the-first-time}
 
-1. Meld u aan bij de **Adobe[!UICONTROL Experience Cloud]** en u ziet de lijst met **programma&#39;s**.
+1. Meld u aan bij **Adobe[!UICONTROL Experience Cloud]** en u ziet de lijst met **Programma&#39;s**.
 
    ![](assets/screen_shot_2018-06-04at120643pm.png)
 
-1. Selecteer het programma (bijvoorbeeld **We.Retail Global**) en klik op het pictogram linksboven om het te openen [!UICONTROL Cloud Manager].
+1. Selecteer het programma (bijvoorbeeld **We.Retail Global**) en klik op het pictogram linksboven om [!UICONTROL Cloud Manager] te openen.
 
    ![](assets/first-timea1.png)
 
-1. Het dashboard voor [!UICONTROL Cloud Manager] weergaven.
+1. Het dashboard voor [!UICONTROL Cloud Manager] vertoningen.
 
    ![](assets/FirstLogin1.png)
 
@@ -50,7 +50,7 @@ De volgende video biedt een overzicht van programma&#39;s van de Manager van de 
 
    >[!NOTE]
    >
-   >Zie [Uw programma](https://helpx.adobe.com/experience-manager/cloud-manager/using/setting-up-program.html) instellen om de volgende stappen te voltooien.
+   >Zie [Uw programma instellen](https://helpx.adobe.com/experience-manager/cloud-manager/using/setting-up-program.html) om de volgende stappen te voltooien.
 
 ## Videozelfstudie {#video-tutorial-two}
 
