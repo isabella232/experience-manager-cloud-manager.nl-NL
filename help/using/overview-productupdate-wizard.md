@@ -37,8 +37,8 @@ De wizard bevat vijf fasen die de gebruiker tijdens een AEM productupdate begele
 
 1. U ontvangt een pulsmelding via Cloud Manager met de mededeling dat AEM 6.5 beschikbaar is voor uw programma.
 
-1. Een **[!UICONTROL AEM 6.5 Update]** kaart wordt weergegeven op het overzichtsscherm van [!UICONTROL Cloud Manager]. Met deze kaart kunt u bijhouden in welke fase van het updateproces u zich bevindt en kunt u zien welke volgende stap moet worden uitgevoerd. Selecteer deze optie **[!UICONTROL Start Update]** om de wizard te starten.
+1. Een **[!UICONTROL AEM 6.5 Update]** kaart wordt weergegeven op het overzichtsscherm van [!UICONTROL Cloud Manager]. Met deze kaart kunt u bijhouden in welke fase van het updateproces u zich bevindt en kunt u zien welke volgende stap moet worden uitgevoerd. Selecteer **[!UICONTROL Start Update]** om de wizard te starten.
 
    ![](assets/Start-Update.png)
 
-   De tovenaar toont nu de eerste fase van **[!UICONTROL AEM 6.5 Update]** proces zoals die in de Fase [van de](evaluation.md)Evaluatie wordt gezien.
+   De tovenaar toont nu de eerste fase van **[!UICONTROL AEM 6.5 Update]** proces zoals gezien in [Evaluatiefase](evaluation.md).
