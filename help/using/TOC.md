@@ -6,9 +6,9 @@ user-guide-title: Handleiding Experience Manager Cloud Manager
 breadcrumb-title: Handleiding voor Cloud Manager
 user-guide-description: Leer hoe u met Adobe Managed Services Experience Manager in de cloud zelf kunt beheren.
 translation-type: tm+mt
-source-git-commit: 30d782f5a095b1b07ec4f2039def9ba30a559325
+source-git-commit: f5359dee907b32cefa2db2c4ad2baf8e337f6060
 workflow-type: tm+mt
-source-wordcount: '243'
+source-wordcount: '249'
 ht-degree: 14%
 
 ---
@@ -52,6 +52,7 @@ ht-degree: 14%
    + [Maven-projectversiebeheer](activating-maven-project.md)
    + [Toegang tot Git](accessing-git.md)
    + [Integreren met Git](setup-cloud-manager-git-integration.md)
+   + [Werken met Meerdere opslagplaatsen voor Git-bronnen](/help/using/working-with-multiple-source-git-repos.md)
 + Wizard Productupdates {#product-update-wizard}
    + [Overzicht](overview-productupdate-wizard.md)
    + [Evaluatie](evaluation.md)
