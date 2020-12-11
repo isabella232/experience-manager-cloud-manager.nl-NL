@@ -1,36 +1,24 @@
 ---
-title: Opmerkingen bij de release 2020.11.0
-seo-title: Opmerkingen bij de release AEM Cloud Manager voor 2020.11.0
-description: Volg deze pagina voor informatie over Cloud Manager Release 2020.11.0
-seo-description: Volg deze pagina om informatie op te halen voor AEM Cloud Manager Release 2020.11.0
+title: Opmerkingen bij de release 2020.12.0
+seo-title: Opmerkingen bij de release AEM Cloud Manager voor 2020.12.0
+description: Volg deze pagina voor informatie over Cloud Manager Release 2020.12.0
+seo-description: Volg deze pagina om informatie op te halen voor AEM Cloud Manager Release 2020.12.0
 translation-type: tm+mt
-source-git-commit: 30d782f5a095b1b07ec4f2039def9ba30a559325
+source-git-commit: 4767e782019998564f4fd238ef2555ab0a4f6d62
 workflow-type: tm+mt
-source-wordcount: '160'
-ht-degree: 1%
+source-wordcount: '66'
+ht-degree: 0%
 
 ---
 
-# Opmerkingen bij de release 2020.11.0 {#release-notes-for}
+# Opmerkingen bij de release voor 2020.12.0 {#release-notes-for}
 
-In de volgende sectie worden de algemene opmerkingen bij de release voor [!UICONTROL Cloud Manager] Release 2020.11.0 beschreven.
+In de volgende sectie worden de algemene opmerkingen bij de release voor [!UICONTROL Cloud Manager] Release 2020.12.0 beschreven.
 
 ## Releasedatum {#release-date}
 
-De datum van de Versie voor [!UICONTROL Cloud Manager] Versie 2020.11.0 is 12 november 2020.
-
-## Wat is er nieuw?{#whats-new}
-
-* Het tabblad **Leren** in Cloud Manager wordt vernieuwd met nieuwe afbeeldingen in de gebruikersinterface.
+De datum van de Versie voor [!UICONTROL Cloud Manager] Versie 2020.12.0 is 10 December, 2020.
 
 ## Opgeloste problemen {#bug-fixes}
 
-* Bepaalde door de klant veroorzaakte implementatiefouten worden nu expliciet opgehaald in de implementatielogboeken.
-
-* Voor het laden van afhankelijkheden die zijn uitgevoerd voordat de build werd uitgevoerd, moest een Maven-plug-in worden gedownload.
-
-* Met de koppeling in de voettekst van Cloud Manager om een taal te selecteren, gaat u nu naar de juiste locatie.
-
-* Soms wordt tijdens het scannen van code het SonarQube-proces niet gestart. Dit wordt nu automatisch gedetecteerd en er wordt geprobeerd opnieuw te starten.
-
-* Tijdens het proces van de plaatskruipende die in prestaties het testen wordt gebruikt, verzoeken die uit de tijd in de eerste drie niveaus van diepteverplaatsing automatisch zullen worden opnieuw geprobeerd.
+* Sommige gevallen van fouten tijdens het scannen van code zonder dat de resultaten worden verholpen.
