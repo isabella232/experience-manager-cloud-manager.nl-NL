@@ -10,7 +10,7 @@ topic-tags: using
 content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 translation-type: tm+mt
-source-git-commit: d02292e4f6369e0e0bf8fcf60cb8fe299854b3cc
+source-git-commit: bbcd5e59a9f9e8cb83cefb8af79d3ce7987bf388
 workflow-type: tm+mt
 source-wordcount: '1776'
 ht-degree: 0%
@@ -170,7 +170,7 @@ Voer de onderstaande stappen uit om validaties voor Dispatcher te configureren:
 
    Stel bijvoorbeeld dat er een splitsing is van 50%/50% tussen de set Actieve pagina&#39;s populair en Nieuwe pagina&#39;s (in dit voorbeeld wordt Andere actieve pagina&#39;s niet gebruikt) en dat de set Nieuwe pagina&#39;s 3000 pagina&#39;s bevat. De paginaweergaven per minuut KPI is ingesteld op 200. Gedurende de testperiode van 30 minuten:
 
-   * Elk van de 25 pagina&#39;s in de Populaire live paginaset wordt 240 keer - (200 * 0,5) / 25) * 30 = 120
+   * Elk van de 25 pagina&#39;s in de Populaire live paginaset wordt 120 keer - (200 * 0,5) / 25) * 30 = 120
 
    * Elk van de 3000 pagina&#39;s in de set Nieuwe pagina&#39;s wordt één keer geraakt - (200 * 0,5) / 3000) * 30 = 1
 
