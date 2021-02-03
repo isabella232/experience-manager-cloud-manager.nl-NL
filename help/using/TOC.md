@@ -6,7 +6,7 @@ user-guide-title: Handleiding Experience Manager Cloud Manager
 breadcrumb-title: Handleiding voor Cloud Manager
 user-guide-description: Leer hoe u met Adobe Managed Services Experience Manager in de cloud zelf kunt beheren.
 translation-type: tm+mt
-source-git-commit: 5688e956c4c21968ce691b560a6ce519496f7563
+source-git-commit: f3e5e4be7ac4ba7eef158cea3c1c19ea83ec4d75
 workflow-type: tm+mt
 source-wordcount: '252'
 ht-degree: 13%
@@ -45,7 +45,7 @@ ht-degree: 13%
    + [Uw omgevingen beheren](manage-your-environment.md)
    + [Uw omgevingen bewaken](monitor-your-environments.md)
    + [Cloud Manager-API](https://www.adobe.io/apis/experiencecloud/cloud-manager/docs.html)
-   + [Cloud Manager CLI](https://github.com/adobe/aio-cli-plugin-cloudmanager/blob/master/README.md)
+   + [Cloud Manager CLI](https://github.com/adobe/aio-cli-plugin-cloudmanager/blob/main/README.md)
    + [Meldingen](notifications.md)
    + [Aangepaste regels voor codekwaliteit](custom-code-quality-rules.md)
 + Uw code {#managing-code} beheren
