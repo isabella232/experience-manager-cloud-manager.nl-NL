@@ -2,7 +2,7 @@
 title: Inzicht in de omgeving van de build
 description: Volg deze pagina voor meer informatie over omgevingen
 translation-type: tm+mt
-source-git-commit: 60270a7adb612355ff6d6928adcff8e94cabe092
+source-git-commit: 5a6148fd7750544def87147c5f012c09077b2b60
 workflow-type: tm+mt
 source-wordcount: '768'
 ht-degree: 0%
@@ -33,7 +33,8 @@ Cloud Manager bouwt en test uw code gebruikend een gespecialiseerde bouwstijlmil
    * `mvn --batch-mode org.apache.maven.plugins:maven-clean-plugin:3.1.0:clean -Dmaven.clean.failOnError=false`
    * `mvn --batch-mode org.jacoco:jacoco-maven-plugin:prepare-agent package`
 
-* Maven wordt geconfigureerd op systeemniveau met een settings.xml-bestand dat automatisch de openbare Adobe **Artifact**-opslagplaats omvat. (Zie [Adobe Public Maven Repository](https://repo.adobe.com/) voor meer informatie).
+* Maven wordt geconfigureerd op systeemniveau met een settings.xml-bestand dat automatisch de openbare Adobe **Artifact**-opslagplaats omvat.
+Raadpleeg [Adobe Public Maven Repository](https://repo.adobe.com/) voor meer informatie.
 
 >[!NOTE]
 >Hoewel Cloud Manager geen specifieke versie van `jacoco-maven-plugin` definieert, moet de gebruikte versie ten minste `0.7.5.201505241946` zijn.
