@@ -1,7 +1,7 @@
 ---
 title: Uw omgevingen beheren
 seo-title: Uw omgevingen beheren
-description: 'null'
+description: Meer informatie over de omgeving van Cloud Manager
 seo-description: Volg deze pagina om de lijst van productie en non-production milieu's te bekijken die voor vestiging en het in werking stellen van de pijpleiding CI/CD in de Manager van de Wolk worden gebruikt.
 uuid: 04e67572-11db-4d5d-acf3-fd7f644a95f0
 contentOwner: jsyal
@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: c5b39de2-3a9b-437f-98e8-e6e6249a5b3a
 translation-type: tm+mt
-source-git-commit: c81243708d938a8bffdec8a35f32a2cf552c1c95
+source-git-commit: 2dda85baa5e7ed9bfd8933df3580ec6fc3c210fd
 workflow-type: tm+mt
-source-wordcount: '265'
+source-wordcount: '269'
 ht-degree: 0%
 
 ---
