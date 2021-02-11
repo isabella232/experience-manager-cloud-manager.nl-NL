@@ -6,9 +6,9 @@ user-guide-title: Handleiding Experience Manager Cloud Manager
 breadcrumb-title: Handleiding voor Cloud Manager
 user-guide-description: Leer hoe u met Adobe Managed Services Experience Manager in de cloud zelf kunt beheren.
 translation-type: tm+mt
-source-git-commit: f3e5e4be7ac4ba7eef158cea3c1c19ea83ec4d75
+source-git-commit: 88b17f05a577b5c46b5b352d7340228353b49a38
 workflow-type: tm+mt
-source-wordcount: '252'
+source-wordcount: '255'
 ht-degree: 13%
 
 ---
@@ -57,7 +57,8 @@ ht-degree: 13%
    + [Overzicht](overview-productupdate-wizard.md)
    + [Evaluatie](evaluation.md)
 + Releaseopmerkingen {#release-notes}
-   + [Huidige opmerkingen bij de release (2020.12.0)](release-notes-current.md)
+   + [Huidige opmerkingen bij de release (2021.2.0)](release-notes-current.md)
+   + [Opmerkingen bij de release 2020.12.0](release-notes-2020-12-0.md)
    + [Opmerkingen bij de release 2020.11.0](release-notes-2020-11-0.md)
    + [Opmerkingen bij de release 2020.10.0](release-notes-2020-10-0.md)
    + [Opmerkingen bij de release 2020.9.0](release-notes-2020-9-0.md)
