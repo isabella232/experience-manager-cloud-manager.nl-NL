@@ -1,7 +1,7 @@
 ---
 title: Inzicht in de testresultaten
 seo-title: Inzicht in de testresultaten
-description: 'null'
+description: Meer informatie over drie sneltoetsen tijdens het uitvoeren van een pijplijn in Cloud Manager
 seo-description: Volg deze pagina voor meer informatie over drie sneltoetsen tijdens het uitvoeren van een pijplijn, het scannen van code, prestaties en beveiligingstests waarmee uw programma wordt gevalideerd in Cloud Manager.
 uuid: 93caa01f-0df2-4a6f-81dc-23dfee24dc93
 contentOwner: jsyal
@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: 83299ed8-4b7a-4b1c-bd56-1bfc7e7318d4
 translation-type: tm+mt
-source-git-commit: 39e6af753cdd43da96746c7609a8f502b3ac9e77
+source-git-commit: 2dda85baa5e7ed9bfd8933df3580ec6fc3c210fd
 workflow-type: tm+mt
-source-wordcount: '1544'
+source-wordcount: '1556'
 ht-degree: 2%
 
 ---
@@ -50,7 +50,7 @@ Deze stap evalueert de kwaliteit van uw toepassingscode. Het is de kerndoelstell
 Bij het testen van de kwaliteit van de code, wordt de broncode gescand om ervoor te zorgen dat het aan bepaalde kwaliteitscriteria voldoet. Momenteel wordt dit geïmplementeerd door een combinatie van SonarQube en inhoudspakketonderzoek met gebruik van OakPAL. Er zijn meer dan 100 regels die generieke Java-regels en AEM-specifieke regels combineren. Enkele AEM-specifieke regels worden gecreeerd gebaseerd op beste praktijken van AEM Techniek en worden bedoeld als [Regels van de Kwaliteit van de Code van de Douane](/help/using/custom-code-quality-rules.md).
 
 >[!NOTE]
->U kunt de volledige lijst met regels [hier](/help/using/assets/CodeQuality-rules-latest.xlsx) downloaden.
+>U kunt de volledige lijst met regels [hier](/help/using/assets/CodeQuality-rules-latest-AMS.xlsx) downloaden.
 
 De resultaten van deze stap worden geleverd als *Classificatie*. De onderstaande tabel geeft een overzicht van de scores voor verschillende testcriteria:
 
