@@ -9,10 +9,10 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: d2338c74-3278-49e6-a186-6ef62362509f
 translation-type: tm+mt
-source-git-commit: 71a760997ec2a0873a7f39d206086a8b4fd6854e
+source-git-commit: 7cfa7826f851cb55be72211f8e8a980451846f3b
 workflow-type: tm+mt
-source-wordcount: '2314'
-ht-degree: 6%
+source-wordcount: '3251'
+ht-degree: 4%
 
 ---
 
@@ -225,7 +225,7 @@ public class DontDoThis implements Page {
 
 ResourceResolver-objecten die zijn verkregen van de ResourceResolverFactory gebruiken systeembronnen. Hoewel er maatregelen op zijn plaats zijn om deze middelen terug te winnen wanneer een ResourceResolver niet meer in gebruik is, is het efficiënter om om het even welke geopende voorwerpen uitdrukkelijk te sluiten ResourceResolver door de close () methode te roepen.
 
-Eén relatief gebruikelijke misvatting is dat ResourceResolver-objecten die zijn gemaakt met een bestaande JCR-sessie, niet expliciet moeten worden gesloten of dat de onderliggende JCR-sessie hierdoor wordt gesloten. Dit is niet het geval - ongeacht hoe een ResourceResolver wordt geopend, zou het moeten worden gesloten wanneer niet meer gebruikt. Aangezien ResourceResolver de Closeable interface uitvoert, is het ook mogelijk om de poging-met-middelen syntaxis te gebruiken in plaats van uitdrukkelijk het aanhalen van close().
+Eén relatief gebruikelijke misvatting is dat ResourceResolver-objecten die zijn gemaakt met een bestaande JCR-sessie, niet expliciet moeten worden gesloten of dat de onderliggende JCR-sessie hierdoor wordt gesloten. Dit is niet het geval - ongeacht hoe een ResourceResolver wordt geopend, zou het moeten worden gesloten wanneer niet meer gebruikt. Aangezien ResourceResolver de Closeable interface uitvoert, is het ook mogelijk om de poging-met-middelen syntaxis in plaats van uitdrukkelijk te gebruiken close().
 
 #### Niet-compatibele code {#non-compliant-code-4}
 
@@ -743,6 +743,183 @@ Ondersteuning voor omgekeerde replicatie is niet beschikbaar in Cloud Service-im
 
 De klanten die omgekeerde replicatie gebruiken zouden Adobe voor alternatieve oplossingen moeten contacteren.
 
+### OakPAL - De middelen die in volmacht-Toegelaten de Bibliotheken van de Cliënt worden bevat zouden in een omslag genoemd middelen {#oakpal-resources-proxy} moeten zijn
+
+**Sleutel**: ClientlibProxyResource
+
+**Type**: Bug
+
+**Ernst**: Klein
+
+**Sinds**: Versie 2021.2.0
+
+AEM clientbibliotheken kunnen statische bronnen bevatten, zoals afbeeldingen en lettertypen. Zoals beschreven in [Het gebruiken van Preprocessoren](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html?lang=en#using-preprocessors), wanneer het gebruiken van pro-xied cliëntbibliotheken moeten deze statische middelen in een kindomslag genoemd middelen worden bevat om effectief van verwijzingen te zijn op de publicatieinstanties.
+
+#### Niet-compatibele code {#non-compliant-proxy-enabled}
+
+```
++ apps
+  + projectA
+    + clientlib
+      - allowProxy=true
+      + images
+        + myimage.jpg
+```
+
+#### Compatibele code {#compliant-proxy-enabled}
+
+```
++ apps
+  + projectA
+    + clientlib
+      - allowProxy=true
+      + resources
+        + myimage.jpg
+```
+
+### OakPAL - Gebruik van Cloud Service Incompatible Workflow Processes {#oakpal-usage-cloud-service}
+
+**Sleutel**: CloudServiceIncompatibleWorkflowProcess
+
+**Type**: Code Smell
+
+**Ernst**: Klein
+
+**Sinds**: Versie 2021.2.0
+
+Met de overgang naar Asset Micro-services voor de verwerking van bedrijfsmiddelen op AEM Cloud Service zijn diverse workflowprocessen die werden gebruikt in on-premise- en AMS-versies van AEM niet ondersteund of onnodig geworden. Het migratiehulpmiddel bij [aem-wolk-migratie](https://github.com/adobe/aem-cloud-migration) kan worden gebruikt om werkschemamodellen tijdens de migratie van AEM Cloud Service bij te werken.
+
+### OakPAL - Het gebruik van statische sjablonen wordt ontmoedigd ten gunste van bewerkbare sjablonen {#oakpal-static-template}
+
+**Sleutel**: StaticTemplateUsage
+
+**Type**: Code Smell
+
+**Ernst**: Klein
+
+**Sinds**: Versie 2021.2.0
+
+Terwijl het gebruik van statische malplaatjes historisch zeer algemeen in AEM projecten is geweest, worden de editable malplaatjes hoogst geadviseerd aangezien zij de meeste flexibiliteit verstrekken en extra eigenschappen steunen die niet in statische malplaatjes aanwezig zijn. Meer informatie vindt u op [Paginasjablonen - Bewerkbaar](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/templates/page-templates-editable.html?lang=en). De migratie van statische aan editable malplaatjes kan grotendeels worden geautomatiseerd gebruikend [AEM Moderniseringshulpmiddelen](https://opensource.adobe.com/aem-modernize-tools/).
+
+### OakPAL - Het gebruik van verouderde stichtingscomponenten wordt ontmoedigd {#oakpal-usage-legacy}
+
+**Sleutel**: LegacyFoundationComponentUsage
+
+**Type**: Code Smell
+
+**Ernst**: Klein
+
+**Sinds**: Versie 2021.2.0
+
+De oudere stichtingscomponenten (d.w.z. componenten onder `/libs/foundation`) zijn afgekeurd voor verscheidene AEM versies ten gunste van de Componenten van de Kern WCM. Het gebruik van de oudere basiscomponenten als de basis voor aangepaste componenten (door bedekking of overerving) wordt afgeraden en moet worden omgezet in de corresponderende kerncomponent. Deze omzetting kan door [AEM Moderniseringshulpmiddelen ](https://opensource.adobe.com/aem-modernize-tools/) worden vergemakkelijkt.
+
+### OakPAL - alleen ondersteunde namen en volgorde van de uitvoermodus moeten worden gebruikt {#oakpal-supported-runmodes}
+
+**Sleutel**: SupportedRunmode
+
+**Type**: Code Smell
+
+**Ernst**: Klein
+
+**Sinds**: Versie 2021.2.0
+
+AEM Cloud Service dwingt een strikt naamgevingsbeleid voor runmode namen en een strikte volgorde voor die runmodes af. De lijst met ondersteunde runmodi vindt u op [Runmodi](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/overview.html?lang=en#runmodes) en elke afwijking hiervan wordt als een probleem geïdentificeerd.
+
+### OakPAL - De definitieknoden van de Index van het Onderzoek van de Douane moeten directe kinderen van /oak:index {#oakpal-custom-search} zijn
+
+**Sleutel**: OakIndexLocation
+
+**Type**: Code Smell
+
+**Ernst**: Klein
+
+**Sinds**: Versie 2021.2.0
+
+AEM Cloud Service vereist dat de definities van de douaneonderzoeksindex (d.w.z. knopen van type oak:QueryIndexDefinition) directe kindknopen van `/oak:index` zijn. Indexen op andere locaties moeten worden verplaatst om compatibel te zijn met AEM Cloud Service. Meer informatie over zoekindexen vindt u op [Inhoud zoeken en indexeren](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/operations/indexing.html?lang=en).
+
+### OakPAL - De definitieknoden van de Definitie van de Index van het Onderzoek van de Douane moeten een compatVersie van 2 {#oakpal-custom-search-compatVersion} hebben
+
+**Sleutel**: IndexCompatVersion
+
+**Type**: Code Smell
+
+**Ernst**: Klein
+
+**Sinds**: Versie 2021.2.0
+
+AEM Cloud Service vereist dat de definities van de douaneonderzoek indexdefinities (d.w.z. knopen van type oak:QueryIndexDefinition) het compatVersion bezit hebben dat aan 2 wordt geplaatst. Andere waarden worden niet ondersteund door AEM Cloud Service. Meer informatie over zoekindexen vindt u op [Inhoud zoeken en indexeren](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/operations/indexing.html?lang=en).
+
+### OakPAL - afstammende knooppunten van Custom Search Index Definition-knooppunten moeten van het type &#39;t zijn:ongestructureerd {#oakpal-descendent-nodes}
+
+**Sleutel**: IndexDescendantNodeType
+
+**Type**: Code Smell
+
+**Ernst**: Klein
+
+**Sinds**: Versie 2021.2.0
+
+Problemen kunnen moeilijk worden opgelost wanneer een definitieknooppunt van een aangepaste zoekindex niet-geordende onderliggende knooppunten bevat. Om deze te vermijden, wordt geadviseerd dat alle afstammende knopen van een `oak:QueryIndexDefinition` knoop van type niet:ongestructureerd zijn.
+
+### OakPAL - de Definitie van de Index van het Onderzoek van de Douane moet een kindknoop genoemd indexRules bevatten die kinderen {#oakpal-custom-search-index} heeft
+
+**Sleutel**: IndexRulesNode
+
+**Type**: Code Smell
+
+**Ernst**: Klein
+
+**Sinds**: Versie 2021.2.0
+
+Een behoorlijk bepaalde knoop van de de definitiedefinitie van de douaneonderzoek index moet een kindknoop genoemd indexRules bevatten die, beurtelings minstens één kind moet hebben. Meer informatie vindt u op [Oak-documentatie](https://jackrabbit.apache.org/oak/docs/query/lucene.html).
+
+### OakPAL - De definitieknoden van de Definitie van de Index van het Onderzoek van de Douane moeten de noemende Overeenkomsten {#oakpal-custom-search-definitions} volgen
+
+**Sleutel**: IndexName
+
+**Type**: Code Smell
+
+**Ernst**: Klein
+
+**Sinds**: Versie 2021.2.0
+
+AEM Cloud Service vereist dat de definities van de douaneonderzoek indexdefinities (d.w.z., knopen van type `oak:QueryIndexDefinition`) volgens een specifiek patroon moeten worden genoemd dat op [Inhoud het Onderzoek en het Indexeren](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/operations/indexing.html?lang=en#how-to-use) wordt beschreven.
+
+### OakPAL - de Duidelijkheden van de Definitie van de Index van het Onderzoek van de Douane moeten de Type van Index {#oakpal-index-type-lucene} gebruiken
+
+**Sleutel**: IndexType
+
+**Type**: Code Smell
+
+**Ernst**: Klein
+
+**Sinds**: Versie 2021.2.0
+
+AEM Cloud Service vereist dat de definities van de douaneonderzoek indexdefinities (d.w.z. knopen van type oak:QueryIndexDefinition) een typebezit met de waarde hebben die aan **lucene** wordt geplaatst. Indexering met behulp van verouderde indextypen moet worden bijgewerkt voordat er wordt overgeschakeld naar AEM Cloud Service. Zie [Inhoud zoeken en indexeren](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/operations/indexing.html?lang=en#how-to-use) voor meer informatie.
+
+### OakPAL - De definitieknooppunten van de Index van het Onderzoek van de Douane moeten geen bezit genoemd zaad {#oakpal-property-name-seed} bevatten
+
+**Sleutel**: IndexSeedProperty
+
+**Type**: Code Smell
+
+**Ernst**: Klein
+
+**Sinds**: Versie 2021.2.0
+
+AEM Cloud Service verbiedt definities van de aangepaste zoekindex (knooppunten van het type `oak:QueryIndexDefinition`) om een eigenschap met de naam zaad te bevatten. Indexering met behulp van deze eigenschap moet worden bijgewerkt voordat wordt overgeschakeld naar AEM Cloud Service. Zie [Inhoud zoeken en indexeren](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/operations/indexing.html?lang=en#how-to-use) voor meer informatie.
+
+### OakPAL - De definitieknooppunten van de Index van het Onderzoek van de Douane moeten geen bezit genoemd herdex {#oakpal-reindex-property} bevatten
+
+**Sleutel**: IndexReindexProperty
+
+**Type**: Code Smell
+
+**Ernst**: Klein
+
+**Sinds**: Versie 2021.2.0
+
+AEM Cloud Service verbiedt aangepaste zoekindexdefinities (knooppunten van het type `oak:QueryIndexDefinition`) die een eigenschap met de naam reindex bevatten. Indexering met behulp van deze eigenschap moet worden bijgewerkt voordat wordt overgeschakeld naar AEM Cloud Service. Zie [Inhoud zoeken en indexeren](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/operations/indexing.html?lang=en#how-to-use) voor meer informatie.
 
 
 
