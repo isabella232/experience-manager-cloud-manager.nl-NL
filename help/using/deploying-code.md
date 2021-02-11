@@ -1,17 +1,17 @@
 ---
 title: Uw code implementeren
 seo-title: Uw code implementeren
-description: 'null'
-seo-description: Zodra u uw pijpleiding (bewaarplaats, milieu, en het testen milieu) hebt gevormd, bent u bereid om uw code op te stellen. Volg deze pagina voor meer informatie.
+description: Geeft een overzicht van het implementatieproces in Cloud Manager
+seo-description: Leer hoe te om uw code op te stellen zodra u uw pijpleiding (bewaarplaats, milieu, en het testen milieu) hebt gevormd
 uuid: 4e3807e1-437e-4922-ba48-0bcadf293a99
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: 832a4647-9b83-4a9d-b373-30fe16092b15
 translation-type: tm+mt
-source-git-commit: c35398110e9d8311bf58f217efdd082cf0cfd90a
+source-git-commit: 2dda85baa5e7ed9bfd8933df3580ec6fc3c210fd
 workflow-type: tm+mt
-source-wordcount: '952'
+source-wordcount: '957'
 ht-degree: 0%
 
 ---
@@ -142,10 +142,10 @@ Productie-implementaties volgen doorgaans dezelfde stappen als hierboven, maar o
 
 1. Implementeer AEM pakketten naar de auteur.
 1. Dispatcher1 loskoppelen van het taakverdelingsmechanisme.
-1. Implementeer AEM pakketten om te publiceren1 en het verzenderpakket om de verzendingscache van Dispatcher1 leeg te maken.
+1. Implementeer AEM pakketten om te publiceren1 en het verzendingspakket om dispatcher1 parallel in de cache van de uitlijningsdispatcher te plaatsen.
 1. Plaats dispatcher1 terug in het taakverdelingsmechanisme.
 1. Als dispatcher1 weer in bedrijf is, koppelt u dispatcher2 af van het taakverdelingsmechanisme.
-1. Implementeer AEM pakketten om te publiceren2 en het verzenderpakket om de verzendingscache van Dispatcher2 leeg te maken.
+1. Implementeer AEM pakketten om te publiceren2 en het verzendingspakket naar dispatcher2 in parallel, uitlijningscachegeheugen.
 1. Plaats dispatcher2 terug in het taakverdelingsmechanisme.
 Dit proces gaat verder tot de plaatsing alle uitgevers en verzenders in de topologie heeft bereikt.
 
