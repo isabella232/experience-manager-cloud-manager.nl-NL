@@ -4,9 +4,9 @@ seo-title: Veelgestelde vragen over Cloud Manager
 description: Raadpleeg de veelgestelde vragen over probleemoplossing in Cloud Manager
 seo-description: Volg deze pagina om antwoorden te krijgen op veelgestelde vragen over Cloud Manager
 translation-type: tm+mt
-source-git-commit: 31627bf11a46b2e6f1d0aa196bc4a9cf9648e775
+source-git-commit: fbf91ad0d200a9f1cbde4e87cf6b78a8479d0614
 workflow-type: tm+mt
-source-wordcount: '882'
+source-wordcount: '881'
 ht-degree: 0%
 
 ---
@@ -43,7 +43,7 @@ Sommige notities over de stap Prestatietest:
 * De *Prestatiesstap* is een stap van Webprestaties, namelijk de tijd om de pagina te laden gebruikend browser van het Web.
 * De URL&#39;s in het resulterende bestand *CSV* worden tijdens de test geladen in een Chrome-browser in de Cloud Manager-infrastructuur.
 * Een gemeenschappelijke metrisch die ontbreekt is *foutentarief*. Een URL kan alleen worden doorgegeven als de hoofd-URL met de status `200` en in minder dan `20` seconden wordt geladen. Paginalading die `20` seconden overschrijdt, wordt gemarkeerd als `504` fouten.
-* Als voor uw site verificatie van gebruikers is vereist, raadpleegt u [Verified Performance Testing](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html?lang=en#how-to-use) voor het configureren van de test voor verificatie op uw site.
+* Als voor uw site verificatie van gebruikers is vereist, raadpleegt u [Verified Performance Testing](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html?lang=en#how-to-use) voor het configureren van de test voor verificatie voor uw site.
 
 ## Kunnen wij SNAPSHOT in de versie van het Maven project gebruiken? Hoe werkt het versioning van de pakketten en bundeljar-bestanden voor werkgebied en productie? {#snapshot-version}
 
