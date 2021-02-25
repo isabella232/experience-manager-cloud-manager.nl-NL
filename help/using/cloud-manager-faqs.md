@@ -4,9 +4,9 @@ seo-title: Veelgestelde vragen over Cloud Manager
 description: Raadpleeg de veelgestelde vragen over probleemoplossing in Cloud Manager
 seo-description: Volg deze pagina om antwoorden te krijgen op veelgestelde vragen over Cloud Manager
 translation-type: tm+mt
-source-git-commit: 0db6a6a4e430cd2619db1739fd322224e4e129e7
+source-git-commit: da3346852df4e421a69321830d7efee81d58e20c
 workflow-type: tm+mt
-source-wordcount: '881'
+source-wordcount: '880'
 ht-degree: 0%
 
 ---
@@ -55,9 +55,9 @@ Sommige notities over de stap Prestatietest:
 
 1. Cloud Manager voegt automatisch zijn versie toe aan Stage en Production builds en maakt zelfs een Git-vertakking. Er is geen speciale configuratie vereist. Als stap 3 hierboven wordt overgeslagen, zou de plaatsing nog goed werken en een versie automatisch worden geplaatst.
 
-1. Als u de versie met `-SNAPSHOT` voor stadium en productie bouwt of plaatsingen verlaat, dan is zelfs dat ok. Cloud Manager stelt automatisch een correct versienummer in en maakt een tag voor u in Git. Indien nodig kunt u later naar dit label verwijzen.
+1. Er zijn geen kwesties, als u de versie met `-SNAPSHOT` voor Stadium en Productie bouwt of plaatsingen verlaat. Cloud Manager stelt automatisch een correct versienummer in en maakt een tag voor u in Git. Indien nodig kunt u later naar dit label verwijzen.
 
-1. Als u één of andere experimentele code op ontwikkelomgeving wilt uitproberen, kunt u een nieuwe tak van de Git tot stand brengen en de pijpleiding plaatsen om die verschillende tak te gebruiken. Dit is nuttig wanneer de plaatsingen beginnen te ontbreken en u met oudere versies van de code zou willen testen om te zien wanneer het brak.
+1. Als u één of andere experimentele code op het milieu van de Ontwikkeling wilt uitproberen, kunt u een nieuwe tak van de Git tot stand brengen en de pijpleiding plaatsen om die verschillende tak te gebruiken. Dit is nuttig wanneer de plaatsingen beginnen te ontbreken en u met oudere versies van de code zou willen testen om te zien wanneer het brak.
 
    Met de opdracht Git hieronder maakt u een externe vertakking met de naam *testvertakking1* op basis van een specifieke, reeds bestaande koppeling `485548e4fbafbc83b11c3cb12b035c9d26b6532b`.  Deze speciale vertakking kan worden gebruikt in Cloud Manager zonder andere vertakkingen te beïnvloeden:
 
