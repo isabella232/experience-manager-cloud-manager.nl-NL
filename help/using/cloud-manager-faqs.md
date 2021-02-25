@@ -4,7 +4,7 @@ seo-title: Veelgestelde vragen over Cloud Manager
 description: Raadpleeg de veelgestelde vragen over probleemoplossing in Cloud Manager
 seo-description: Volg deze pagina om antwoorden te krijgen op veelgestelde vragen over Cloud Manager
 translation-type: tm+mt
-source-git-commit: fbf91ad0d200a9f1cbde4e87cf6b78a8479d0614
+source-git-commit: 0db6a6a4e430cd2619db1739fd322224e4e129e7
 workflow-type: tm+mt
 source-wordcount: '881'
 ht-degree: 0%
@@ -47,11 +47,11 @@ Sommige notities over de stap Prestatietest:
 
 ## Kunnen wij SNAPSHOT in de versie van het Maven project gebruiken? Hoe werkt het versioning van de pakketten en bundeljar-bestanden voor werkgebied en productie? {#snapshot-version}
 
-1. Voor dev-implementaties moeten de Git-vertakking `pom.xml`-bestanden `-SNAPSHOT` bevatten aan het einde van de waarde `<version>`. Dit staat verdere plaatsing toe waar de versie niet verandert om nog geïnstalleerd te worden. In dev plaatsingen, wordt geen automatische versie toegevoegd of geproduceerd voor de beproefde bouwstijl.
+1. Voor ontwikkelaarsimplementaties moeten de Git-vertakking `pom.xml`-bestanden `-SNAPSHOT` bevatten aan het einde van de waarde `<version>`. Dit staat verdere plaatsing toe waar de versie niet verandert om nog geïnstalleerd te worden. In ontwikkelaarsplaatsingen, wordt geen automatische versie toegevoegd of geproduceerd voor de beproefde bouwstijl.
 
-1. In werkgebied en productielocatie, wordt een automatische versie geproduceerd zoals gedocumenteerd [hier](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/managing-code/activating-maven-project.html?lang=en#managing-code).
+1. In de plaatsing van het Stadium en van de Productie, wordt een automatische versie geproduceerd zoals gedocumenteerd [hier](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/managing-code/activating-maven-project.html?lang=en#managing-code).
 
-1. Voor aangepaste versioning in werkgebied en productieimplementaties stelt u een correcte versie van drie onderdelen in, bijvoorbeeld `1.0.0`. Verhoog de versie telkens als u een andere moet doen opstelt aan productie.
+1. Stel voor aangepaste versies in werkgebied- en productieimplementaties een correcte versie van drie onderdelen in, bijvoorbeeld `1.0.0`. Verhoog de versie telkens als u een andere moet doen opstelt aan productie.
 
 1. Cloud Manager voegt automatisch zijn versie toe aan Stage en Production builds en maakt zelfs een Git-vertakking. Er is geen speciale configuratie vereist. Als stap 3 hierboven wordt overgeslagen, zou de plaatsing nog goed werken en een versie automatisch worden geplaatst.
 
@@ -82,8 +82,8 @@ Verwante opdrachten en fouten:
 
 `$ aio cloudmanager:list-pipeline-variables 222`
 
-Fout: `Cannot get variables: https://cloudmanager.adobe.io/api/program/111/pipeline/222/variables (403 Forbidden)`
+*Fout*:  `Cannot get variables: https://cloudmanager.adobe.io/api/program/111/pipeline/222/variables (403 Forbidden)`
 
 `$ aio cloudmanager:set-pipeline-variables 222 --variable TEST 1`
 
-Fout: `Cannot get variables: https://cloudmanager.adobe.io/api/program/111/pipeline/222/variables (403 Forbidden)`
+*Fout*:  `Cannot get variables: https://cloudmanager.adobe.io/api/program/111/pipeline/222/variables (403 Forbidden)`
