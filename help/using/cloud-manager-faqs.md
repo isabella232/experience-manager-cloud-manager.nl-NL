@@ -4,9 +4,9 @@ seo-title: Veelgestelde vragen over Cloud Manager
 description: Raadpleeg de veelgestelde vragen over probleemoplossing in Cloud Manager
 seo-description: Volg deze pagina om antwoorden te krijgen op veelgestelde vragen over Cloud Manager
 translation-type: tm+mt
-source-git-commit: cb63a8bbe30b28668313dc851f17aa34fc166474
+source-git-commit: 1d4f07ba0aa4630585ccbb35f2d48f0c7e1f3df2
 workflow-type: tm+mt
-source-wordcount: '873'
+source-wordcount: '881'
 ht-degree: 0%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 0%
 
 # Veelgestelde vragen over wolkenbeheer {#cloud-manager-faqs}
 
-In het volgende gedeelte worden antwoorden gegeven op een aantal veelgestelde vragen over Cloud Manager.
+In de volgende sectie worden antwoorden gegeven op veelgestelde vragen over Cloud Manager.
 
 ## 1. Is het mogelijk om Java 11 te gebruiken met Cloud Manager builds? {#java-11-cloud-manager}
 
-AEM de build van Cloud Manager mislukt wanneer wordt geprobeerd om van Java 8 over te schakelen op Java 11. Het probleem kan vele oorzaken hebben en de meest voorkomende zijn hieronder gedocumenteerd:
+AEM de build van Cloud Manager mislukt tijdens een poging om te schakelen van Java 8 naar 11. Het probleem kan vele oorzaken hebben en de meest voorkomende zijn hieronder gedocumenteerd:
 
 * Voeg de plug-in maven-toolketins toe met de juiste instellingen voor Java 11, zoals [hier](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/getting-started/create-application-project/using-the-wizard.html?lang=en#getting-started) wordt beschreven.  Bijvoorbeeld, zie [wint steekproefprojectcode](https://github.com/adobe/aem-guides-wknd/commit/6cb5238cb6b932735dcf91b21b0d835ae3a7fe75).
 
@@ -43,7 +43,7 @@ Sommige opmerkingen over de teststap voor de prestaties:
 * De *Performance Step* is een stap voor webprestaties. Dit houdt in dat het tijd is om de pagina te laden met een webbrowser.
 * De URL&#39;s in het CSV-bestand met resultaten worden tijdens de test in een Chrome-browser in de Cloud Manager-infrastructuur geladen.
 * Een gemeenschappelijke metrisch die ontbreekt is *foutentarief*. Een URL kan alleen worden doorgegeven als de hoofd-URL is geladen met de status 200 en binnen 20 seconden. Paginaladen die meer dan 20 seconden duren, worden gemarkeerd als 504 fouten.
-* Als voor uw site gebruikersverificatie is vereist, raadpleegt u deze documentatie voor het configureren van de test voor verificatie op uw site.
+* Als voor uw site verificatie van gebruikers is vereist, raadpleegt u [Verified Performance Testing](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html?lang=en#how-to-use) voor het configureren van de test voor verificatie op uw site.
 
 ## 4. Kunnen we SNAPSHOT gebruiken in de versie van het gemaakte project? Hoe werkt het versioning van de pakketten en bundeljar-bestanden voor werkgebied en productie? {#snapshot-version}
 
@@ -75,7 +75,7 @@ Zie [Git Resource](https://github.com/cqsupport/cloud-manager/blob/main/cm-build
 
 ## 6. Kan een variabele niet instellen via via een AIR-cloudmanager ingestelde pijpleidingvariabelen. Hoe te om deze kwesties te zuiveren? {#set-variable}
 
-Als u een fout 403 krijgt wanneer het proberen om pijpleidingsvariabelen via bevelen te vermelden of te plaatsen gelijkend op hieronder, dan moet u als *Manager van de Plaatsing worden toegevoegd* het productrol van de Manager van de Wolk in de admin console.\
+Als u een fout 403 krijgt wanneer het proberen om pijpleidingsvariabelen via bevelen te vermelden of te plaatsen gelijkend op hieronder, dan moet u als *Manager van de Plaatsing worden toegevoegd* het productrol van de Manager van de Wolk in de Admin Console.\
 Zie [API-machtigingen](https://www.adobe.io/apis/experiencecloud/cloud-manager/docs.html#!AdobeDocs/cloudmanager-api-docs/master/permissions.md) voor meer informatie.
 
 Verwante opdrachten en fouten:
