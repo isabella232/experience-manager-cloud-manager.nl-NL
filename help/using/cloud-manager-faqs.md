@@ -4,9 +4,9 @@ seo-title: Veelgestelde vragen over Cloud Manager
 description: Raadpleeg de veelgestelde vragen over probleemoplossing in Cloud Manager
 seo-description: Volg deze pagina om antwoorden te krijgen op veelgestelde vragen over Cloud Manager
 translation-type: tm+mt
-source-git-commit: d901fd27626640e71d367d3f138d7ba2e907fa9a
+source-git-commit: 31627bf11a46b2e6f1d0aa196bc4a9cf9648e775
 workflow-type: tm+mt
-source-wordcount: '885'
+source-wordcount: '882'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Veelgestelde vragen over wolkenbeheer {#cloud-manager-faqs}
 
-In de volgende sectie worden antwoorden gegeven op veelgestelde vragen over Cloud Manager.
+In het volgende gedeelte worden antwoorden gegeven op veelgestelde vragen over Cloud Manager.
 
 ## Is het mogelijk om Java 11 te gebruiken met Cloud Manager builds? {#java-11-cloud-manager}
 
@@ -22,7 +22,7 @@ AEM de build van Cloud Manager mislukt tijdens een poging om te schakelen van Ja
 
 * Voeg de plug-in maven-toolketins toe met de juiste instellingen voor Java 11, zoals [hier](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/getting-started/create-application-project/using-the-wizard.html?lang=en#getting-started) wordt beschreven.  Bijvoorbeeld, zie [wint steekproefprojectcode](https://github.com/adobe/aem-guides-wknd/commit/6cb5238cb6b932735dcf91b21b0d835ae3a7fe75).
 
-* Als u de hieronder beschreven fout tegenkomt, moet u het gebruik van de maven-scr-plugin verwijderen en alle OSGi-annotaties omzetten in OSGi R6-annotaties. Zie [hier](https://cqdump.wordpress.com/2019/01/03/from-scr-annotations-to-osgi-annotations/) voor instructies.
+* Als u hieronder de fout ontmoet dan moet u gebruik van `maven-scr-plugin` verwijderen en alle OSGi- annotaties in OSGi R6- annotaties omzetten. Zie [hier](https://cqdump.wordpress.com/2019/01/03/from-scr-annotations-to-osgi-annotations/) voor instructies.
 
    `[main] [ERROR] Failed to execute goal org.apache.felix:maven-scr-plugin:1.26.4:scr (generate-scr-scrdescriptor) on project helloworld.core: /build_root/build/testsite/src/main/java/com/adobe/HelloWorldServiceImpl.java : Unable to load compiled class: com.adobe.HelloWorldServiceImpl: com/adobe/HelloWorldServiceImpl has been compiled by a more recent version of the Java Runtime (class file version 55.0), this version of the Java Runtime only recognizes class file versions up to 52.0 -> [Help 1]`
 
@@ -47,11 +47,11 @@ Sommige notities over de stap Prestatietest:
 
 ## Kunnen wij SNAPSHOT in de versie van het Maven project gebruiken? Hoe werkt het versioning van de pakketten en bundeljar-bestanden voor werkgebied en productie? {#snapshot-version}
 
-1. Voor dev-implementaties moeten de Git-vertakking `pom.xml`-bestanden -SNAPSHOT bevatten aan het einde van de waarde `<version>`. Dit staat verdere plaatsing toe waar de versie niet verandert om nog geïnstalleerd te worden. In dev-implementaties wordt geen automatische versie toegevoegd of gegenereerd voor de Mven-build.
+1. Voor dev-implementaties moeten de Git-vertakking `pom.xml`-bestanden `-SNAPSHOT` bevatten aan het einde van de waarde `<version>`. Dit staat verdere plaatsing toe waar de versie niet verandert om nog geïnstalleerd te worden. In dev plaatsingen, wordt geen automatische versie toegevoegd of geproduceerd voor de beproefde bouwstijl.
 
 1. In werkgebied en productielocatie, wordt een automatische versie geproduceerd zoals gedocumenteerd [hier](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/managing-code/activating-maven-project.html?lang=en#managing-code).
 
-1. Voor aangepaste versioning in werkgebied- en productieimplementaties stelt u een versie met drie onderdelen correct in, zoals `1.0.0`. Verhoog de versie telkens als u een andere moet doen opstelt aan productie.
+1. Voor aangepaste versioning in werkgebied en productieimplementaties stelt u een correcte versie van drie onderdelen in, bijvoorbeeld `1.0.0`. Verhoog de versie telkens als u een andere moet doen opstelt aan productie.
 
 1. Cloud Manager voegt automatisch zijn versie toe aan Stage en Production builds en maakt zelfs een Git-vertakking. Er is geen speciale configuratie vereist. Als stap 3 hierboven wordt overgeslagen, zou de plaatsing nog goed werken en een versie automatisch worden geplaatst.
 
