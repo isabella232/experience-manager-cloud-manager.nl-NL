@@ -4,9 +4,9 @@ seo-title: Veelgestelde vragen over Cloud Manager
 description: Raadpleeg de veelgestelde vragen over probleemoplossing in Cloud Manager
 seo-description: Volg deze pagina om antwoorden te krijgen op veelgestelde vragen over Cloud Manager
 translation-type: tm+mt
-source-git-commit: da3346852df4e421a69321830d7efee81d58e20c
+source-git-commit: cf5c02c8c594015b6baa00e1a8aaa2d898aa60a9
 workflow-type: tm+mt
-source-wordcount: '880'
+source-wordcount: '901'
 ht-degree: 0%
 
 ---
@@ -45,7 +45,9 @@ Sommige notities over de stap Prestatietest:
 * Een gemeenschappelijke metrisch die ontbreekt is *foutentarief*. Een URL kan alleen worden doorgegeven als de hoofd-URL met de status `200` en in minder dan `20` seconden wordt geladen. Paginalading die `20` seconden overschrijdt, wordt gemarkeerd als `504` fouten.
 * Als voor uw site verificatie van gebruikers is vereist, raadpleegt u [Verified Performance Testing](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html?lang=en#how-to-use) voor het configureren van de test voor verificatie voor uw site.
 
-## Kunnen wij SNAPSHOT in de versie van het Maven project gebruiken? Hoe werkt het versioning van de pakketten en bundeljar-bestanden voor werkgebied en productie? {#snapshot-version}
+## Kunnen wij SNAPSHOT in de versie van het Maven project gebruiken? Hoe werkt het versioning van pakketten en bundeljar-bestanden voor werkgebied- en productieimplementaties? {#snapshot-version}
+
+Raadpleeg de volgende scenario&#39;s voor meer informatie over het versieren van pakketten en bundeljar-bestanden voor werkgebied- en productieimplementaties:
 
 1. Voor ontwikkelaarsimplementaties moeten de Git-vertakking `pom.xml`-bestanden `-SNAPSHOT` bevatten aan het einde van de waarde `<version>`. Dit staat verdere plaatsing toe waar de versie niet verandert om nog geïnstalleerd te worden. In ontwikkelaarsplaatsingen, wordt geen automatische versie toegevoegd of geproduceerd voor de beproefde bouwstijl.
 
