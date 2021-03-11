@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: 83299ed8-4b7a-4b1c-bd56-1bfc7e7318d4
 translation-type: tm+mt
-source-git-commit: 2dda85baa5e7ed9bfd8933df3580ec6fc3c210fd
+source-git-commit: b5233e1932888b515d8dc26a6493cbd26686bc3c
 workflow-type: tm+mt
-source-wordcount: '1556'
+source-wordcount: '1563'
 ht-degree: 2%
 
 ---
@@ -47,10 +47,10 @@ Deze stap evalueert de kwaliteit van uw toepassingscode. Het is de kerndoelstell
 
 ### Testen van codekwaliteit {#understanding-code-quality-testing}
 
-Bij het testen van de kwaliteit van de code, wordt de broncode gescand om ervoor te zorgen dat het aan bepaalde kwaliteitscriteria voldoet. Momenteel wordt dit geïmplementeerd door een combinatie van SonarQube en inhoudspakketonderzoek met gebruik van OakPAL. Er zijn meer dan 100 regels die generieke Java-regels en AEM-specifieke regels combineren. Enkele AEM-specifieke regels worden gecreeerd gebaseerd op beste praktijken van AEM Techniek en worden bedoeld als [Regels van de Kwaliteit van de Code van de Douane](/help/using/custom-code-quality-rules.md).
+Bij het testen van de kwaliteit van de code, wordt de broncode gescand om ervoor te zorgen dat het aan bepaalde kwaliteitscriteria voldoet. Momenteel wordt dit geïmplementeerd door een combinatie van SonarQube, inhoudspakketonderzoek met behulp van OakPAL en validatie van verzenders met behulp van het Dispatcher Optimization Tool. Er zijn meer dan 100 regels die generieke Java-regels en AEM-specifieke regels combineren. Enkele AEM-specifieke regels worden gecreeerd gebaseerd op beste praktijken van AEM Techniek en worden bedoeld als [Regels van de Kwaliteit van de Code van de Douane](/help/using/custom-code-quality-rules.md).
 
 >[!NOTE]
->U kunt de volledige lijst met regels [hier](/help/using/assets/CodeQuality-rules-latest-AMS.xlsx) downloaden.
+>U kunt de volledige lijst met regels [hier](/help/using/assets/CodeQuality-rules-AMS.xlsx) downloaden.
 
 De resultaten van deze stap worden geleverd als *Classificatie*. De onderstaande tabel geeft een overzicht van de scores voor verschillende testcriteria:
 
