@@ -1,44 +1,40 @@
 ---
-title: Opmerkingen bij de release 2021.2.0
-seo-title: Opmerkingen bij de release AEM Cloud Manager voor 2021.2.0
-description: Volg deze pagina om informatie op te halen voor Cloud Manager Release 2021.2.0
-seo-description: Volg deze pagina om informatie op te halen voor AEM Cloud Manager Release 2021.2.0
+title: Opmerkingen bij de release 2021.3.0
+seo-title: Opmerkingen bij de release AEM Cloud Manager voor 2021.3.0
+description: Volg deze pagina voor informatie over Cloud Manager Release 2021.3.0
+seo-description: Volg deze pagina om informatie op te halen voor AEM Cloud Manager Release 2021.3.0
 translation-type: tm+mt
-source-git-commit: d956c7a2d3833e357920a9602e4f5a5b37f2c98a
+source-git-commit: b5233e1932888b515d8dc26a6493cbd26686bc3c
 workflow-type: tm+mt
-source-wordcount: '244'
+source-wordcount: '221'
 ht-degree: 0%
 
 ---
 
-# Opmerkingen bij de release voor 2021.2.0 {#release-notes-for}
+# Opmerkingen bij de release voor 2021.3.0 {#release-notes-for}
 
-In de volgende sectie worden de algemene opmerkingen bij de release voor [!UICONTROL Cloud Manager] Release 2021.2.0 beschreven.
+In de volgende sectie worden de algemene opmerkingen bij de release voor [!UICONTROL Cloud Manager] Release 2021.3.0 beschreven.
 
 ## Releasedatum {#release-date}
 
-De datum van de Versie voor [!UICONTROL Cloud Manager] Versie 2021.2.0 is 11 Februari, 2021.
+De datum van de Versie voor [!UICONTROL Cloud Manager] Versie 2021.3.0 is 11 Maart, 2021.
 
 ## Wat is er nieuw?{#whats-new}
 
-* Het AEM Project Archetype dat in Project en Sandbox creatie wordt gebruikt is bijgewerkt aan versie 25.
+* Er is een nieuw hulpmiddel voor de kwaliteit van de code geïntroduceerd om de configuratie van de dispatcher van de klant te valideren (Hulpprogramma voor de optimalisatie van de verzender).
 
-* De lijst met afgekeurde API&#39;s die tijdens het scannen van code zijn geïdentificeerd, is verfijnd en bevat nu extra klassen en methoden die zijn afgekeurd in de meest recente Cloud Service SDK-releases.
+* Gebruikers kunnen nu hun rol(en) van de Cloud Manager zien door de optie **Rol(en) van de Cloud Manager weergeven** te selecteren na naar het pictogram Gebruikersprofiel (rechtsboven) van Unified Shell te navigeren.
 
-* Productie-implementaties worden nu parallel geïmplementeerd in de gepaarde publicatie- en verzendingsinstanties.
+* Het label **Goedkeuringsaanvraag** is voor meer duidelijkheid opnieuw gelabeld aan **Productiegoedkeuring**.
 
-* SonarQube-profiel voor Cloud Manager bijgewerkt om Sonar-regel `squid:S2142` te verwijderen. Dit zal niet meer met de controles van de draadonderbreking in conflict brengen.
+* Het **Version**-label is opnieuw gelabeld aan **Git Tag** in het uitvoeringsscherm van de productiepijplijn.
 
-* Eigenschappen die zijn ingesteld in `pom.xml`-bestanden van de klant die vooraf zijn voorzien van sonar, worden nu dynamisch verwijderd om fouten met het scannen van build en kwaliteit te voorkomen.
+* De labels die het gedrag bepalen wanneer belangrijke metriek niet aan de bepaalde drempel voldoet, zijn geëtiketteerd om op hun ware gedrag te wijzen - onmiddellijk annuleren en Onmiddellijk goedkeuren.
 
-* Er zijn aanvullende regels voor de kwaliteit van code toegevoegd om compatibiliteitsproblemen met Cloud Servicen te verhelpen.
+* De lijsten van de klasse en van de methodevervanging zijn bijgewerkt gebaseerd op versie `2021.3.4997.20210303T022849Z-210225` van de AEM Cloud Service SDK.
 
 ## Opgeloste problemen {#bug-fixes}
 
-* De CI/CD (plaatsing) pijpleiding mislukte tijdens een prestatieteststap toe te schrijven aan een container die de ladingstest in werking stelt die een fout ontmoette.
+* Bepaalde kwaliteitsproblemen zijn niet goed ontdekt wanneer pakketten in andere pakketten waren ingesloten.
 
-* Soms kan de laadtestcontainer de run als mislukt rapporteren, zelfs als er slechts één uitzondering optreedt. De fout wordt alleen gemeld als het testproces niet kan worden hersteld.
-
-* Bepaalde problemen met trapsgewijze gegevens tussen de manier waarop de omgevingsnamen werden opgeslagen, zouden leiden tot fouten bij het testen van de prestaties.
-
-* Sommige pijpleidingsmislukkingen werden verkeerd gemeld als pijpleidingsfouten.
+* Wanneer de gebruiker bij gelegenheid vanaf de pagina voor de uitvoering van de pijpleiding navigeert onmiddellijk nadat een pijpleiding is gestart, wordt een foutbericht weergegeven met de mededeling dat de handeling is mislukt, hoewel de uitvoering daadwerkelijk wordt gestart.
