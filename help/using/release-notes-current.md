@@ -4,9 +4,9 @@ seo-title: Opmerkingen bij de release AEM Cloud Manager voor 2021.3.0
 description: Volg deze pagina voor informatie over Cloud Manager Release 2021.3.0
 seo-description: Volg deze pagina om informatie op te halen voor AEM Cloud Manager Release 2021.3.0
 translation-type: tm+mt
-source-git-commit: 090505e737b8cb224d87f117a9b5e786a4f99851
+source-git-commit: 47424ea0e087f1f69db0aef8ca2122de2352a6e0
 workflow-type: tm+mt
-source-wordcount: '311'
+source-wordcount: '308'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ De datum van de Versie voor [!UICONTROL Cloud Manager] Versie 2021.3.0 is 11 Maa
 
 * Het **Version**-label is opnieuw gelabeld aan **Git Tag** in het uitvoeringsscherm van de productiepijplijn.
 
-* De etiketten die het gedrag bepalen wanneer de belangrijke metriek niet de bepaalde drempel ontmoeten zijn opnieuw geëtiketteerd om op hun ware gedrag te wijzen - **annuleert onmiddellijk** en **goedkeuren Onmiddellijk**. Zie [De Instellingen van de Pijpleiding van de Manager van de Wolk](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html?lang=en#configuring-the-pipeline-settings-from-cloud-manager) voor meer details vormen.
+* De etiketten die het gedrag bepalen wanneer de belangrijke metriek niet de bepaalde drempel ontmoeten zijn opnieuw geëtiketteerd om op hun ware gedrag te wijzen - **annuleert onmiddellijk** en **goedkeuren Onmiddellijk**. Verwijs naar [Vormend de Montages van de Pijpleiding](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html?lang=en#configuring-the-pipeline-settings-from-cloud-manager) voor meer details.
 
 * De lijsten van de klasse en van de methodevervanging zijn bijgewerkt gebaseerd op versie `2021.3.4997.20210303T022849Z-210225` van de AEM Cloud Service SDK.
 
