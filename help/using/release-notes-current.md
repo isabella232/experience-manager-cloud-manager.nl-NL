@@ -4,7 +4,7 @@ seo-title: Opmerkingen bij de release AEM Cloud Manager voor 2021.3.0
 description: Volg deze pagina voor informatie over Cloud Manager Release 2021.3.0
 seo-description: Volg deze pagina om informatie op te halen voor AEM Cloud Manager Release 2021.3.0
 translation-type: tm+mt
-source-git-commit: b0c29ed6712abd556458aea6d49f6382f183cdae
+source-git-commit: e12adf3549af6ecd5e7487ef27f25abc44eaa794
 workflow-type: tm+mt
 source-wordcount: '0'
 ht-degree: 0%
@@ -23,7 +23,7 @@ De datum van de Versie voor [!UICONTROL Cloud Manager] Versie 2021.3.0 is 11 Maa
 
 * Gebruikers met de vereiste machtigingen kunnen het programma nu bewerken, zodat zij het volgende op een zelfbedieningsmanier kunnen doen:
 
-   *Voeg de oplossing van Plaatsen aan een bestaand programma met Activa (of vice versa) toe.
+   * Voeg de oplossing van Plaatsen aan een bestaand programma met Activa (of vice versa) toe.
    * Sites (of Middelen) verwijderen uit een bestaand programma met zowel Sites als Middelen.
    * Het toevoegen (terug) van een oplossing kan aan het bestaande programma of als nieuw Programma worden gedaan.
 
