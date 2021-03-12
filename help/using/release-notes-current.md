@@ -4,9 +4,9 @@ seo-title: Opmerkingen bij de release AEM Cloud Manager voor 2021.3.0
 description: Volg deze pagina voor informatie over Cloud Manager Release 2021.3.0
 seo-description: Volg deze pagina om informatie op te halen voor AEM Cloud Manager Release 2021.3.0
 translation-type: tm+mt
-source-git-commit: e12adf3549af6ecd5e7487ef27f25abc44eaa794
+source-git-commit: 5542942da33efc2926e62cce00ea39e3c65b3e16
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '289'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ De datum van de Versie voor [!UICONTROL Cloud Manager] Versie 2021.3.0 is 11 Maa
    * Sites (of Middelen) verwijderen uit een bestaand programma met zowel Sites als Middelen.
    * Het toevoegen (terug) van een oplossing kan aan het bestaande programma of als nieuw Programma worden gedaan.
 
-* Er is een nieuw hulpmiddel voor de kwaliteit van de code geïntroduceerd om de configuratie van de dispatcher van de klant te valideren (Hulpprogramma voor de optimalisatie van de verzender).
+* Er is een nieuw hulpmiddel [Dispatcher Optimization Tool](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/custom-code-quality-rules.html?lang=en#dispatcher-optimization-tool-rules) geïntroduceerd om de configuratie van de klantdispatcher te valideren.
 
 * Gebruikers kunnen nu hun rol(en) van de Cloud Manager zien door de optie **Rol(en) van de Cloud Manager weergeven** te selecteren na naar het pictogram Gebruikersprofiel (rechtsboven) van Unified Shell te navigeren.
 
@@ -35,7 +35,7 @@ De datum van de Versie voor [!UICONTROL Cloud Manager] Versie 2021.3.0 is 11 Maa
 
 * Het **Version**-label is opnieuw gelabeld aan **Git Tag** in het uitvoeringsscherm van de productiepijplijn.
 
-* De etiketten die het gedrag bepalen wanneer de belangrijke metriek niet de bepaalde drempel ontmoeten zijn opnieuw geëtiketteerd om op hun ware gedrag te wijzen - *annuleer onmiddellijk* en keur *Onmiddellijk* goed.
+* De etiketten die het gedrag bepalen wanneer de belangrijke metriek niet de bepaalde drempel ontmoeten zijn opnieuw geëtiketteerd om op hun ware gedrag te wijzen - **annuleert onmiddellijk** en **goedkeuren Onmiddellijk**.
 
 * De lijsten van de klasse en van de methodevervanging zijn bijgewerkt gebaseerd op versie `2021.3.4997.20210303T022849Z-210225` van de AEM Cloud Service SDK.
 
