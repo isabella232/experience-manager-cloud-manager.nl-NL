@@ -4,9 +4,9 @@ seo-title: Opmerkingen bij de release AEM Cloud Manager voor 2021.3.0
 description: Volg deze pagina voor informatie over Cloud Manager Release 2021.3.0
 seo-description: Volg deze pagina om informatie op te halen voor AEM Cloud Manager Release 2021.3.0
 translation-type: tm+mt
-source-git-commit: b5233e1932888b515d8dc26a6493cbd26686bc3c
+source-git-commit: b0c29ed6712abd556458aea6d49f6382f183cdae
 workflow-type: tm+mt
-source-wordcount: '221'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -21,6 +21,12 @@ De datum van de Versie voor [!UICONTROL Cloud Manager] Versie 2021.3.0 is 11 Maa
 
 ## Wat is er nieuw?{#whats-new}
 
+* Gebruikers met de vereiste machtigingen kunnen het programma nu bewerken, zodat zij het volgende op een zelfbedieningsmanier kunnen doen:
+
+   *Voeg de oplossing van Plaatsen aan een bestaand programma met Activa (of vice versa) toe.
+   * Sites (of Middelen) verwijderen uit een bestaand programma met zowel Sites als Middelen.
+   * Het toevoegen (terug) van een oplossing kan aan het bestaande programma of als nieuw Programma worden gedaan.
+
 * Er is een nieuw hulpmiddel voor de kwaliteit van de code geïntroduceerd om de configuratie van de dispatcher van de klant te valideren (Hulpprogramma voor de optimalisatie van de verzender).
 
 * Gebruikers kunnen nu hun rol(en) van de Cloud Manager zien door de optie **Rol(en) van de Cloud Manager weergeven** te selecteren na naar het pictogram Gebruikersprofiel (rechtsboven) van Unified Shell te navigeren.
@@ -29,7 +35,7 @@ De datum van de Versie voor [!UICONTROL Cloud Manager] Versie 2021.3.0 is 11 Maa
 
 * Het **Version**-label is opnieuw gelabeld aan **Git Tag** in het uitvoeringsscherm van de productiepijplijn.
 
-* De labels die het gedrag bepalen wanneer belangrijke metriek niet aan de bepaalde drempel voldoet, zijn geëtiketteerd om op hun ware gedrag te wijzen - onmiddellijk annuleren en Onmiddellijk goedkeuren.
+* De etiketten die het gedrag bepalen wanneer de belangrijke metriek niet de bepaalde drempel ontmoeten zijn opnieuw geëtiketteerd om op hun ware gedrag te wijzen - *annuleer onmiddellijk* en keur *Onmiddellijk* goed.
 
 * De lijsten van de klasse en van de methodevervanging zijn bijgewerkt gebaseerd op versie `2021.3.4997.20210303T022849Z-210225` van de AEM Cloud Service SDK.
 
