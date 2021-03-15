@@ -4,9 +4,9 @@ seo-title: Opmerkingen bij de release AEM Cloud Manager voor 2021.3.0
 description: Volg deze pagina voor informatie over Cloud Manager Release 2021.3.0
 seo-description: Volg deze pagina om informatie op te halen voor AEM Cloud Manager Release 2021.3.0
 translation-type: tm+mt
-source-git-commit: 47424ea0e087f1f69db0aef8ca2122de2352a6e0
+source-git-commit: fde8cbd22ff36e0d30409f68e8a0523c814ccf90
 workflow-type: tm+mt
-source-wordcount: '308'
+source-wordcount: '315'
 ht-degree: 0%
 
 ---
@@ -18,6 +18,7 @@ In de volgende sectie worden de algemene opmerkingen bij de release voor [!UICON
 ## Releasedatum {#release-date}
 
 De datum van de Versie voor [!UICONTROL Cloud Manager] Versie 2021.3.0 is 11 Maart, 2021.
+De volgende release is gepland voor 8 april 2021.
 
 ## Wat is er nieuw?{#whats-new}
 
