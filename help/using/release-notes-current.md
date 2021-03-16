@@ -4,9 +4,9 @@ seo-title: Opmerkingen bij de release AEM Cloud Manager voor 2021.3.0
 description: Volg deze pagina voor informatie over Cloud Manager Release 2021.3.0
 seo-description: Volg deze pagina om informatie op te halen voor AEM Cloud Manager Release 2021.3.0
 translation-type: tm+mt
-source-git-commit: fde8cbd22ff36e0d30409f68e8a0523c814ccf90
+source-git-commit: 8c057ca2d3dfe8c8575300084b7bc83c95556d67
 workflow-type: tm+mt
-source-wordcount: '315'
+source-wordcount: '257'
 ht-degree: 0%
 
 ---
@@ -21,12 +21,6 @@ De datum van de Versie voor [!UICONTROL Cloud Manager] Versie 2021.3.0 is 11 Maa
 De volgende release is gepland voor 8 april 2021.
 
 ## Wat is er nieuw?{#whats-new}
-
-* Gebruikers met de vereiste machtigingen kunnen het programma nu bewerken, zodat zij het volgende op een zelfbedieningsmanier kunnen doen:
-
-   * Voeg de oplossing van Plaatsen aan een bestaand programma met Activa (of vice versa) toe.
-   * Sites (of Middelen) verwijderen uit een bestaand programma met zowel Sites als Middelen.
-   * Het toevoegen (terug) van een oplossing kan aan het bestaande programma of als nieuw Programma worden gedaan.
 
 * Er is een nieuw hulpmiddel [Dispatcher Optimization Tool](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/custom-code-quality-rules.html?lang=en#dispatcher-optimization-tool-rules) geïntroduceerd om de configuratie van de klantdispatcher te valideren.
 
