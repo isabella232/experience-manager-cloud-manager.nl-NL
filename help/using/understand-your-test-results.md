@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: 83299ed8-4b7a-4b1c-bd56-1bfc7e7318d4
 translation-type: tm+mt
-source-git-commit: 7061910ae2cb0aae10876faf448838570f02d9be
+source-git-commit: f62c967feec3960499de93443548422167fedfa7
 workflow-type: tm+mt
-source-wordcount: '2593'
+source-wordcount: '2681'
 ht-degree: 1%
 
 ---
@@ -112,28 +112,30 @@ Dan is de correcte oplossing het hardcoded wachtwoord te verwijderen.
 
 [!UICONTROL Cloud Manager] stelt het bestaande  ***AEM het stadium van de Controle van de*** Gezondheid van de Veiligheid na de plaatsing in werking en rapporteert de status door UI. De resultaten worden samengevoegd van alle AEM in de omgeving.
 
+Deze zelfde Controles van de Gezondheid kunnen op elk ogenblik door de Console van het Web of het Dashboard van Verrichtingen worden uitgevoerd.
+
 Als om het even welk **Instanties** een mislukking voor een bepaalde gezondheidscontrole melden, ontbreekt het volledige **Milieu** die gezondheidscontrole. Net als bij het testen van de kwaliteit en prestaties van de code, worden deze gezondheidscontroles in categorieën ingedeeld en gerapporteerd met behulp van het drielagige gatingsysteem. Het enige verschil is dat er geen drempelwaarde is voor het testen van de veiligheid. Alle gezondheidscontroles worden gewoon goedgekeurd of gefaald.
 
 In de volgende tabel worden de huidige controles weergegeven:
 
 | **Naam** | **Implementatie van gezondheidscontrole** | **Categorie** |
 |---|---|---|
-| Gereedheid van API voor aansluiting op een virtualisatiefirewall is acceptabel | Gereedheid van de firewall voor deserialisatie bevestigen-API | Kritiek |
-| De firewall voor deserialization werkt goed | Functionele firewall voor deserialization | Kritiek |
-| De firewall voor deserialization wordt geladen | Firewall voor deserialisatie geladen | Kritiek |
-| AuthorizableNodeName de implementatie stelt toegelaten identiteitskaart in de knoopnaam/de weg niet bloot. | Authorizable Node Name Generation | Kritiek |
-| Standaardwachtwoorden zijn gewijzigd | Standaardaanmeldingsaccounts | Kritiek |
+| Gereedheid van API voor aansluiting op een virtualisatiefirewall is acceptabel | [Gereedheid van de firewall voor deserialisatie bevestigen-API](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/mitigating-serialization-issues.html?lang=en#security) | Kritiek |
+| De firewall voor deserialization werkt goed | [Functionele firewall voor deserialization](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/mitigating-serialization-issues.html?lang=en#security) | Kritiek |
+| De firewall voor deserialization wordt geladen | [Firewall voor deserialisatie geladen](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/mitigating-serialization-issues.html?lang=en#security) | Kritiek |
+| AuthorizableNodeName de implementatie stelt toegelaten identiteitskaart in de knoopnaam/de weg niet bloot. | [Authorizable Node Name Generation](https://experienceleague.adobe.com/docs/experience-manager-64/administering/security/security-checklist.html?lang=en#security) | Kritiek |
+| Standaardwachtwoorden zijn gewijzigd | [Standaardaanmeldingsaccounts](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html?lang=en#users-and-groups-in-aem) | Kritiek |
 | Standaard GET-servlet wordt beveiligd tegen DOS-aanvallen. | Sling Get Servlet | Kritiek |
 | De Sling Java Script Handler is op de juiste wijze geconfigureerd | JavaScript-handler afspelen | Kritiek |
 | De Sling JSP Scripthandler is op de juiste wijze geconfigureerd | JSP-scripthandler afspelen | Kritiek |
 | SSL is correct geconfigureerd | SSL-configuratie | Kritiek |
 | Geen duidelijk onveilig beleid voor gebruikersprofielen gevonden | Standaardtoegang gebruikersprofiel | Kritiek |
-| Het filter van de Verschuiver wordt gevormd om aanvallen te verhinderen CSRF | Filter Verschuivingsverwijzing | Belangrijk |
+| Het filter van de Verschuiver wordt gevormd om aanvallen te verhinderen CSRF | [Filter Verschuivingsverwijzing](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security-checklist.html?lang=en#security) | Belangrijk |
 | De Adobe Granite HTML Library Manager is op de juiste wijze geconfigureerd | Config. HTML Library Manager | Belangrijk |
 | CRXDE-ondersteuningsbundel is uitgeschakeld | CRXDE-ondersteuning | Belangrijk |
 | Sling DavEx-bundel en -servlet zijn uitgeschakeld | DavEx Health Check | Belangrijk |
 | Voorbeeldinhoud is niet geïnstalleerd | Voorbeelden van inhoudspakketten | Belangrijk |
-| Zowel het WCM-aanvraagfilter als het WCM-foutopsporingsfilter zijn uitgeschakeld | Configuratie WCM-filters | Belangrijk |
+| Zowel het WCM-aanvraagfilter als het WCM-foutopsporingsfilter zijn uitgeschakeld | [Configuratie WCM-filters](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/osgi-configuration-settings.html?lang=en#configuring) | Belangrijk |
 | De verkoop WebDAV bundel en servlet worden gevormd geschikt | WebDAV Health Check | Belangrijk |
 | De webserver is geconfigureerd om te voorkomen dat er wordt geklikt | Webserverconfiguratie | Belangrijk |
 | Replicatie maakt geen gebruik van de gebruiker &#39;admin&#39; | Replicatie- en transportgebruikers | Info |
