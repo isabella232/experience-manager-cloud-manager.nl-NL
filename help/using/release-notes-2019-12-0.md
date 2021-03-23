@@ -3,10 +3,11 @@ title: Opmerkingen bij de release 2019.12.0
 seo-title: Opmerkingen bij de release AEM Cloud Manager voor 2019.12.0
 description: Volg deze pagina voor informatie over Cloud Manager Release 2019.12.0.
 seo-description: Volg deze pagina voor informatie over AEM Cloud Manager Release 2019.12.0.
+feature: Geen informatie
 translation-type: tm+mt
-source-git-commit: 0fa1fedccb013e82c8df5838a612ce26a1efb7e8
+source-git-commit: fb10d775c930b5bb475b497aac2fd59b053a9a00
 workflow-type: tm+mt
-source-wordcount: '229'
+source-wordcount: '231'
 ht-degree: 0%
 
 ---
@@ -35,5 +36,5 @@ De releasedatum voor [!UICONTROL Cloud Manager] versie 2019.12.0 is 12 december 
 * In bepaalde omstandigheden zagen onbevoegde gebruikers een knoop om de pijpleiding te beginnen, hoewel de knoop zelf niet klikbaar was.
 * De actieknoppen voor niet-productiepijpleidingen worden soms op de verkeerde locatie weergegeven.
 * Pakketten met de graniet:Het knooppunttype Rangschikken kon niet voor bepaalde schendingen van de kwaliteitsregel worden gescand.
-* Bepaalde fouten in het codekwaliteitsproces zijn onjuist geteld als fouten.
+* Bepaalde fouten in het codekwaliteitsproces zijn onjuist als fouten geteld.
 * De gegevens van de controle konden niet voor bepaalde topologieën worden geladen.
