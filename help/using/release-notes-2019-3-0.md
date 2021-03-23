@@ -3,10 +3,11 @@ title: Opmerkingen bij de release 2019.3.0
 seo-title: Opmerkingen bij de release AEM Cloud Manager voor 2019.3.0
 description: Volg deze pagina voor informatie over Cloud Manager Release 2019.3.0.
 seo-description: Volg deze pagina voor informatie over AEM Cloud Manager Release 2019.3.0.
+feature: Geen informatie
 translation-type: tm+mt
-source-git-commit: 28780dc73a6787b7f3e715965e580534344f3602
+source-git-commit: fb10d775c930b5bb475b497aac2fd59b053a9a00
 workflow-type: tm+mt
-source-wordcount: '123'
+source-wordcount: '125'
 ht-degree: 1%
 
 ---
