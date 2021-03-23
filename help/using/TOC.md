@@ -5,10 +5,13 @@ archetype: administrator
 user-guide-title: Handleiding Experience Manager Cloud Manager
 breadcrumb-title: Handleiding voor Cloud Manager
 user-guide-description: Leer hoe u met Adobe Managed Services Experience Manager in de cloud zelf kunt beheren.
+feature-set: Experience Manager Cloud Manager
+role: Beheerder
+level: Intermediair
 translation-type: tm+mt
-source-git-commit: b5233e1932888b515d8dc26a6493cbd26686bc3c
+source-git-commit: 12a7d6199983e2d19ef401051f60e3f24bb6d4f8
 workflow-type: tm+mt
-source-wordcount: '261'
+source-wordcount: '263'
 ht-degree: 13%
 
 ---
