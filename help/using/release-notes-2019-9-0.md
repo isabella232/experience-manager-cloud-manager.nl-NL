@@ -3,10 +3,11 @@ title: Opmerkingen bij de release 2019.9.0
 seo-title: Opmerkingen bij de release AEM Cloud Manager voor 2019.9.0
 description: Volg deze pagina voor informatie over Cloud Manager Release 2019.9.0.
 seo-description: Volg deze pagina voor informatie over AEM Cloud Manager Release 2019.9.0.
+feature: Geen informatie
 translation-type: tm+mt
-source-git-commit: de9d2834ffa6c235e580227bd020fb8a0b94d22c
+source-git-commit: fb10d775c930b5bb475b497aac2fd59b053a9a00
 workflow-type: tm+mt
-source-wordcount: '277'
+source-wordcount: '279'
 ht-degree: 1%
 
 ---
@@ -37,7 +38,7 @@ De releasedatum voor [!UICONTROL Cloud Manager] versie 2019.9.0 is 12 september 
 * Op de pagina **Overzicht** was de rechtermarge niet consistent.
 * De bouwstijlcontainer kon uit geheugen in grote projecten lopen.
 * Onder bepaalde omstandigheden, identificeerde de BannedPaths OakPAL regel geïnstalleerde inhoud onder /libs niet.
-* Wanneer een kwaliteitsgate is geweigerd, is in de dialoogkop *Gedeeltelijk geslaagd* nog steeds &lt;a0/>getoond.
+* Wanneer een kwaliteitsgate is geweigerd, is in de dialoogkop *Gedeeltelijk geslaagd* nog steeds getoond.
 
 ## Bekende problemen {#known-issues}
 
