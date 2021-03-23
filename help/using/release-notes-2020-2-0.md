@@ -3,10 +3,11 @@ title: Opmerkingen bij de release 2020.2.0
 seo-title: Opmerkingen bij de release AEM Cloud Manager voor 2020.2.0
 description: Volg deze pagina om informatie op te halen voor Cloud Manager Release 2020.2.0
 seo-description: Volg deze pagina om informatie op te halen voor AEM Cloud Manager Release 2020.2.0
+feature: Geen informatie
 translation-type: tm+mt
-source-git-commit: 44671d89edad0ccb6ded998b62beb5fa012678e9
+source-git-commit: fb10d775c930b5bb475b497aac2fd59b053a9a00
 workflow-type: tm+mt
-source-wordcount: '194'
+source-wordcount: '196'
 ht-degree: 1%
 
 ---
@@ -23,7 +24,7 @@ De datum van de Versie voor [!UICONTROL Cloud Manager] Versie 2020.2.0 is 13 Feb
 
 * De Adobe Experience Manager archetype-versie is bijgewerkt naar versie 22.
 * Actieve instanties toegevoegd in logboeken voor werkgebiedimplementatie
-* URL&#39;s die worden gebruikt in Experience Cloud-berichten, zijn geoptimaliseerd om een extra omleiding te voorkomen.
+* URL&#39;s die in Experience Cloud-berichten worden gebruikt, zijn geoptimaliseerd om een extra omleiding te voorkomen.
 * Uitvoeringsstappen van de pijpleiding die nu uitdrukkelijk genoemd.
 * De stap voor het scannen van code heeft nu een downloadbaar logboek.
 * De teststap Beveiliging kan nu worden gedownload.
