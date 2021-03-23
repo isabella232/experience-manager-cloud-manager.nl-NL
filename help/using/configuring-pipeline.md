@@ -10,10 +10,10 @@ topic-tags: using
 content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 translation-type: tm+mt
-source-git-commit: 5542942da33efc2926e62cce00ea39e3c65b3e16
+source-git-commit: 7a33d6dc2240b61c9413bba34880ee5e7d49e02d
 workflow-type: tm+mt
-source-wordcount: '1776'
-ht-degree: 0%
+source-wordcount: '1249'
+ht-degree: 1%
 
 ---
 
@@ -99,7 +99,6 @@ Selecteer de Git-vertakking en klik op **Volgende**.
 * **Gepland**  - Deze optie staat de gebruiker toe om de geplande productie plaatsing toe te laten.
 
 >[!NOTE]
->
 >Als **Gepland** optie wordt geselecteerd, kunt u uw productiesplaatsing aan de pijpleiding **na** de werkgebiedplaatsing (en **Gebruik GoLive Goedkeuring**, als dat is toegelaten) plannen om op een te plaatsen programma te wachten. De gebruiker kan er ook voor kiezen om de productieimplementatie onmiddellijk uit te voeren.
 >
 >Raadpleeg [**Uw code implementeren**](deploying-code.md) om het implementatieschema in te stellen of de productie direct uit te voeren.
@@ -153,62 +152,17 @@ Voer de onderstaande stappen uit om validaties voor Dispatcher te configureren:
 
    ![](assets/image2018-8-7_15-4-30.png)
 
+1. Open het tabblad **Testen** om uw testcriteria voor uw programma te definiëren. U kunt de parameters van de prestatietest nu vormen.
 
-1. Open het tabblad **Testen** om uw testcriteria voor uw programma te definiëren.
-
-   Nu, kunt u de parameters van de prestatietest vormen.
-
-   U kunt *AEM Sites* en *AEM Assets* het Testen van Prestaties vormen, afhankelijk van welke producten u vergunning hebt gegeven.
-
-   **AEM Sites:**
-
-   Cloud Manager voert het testen van de prestaties voor AEM Sites-programma&#39;s uit door pagina&#39;s (als een niet-geverifieerde gebruiker standaard) op de publicatieserver van het werkgebied aan te vragen voor een testperiode van 30 minuten en de responstijd voor elke pagina en verschillende metingen op systeemniveau te meten. Deze verzoeken worden gemaakt van een reeks bekende, specifieke adressen. De adreswaaiers kunnen van uw Ingenieur van het Succes van de Klant of Adobe worden verkregen.
-
-   Vóór het begin van de testperiode van 30 minuten, zal de Manager van de Wolk de milieu van het Stadium kruipen gebruikend een reeks van één of meerdere *zaad* URLs die door de Ingenieur van het Succes van de Klant worden gevormd. Vanaf deze URL&#39;s wordt de HTML van elke pagina gecontroleerd en worden koppelingen doorlopen op een wijze die begint met het doorlopen van de breedte. Dit schuifproces is beperkt tot maximaal 5000 pagina&#39;s. De verzoeken van de kruipper hebben een vaste onderbreking van 10 seconden.
-
-   Pagina&#39;s worden geselecteerd door drie **paginasets**; u kunt kiezen uit een van de drie sets. De verdeling van verkeer is gebaseerd op het aantal geselecteerde reeksen, dat wil zeggen, als alle drie worden geselecteerd, 33% van de totale paginameningen in de richting van elke reeks wordt gezet; als er twee zijn geselecteerd, gaat 50% naar elke set; als er één wordt geselecteerd , gaat 100 % van het verkeer naar die set .
-
-   Stel bijvoorbeeld dat er een splitsing is van 50%/50% tussen de set Actieve pagina&#39;s populair en Nieuwe pagina&#39;s (in dit voorbeeld wordt Andere actieve pagina&#39;s niet gebruikt) en dat de set Nieuwe pagina&#39;s 3000 pagina&#39;s bevat. De paginaweergaven per minuut KPI is ingesteld op 200. Gedurende de testperiode van 30 minuten:
-
-   * Elk van de 25 pagina&#39;s in de Populaire live paginaset wordt 120 keer - (200 * 0,5) / 25) * 30 = 120
-
-   * Elk van de 3000 pagina&#39;s in de set Nieuwe pagina&#39;s wordt één keer geraakt - (200 * 0,5) / 3000) * 30 = 1
-
-   ![](assets/Configuring_Pipeline_AEM-Sites.png)
-
-   Raadpleeg [Authenticated Performance Testing](#authenticated-performance-testing) voor meer informatie.
-
-   **AEM Assets:**
-
-   Cloud Manager voert de prestatietests voor AEM Assets-programma&#39;s uit door elementen gedurende een testperiode van 30 minuten herhaaldelijk te uploaden en de verwerkingstijd voor elk element en verschillende metingen op systeemniveau te meten. Met deze functie kunt u zowel afbeeldingen als PDF-documenten uploaden. De verdeling van hoeveel activa van elk type per minuut worden geupload wordt geplaatst in de Opstelling of geeft het scherm van de Pijpleiding uit.
-
-   Als bijvoorbeeld een splitsing van 70/30 wordt gebruikt, zoals in de onderstaande afbeelding wordt getoond. Er worden 10 elementen per minuut geüpload, 7 afbeeldingen worden per minuut geüpload en 3 documenten.
-
-   ![](assets/Configuring_Pipeline_AEM-Assets.png)
-
-   >[!NOTE]
-   >
-   >Er is een standaardafbeelding en PDF-document, maar in de meeste gevallen willen klanten hun eigen elementen uploaden. Dit kan van de Opstelling van de Pijpleiding of het Edit scherm worden gedaan. Algemene afbeeldingsindelingen, zoals JPEG, PNG, GIF en BMP, worden ondersteund in combinatie met Photoshop-, Illustrator- en Postscript-bestanden.
+   U kunt *AEM Sites* en *AEM Assets* het Testen van Prestaties vormen, afhankelijk van welke producten u vergunning hebt gegeven. Raadpleeg [Prestatietests](understand-your-test-results.md#performance-testing) voor meer informatie.
 
 1. Klik **sparen** om de opstelling van pijpleidingsproces te voltooien.
 
    >[!NOTE]
-   >
    >Bovendien, zodra u opstelling de pijpleiding hebt, kunt u montages voor het zelfde nog uitgeven gebruikend **de tegel van de Pijpleiding van de Productie** van [!UICONTROL Cloud Manager] UI.
 
    ![](assets/Production-Pipeline.png)
 
-### Voor authentiek verklaarde Prestaties het Testen {#authenticated-performance-testing}
-
-AMS-klanten met geverifieerde sites kunnen een gebruikersnaam en wachtwoord opgeven die door Cloud Manager worden gebruikt voor toegang tot de website tijdens het testen van de Sites-prestaties.
-
-De gebruikersnaam en het wachtwoord worden opgegeven als [Pipeline Variables](/help/using/build-environment-details.md#pipeline-variables) met de namen `CM_PERF_TEST_BASIC_USERNAME` en `CM_PERF_TEST_BASIC_PASSWORD`.
-
-Hoewel niet strikt vereist, wordt het geadviseerd om het type van koordvariabele voor de gebruikersbenaming en het geheimString veranderlijke type voor het wachtwoord te gebruiken. Als beide van deze worden gespecificeerd, zal elk verzoek van de kruipper van de prestatietest en de test virtuele gebruikers deze geloofsbrieven als Basisauthentificatie van HTTP bevatten.
-
-Als u deze variabelen wilt instellen met de [Cloud Manager CLI](https://github.com/adobe/aio-cli-plugin-cloudmanager), voert u het volgende uit:
-
-`$ aio cloudmanager:set-pipeline-variables <pipeline id> --variable CM_PERF_TEST_BASIC_USERNAME <username> --secret CM_PERF_TEST_BASIC_PASSWORD <password>`
 
 ## Uitsluitend pijplijnen zonder productie en codekwaliteit
 
