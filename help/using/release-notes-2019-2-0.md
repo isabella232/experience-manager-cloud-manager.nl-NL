@@ -3,10 +3,11 @@ title: Opmerkingen bij de release 2019.2.0
 seo-title: Opmerkingen bij de release AEM Cloud Manager voor 2019.2.0
 description: Volg deze pagina voor informatie over Cloud Manager Release 2019.2.0.
 seo-description: Volg deze pagina om informatie op te halen voor AEM Cloud Manager Release 2019.2.0.
+feature: Geen informatie
 translation-type: tm+mt
-source-git-commit: 98395c4413b1b6bfbb3a565388ffa32dc3880dff
+source-git-commit: fb10d775c930b5bb475b497aac2fd59b053a9a00
 workflow-type: tm+mt
-source-wordcount: '397'
+source-wordcount: '399'
 ht-degree: 1%
 
 ---
@@ -27,7 +28,7 @@ De releasedatum voor [!UICONTROL Cloud Manager] versie 2019.2.0 is 21 februari 2
 * De verzender module in tovenaar-geproduceerde projecten bevat nu een README dossier.
 * De sorteervolgorde van de problemen bij het scannen van code is verbeterd en afgestemd op de prioriteit van het probleem.
 * Werkgebiedinstanties worden nu altijd teruggezet naar het taakverdelingsmechanisme, zelfs in het geval van een implementatiefout.
-* Er is een nieuwe API-ontwikkelaarrol beschikbaar in de Admin Console, waarmee specifieke gebruikers toestemming krijgen om integraties te maken in de Adobe I/O-console. Raadpleeg [Ontwikkelaars beheren](https://www.adobe.com/go/aac_api_prod_learn) voor meer informatie.
+* Een nieuwe API rol van de Ontwikkelaar is beschikbaar in de Admin Console die specifieke gebruikers toestaat om de toestemming worden verleend om tot integratie in de console van de Adobe I/O te leiden. Raadpleeg [Ontwikkelaars beheren](https://www.adobe.com/go/aac_api_prod_learn) voor meer informatie.
 * De versie van Maven Archetype is bijgewerkt naar versie 16.
 * De versie van Maven is bijgewerkt naar versie 3.6.0.
 
