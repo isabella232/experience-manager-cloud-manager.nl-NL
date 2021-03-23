@@ -1,10 +1,11 @@
 ---
-title: Werken met Meerdere opslagplaatsen voor Git-bronnen
+title: Werken met Meerdere bronopslaglocaties voor Git
 description: Werken met Meerdere bronopslaglocaties voor Git - Cloud Manager
+feature: Opslagplaatsen voor git
 translation-type: tm+mt
-source-git-commit: f5359dee907b32cefa2db2c4ad2baf8e337f6060
+source-git-commit: fb10d775c930b5bb475b497aac2fd59b053a9a00
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '749'
 ht-degree: 0%
 
 ---
@@ -44,7 +45,7 @@ Een dergelijke hoofdpom wordt naar een vertakking verplaatst in de Git Repositor
 
 Bijvoorbeeld, kan een actie GitHub door een duw aan een tak in project A worden teweeggebracht. De actie evalueert project A en de gegevensopslagplaats van de Git van de Manager van de Wolk en kopieert alle inhoud van project A aan de folder `project-a` in de Opslagbewaarplaats van de Manager van de Wolk van de Wolk en dan verbind-duw de verandering. Een wijziging in de hoofdvertakking in project A wordt bijvoorbeeld automatisch doorgevoerd in de hoofdvertakking in de git-opslagplaats van Cloud Manager. Natuurlijk zou er een afbeelding tussen takken als een duw aan een tak kunnen zijn genoemd &quot;dev&quot;in project A wordt geduwd aan een tak genoemd &quot;ontwikkeling&quot;in de bewaarplaats van de it van de Manager van de Wolk. Vergelijkbare stappen zijn vereist voor project B.
 
-Afhankelijk van de vertakkingsstrategie en workflows kan de synchronisatie worden geconfigureerd voor verschillende vertakkingen. Als de gebruikte opslagplaats van de Git geen concept gelijkend op acties GitHub verstrekt, is een integratie via (of gelijkaardig) Jenkins ook mogelijk. In dit geval activeert een webhaak een Jenkins-taak die het werk doet.
+Afhankelijk van de vertakkingsstrategie en workflows kan de synchronisatie worden geconfigureerd voor verschillende vertakkingen. Als de gebruikte gegevensopslagplaats van de Git geen concept gelijkend op acties GitHub verstrekt, is een integratie via (of gelijkaardig) Jenkins ook mogelijk. In dit geval activeert een webhaak een Jenkins-taak die het werk doet.
 
 Voer de onderstaande stappen uit om een nieuwe (derde) bron of opslagplaats toe te voegen:
 
@@ -115,7 +116,7 @@ jobs:
 Zoals hierboven getoond, is het gebruiken van een actie GitHub zeer flexibel. Elke toewijzing tussen vertakkingen van de Git-opslagplaatsen kan worden uitgevoerd en elke toewijzing van de afzonderlijke it-projecten aan de mappenlay-out van het hoofdproject.
 
 >[!NOTE]
->Het bovenstaande script gebruikt `git add` om de repository bij te werken, waarbij ervan wordt uitgegaan dat verwijderingen worden opgenomen - afhankelijk van de standaardconfiguratie van Git, moet deze worden vervangen door `git add --all`.
+>In het bovenstaande script wordt `git add` gebruikt om de gegevensopslagruimte bij te werken, waarbij ervan wordt uitgegaan dat verwijderingen worden opgenomen. Afhankelijk van de standaardconfiguratie van Git moet dit worden vervangen door `git add --all`.
 
 ## Voorbeeld van Jenkins-taak {#sample-jenkins-job}
 
@@ -180,4 +181,4 @@ git push
 Zoals hierboven is weergegeven, is het gebruik van een Jenkins-baan erg flexibel. Elke toewijzing tussen vertakkingen van de Git-opslagplaatsen kan worden uitgevoerd en elke toewijzing van de afzonderlijke Git-projecten aan de mappenlay-out van het hoofdproject.
 
 >[!NOTE]
->Het bovenstaande script gebruikt `git add` om de repository bij te werken, waarbij ervan wordt uitgegaan dat verwijderingen worden opgenomen - afhankelijk van de standaardconfiguratie van Git, moet deze worden vervangen door `git add --all`.
+>In het bovenstaande script wordt `git add` gebruikt om de gegevensopslagruimte bij te werken, waarbij ervan wordt uitgegaan dat verwijderingen worden opgenomen. Afhankelijk van de standaardconfiguratie van Git moet dit worden vervangen door `git add --all`.
