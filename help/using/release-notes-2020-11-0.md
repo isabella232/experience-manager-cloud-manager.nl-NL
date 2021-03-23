@@ -3,10 +3,11 @@ title: Opmerkingen bij de release 2020.11.0
 seo-title: Opmerkingen bij de release AEM Cloud Manager voor 2020.11.0
 description: Volg deze pagina voor informatie over Cloud Manager Release 2020.11.0
 seo-description: Volg deze pagina om informatie op te halen voor AEM Cloud Manager Release 2020.11.0
+feature: Geen informatie
 translation-type: tm+mt
-source-git-commit: 5688e956c4c21968ce691b560a6ce519496f7563
+source-git-commit: fb10d775c930b5bb475b497aac2fd59b053a9a00
 workflow-type: tm+mt
-source-wordcount: '160'
+source-wordcount: '162'
 ht-degree: 1%
 
 ---
