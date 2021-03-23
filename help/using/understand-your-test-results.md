@@ -9,10 +9,10 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: 83299ed8-4b7a-4b1c-bd56-1bfc7e7318d4
 translation-type: tm+mt
-source-git-commit: b5233e1932888b515d8dc26a6493cbd26686bc3c
+source-git-commit: 7061910ae2cb0aae10876faf448838570f02d9be
 workflow-type: tm+mt
-source-wordcount: '1563'
-ht-degree: 2%
+source-wordcount: '2593'
+ht-degree: 1%
 
 ---
 
@@ -140,15 +140,42 @@ In de volgende tabel worden de huidige controles weergegeven:
 
 ## Prestaties testen {#performance-testing}
 
-*Prestatietests* worden  [!UICONTROL Cloud Manager] uitgevoerd met een test van 30 minuten.
+### AEM Sites {#aem-sites}
 
-Tijdens pijpleidingsopstelling, kan de plaatsingsmanager beslissen hoeveel verkeer aan elk emmertje te leiden.
+Cloud Manager voert prestatietests voor AEM Sites-programma&#39;s uit. De prestatietest wordt uitgevoerd voor ongeveer 30 minuten door virtuele gebruikers (containers) te draaien die daadwerkelijke gebruikers simuleren om tot pagina&#39;s op het milieu van het Stadium toegang te hebben en verkeer te simuleren. Deze pagina&#39;s worden gevonden gebruikend een kruipper.
 
-U kunt meer over bandcontroles leren, van [vorm uw CI/CD Pijpleiding](configuring-pipeline.md).
+1. **Virtuele gebruikers**
 
->[!NOTE]
->
->Om uw programma in te stellen en uw KPIs te bepalen, zie [Opstelling uw Programma](setting-up-program.md).
+   Het aantal virtuele gebruikers of containers dat door de Manager van de Wolk wordt gesponnen wordt gedreven door KPI (reactietijd en pagina&#39;s/min) die door de gebruiker in de rol Bedrijfs van de Eigenaar wordt bepaald terwijl [creërend of het uitgeven van het programma](setting-up-program.md). Op basis van gedefinieerde KPI&#39;s worden maximaal 10 containers gesponnen die werkelijke gebruikers simuleren. De pagina&#39;s die voor het testen zijn geselecteerd, worden gesplitst en toegewezen aan elke virtuele pagina.
+
+1. **Crawler**
+
+   Vóór het begin van de testperiode van 30 minuten, zal de Manager van de Wolk de milieu van het Stadium kruipen gebruikend een reeks van één of meerdere zaadURLs die door de Ingenieur van het Succes van de Klant wordt gevormd. Vanaf deze URL&#39;s wordt de HTML van elke pagina gecontroleerd en worden koppelingen doorlopen op een wijze die begint met het doorlopen van de breedte. Dit schuifproces is beperkt tot maximaal 5000 pagina&#39;s. De verzoeken van de kruipper hebben een vaste onderbreking van 10 seconden.
+
+1. **Paginasets voor testen**
+
+   Pagina&#39;s worden geselecteerd door drie paginasets. Cloud Manager gebruikt de toegangslogboeken van de AEM instanties over Productie en Stadium om de volgende drie emmers te bepalen:
+
+   * *Populaire actieve pagina&#39;s*: Deze optie is geselecteerd om ervoor te zorgen dat de populairste pagina&#39;s die door live klanten worden benaderd, worden getest. Cloud Manager leest het toegangslogboek en bepaalt de 25 meest benaderde pagina&#39;s van live klanten om een lijst met top `Popular Live Pages` te genereren. Het snijpunt hiervan dat ook aanwezig is in het werkgebied wordt vervolgens gekropen in de Stage-omgeving.
+
+   * *Andere actieve pagina&#39;s*: Deze optie is geselecteerd om te controleren of de pagina&#39;s die buiten de bovenste 25 populaire live pagina&#39;s vallen die misschien niet populair zijn, maar die wel belangrijk zijn om te testen, worden getest. Net als bij populaire live pagina&#39;s worden deze opgehaald uit het toegangslogboek en moeten deze ook aanwezig zijn in het werkgebied.
+
+   * *Nieuwe pagina&#39;s*: Deze optie is geselecteerd om nieuwe pagina&#39;s te testen die mogelijk alleen in het werkgebied zijn geïmplementeerd en nog niet in productie zijn, maar die moeten worden getest.
+
+      **Verdeling van verkeer over geselecteerde paginasets**
+
+      U kunt overal van één tot alle drie reeksen in het &quot;Testen&quot;lusje van uw pijpleidingsconfiguratie (de verbinding van het Tussenvoegsel) kiezen. De verdeling van verkeer is gebaseerd op het aantal geselecteerde reeksen, dat wil zeggen, als alle drie worden geselecteerd, 33% van de totale paginameningen in de richting van elke reeks wordt gezet; als er twee zijn geselecteerd, gaat 50% naar elke set; als er één wordt geselecteerd , gaat 100 % van het verkeer naar die set .
+
+      Stel bijvoorbeeld dat er een splitsing is van 50% tot 50% tussen de set Actieve pagina&#39;s populair en Nieuwe pagina&#39;s (in dit voorbeeld wordt Andere actieve pagina&#39;s niet gebruikt) en dat de set Nieuwe pagina&#39;s 3000 pagina&#39;s bevat. De paginaweergaven per minuut KPI is ingesteld op 200. Gedurende de testperiode van 30 minuten:
+
+      * Elk van de 25 pagina&#39;s in de Populaire live paginaset wordt 120 keer - (200 * 0,5) / 25) * 30 = 120
+
+      * Elk van de 3000 pagina&#39;s in de set Nieuwe pagina&#39;s wordt één keer geraakt - (200 * 0,5) / 3000) * 30 = 1
+
+#### {#testing-reporting} testen en rapporteren
+
+Cloud Manager voert de prestatie-tests voor AEM Sites-programma&#39;s uit door pagina&#39;s (als een niet-geverifieerde gebruiker standaard) op de publicatieserver van het werkgebied aan te vragen voor een testperiode van 30 minuten en de (virtuele) door de gebruiker gegenereerde meetgegevens te meten (responstijd, foutfrequentie, weergaven per minuut, enz.) voor elke pagina en voor alle instanties op systeemniveau (CPU, geheugen, netwerkgegevens).\
+De volgende tabel geeft een overzicht van de meetgegevens van de prestatietest ten opzichte van het gebruik van het drielagige gatingsysteem:
 
 In de volgende tabel wordt een overzicht gegeven van de prestatietestmatrix met behulp van het drielagige gatingsysteem:
 
@@ -163,6 +190,50 @@ In de volgende tabel wordt een overzicht gegeven van de prestatietestmatrix met 
 | Gebruik van schijfbandbreedte | Belangrijk | >= 90% |
 | Netwerkbandbreedtegebruik | Belangrijk | >= 90% |
 | Aanvragen per minuut | Info | >= 6000 |
+
+Raadpleeg de onderstaande sectie **Authenticated Performance Testing** voor meer informatie over het gebruik van basisverificatie voor het testen van prestaties voor sites en middelen.
+
+>[!NOTE]
+>Elk exemplaar wordt gecontroleerd tijdens de periode van de test, voor zowel Publish als Auteur. Als om het even welke metrisch voor zelfs één instantie niet wordt verkregen, wordt die metrisch gemeld als onbekend en de overeenkomstige stap zal ontbreken.
+
+#### Voor authentiek verklaarde Prestaties het Testen {#authenticated-performance-testing}
+
+Deze functie is Sites optioneel.
+AMS-klanten met geverifieerde sites kunnen een gebruikersnaam en wachtwoord opgeven die door Cloud Manager worden gebruikt voor toegang tot de website tijdens het testen van de Sites-prestaties.
+De gebruikersnaam en het wachtwoord worden gespecificeerd als Variabelen van de Pijpleiding met de namen `CM_PERF_TEST_BASIC_USERNAME` en `CM_PERF_TEST_BASIC_PASSWORD`.
+Hoewel niet strikt vereist, wordt het geadviseerd om het type van koordvariabele voor de gebruikersbenaming en het geheimString veranderlijke type voor het wachtwoord te gebruiken. Als beide van deze worden gespecificeerd, zal elk verzoek van de kruipper van de prestatietest en de test virtuele gebruikers deze geloofsbrieven als Basisauthentificatie van HTTP bevatten.
+
+Voer de volgende handelingen uit om deze variabelen in te stellen met de CLI van Cloud Manager:
+
+```shell
+$ aio cloudmanager:set-pipeline-variables <pipeline id> --variable CM_PERF_TEST_BASIC_USERNAME <username> --secret CM_PERF_TEST_BASIC_PASSWORD <password>
+```
+
+Raadpleeg [Variabelen](https://www.adobe.io/apis/experiencecloud/cloud-manager/api-reference.html#/Variables/patchPipelineVariables) voor meer informatie over het gebruik van de API.
+
+### AEM Assets {#aem-assets}
+
+Cloud Manager voert de prestatietests voor AEM Assets-programma&#39;s uit door elementen gedurende een testperiode van 30 minuten herhaaldelijk te uploaden.
+
+1. **Voorschrift aan boord**
+
+   Voor het testen van de prestaties van middelen zal uw Klantsuccesingenieur `cloudmanager` gebruiker (en wachtwoord) tijdens het instappen van de Auteur aan het milieu van het Stadium creëren. Voor het testen van de prestaties is de gebruiker `cloudmanager` nodig en het bijbehorende wachtwoord dat door de CSE is ingesteld. Deze mag niet uit de Auteur worden verwijderd en mag niet worden gewijzigd in machtigingen. Dit zal waarschijnlijk mislukken bij het testen van de middelenprestaties.
+
+1. **Afbeeldingen en middelen voor tests**
+
+   Klanten kunnen hun eigen middelen uploaden om te testen. Dit kan van de Opstelling van de Pijpleiding of het Edit scherm worden gedaan. Algemene afbeeldingsindelingen, zoals JPEG, PNG, GIF en BMP, worden ondersteund in combinatie met Photoshop-, Illustrator- en Postscript-bestanden. Als er echter geen afbeeldingen worden geüpload, gebruikt Cloud Manager een standaardafbeelding en PDF-document voor het testen.
+
+1. **Distributie van activa voor tests**
+
+   De verdeling van hoeveel activa van elk type per minuut worden geupload wordt geplaatst in de Opstelling of geeft het scherm van de Pijpleiding uit.
+Als bijvoorbeeld een splitsing van 70/30 wordt gebruikt, zoals in de onderstaande afbeelding wordt getoond. Er worden 10 elementen per minuut geüpload, 7 afbeeldingen worden per minuut geüpload en 3 documenten.
+
+1. **Testen en rapporteren**
+
+   Cloud Manager maakt een map op de instantie Auteur met behulp van de gebruikersnaam en het wachtwoord die door de CSE zijn ingesteld in stap #1 (Vereisten voor instapweigering), zoals hierboven vermeld, en uploadt elementen in de map met behulp van een bibliotheek die open source is. De tests die door de het testen van Activa worden in werking gesteld worden geschreven gebruikend deze [open bronbibliotheek](https://github.com/adobe/toughday2). Zowel de verwerkingstijd voor elk element als de verschillende metingen op systeemniveau worden over de testduur van 30 minuten gemeten. Met deze functie kunt u zowel afbeeldingen als PDF-documenten uploaden.
+
+   >[!NOTE]
+   >U kunt meer leren over het vormen van prestaties het testen, van [vorm uw CI/CD Pijpleiding](configuring-pipeline.md). Verwijs naar [Opstelling uw Programma](setting-up-program.md) om te leren hoe te om uw programma te installeren en uw KPIs te bepalen.
 
 ### Resultaten van het testen van prestaties Grafieken {#performance-testing-results-graphs}
 
