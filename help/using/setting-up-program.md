@@ -8,11 +8,12 @@ contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: getting-started
 discoiquuid: c2393540-e852-4f7c-aafd-1427209065d2
+feature: Aan de slag
 translation-type: tm+mt
-source-git-commit: 6851884b08c0c0a971242a958f72a7673a1a1196
+source-git-commit: c5d32d49782c899d013fcc60b9c4d2b67e9350ae
 workflow-type: tm+mt
-source-wordcount: '687'
-ht-degree: 0%
+source-wordcount: '689'
+ht-degree: 1%
 
 ---
 
@@ -69,7 +70,7 @@ Voer de onderstaande stappen uit om het programma in te stellen en KPI&#39;s te 
    Sinds de eerste release van Cloud Manager kunnen de prestaties van AEM Sites-programma&#39;s worden getest. Met deze release is de mogelijkheid toegevoegd om ook prestatietests voor AEM Assets-programma&#39;s uit te voeren. De prestaties van de activa worden getest door elementen herhaaldelijk te uploaden tijdens een testperiode van 30 minuten en de verwerkingstijd voor elk middel en verschillende metingen op systeemniveau te meten.
 Tijdens de Opstelling van het Programma, worden de activa-specifieke KPIs gespecificeerd:
 
-   * 95e verwerkingstijd
+   * 95e Processorverwerkingstijd
    * Per minuut geüploade elementen
 
    ![](assets/Setup_Program-KPIs.png)
