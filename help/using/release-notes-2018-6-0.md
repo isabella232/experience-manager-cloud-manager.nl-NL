@@ -1,17 +1,18 @@
 ---
 title: Opmerkingen bij de release 2018.6.0
 seo-title: Opmerkingen bij de release AEM Cloud Manager voor 2018.6.0
-description: Deze pagina volgen voor informatie over Cloud Manager Release 2018.6.0.
+description: Volg deze pagina voor informatie over Cloud Manager Release 2018.6.0.
 seo-description: Volg deze pagina voor informatie over AEM Cloud Manager Release 2018.6.0.
 uuid: 211b6e1b-10fb-46b0-b591-44d5e44abd77
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: release-notes
 discoiquuid: 8584f467-3e61-41ea-98e4-f79e68c86469
+feature: Geen informatie
 translation-type: tm+mt
-source-git-commit: 15f75ca67c3d52ae511357c5b564daaa3d9def6b
+source-git-commit: fb10d775c930b5bb475b497aac2fd59b053a9a00
 workflow-type: tm+mt
-source-wordcount: '334'
+source-wordcount: '336'
 ht-degree: 0%
 
 ---
