@@ -1,41 +1,43 @@
 ---
-title: Opmerkingen bij de release 2021.3.0
-description: Volg deze pagina voor informatie over Cloud Manager Release 2021.3.0
+title: Opmerkingen bij de release 2021.4.0
+description: Volg deze pagina om informatie op te halen voor Cloud Manager Release 2021.4.0
 feature: Geen informatie
+exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
 translation-type: tm+mt
-source-git-commit: 12a7d6199983e2d19ef401051f60e3f24bb6d4f8
+source-git-commit: 0c33fd9f1af4c98564c9fd14a468fc3bf27744ee
 workflow-type: tm+mt
-source-wordcount: '242'
-ht-degree: 0%
+source-wordcount: '192'
+ht-degree: 1%
 
 ---
 
+# Opmerkingen bij de release voor 2021.4.0 {#release-notes-for}
 
-# Opmerkingen bij de release voor 2021.3.0 {#release-notes-for}
-
-In de volgende sectie worden de algemene opmerkingen bij de release voor [!UICONTROL Cloud Manager] Release 2021.3.0 beschreven.
+In de volgende sectie worden de algemene opmerkingen bij de release voor [!UICONTROL Cloud Manager] Release 2021.4.0 beschreven.
 
 ## Releasedatum {#release-date}
 
-De datum van de Versie voor [!UICONTROL Cloud Manager] Versie 2021.3.0 is 11 Maart, 2021.
-De volgende release is gepland voor 8 april 2021.
+De datum van de Versie voor [!UICONTROL Cloud Manager] Versie 2021.4.0 is April 08, 2021.
+De volgende release is gepland voor 6 mei 2021.
 
 ## Wat is er nieuw?{#whats-new}
 
-* Er is een nieuw hulpmiddel [Dispatcher Optimization Tool](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/custom-code-quality-rules.html?lang=en#dispatcher-optimization-tool-rules) geïntroduceerd om de configuratie van de klantdispatcher te valideren.
+* De time-out van de aanvraag voor de prestatietest voor virtuele gebruikers is verhoogd van 20 seconden naar 60 seconden.
 
-* Gebruikers kunnen nu hun rol(en) van de Cloud Manager zien door de optie **Rol(en) van de Cloud Manager weergeven** te selecteren na naar het pictogram Gebruikersprofiel (rechtsboven) van Unified Shell te navigeren.
+* De Manage knoop van de it wordt getoond op de kaart van Pijpleidingen zelfs wanneer geen pijpleidingen zijn gevormd.
 
-* Het label **Goedkeuringsaanvraag** is voor meer duidelijkheid opnieuw gelabeld aan **Productiegoedkeuring**.
+* Tijdens de plaatsingsstap van de de uitvoeringspagina van de Pijpleiding zal de gebruiker de voltooide en toekomstige plaatsingsstappen naast huidige stap in UI voor *Bezig* staat kunnen zien.
 
-* Het **Version**-label is opnieuw gelabeld aan **Git Tag** in het uitvoeringsscherm van de productiepijplijn.
+* De versie van het AEM projectarchetype dat door de Manager van de Wolk wordt gebruikt is bijgewerkt aan versie 27.
 
-* De etiketten die het gedrag bepalen wanneer de belangrijke metriek niet de bepaalde drempel ontmoeten zijn opnieuw geëtiketteerd om op hun ware gedrag te wijzen - **annuleert onmiddellijk** en **goedkeuren Onmiddellijk**. Verwijs naar [Vormend de Montages van de Pijpleiding](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html?lang=en#configuring-the-pipeline-settings-from-cloud-manager) voor meer details.
+* Het foutbericht bij het starten van een pijpleiding wanneer een omgeving werd verwijderd, is verduidelijkt.
 
-* De lijsten van de klasse en van de methodevervanging zijn bijgewerkt gebaseerd op versie `2021.3.4997.20210303T022849Z-210225` van de AEM Cloud Service SDK.
+* OSGi-bundels die door Eclipse-projecten worden geleverd, zijn nu van de regel uitgesloten.
 
 ## Opgeloste problemen {#bug-fixes}
 
-* Bepaalde kwaliteitsproblemen zijn niet goed ontdekt wanneer pakketten in andere pakketten waren ingesloten.
+* Zeldzame, voorbijgaande fouten die bij de stap van de Test van Activa in de productiepijplijn kunnen voorkomen.
 
-* Wanneer de gebruiker bij gelegenheid vanaf de pagina voor de uitvoering van de pijpleiding navigeert onmiddellijk nadat een pijpleiding is gestart, wordt een foutbericht weergegeven met de mededeling dat de handeling is mislukt, hoewel de uitvoering daadwerkelijk wordt gestart.
+* Een slash in de productiecijplijn Load Test veroorzaakte een fout van 404.
+
+* De `Runmode` controle produceerde valse positieven op niet omslagknopen.
