@@ -4,7 +4,7 @@ description: Volg deze pagina om informatie op te halen voor Cloud Manager Relea
 feature: Geen informatie
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
 translation-type: tm+mt
-source-git-commit: 0c33fd9f1af4c98564c9fd14a468fc3bf27744ee
+source-git-commit: 1f7f87a4b944d1fadc708958a96a1bda7d41da5d
 workflow-type: tm+mt
 source-wordcount: '192'
 ht-degree: 1%
@@ -32,11 +32,11 @@ De volgende release is gepland voor 6 mei 2021.
 
 * Het foutbericht bij het starten van een pijpleiding wanneer een omgeving werd verwijderd, is verduidelijkt.
 
-* OSGi-bundels die door Eclipse-projecten worden geleverd, zijn nu van de regel uitgesloten.
+* OSGi-bundels die door Eclipse-projecten worden geleverd, zijn nu uitgesloten van regel `CQBP-84--dependencies`.
 
 ## Opgeloste problemen {#bug-fixes}
 
-* Zeldzame, voorbijgaande fouten die bij de stap van de Test van Activa in de productiepijplijn kunnen voorkomen.
+* Zeldzame, voorbijgaande fouten die bij *Activa Test* stap in de productiepijplijn kunnen voorkomen.
 
 * Een slash in de productiecijplijn Load Test veroorzaakte een fout van 404.
 
