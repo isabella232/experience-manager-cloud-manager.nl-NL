@@ -9,14 +9,14 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: getting-started
 discoiquuid: 2221d1d5-dbc2-4175-8371-60344f932a82
 feature: Aan de slag
+exl-id: eb043437-8566-4a8d-8c5c-c8cf1d33daeb
 translation-type: tm+mt
-source-git-commit: fb10d775c930b5bb475b497aac2fd59b053a9a00
+source-git-commit: 9be78d21b455095c1b1bd49cdb267a8aa5624927
 workflow-type: tm+mt
-source-wordcount: '249'
-ht-degree: 6%
+source-wordcount: '213'
+ht-degree: 7%
 
 ---
-
 
 # Eerste aanmelding {#first-time-login}
 
@@ -24,14 +24,6 @@ Als u de algemene configuraties voor [!UICONTROL Cloud Manager] hebt ingesteld, 
 
 >[!NOTE]
 >Afhankelijk van de rollen die in [!UICONTROL Cloud Manager] en de staat van de toepassing worden toegewezen, zult u verschillende schermen zien terwijl het gebruiken van [!UICONTROL Cloud Manager] UI.
-
-## Videozelfstudie {#video-tutorial-one}
-
-### Cloud Manager-programma&#39;s {#programs-video}
-
-De volgende video biedt een overzicht van programma&#39;s van de Manager van de Wolk die reeksen AEM milieu&#39;s vertegenwoordigen die logische reeksen bedrijfsinitiatieven steunen, typisch die aan een gekochte Overeenkomst van het Niveau van de Dienst (SLA) beantwoorden.
-
->[!VIDEO](https://video.tv.adobe.com/v/26313/)
 
 ## Aanmelden voor de eerste keer {#logging-in-for-the-first-time}
 
