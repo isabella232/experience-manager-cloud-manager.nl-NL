@@ -3,7 +3,7 @@ title: Toegang tot Git
 seo-title: Toegang tot Git
 description: Op deze pagina wordt beschreven hoe u de Git-opslagplaats kunt openen en beheren.
 seo-description: Volg deze pagina voor meer informatie over het openen en beheren van uw Git-opslagplaats.
-feature: Opslagplaatsen voor git
+feature: Git Repositories
 translation-type: tm+mt
 source-git-commit: c5d32d49782c899d013fcc60b9c4d2b67e9350ae
 workflow-type: tm+mt

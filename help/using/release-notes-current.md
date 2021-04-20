@@ -1,7 +1,7 @@
 ---
 title: Opmerkingen bij de release 2021.4.0
 description: Volg deze pagina om informatie op te halen voor Cloud Manager Release 2021.4.0
-feature: Geen informatie
+feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
 translation-type: tm+mt
 source-git-commit: 1f7f87a4b944d1fadc708958a96a1bda7d41da5d

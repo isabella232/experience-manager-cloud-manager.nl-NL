@@ -3,7 +3,7 @@ title: Maven-projectversiebeheer
 seo-title: Maven-projectversiebeheer
 description: Meer informatie over Maven Project Version Handling.
 seo-description: Volg deze pagina voor meer informatie over Maven Project Version Handling.
-feature: Aan de slag
+feature: Getting Started
 translation-type: tm+mt
 source-git-commit: fb10d775c930b5bb475b497aac2fd59b053a9a00
 workflow-type: tm+mt

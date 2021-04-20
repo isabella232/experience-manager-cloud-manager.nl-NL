@@ -3,7 +3,7 @@ title: Git Integration met Adobe Cloud Manager
 description: Een videoreeks die door de opstelling en de integratie van een klant-beheerde (op-gebouw) gogegevensopslagplaats met de Manager van de Adobe Cloud loopt.
 seo-title: Git Integration met Adobe Cloud Manager
 seo-description: Een videoreeks die door de opstelling en de integratie van een klant-beheerde (op-gebouw) gogegevensopslagplaats met de Manager van de Adobe Cloud loopt.
-feature: Opslagplaatsen voor git
+feature: Git Repositories
 translation-type: tm+mt
 source-git-commit: fb10d775c930b5bb475b497aac2fd59b053a9a00
 workflow-type: tm+mt

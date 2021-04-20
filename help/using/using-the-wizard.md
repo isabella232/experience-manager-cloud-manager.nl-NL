@@ -1,7 +1,7 @@
 ---
 title: De wizard gebruiken
 description: Volg deze pagina om te leren hoe u de wizard kunt gebruiken om een AEM Application Project te maken
-feature: Aan de slag
+feature: Getting Started
 translation-type: tm+mt
 source-git-commit: fb10d775c930b5bb475b497aac2fd59b053a9a00
 workflow-type: tm+mt

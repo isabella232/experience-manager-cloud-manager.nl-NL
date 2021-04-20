@@ -1,7 +1,7 @@
 ---
 title: Inzicht in de omgeving van de build
 description: Volg deze pagina voor meer informatie over omgevingen
-feature: Omgevingen
+feature: Environments
 translation-type: tm+mt
 source-git-commit: fb10d775c930b5bb475b497aac2fd59b053a9a00
 workflow-type: tm+mt

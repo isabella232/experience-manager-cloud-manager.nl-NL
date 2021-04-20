@@ -3,7 +3,7 @@ title: Veelgestelde vragen over Cloud Manager
 seo-title: Veelgestelde vragen over Cloud Manager
 description: Raadpleeg de veelgestelde vragen over probleemoplossing in Cloud Manager
 seo-description: Volg deze pagina om antwoorden te krijgen op veelgestelde vragen over Cloud Manager
-feature: Aan de slag
+feature: Getting Started
 translation-type: tm+mt
 source-git-commit: fb10d775c930b5bb475b497aac2fd59b053a9a00
 workflow-type: tm+mt

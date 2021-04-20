@@ -3,7 +3,7 @@ title: Uw omgevingen bewaken
 seo-title: Uw omgevingen bewaken
 description: Leer hoe u uw omgevingen kunt controleren in Cloud Manager
 seo-description: Volg deze pagina om meer te weten te komen over System Monitoring in Cloud Manager. Dit gebeurt door de afzonderlijke instanties binnen een omgeving te observeren en een aantal verschillende meetgegevens voor elke instantie te volgen.
-feature: Omgevingen
+feature: Environments
 translation-type: tm+mt
 source-git-commit: fb10d775c930b5bb475b497aac2fd59b053a9a00
 workflow-type: tm+mt

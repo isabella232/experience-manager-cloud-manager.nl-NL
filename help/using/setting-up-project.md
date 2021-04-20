@@ -1,7 +1,7 @@
 ---
 title: Het project instellen
 description: Volg deze pagina om te leren hoe u een project instelt
-feature: Aan de slag, Productie
+feature: Getting Started, Production
 translation-type: tm+mt
 source-git-commit: c5d32d49782c899d013fcc60b9c4d2b67e9350ae
 workflow-type: tm+mt
