@@ -3,10 +3,10 @@ title: Opmerkingen bij de release 2021.5.0
 description: Volg deze pagina voor informatie over Cloud Manager Release 2021.5.0
 feature: Geen informatie
 translation-type: tm+mt
-source-git-commit: 3d6f9a760a1e5bafdae6ece5627358524467a0d2
+source-git-commit: 849a2df2f272973740c1dd8580daaa518f2c9ec4
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '181'
+ht-degree: 1%
 
 ---
 
@@ -32,8 +32,6 @@ De volgende release is gepland voor 3 juni 2021.
 * De ervaring met het bewerkingsprogramma is vernieuwd.
 
 ## Opgeloste problemen {#bug-fixes}
-
-* Soms, kan de gebruiker een groene *actieve* status naast een IP Lijst van gewenste personen zien zelfs toen die configuratie niet werd opgesteld.
 
 * In plaats van &#39;verwijderde&#39; variabelen te verwijderen, markeert de API voor pijpleidingvariabelen deze alleen met de status &#39;DELETED&#39;.
 
