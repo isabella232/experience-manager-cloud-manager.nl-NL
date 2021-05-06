@@ -8,15 +8,15 @@ contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: 83299ed8-4b7a-4b1c-bd56-1bfc7e7318d4
-feature: CI-CD Pipeline, Test Results
+feature: CI-CD Pipeline, testresultaten
+exl-id: 6a574858-a30e-4768-bafc-8fe79f928294
 translation-type: tm+mt
-source-git-commit: 12a7d6199983e2d19ef401051f60e3f24bb6d4f8
+source-git-commit: 9e7c6f7241900432155a1a32abfb440fb3f93172
 workflow-type: tm+mt
-source-wordcount: '2685'
+source-wordcount: '2694'
 ht-degree: 1%
 
 ---
-
 
 # Inzicht in de testresultaten {#understand-your-test-results}
 
@@ -35,7 +35,7 @@ Er liggen drie poorten in de pijplijn:
 Voor elk van deze poorten is er een structuur met drie niveaus voor emissies die door de poort worden geïdentificeerd.
 
 * **Kritiek**  - Dit zijn kwesties die door de poort worden geïdentificeerd die een directe mislukking van de pijpleiding veroorzaken.
-* **Belangrijk**  - Dit zijn kwesties die door de poort worden geïdentificeerd die de pijpleiding veroorzaken om een gepauzeerde staat in te gaan. Een plaatsingsmanager, projectmanager, of bedrijfseigenaar kunnen of de kwesties met voeten treden, waarin de pijpleiding te werk gaat, of zij kunnen de kwesties goedkeuren, in welk geval de pijpleiding met een mislukking stopt.
+* **Belangrijk**  - Dit zijn kwesties die door de poort worden geïdentificeerd die de pijpleiding veroorzaken om een gepauzeerde staat in te gaan. Een plaatsingsmanager, projectmanager, of bedrijfseigenaar kunnen of de kwesties met voeten treden, waarin de pijpleiding te werk gaat, of zij kunnen de kwesties goedkeuren, in welk geval de pijpleiding met een mislukking stopt. Overschrijving van belangrijke mislukkingen is onderworpen aan [Timeout](deploying-code.md#timeouts).
 * **Info**  - Dit zijn kwesties die door de poort worden geïdentificeerd en die uitsluitend ter informatie worden verstrekt en geen invloed hebben op de uitvoering van de pijpleiding.
 
 >[!NOTE]
@@ -274,4 +274,3 @@ In de volgende afbeeldingen worden de prestatietestgrafieken weergegeven:
 ![](assets/understand_test-results-screen1.png)
 
 ![](assets/screen_shot_2018-09-05at83933pm.png)
-
