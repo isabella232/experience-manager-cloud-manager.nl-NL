@@ -1,43 +1,42 @@
 ---
-title: Opmerkingen bij de release 2021.4.0
-description: Volg deze pagina om informatie op te halen voor Cloud Manager Release 2021.4.0
-feature: Release Information
-exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
+title: Opmerkingen bij de release 2021.5.0
+description: Volg deze pagina voor informatie over Cloud Manager Release 2021.5.0
+feature: Geen informatie
 translation-type: tm+mt
-source-git-commit: 1f7f87a4b944d1fadc708958a96a1bda7d41da5d
+source-git-commit: 5f81fdb86b1dfa6c748bb7784ef00dc062c9f8ef
 workflow-type: tm+mt
-source-wordcount: '192'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
-# Opmerkingen bij de release voor 2021.4.0 {#release-notes-for}
+# Opmerkingen bij de release voor 2021.5.0 {#release-notes-for}
 
-In de volgende sectie worden de algemene opmerkingen bij de release voor [!UICONTROL Cloud Manager] Release 2021.4.0 beschreven.
+In de volgende sectie worden de algemene opmerkingen bij de release voor [!UICONTROL Cloud Manager] Release 2021.5.0 beschreven.
 
 ## Releasedatum {#release-date}
 
-De datum van de Versie voor [!UICONTROL Cloud Manager] Versie 2021.4.0 is April 08, 2021.
-De volgende release is gepland voor 6 mei 2021.
+De datum van de Versie voor [!UICONTROL Cloud Manager] Versie 2021.5.0 is Mei 06, 2021.
+De volgende release is gepland voor 6 juni 2021.
 
 ## Wat is er nieuw?{#whats-new}
 
-* De time-out van de aanvraag voor de prestatietest voor virtuele gebruikers is verhoogd van 20 seconden naar 60 seconden.
+* De PackageOverlaps kwaliteitsregel ontdekt nu gevallen waar het zelfde pakket veelvoudige tijden, d.w.z. in veelvoudige ingebedde plaatsen, in de zelfde opgestelde pakketreeks werd opgesteld.
 
-* De Manage knoop van de it wordt getoond op de kaart van Pijpleidingen zelfs wanneer geen pijpleidingen zijn gevormd.
+* Het eindpunt van de repository in de Public API bevat nu de Git URL.
 
-* Tijdens de plaatsingsstap van de de uitvoeringspagina van de Pijpleiding zal de gebruiker de voltooide en toekomstige plaatsingsstappen naast huidige stap in UI voor *Bezig* staat kunnen zien.
+* In de workflow van het programma Bewerken mag de gebruiker alleen niet-decimale KPI-waarden instellen.
 
-* De versie van het AEM projectarchetype dat door de Manager van de Wolk wordt gebruikt is bijgewerkt aan versie 27.
+* Intermitterende fouten die werden aangetroffen tijdens het drukken van code naar Adobe Git zijn nu opgelost.
 
-* Het foutbericht bij het starten van een pijpleiding wanneer een omgeving werd verwijderd, is verduidelijkt.
-
-* OSGi-bundels die door Eclipse-projecten worden geleverd, zijn nu uitgesloten van regel `CQBP-84--dependencies`.
+* De ervaring met het bewerkingsprogramma is vernieuwd.
 
 ## Opgeloste problemen {#bug-fixes}
 
-* Zeldzame, voorbijgaande fouten die bij *Activa Test* stap in de productiepijplijn kunnen voorkomen.
+* Soms, kan de gebruiker een groene *actieve* status naast een IP Lijst van gewenste personen zien zelfs toen die configuratie niet werd opgesteld.
 
-* Een slash in de productiecijplijn Load Test veroorzaakte een fout van 404.
+* In plaats van &#39;verwijderde&#39; variabelen te verwijderen, markeert de API voor pijpleidingvariabelen deze alleen met de status &#39;DELETED&#39;.
 
-* De `Runmode` controle produceerde valse positieven op niet omslagknopen.
+* Sommige kwaliteitskwesties van het type Code Smell hadden een onjuiste invloed op de beoordeling Betrouwbaarheid.
+
+* Wanneer een pijpleidingsuitvoering tussen middernacht en 1am UTC werd begonnen, werd de artefactversie die door de Manager van de Wolk werd geproduceerd niet gewaarborgd om groter te zijn dan een versie die de vorige dag werd gecreeerd.
