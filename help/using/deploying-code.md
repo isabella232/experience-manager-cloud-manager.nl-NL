@@ -8,15 +8,15 @@ contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: 832a4647-9b83-4a9d-b373-30fe16092b15
-feature: Code Deployment
+feature: Codeimplementatie
+exl-id: 3d6610e5-24c2-4431-ad54-903d37f4cdb6
 translation-type: tm+mt
-source-git-commit: c5d32d49782c899d013fcc60b9c4d2b67e9350ae
+source-git-commit: 9e7c6f7241900432155a1a32abfb440fb3f93172
 workflow-type: tm+mt
-source-wordcount: '959'
+source-wordcount: '994'
 ht-degree: 0%
 
 ---
-
 
 # Uw code {#deploy-your-code} implementeren
 
@@ -92,6 +92,19 @@ Nadat u de productiepijpleiding hebt geconfigureerd (opslagruimte, omgeving en t
 
    ![](assets/Production_Deployment2.png)
 
+## Tijdslimieten {#timeouts}
+
+Er wordt een time-out toegepast in de volgende stappen als er op feedback van gebruikers wordt gewacht:
+
+| Stap | Time-out |
+|--- |--- |
+| Testen van de codekwaliteit | 7 dagen |
+| Beveiligingstests | 7 dagen |
+| Prestatietesten | 7 dagen |
+| Goedkeuringsaanvraag | 7 dagen |
+| Implementatie van planningsproductie | 7 dagen |
+| CSE-ondersteuning | 7 dagen |
+
 ## Implementatieproces {#deployment-process}
 
 In de volgende sectie wordt beschreven hoe AEM- en verzendingspakketten in de fase van het werkgebied en in de productiefase worden geïmplementeerd.
@@ -149,5 +162,3 @@ Productie-implementaties volgen doorgaans dezelfde stappen als hierboven, maar o
 1. Implementeer AEM pakketten om te publiceren2 en het verzendingspakket naar dispatcher2 in parallel, uitlijningscachegeheugen.
 1. Plaats dispatcher2 terug in het taakverdelingsmechanisme.
 Dit proces gaat verder tot de plaatsing alle uitgevers en verzenders in de topologie heeft bereikt.
-
-
