@@ -1,15 +1,14 @@
 ---
 title: Inzicht in de omgeving van de build
 description: Volg deze pagina voor meer informatie over omgevingen
-feature: Environments
-translation-type: tm+mt
-source-git-commit: fb10d775c930b5bb475b497aac2fd59b053a9a00
+feature: Omgevingen
+exl-id: b3543320-66d4-4358-8aba-e9bdde00d976
+source-git-commit: 0a5556729e64c9e8736d13b357db001dd57bc03a
 workflow-type: tm+mt
-source-wordcount: '769'
+source-wordcount: '773'
 ht-degree: 0%
 
 ---
-
 
 # Inzicht in de omgeving van de build {#build-environment-details}
 
@@ -34,7 +33,7 @@ Cloud Manager bouwt en test uw code gebruikend een gespecialiseerde bouwstijlmil
    * `mvn --batch-mode org.apache.maven.plugins:maven-clean-plugin:3.1.0:clean -Dmaven.clean.failOnError=false`
    * `mvn --batch-mode org.jacoco:jacoco-maven-plugin:prepare-agent package`
 
-* Maven wordt geconfigureerd op systeemniveau met een settings.xml-bestand dat automatisch de openbare Adobe **Artifact**-opslagplaats omvat.
+* Maven wordt op systeemniveau geconfigureerd met een settings.xml-bestand dat automatisch de openbare Adobe **Artifact**-opslagplaats bevat met een profiel met de naam `adobe-public`.
 Raadpleeg [Adobe Public Maven Repository](https://repo.adobe.com/) voor meer informatie.
 
 >[!NOTE]
