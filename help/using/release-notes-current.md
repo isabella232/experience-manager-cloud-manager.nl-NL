@@ -2,11 +2,10 @@
 title: Opmerkingen bij de release 2021.5.0
 description: Volg deze pagina voor informatie over Cloud Manager Release 2021.5.0
 feature: Geen informatie
-translation-type: tm+mt
-source-git-commit: 849a2df2f272973740c1dd8580daaa518f2c9ec4
+source-git-commit: b9adcc700edb7ba54a92037e86e86df812c93c83
 workflow-type: tm+mt
-source-wordcount: '181'
-ht-degree: 1%
+source-wordcount: '204'
+ht-degree: 0%
 
 ---
 
@@ -38,3 +37,5 @@ De volgende release is gepland voor 3 juni 2021.
 * Sommige kwaliteitskwesties van het type Code Smell hadden een onjuiste invloed op de beoordeling Betrouwbaarheid.
 
 * Wanneer een pijpleidingsuitvoering tussen middernacht en 1am UTC werd begonnen, werd de artefactversie die door de Manager van de Wolk werd geproduceerd niet gewaarborgd om groter te zijn dan een versie die de vorige dag werd gecreeerd.
+
+* Bepaalde klanten van Adobe Managed Services (AMS) konden geen nieuwe projecten maken in de Adobe I/O Developer Console met de API voor Cloud Manager.
