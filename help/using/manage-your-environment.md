@@ -8,17 +8,19 @@ contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: c5b39de2-3a9b-437f-98e8-e6e6249a5b3a
-feature: Environments
-translation-type: tm+mt
-source-git-commit: c5d32d49782c899d013fcc60b9c4d2b67e9350ae
+feature: Omgevingen
+exl-id: 700b0b4c-1e1a-4993-b366-426b14a98f8e
+source-git-commit: df2f598f91201d362f54b17e4092ff6bd6a72cec
 workflow-type: tm+mt
-source-wordcount: '270'
+source-wordcount: '296'
 ht-degree: 0%
 
 ---
 
-
 # Uw omgevingen beheren {#manage-your-environments}
+
+>[!NOTE]
+>Zie [hier](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html?lang=en#using-cloud-manager) voor meer informatie over het beheren van omgevingen voor Cloud Manager in AEM als Cloud Service.
 
 De **Overview**-pagina van Cloud Manager bevat de **tile**-tegel die alle beheerde AEM weergeeft.
 
