@@ -8,17 +8,19 @@ contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: d2338c74-3278-49e6-a186-6ef62362509f
-feature: Code Quality Rules
-translation-type: tm+mt
-source-git-commit: 12a7d6199983e2d19ef401051f60e3f24bb6d4f8
+feature: Codekwaliteitsregels
+exl-id: 7d118225-5826-434e-8869-01ee186e0754
+source-git-commit: df2f598f91201d362f54b17e4092ff6bd6a72cec
 workflow-type: tm+mt
-source-wordcount: '3625'
+source-wordcount: '3654'
 ht-degree: 4%
 
 ---
 
-
 # Aangepaste regels voor codekwaliteit {#custom-code-quality-rules}
+
+>[!NOTE]
+>Zie [hier](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/test-results/custom-code-quality-rules.html?lang=en#using-cloud-manager) voor meer informatie over aangepaste codekwaliteitsregels voor Cloud Manager in AEM als Cloud Service.
 
 Op deze pagina worden de kwaliteitsregels voor aangepaste code beschreven die worden uitgevoerd door Cloud Manager en die zijn gemaakt op basis van de beste werkwijzen van AEM Engineering.
 
@@ -961,4 +963,3 @@ In de volgende sectie worden de DOT-controles gemarkeerd die worden uitgevoerd d
 * [DOT - De Dispatcher publiceert landbouwbedrijffilters zou de toegestane het achtervoegselpatronen van het Sling op een lijst van gewenste personen manier moeten specificeren](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-filters-should-specify-the-allowed-sling-suffix-patterns-in-an-allow-list-manner)
 
 * [DOT - De &quot;Vereisen alle verleend&quot;richtlijn zou niet in een sectie van de Folder VirtualHost met een wortel folder-weg moeten worden gebruikt](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-require-all-granted-directive-should-not-be-used-in-a-virtualhost-directory-section-with-a-root-directory-path)
-
