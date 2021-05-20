@@ -3,15 +3,14 @@ title: Maven-projectversiebeheer
 seo-title: Maven-projectversiebeheer
 description: Meer informatie over Maven Project Version Handling.
 seo-description: Volg deze pagina voor meer informatie over Maven Project Version Handling.
-feature: Getting Started
-translation-type: tm+mt
-source-git-commit: fb10d775c930b5bb475b497aac2fd59b053a9a00
+feature: Aan de slag
+exl-id: a1d676e0-27cc-4b0d-8799-527c0520946a
+source-git-commit: aa2d7cb3d0fa3d6038d364659ce8d5eacb6825c5
 workflow-type: tm+mt
-source-wordcount: '255'
-ht-degree: 8%
+source-wordcount: '276'
+ht-degree: 7%
 
 ---
-
 
 # Maven-projectversiebeheer {#project-version}
 
@@ -22,6 +21,9 @@ Voor stage- en productieimplementaties genereert Cloud Manager een unieke, incre
 Deze versie wordt gezien op de pagina van de details van de pijpleidingsuitvoering evenals de activiteitenpagina. Wanneer een bouwstijl in werking wordt gesteld, wordt het Maven project bijgewerkt om deze versie te gebruiken en een markering wordt gecreeerd in de git bewaarplaats met die versie als zijn naam.
 
 Als de oorspronkelijke projectversie aan bepaalde criteria voldoet, voegt de bijgewerkte versie van het Maven-project zowel de oorspronkelijke projectversie als de door Cloud Manager gegenereerde versie samen. De tag gebruikt echter altijd de gegenereerde versie. Opdat deze samenvoeging plaatsvindt, moet de oorspronkelijke projectversie worden gevormd met precies drie versiesegmenten, bijvoorbeeld, 1.0.0 of 1.2.3, maar niet 1.0 of 1, en de originele versie moet niet in - SNAPSHOT eindigen.
+
+>[!NOTE]
+>Deze oorspronkelijke waarde van de projectversie moet statisch worden ingesteld in het `<version>`-element van het `pom.xml`-bestand op hoofdniveau in de vertakking van de it-opslagplaats.
 
 Als de oorspronkelijke versie wel aan deze criteria voldoet, wordt de gegenereerde versie als een nieuw versiesegment toegevoegd aan de oorspronkelijke versie. De gegenereerde versie wordt ook enigszins aangepast, zodat de versie correct wordt gesorteerd en verwerkt. Bijvoorbeeld, uitgaande van een gegenereerde versie van 2019.926.121356.000020490:
 
