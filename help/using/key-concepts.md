@@ -8,16 +8,15 @@ contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: introduction
 discoiquuid: b702dfc0-3534-4d90-af19-8559d8baf6a6
-feature: Getting Started
+feature: Aan de slag
 level: Beginner
-translation-type: tm+mt
-source-git-commit: c5d32d49782c899d013fcc60b9c4d2b67e9350ae
+exl-id: 86dfc976-f3da-479a-9faa-08f40ca909e0
+source-git-commit: f9b33de0f1f2203175f66f261c8ee553f47e0c3b
 workflow-type: tm+mt
-source-wordcount: '348'
+source-wordcount: '347'
 ht-degree: 0%
 
 ---
-
 
 # Belangrijke concepten {#key-concepts}
 
@@ -41,7 +40,7 @@ Bijvoorbeeld *We.Retail*.
 
 **** PipelineA reeks plaatsingsstappen die in opeenvolging worden uitgevoerd.
 
-**** ProductEen specifieke reeks functionaliteit binnen een oplossing die door een organisatie wordt toegelaten. Verschillende programma&#39;s binnen een organisatie kunnen recht hebben op verschillende productgroepen. Bijvoorbeeld Sites, Assets van Forms.
+**** ProductEen specifieke reeks functionaliteit binnen een oplossing die door een organisatie wordt toegelaten. Verschillende programma&#39;s binnen een organisatie kunnen recht hebben op verschillende productgroepen. Bijvoorbeeld Sites, Assets of Forms.
 
 **** ProgramA reeks milieu&#39;s die een logische groepering van klanteninitiatieven steunen, gewoonlijk die aan een gekochte Overeenkomsten van het Niveau van de Dienst (SLA) beantwoorden. Elk programma heeft precies één productieomgeving en kan vele niet-productieomgevingen hebben.
 
