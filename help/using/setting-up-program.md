@@ -5,7 +5,7 @@ description: Na het instappen, zal de bedrijfseigenaar één of andere aanvankel
 seo-description: 'Na het instappen, zal de bedrijfseigenaar één of andere aanvankelijke opstelling van Adobe AEM Cloud Manager moeten doen. Dit omvat het instellen van de programmabeschrijving en het definiëren van de KPI''s die voor het testen van de prestaties zullen worden gebruikt. '
 feature: Aan de slag
 exl-id: 795c7112-d564-4fbf-96a1-152a6c286bf2
-source-git-commit: f14725f87d5c4c3afe63d4bfc924962a92705c7c
+source-git-commit: c39390f34cf4ab6c9b2d5957b169c3c2cb43e6d3
 workflow-type: tm+mt
 source-wordcount: '729'
 ht-degree: 1%
@@ -78,7 +78,7 @@ Tijdens de Opstelling van het Programma, worden de activa-specifieke KPIs gespec
    >[!NOTE]
    >U kunt het programma altijd bewerken als het oorspronkelijke programma al is ingesteld. Volg de onderstaande stappen voor meer informatie.
 
-## Een programma bewerken
+## Een programma {#editing-program} bewerken
 
 1. Navigeer naar het programma vanuit het startscherm van **Cloud Manager**.
 
