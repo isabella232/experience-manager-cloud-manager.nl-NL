@@ -10,9 +10,9 @@ topic-tags: using
 discoiquuid: d2338c74-3278-49e6-a186-6ef62362509f
 feature: Codekwaliteitsregels
 exl-id: 7d118225-5826-434e-8869-01ee186e0754
-source-git-commit: df2f598f91201d362f54b17e4092ff6bd6a72cec
+source-git-commit: 5111a918b8063ab576ef587dc3c8d66ad976fc1a
 workflow-type: tm+mt
-source-wordcount: '3654'
+source-wordcount: '3652'
 ht-degree: 4%
 
 ---
@@ -187,32 +187,6 @@ public void orDoThis() {
   }
  
   in.close();
-}
-```
-
-### Product-API&#39;s die met @ProviderType zijn geannoteerd, mogen niet worden geïmplementeerd of uitgebreid door klanten {#product-apis-annotated-with-providertype-should-not-be-implemented-or-extended-by-customers}
-
-**Sleutel**: CQBP-84, afhankelijkheden van CQBP-84
-
-**Type**: Bug
-
-**Ernst**: Kritiek
-
-**Sinds**: Versie 2018.7.0
-
-De AEM-API bevat Java-interfaces en -klassen die alleen door aangepaste code mogen worden gebruikt, maar niet geïmplementeerd. De interface *com.day.cq.wcm.api.Page* is bijvoorbeeld ontworpen om ***alleen door AEM*** te worden geïmplementeerd.
-
-Wanneer nieuwe methoden aan deze interfaces worden toegevoegd, beïnvloeden deze aanvullende methoden geen bestaande code die deze interfaces gebruikt en daardoor wordt de toevoeging van nieuwe methoden aan deze interfaces beschouwd als compatibel met eerdere versies. Als echter door aangepaste code één van deze interfaces ***wordt geïmplementeerd***, heeft deze aangepaste code een risico voor compatibiliteit met eerdere versies voor de klant geïntroduceerd.
-
-Interfaces (en klassen) die alleen bedoeld zijn om door AEM te worden geïmplementeerd, worden geannoteerd met *org.osgi.annotation.versioning.ProviderType* (of, in sommige gevallen, een vergelijkbare oudere annotatie *aQute.bnd.annotation.ProviderType*). Deze regel identificeert de gevallen waarin een dergelijke interface wordt uitgevoerd (of een klasse wordt uitgebreid) door douanecode.
-
-#### Niet-compatibele code {#non-compliant-code-3}
-
-```java
-import com.day.cq.wcm.api.Page;
-
-public class DontDoThis implements Page {
-// implementation here
 }
 ```
 
@@ -597,6 +571,32 @@ U vindt hieronder de OakPAL-controles die zijn uitgevoerd door Cloud Manager.
 >[!NOTE]
 >
 >OakPAL is een kader dat door een AEM Partner (en winnaar van 2019 AEM Rockstar North America) wordt ontwikkeld die inhoudspakketten valideert met behulp van een standalone Oak-opslagplaats.
+
+### Product-API&#39;s die met @ProviderType zijn geannoteerd, mogen niet worden geïmplementeerd of uitgebreid door klanten {#product-apis-annotated-with-providertype-should-not-be-implemented-or-extended-by-customers}
+
+**Sleutel**: CQBP-84
+
+**Type**: Bug
+
+**Ernst**: Kritiek
+
+**Sinds**: Versie 2018.7.0
+
+De AEM-API bevat Java-interfaces en -klassen die alleen door aangepaste code mogen worden gebruikt, maar niet geïmplementeerd. De interface *com.day.cq.wcm.api.Page* is bijvoorbeeld ontworpen om ***alleen door AEM*** te worden geïmplementeerd.
+
+Wanneer nieuwe methoden aan deze interfaces worden toegevoegd, beïnvloeden deze aanvullende methoden geen bestaande code die deze interfaces gebruikt en daardoor wordt de toevoeging van nieuwe methoden aan deze interfaces beschouwd als compatibel met eerdere versies. Als echter door aangepaste code één van deze interfaces ***wordt geïmplementeerd***, heeft deze aangepaste code een risico voor compatibiliteit met eerdere versies voor de klant geïntroduceerd.
+
+Interfaces (en klassen) die alleen bedoeld zijn om door AEM te worden geïmplementeerd, worden geannoteerd met *org.osgi.annotation.versioning.ProviderType* (of, in sommige gevallen, een vergelijkbare oudere annotatie *aQute.bnd.annotation.ProviderType*). Deze regel identificeert de gevallen waarin een dergelijke interface wordt uitgevoerd (of een klasse wordt uitgebreid) door douanecode.
+
+#### Niet-compatibele code {#non-compliant-code-3}
+
+```java
+import com.day.cq.wcm.api.Page;
+
+public class DontDoThis implements Page {
+// implementation here
+}
+```
 
 ### Klantpakketten moeten geen knooppunten maken of wijzigen onder /libs {#oakpal-customer-package}
 
