@@ -2,9 +2,9 @@
 title: Opmerkingen bij de release 2021.5.0
 description: Volg deze pagina voor informatie over Cloud Manager Release 2021.5.0
 feature: Geen informatie
-source-git-commit: 5111a918b8063ab576ef587dc3c8d66ad976fc1a
+source-git-commit: 196e9947b732b8cd70a8a0f7fc72ef9900561125
 workflow-type: tm+mt
-source-wordcount: '235'
+source-wordcount: '228'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,6 @@ In de volgende sectie worden de algemene opmerkingen bij de release voor [!UICON
 ## Releasedatum {#release-date}
 
 De datum van de Versie voor [!UICONTROL Cloud Manager] Versie 2021.5.0 is Mei 06, 2021.
-De volgende release is gepland voor 10 juni 2021.
 
 ## Wat is er nieuw?{#whats-new}
 
