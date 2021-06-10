@@ -2,9 +2,9 @@
 title: Opmerkingen bij de release 2021.6.0
 description: Volg deze pagina voor informatie over Cloud Manager Release 2021.6.0
 feature: Geen informatie
-source-git-commit: 5111a918b8063ab576ef587dc3c8d66ad976fc1a
+source-git-commit: c39390f34cf4ab6c9b2d5957b169c3c2cb43e6d3
 workflow-type: tm+mt
-source-wordcount: '277'
+source-wordcount: '285'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ De volgende release is gepland voor 15 juli 2021.
 
 * De standaardtaknaam die tijdens zowel project verwezenlijking als in het gebrek wordt gebruikt duw bevel via beheert git werkschema is veranderd in `main`.
 
-* De ervaring met het bewerken van programma&#39;s in de gebruikersinterface is vernieuwd.
+* De ervaring met het bewerken van programma&#39;s in de gebruikersinterface is vernieuwd. Raadpleeg [Een programma bewerken](/help/using/setting-up-program.md#editing-program) voor meer informatie.
 
 * De kwaliteitsregel `ImmutableMutableMixCheck` is bijgewerkt om `/oak:index` knopen als onveranderlijk te classificeren.
 
