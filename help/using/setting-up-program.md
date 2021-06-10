@@ -3,20 +3,14 @@ title: Uw programma instellen
 seo-title: Uw programma instellen
 description: Na het instappen, zal de bedrijfseigenaar één of andere aanvankelijke opstelling van het programma moeten doen.
 seo-description: 'Na het instappen, zal de bedrijfseigenaar één of andere aanvankelijke opstelling van Adobe AEM Cloud Manager moeten doen. Dit omvat het instellen van de programmabeschrijving en het definiëren van de KPI''s die voor het testen van de prestaties zullen worden gebruikt. '
-uuid: 9ecf8743-1f5a-4744-86af-e2256567642f
-contentOwner: jsyal
-products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
-topic-tags: getting-started
-discoiquuid: c2393540-e852-4f7c-aafd-1427209065d2
-feature: Getting Started
-translation-type: tm+mt
-source-git-commit: c5d32d49782c899d013fcc60b9c4d2b67e9350ae
+feature: Aan de slag
+exl-id: 795c7112-d564-4fbf-96a1-152a6c286bf2
+source-git-commit: a65c413e9ffa96f950cf1c59771b45ce0f810bc0
 workflow-type: tm+mt
-source-wordcount: '689'
+source-wordcount: '728'
 ht-degree: 1%
 
 ---
-
 
 # Uw programma {#setup-your-program} instellen
 
@@ -25,11 +19,8 @@ Na het instappen, zal de bedrijfseigenaar één of andere aanvankelijke opstelli
 De gedefinieerde KPI&#39;s dienen als basislijn voor het testen van de prestaties die elke keer dat de pijplijn wordt uitgevoerd, wordt doorgegeven.
 
 >[!NOTE]
->
 >De gedefinieerde KPI&#39;s worden gemeten bij tests die worden uitgevoerd in de **stage**-omgeving. Doorgaans worden deze KPI&#39;s verkleind om ze aan te passen aan de mogelijkheden van de werkgebiedomgeving.
->
 >Bijvoorbeeld, zou een gebruiker die een gemiddelde van 1000 paginameningen per minuut in hun productie **Milieu** verwacht en vier verzender/publiceer servers in productie heeft deze aan 250 paginameningen per minuut (veronderstellend hun werkgebiedmilieu uit slechts één verzender/publiceer serverpaar bestaat) moeten schrapen.
->
 >Bovendien zullen vele gebruikers een Netwerk van de Levering van de Inhoud (CDN), zoals Akamai of CloudFront vóór hun productiemilieu hebben. Aangezien [!UICONTROL Cloud Manager] tests tegen het werkgebiedmilieu direct, KPI slechts op het verkeer zou moeten wijzen dat door CDN wordt verwacht over te gaan, namelijk mist het geheime voorgeheugen. Dit zal doorgaans een relatief kleine ondergroep van het totale productieverkeer zijn.
 
 ## Het gebruiken van [!UICONTROL Cloud Manager] om uw Programma {#using-cloud-manager-to-setup-your-program} te plaatsen
@@ -78,17 +69,13 @@ Tijdens de Opstelling van het Programma, worden de activa-specifieke KPIs gespec
 1. Onder **Provisioning** kunt u de inrichtingsconfiguratie voor productie- en niet-productieomgevingen in uw programma weergeven of bewerken. U zult **Autoscale is op** zien, als autoscaling voor het programma is aangezet.
 
    >[!NOTE]
-   >
-   >* De functie Automatisch schalen is alleen van toepassing op de productieomgeving en is mogelijk niet voor alle programma&#39;s van de klant beschikbaar.
-   >* Schaling op aanvraag is niet beschikbaar voor deze release van [!UICONTROL Cloud Manager].
-
+   >De functie Automatisch schalen is alleen van toepassing op de productieomgeving en is mogelijk niet voor alle programma&#39;s van de klant beschikbaar.
 
    ![](assets/Setup_Program-Provisioning.png)
 
 1. Klik **Opslaan** om de installatiewizard te voltooien.
 
    >[!NOTE]
-   >
    >U kunt het programma altijd bewerken als het oorspronkelijke programma al is ingesteld. Volg de onderstaande stappen voor meer informatie.
 
 ## Een programma bewerken
@@ -99,14 +86,26 @@ Tijdens de Opstelling van het Programma, worden de activa-specifieke KPIs gespec
 
 1. Selecteer de oplossing en klik op **Edit** om uw programma bij te werken of te wijzigen, zoals aangetoond in de hieronder figuur.
 
-   ![](assets/SetUpProgram6.png)
+   ![](assets/set-up-program/edit-program1.png)
 
 1. Het **Edit Program** scherm toont dat u toestaat om uw programma bij te werken of te wijzigen.
 
-   ![](assets/Editing_Program-screen3.png)
+   U kunt de naam en beschrijving van uw programma bijwerken via het tabblad **Algemeen**.
+
+   ![](assets/set-up-program/edit-program-general.png)
+
+   Navigeer naar het tabblad **KPI** om informatie over AEM Sites en Middelen bij te werken.
+
+   ![](assets/set-up-program/edit-program-kpi.png)
+
+   Daarnaast kunt u naar het tabblad **Provisioning** navigeren om de inrichtingsconfiguratie voor productie- en niet-productieomgevingen in uw programma te bewerken.
+
+   ![](assets/set-up-program/edit-program-provision.png)
+
+1. Klik op **Bijwerken** om uw bewerkingen op te slaan.
 
 ## De volgende stappen {#the-next-steps}
 
-Als u reeds opstelling **Pipeline** hebt, zal de volgende uitvoering uw bijgewerkte montages in aanmerking nemen. Als u nog niet opstelling de pijpleiding hebt, volg de stappen eerst aan opstelling uw pijpleiding.
+Als u reeds opstelling de Pijpleiding hebt, zal de volgende uitvoering uw bijgewerkte montages in aanmerking nemen. Als u nog niet opstelling de pijpleiding hebt, volg de stappen om uw pijpleiding eerst te opstelling.
 
 Gelieve te zien [vorm uw CI/CD Pijpleiding](https://helpx.adobe.com/experience-manager/cloud-manager/using/configuring-pipeline.html) voor vestiging de pijpleiding.
