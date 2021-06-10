@@ -10,7 +10,7 @@ topic-tags: using
 discoiquuid: 83299ed8-4b7a-4b1c-bd56-1bfc7e7318d4
 feature: CI-CD Pipeline, testresultaten
 exl-id: 6a574858-a30e-4768-bafc-8fe79f928294
-source-git-commit: df2f598f91201d362f54b17e4092ff6bd6a72cec
+source-git-commit: 5111a918b8063ab576ef587dc3c8d66ad976fc1a
 workflow-type: tm+mt
 source-wordcount: '2722'
 ht-degree: 1%
@@ -53,7 +53,7 @@ Deze stap evalueert de kwaliteit van uw toepassingscode. Het is de kerndoelstell
 Bij het testen van de kwaliteit van de code, wordt de broncode gescand om ervoor te zorgen dat het aan bepaalde kwaliteitscriteria voldoet. Momenteel wordt dit geïmplementeerd door een combinatie van SonarQube, inhoudspakketonderzoek met behulp van OakPAL en validatie van verzenders met behulp van het Dispatcher Optimization Tool. Er zijn meer dan 100 regels die generieke Java-regels en AEM-specifieke regels combineren. Enkele AEM-specifieke regels worden gecreeerd gebaseerd op beste praktijken van AEM Techniek en worden bedoeld als [Regels van de Kwaliteit van de Code van de Douane](/help/using/custom-code-quality-rules.md).
 
 >[!NOTE]
->U kunt de volledige lijst met regels [hier](/help/using/assets/CodeQuality-rules-AMS.xlsx) downloaden.
+>U kunt de volledige lijst met regels [hier](/help/using/assets/CodeQuality-rules-latest-AMS.xlsx) downloaden.
 
 De resultaten van deze stap worden geleverd als *Classificatie*. De onderstaande tabel geeft een overzicht van de scores voor verschillende testcriteria:
 
