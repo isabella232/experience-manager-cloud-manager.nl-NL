@@ -2,9 +2,9 @@
 title: Opmerkingen bij de release 2021.6.0
 description: Volg deze pagina voor informatie over Cloud Manager Release 2021.6.0
 feature: Geen informatie
-source-git-commit: c39390f34cf4ab6c9b2d5957b169c3c2cb43e6d3
+source-git-commit: 5ddbf718ad01b11dcba5dc2c5d1ab5d3cff2e9a9
 workflow-type: tm+mt
-source-wordcount: '285'
+source-wordcount: '310'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ De volgende release is gepland voor 15 juli 2021.
 
 * De kwaliteitsregel `ImmutableMutableMixCheck` is bijgewerkt om `/oak:index` knopen als onveranderlijk te classificeren.
 
-* De kwaliteitsregels `CQBP-84` en `CQBP-84--dependencies` zijn geconsolideerd in één enkele regel.
+* De kwaliteitsregels `CQBP-84` en `CQBP-84--dependencies` zijn geconsolideerd in één enkele regel. Als onderdeel van deze consolidatie, identificeert het aftasten van gebiedsdelen nauwkeuriger kwesties in derdegebiedsdelen die aan AEM runtime worden opgesteld.
 
 * In sommige situaties, zou het nalaten om Metrisch te berekenen Skipped Tests pijplijnuitvoeringen veroorzaken om te ontbreken.
 
