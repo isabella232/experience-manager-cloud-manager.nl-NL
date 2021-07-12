@@ -6,9 +6,9 @@ user-guide-title: Handleiding Experience Manager Cloud Manager
 breadcrumb-title: Cloud Manager Guide voor AEM 6.x
 user-guide-description: Leer hoe u met Adobe Managed Services Experience Manager in de cloud zelf kunt beheren.
 feature-set: Experience Manager Cloud Manager, Experience Manager
-role: Administrator
+role: Admin
 level: Intermediate
-source-git-commit: 0c082c7d24a50cfeaa8f452655e5abb609dc6915
+source-git-commit: 58ed9a96513c9d984286132f89f129038f177ee1
 workflow-type: tm+mt
 source-wordcount: '273'
 ht-degree: 12%
