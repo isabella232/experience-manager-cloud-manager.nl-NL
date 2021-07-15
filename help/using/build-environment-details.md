@@ -3,9 +3,9 @@ title: Inzicht in de omgeving van de build
 description: Volg deze pagina voor meer informatie over omgevingen
 feature: Omgevingen
 exl-id: b3543320-66d4-4358-8aba-e9bdde00d976
-source-git-commit: 0a5556729e64c9e8736d13b357db001dd57bc03a
+source-git-commit: ee701dd2d0c3921455a0960cbb6ca9a3ec4793e7
 workflow-type: tm+mt
-source-wordcount: '773'
+source-wordcount: '999'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ Cloud Manager bouwt en test uw code gebruikend een gespecialiseerde bouwstijlmil
 
 * De ontwikkelomgeving is gebaseerd op Linux en is afgeleid van Ubuntu 18.04.
 * Apache Maven 3.6.0 is geïnstalleerd.
-* De geïnstalleerde Java-versies zijn Oracle JDK 8u202 en 11.0.2.
+* De geïnstalleerde Java-versies zijn Oracle JDK 8u202, Azul Zulu 8u292, Oracle JDK 11.0.2, en Azul Zulu 11.0.11.
 * Er zijn enkele extra systeempakketten geïnstalleerd die nodig zijn:
 
    * bzip2
@@ -47,40 +47,62 @@ Raadpleeg [Adobe Public Maven Repository](https://repo.adobe.com/) voor meer inf
 >* [API-machtigingen](https://www.adobe.io/apis/experiencecloud/cloud-manager/docs.html#!AdobeDocs/cloudmanager-api-docs/master/permissions.md)
 
 
-## Java 11 {#using-java-11} gebruiken
+## Een specifieke Java-versie gebruiken {#using-java-version}
 
-Cloud Manager ondersteunt nu het maken van klantprojecten met zowel Java 8 als Java 11. Standaard worden projecten gemaakt met behulp van Java 8. Klanten die van plan zijn Java 11 in hun projecten te gebruiken, kunnen dit doen gebruikend [Apache Maven Toolchains Plugin](https://maven.apache.org/plugins/maven-toolchains-plugin/).
+Standaard worden projecten gemaakt door het buildproces van Cloud Manager met Oracle 8 JDK. Klanten die een alternatieve JDK willen gebruiken, hebben twee opties: Gemaakt met toolketens en het selecteren van een afwisselende versie JDK voor het volledige Geweven uitvoeringsproces.
 
-Hiervoor voegt u in het bestand pom.xml een `<plugin>`-item toe dat er als volgt uitziet:
+### Maven Toolketins {#maven-toolchains}
+
+Met de [Insteekmodule Gemaakt gereedschap](https://maven.apache.org/plugins/maven-toolchains-plugin/) kunnen projecten een specifieke JDK (of *toolchain*) selecteren die moet worden gebruikt in de context van Maven-ins met gereedschapsketens. Dit wordt gedaan in het `pom.xml` dossier van het project door een verkoper en versiewaarde te specificeren. Een voorbeeldsectie in het `pom.xml` dossier is:
 
 ```xml
         <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-toolchains-plugin</artifactId>
-            <version>1.1</version>
-            <executions>
-                <execution>
-                    <goals>
-                        <goal>toolchain</goal>
-                    </goals>
-                </execution>
-            </executions>
-            <configuration>
-                <toolchains>
-                    <jdk>
-                        <version>11</version>
-                        <vendor>oracle</vendor>
-                    </jdk>
-                </toolchains>
-            </configuration>
-        </plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-toolchains-plugin</artifactId>
+    <version>1.1</version>
+    <executions>
+        <execution>
+            <goals>
+                <goal>toolchain</goal>
+            </goals>
+        </execution>
+    </executions>
+    <configuration>
+        <toolchains>
+            <jdk>
+                <version>11</version>
+                <vendor>oracle</vendor>
+            </jdk>
+        </toolchains>
+    </configuration>
+</plugin>
 ```
 
->[!NOTE]
->De ondersteunde `vendor`-waarden zijn `oracle` en `sun` en de ondersteunde `version`-waarden zijn `1.8`, `1.11` en `11`.
+Hierdoor wordt voor alle plug-ins met behoud van gereedschappen het Oracle JDK, versie 11, gebruikt.
+
+Wanneer het gebruiken van deze methode, Maven zelf loopt nog gebruikend het gebrek JDK (Oracle 8). Daarom werkt het controleren of afdwingen van de Java-versie via plug-ins zoals de [Apache Maven Enforcer Plugin](https://maven.apache.org/enforcer/maven-enforcer-plugin/) niet en mogen dergelijke plug-ins niet worden gebruikt.
+
+De momenteel beschikbare leverancier/versiecombinaties zijn:
+
+* oracle 1.8
+* oracle 1.11
+* oracle 11
+* zon 1.8
+* zon 1.11
+* zon 11
+* azul 1,8
+* azul 1,11
+* azul 8
+
+### JDK-versie van alternatieve uitvoering {#alternate-maven}
+
+Het is ook mogelijk om Azul 8 of Azul 11 te selecteren als JDK voor de volledige executie Maven. In tegenstelling tot de opties van toolketins, verandert dit JDK die voor alle stop-ins wordt gebruikt tenzij de toolketenconfiguratie ook wordt geplaatst waarin de toolkettenconfiguratie nog voor toolketens-bewuste Maven plugins wordt toegepast. Hierdoor werkt het controleren en afdwingen van de Java-versie met de [Apache Maven Enforcer Plugin](https://maven.apache.org/enforcer/maven-enforcer-plugin/).
+
+Hiertoe maakt u een bestand met de naam `.cloudmanager/java-version` in de vertakking van de it-opslagruimte die door de pijplijn wordt gebruikt. Dit bestand kan de inhoud 11 of 8 hebben. Eventuele andere waarden worden genegeerd. Indien 11 is opgegeven, wordt Azul 11 gebruikt. Indien 8 is opgegeven, wordt Azul 8 gebruikt.
 
 >[!NOTE]
->De bouwstijl van het project van de Manager van de Wolk gebruikt nog Java 8 om Geweven aan te halen, daarom het controleren van of het handhaven van de versie van Java die in de toolchain stop - binnen door plugins zoals [Apache Maven Inforcer Plugin](https://maven.apache.org/enforcer/maven-enforcer-plugin/) wordt gevormd niet werkt en dergelijke plugins moeten niet worden gebruikt.
+>In een toekomstige versie van Cloud Manager, die momenteel wordt geschat op oktober 2021, wordt de standaard-JDK gewijzigd en wordt de standaard 11 Azul. Projecten die niet compatibel zijn met Java 11 moeten dit bestand zo snel mogelijk met inhoud 8 maken om ervoor te zorgen dat deze switch geen invloed heeft op deze bestanden.
+
 
 ## Omgevingsvariabelen {#environment-variables}
 
