@@ -2,10 +2,10 @@
 title: Opmerkingen bij de release 2021.7.0
 description: Volg deze pagina voor informatie over Cloud Manager Release 2021.7.0
 feature: Geen informatie
-source-git-commit: ee701dd2d0c3921455a0960cbb6ca9a3ec4793e7
+source-git-commit: 1da4ceef0d89223580800d9018c46aaec51f8927
 workflow-type: tm+mt
-source-wordcount: '243'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -27,7 +27,9 @@ De volgende release is gepland voor 12 augustus 2021.
 
 * Uitgaande uitgang IP zal nu het programma worden geopend het dossier van het bouwstijlstaplogboek.
 
-* De knoppen Git beheren hebben de naam Toegangsit-info gewijzigd en het dialoogvenster is visueel vernieuwd.
+* De knoppen **Git beheren** hebben een nieuwe naam **Toegang tot it-info** en het dialoogvenster is visueel vernieuwd.
+
+* De versie van het AEM Project Archetype dat wordt gebruikt door Cloud Manager is bijgewerkt naar versie 28.
 
 * Sommige onverwachte topologieherconfiguraties konden in gedetailleerde testrapporten resulteren die niet meer bij de pagina van de details van de pijpleidingsuitvoering beschikbaar zijn.
 
