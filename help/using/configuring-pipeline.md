@@ -11,14 +11,14 @@ content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 feature: CI-CD Pipeline
 exl-id: d489fa3c-df1e-480b-82d0-ac8cce78a710
-source-git-commit: 83fcc49c7e3e3742930a7179b27f899bff3c4ae1
+source-git-commit: 1c103b1c43a1e5fe7a6fa27110fc692bba6fb8b2
 workflow-type: tm+mt
-source-wordcount: '1280'
-ht-degree: 1%
+source-wordcount: '1308'
+ht-degree: 0%
 
 ---
 
-# Uw CI/CD pijpleiding {#configure-your-ci-cd-pipeline} vormen
+# Uw CI/CD-pijplijn configureren {#configure-your-ci-cd-pipeline}
 
 >[!NOTE]
 >Zie [hier](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/configure-pipeline.html?lang=en#using-cloud-manager) voor meer informatie over het configureren van CI/CD Pipeline voor Cloud Manager in AEM als Cloud Service.
@@ -34,7 +34,7 @@ De configuratie van de Pijpleiding van de Productie CI/CD bepaalt de trekker die
 >[!VIDEO](https://video.tv.adobe.com/v/26314/)
 
 
-## De stroom {#understanding-the-flow} begrijpen
+## De stroom begrijpen {#understanding-the-flow}
 
 U kunt uw pipeline configureren vanaf de tegel **Pipelines** in de [!UICONTROL Cloud Manager]-gebruikersinterface.
 
@@ -173,7 +173,7 @@ Naast de hoofdpijpleiding die zich naar het stadium en de productie ontwikkelt, 
 
 ## Videozelfstudie {#video-tutorial-two}
 
-### Uitsluitend pijplijnen {#non-prod-video} voor beheer van wolken zonder productie en kwaliteit van code
+### Uitsluitend pijplijnen voor beheer van wolken zonder productie en kwaliteit van code {#non-prod-video}
 
 CI/CD de niet productiepijpleidingen zijn verdeeld in twee categorieën, de pijpleidingen van de Kwaliteit van de Code, en de pijpleidingen van de Plaatsing. Codekwaliteitpijplijnen zorgen ervoor dat alle code van een Git-vertakking wordt samengesteld en wordt geëvalueerd op basis van de codescanfunctie van Cloud Manager.
 
@@ -183,22 +183,23 @@ Op het thuisscherm worden deze pijpleidingen op een nieuwe kaart vermeld:
 
 1. Open de tegel **Niet-productiepijpleidingen** vanuit het startscherm van Cloud Manager.
 
-   ![](assets/Non-Production-Pipeline.png)
+   ![](/help/using/assets/non-prod-add.png)
 
-1. Klik op de knop Toevoegen om de naam van de pijplijn, het type pijplijn en de tak van de it op te geven.
+1. Klik op **Add** knoop, om de Naam van de Pijpleiding, het Type van Pijpleiding, en de Tak van het Git te specificeren.
 
    Bovendien, kunt u de Trigger van de Plaatsing van de opstelling en Belangrijk Gedrag van de Mislukking van de Opties van de Pijpleiding ook plaatsen.
 
    ![](assets/non-prod-pipe.png)
 
-1. Klik **sparen** en de pijpleiding wordt getoond op de kaart op het huisscherm met drie acties:
+1. Klik **sparen** en de pijpleiding wordt getoond op de kaart op het huisscherm met vijf acties:
 
    * **Bewerken**  - staat het uitgeven van de pijpleidingsmontages toe
-   * **Detail**  - toont de laatste pijpleidingsuitvoering (als er één is)
+   * **Details**  - toont de laatste pijpleidingsuitvoering (als er één is)
    * **Build**  - navigeert aan de uitvoeringspagina, waarvan de pijpleiding kan worden uitgevoerd
+   * **Toegang tot repo-informatie** : hiermee kan de gebruiker de informatie ophalen die nodig is om toegang te krijgen tot de gegevensopslagruimte van Cloud Manager
+   * **Leer meer**  - navigeert aan het begrip van de CI/CD bron van de pijpleidingsdocumentatie.
 
-   ![](assets/Non-prod-2.png)
-
+      ![](assets/prod-one.png)
    >[!NOTE]
    >
    >Terwijl de pijpleiding loopt, wordt de huidige stap getoond en slechts is de **Details** actie beschikbaar.
