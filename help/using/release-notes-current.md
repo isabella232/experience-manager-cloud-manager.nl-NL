@@ -1,44 +1,38 @@
 ---
-title: Opmerkingen bij de release 2021.7.0
-description: Volg deze pagina voor informatie over Cloud Manager Release 2021.7.0
+title: Opmerkingen bij de release 2021.8.0
+description: Volg deze pagina om informatie op te halen voor Cloud Manager Release 2021.8.0
 feature: Geen informatie
-source-git-commit: fec742eb023e9811ee80951bd25fc2023df52d66
+source-git-commit: 460964e8882a30d9289a25ec7c4162221031b0da
 workflow-type: tm+mt
-source-wordcount: '260'
+source-wordcount: '186'
 ht-degree: 1%
 
 ---
 
-# Opmerkingen bij de release 2021.7.0 {#release-notes-for}
+# Opmerkingen bij de release 2021.8.0 {#release-notes-for}
 
-In de volgende sectie worden de algemene opmerkingen bij de release voor [!UICONTROL Cloud Manager] Release 2021.7.0 beschreven.
+In de volgende sectie worden de algemene opmerkingen bij de release voor [!UICONTROL Cloud Manager] Release 2021.8.0 beschreven.
 
 >[!NOTE]
 >Raadpleeg [Opmerkingen bij de huidige release](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/release-notes-cloud-manager/release-notes-cm-current.html?lang=en#getting-access) om de meest recente releaseopmerkingen voor Cloud Manager in AEM als Cloud Service te bekijken.
 
 ## Releasedatum {#release-date}
 
-De datum van de Versie voor [!UICONTROL Cloud Manager] Versie 2021.7.0 is 15 Juli, 2021.
-De volgende release is gepland voor 12 augustus 2021.
+De Releasedatum voor [!UICONTROL Cloud Manager] Versie 2021.8.0 is 12 augustus 2021.
+De volgende release is gepland voor 9 september 2021.
 
 ## Wat is er nieuw? {#whats-new}
 
-* Klanten kunnen nu Azul 8 en 11 JDK&#39;s gebruiken voor hun buildprocessen in Cloud Manager en kunnen een van deze JDK&#39;s selecteren voor met toolketens compatibele Maven-plug-ins *of* voor de volledige uitvoering van het Maven-proces.
+* Self-service mogelijkheid om gebruikers in staat te stellen meerdere opslagruimten te maken en te beheren via de interface van Cloud Manager.
 
-* Uitgaande uitgang IP zal nu het programma worden geopend het dossier van het bouwstijlstaplogboek.
+* SonarQube leest onnodig gegevens over de git-geschiedenis. Op grote codebasis, zou dit tot een onnodige bouwstijlprestaties kunnen leiden.
 
-* De knoppen **Git beheren** hebben een nieuwe naam gekregen in **Git-info benaderen** en het dialoogvenster is visueel vernieuwd.
+* Er is nu een API beschikbaar om het Geweven gebiedsdeelheidsgeheime voorgeheugen per pijpleiding ongeldig te maken.
 
 * De versie van het AEM Project Archetype dat wordt gebruikt door Cloud Manager is bijgewerkt naar versie 28.
 
-* Sommige onverwachte topologieherconfiguraties konden in gedetailleerde testrapporten resulteren die niet meer bij de pagina van de details van de pijpleidingsuitvoering beschikbaar zijn.
-
 ## Opgeloste problemen {#bug-fixes}
 
-* Wanneer u handmatig naar de pagina met uitvoeringsdetails voor een niet-bestaande uitvoering navigeerde, werd geen fout weergegeven, alleen een eindeloos laadscherm.
+* *Update* Beschikbare status zou niet moeten worden getoond wanneer de recentste versie minder dan de huidige versie is.
 
-* In sommige gevallen zou het automatisch opnieuw proberen van mislukte containers die in de prestaties van Plaatsen worden gebruikt niet 2 uur van kracht zijn, resulterend in een testmislukking.
-
-## Bekende problemen {#known-issues}
-
-Klanten die overstappen op de Azul JDK&#39;s moeten zich ervan bewust zijn dat niet alle bestaande toepassingen zonder fout zullen compileren op Azul JDK. Het wordt hoogst geadviseerd om plaatselijk vóór omschakeling te testen.
+* Af en toe, wanneer een pijpleiding tweemaal om één of andere reden wordt teweeggebracht, resulteert het in één van de uitvoeringen die met *geen status van de pijpleidingsuitvoering kan bijwerken* fout.
