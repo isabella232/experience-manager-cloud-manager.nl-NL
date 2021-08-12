@@ -2,10 +2,10 @@
 title: Opmerkingen bij de release 2021.8.0
 description: Volg deze pagina om informatie op te halen voor Cloud Manager Release 2021.8.0
 feature: Geen informatie
-source-git-commit: 460964e8882a30d9289a25ec7c4162221031b0da
+source-git-commit: 510c523423a8d7cf9ad4c5ba2af11ff12df2b1cc
 workflow-type: tm+mt
-source-wordcount: '186'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -32,7 +32,5 @@ De volgende release is gepland voor 9 september 2021.
 * De versie van het AEM Project Archetype dat wordt gebruikt door Cloud Manager is bijgewerkt naar versie 28.
 
 ## Opgeloste problemen {#bug-fixes}
-
-* *Update* Beschikbare status zou niet moeten worden getoond wanneer de recentste versie minder dan de huidige versie is.
 
 * Af en toe, wanneer een pijpleiding tweemaal om één of andere reden wordt teweeggebracht, resulteert het in één van de uitvoeringen die met *geen status van de pijpleidingsuitvoering kan bijwerken* fout.
