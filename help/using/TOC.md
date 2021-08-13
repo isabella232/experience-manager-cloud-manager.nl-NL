@@ -8,10 +8,10 @@ user-guide-description: Leer hoe u met Adobe Managed Services Experience Manager
 feature-set: Experience Manager Cloud Manager, Experience Manager
 role: Admin
 level: Intermediate
-source-git-commit: e490a8f1dd17e63f35ed00d4cdf95b6e7a07b150
+source-git-commit: c4deb06615652736ff7584566507a2b42a88bfb1
 workflow-type: tm+mt
-source-wordcount: '279'
-ht-degree: 12%
+source-wordcount: '283'
+ht-degree: 11%
 
 ---
 
@@ -53,7 +53,8 @@ ht-degree: 12%
    + [Aangepaste regels voor codekwaliteit](custom-code-quality-rules.md)
 + Uw code {#managing-code} beheren
    + [Maven-projectversiebeheer](activating-maven-project.md)
-   + [Toegang tot Git](accessing-git.md)
+   + [Opslagplaatsen in Cloud Manager](cloud-manager-repositories.md)
+   + [Toegang tot opslagplaatsen](accessing-repos.md)
    + [Integreren met Git](setup-cloud-manager-git-integration.md)
    + [Werken met Meerdere bronopslaglocaties voor Git](/help/using/working-with-multiple-source-git-repos.md)
 + Wizard Productupdates {#product-update-wizard}
