@@ -2,10 +2,10 @@
 title: Opmerkingen bij de release 2021.8.0
 description: Volg deze pagina om informatie op te halen voor Cloud Manager Release 2021.8.0
 feature: Geen informatie
-source-git-commit: 510c523423a8d7cf9ad4c5ba2af11ff12df2b1cc
+source-git-commit: c4deb06615652736ff7584566507a2b42a88bfb1
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '169'
+ht-degree: 1%
 
 ---
 
@@ -29,7 +29,7 @@ De volgende release is gepland voor 9 september 2021.
 
 * Er is nu een API beschikbaar om het Geweven gebiedsdeelheidsgeheime voorgeheugen per pijpleiding ongeldig te maken.
 
-* De versie van het AEM Project Archetype dat wordt gebruikt door Cloud Manager is bijgewerkt naar versie 28.
+* De versie van het AEM Project Archetype dat wordt gebruikt door Cloud Manager is bijgewerkt naar versie 29.
 
 ## Opgeloste problemen {#bug-fixes}
 
