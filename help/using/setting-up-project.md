@@ -3,17 +3,16 @@ title: Het project instellen
 description: Volg deze pagina om te leren hoe u een project instelt
 feature: Aan de slag, Productieprogramma's
 exl-id: ed994daf-0195-485a-a8b1-87796bc013fa
-translation-type: tm+mt
-source-git-commit: cf19c7dfd593810779c03c51e08081954f8fc11e
+source-git-commit: 2a253abb98fa096f9f1c07bac94804849fad2ebb
 workflow-type: tm+mt
-source-wordcount: '877'
+source-wordcount: '884'
 ht-degree: 7%
 
 ---
 
-# Uw project {#setting-up-your-project} instellen
+# Uw project instellen {#setting-up-your-project}
 
-## Details van projectinstelling wijzigen {#modifying-project-setup-details}
+## Details projectinstelling wijzigen {#modifying-project-setup-details}
 
 Om te kunnen worden gebouwd en geïmplementeerd met Cloud Manager, moeten bestaande AEM projecten zich aan een aantal basisregels houden:
 
@@ -28,7 +27,7 @@ Om te kunnen worden gebouwd en geïmplementeerd met Cloud Manager, moeten bestaa
 * Als er meer dan één inhoudspakket is, wordt de volgorde van pakketimplementaties niet gegarandeerd. Als een specifieke orde nodig is, kunnen de gebiedsdelen van het inhoudspakket worden gebruikt om de orde te bepalen. Pakketten kunnen [van implementatie worden overgeslagen](#skipping-content-packages).
 
 
-## Geweven profielen activeren in Cloud Manager {#activating-maven-profiles-in-cloud-manager}
+## GeMaven profielen activeren in Cloud Manager {#activating-maven-profiles-in-cloud-manager}
 
 In sommige beperkte gevallen moet u het constructieproces mogelijk enigszins variëren wanneer u het uitvoert in Cloud Manager, in tegenstelling tot wanneer het wordt uitgevoerd op ontwikkelaarswerkstations. In deze gevallen kan [Maven Profiles](https://maven.apache.org/guides/introduction/introduction-to-profiles.html) worden gebruikt om te definiëren hoe de build in verschillende omgevingen moet verschillen, waaronder Cloud Manager.
 
@@ -106,10 +105,10 @@ En als u een eenvoudig bericht wilt uitvoeren slechts wanneer de bouwstijl buite
         </profile>
 ```
 
-## Ondersteuning voor met wachtwoord beveiligde opslagruimte {#password-protected-maven-repositories}
+## Ondersteuning voor met wachtwoord beveiligde gegevensopslagruimte {#password-protected-maven-repositories}
 
 >[!NOTE]
->Artefacten van een met wachtwoord beveiligde Maven-opslagplaats mogen alleen zeer voorzichtig worden gebruikt, aangezien code die via dit mechanisme wordt geïmplementeerd, momenteel niet wordt uitgevoerd via de Quality Gates van Cloud Manager. Daarom mag het alleen worden gebruikt in zeldzame gevallen en voor code die niet aan AEM is gekoppeld. Het wordt geadviseerd om de bronnen van Java evenals de volledige code van de projectbron samen met het binaire getal op te stellen.
+>Artefacten van een met wachtwoord beveiligde Maven-opslagplaats mogen alleen zeer voorzichtig worden gebruikt, aangezien code die via dit mechanisme wordt geïmplementeerd, momenteel niet door alle kwaliteitsregels wordt uitgevoerd die in de Quality Gates van Cloud Manager zijn geïmplementeerd. Daarom mag het alleen worden gebruikt in zeldzame gevallen en voor code die niet aan AEM is gekoppeld. Het wordt geadviseerd om de bronnen van Java evenals de volledige code van de projectbron samen met het binaire getal op te stellen.
 
 Als u een met een wachtwoord beveiligde gegevensopslagruimte vanuit Cloud Manager wilt gebruiken, geeft u het wachtwoord (en eventueel de gebruikersnaam) op als geheim [Pipeline Variable](/help/using/build-environment-details.md#pipeline-variables) en verwijst u naar dat geheim in een bestand met de naam `.cloudmanager/maven/settings.xml` in de gegevensopslagruimte. Dit bestand volgt het schema [Maven Settings File](https://maven.apache.org/settings.html). Wanneer het buildproces van Cloud Manager wordt gestart, wordt het `<servers>`-element in dit bestand samengevoegd met het standaardbestand `settings.xml` van Cloud Manager. Server-id&#39;s die beginnen met `adobe` en `cloud-manager` worden beschouwd als gereserveerd en mogen niet worden gebruikt door aangepaste servers. Server-id&#39;s **niet** die overeenkomen met een van deze voorvoegsels of de standaard-id `central` worden nooit weerspiegeld door Cloud Manager. Als dit bestand is geïnstalleerd, wordt naar de server-id verwezen vanuit een `<repository>`- en/of `<pluginRepository>`-element in het `pom.xml`-bestand. In het algemeen worden deze `<repository>` en/of `<pluginRepository>` elementen opgenomen in een [Cloud Manager-specifiek profiel](#activating-maven-profiles-in-cloud-manager), hoewel dat niet strikt noodzakelijk is.
 
@@ -178,7 +177,7 @@ En ten slotte verwijs naar de server-id in het `pom.xml`-bestand:
 </profiles>
 ```
 
-### Bronnen {#deploying-sources} implementeren
+### Bronnen implementeren {#deploying-sources}
 
 Het is een goede praktijk om de bronnen van Java samen met binair aan een Geweven bewaarplaats op te stellen.
 
@@ -199,7 +198,7 @@ Vorm maven-bron-stop in uw project:
         </plugin>
 ```
 
-### Projectbronnen {#deploying-project-sources} implementeren
+### Projectbronnen implementeren {#deploying-project-sources}
 
 Het is een goede praktijk om de volledige projectbron samen met binair aan een Geweven bewaarplaats op te stellen - dit staat toe om het nauwkeurige artefact te herbouwen.
 
@@ -226,7 +225,7 @@ Vorm maven-assemblage-stop in uw project:
         </plugin>
 ```
 
-## Inhoudspakketten {#skipping-content-packages} overslaan
+## Inhoudspakketten worden overgeslagen {#skipping-content-packages}
 
 In Cloud Manager kunnen builds een willekeurig aantal inhoudspakketten produceren.
 Om diverse redenen kan het wenselijk zijn een inhoudspakket te maken, maar het niet te implementeren. Dit kan bijvoorbeeld handig zijn wanneer u inhoudspakketten maakt die alleen voor testen worden gebruikt of die door een andere stap in het constructieproces opnieuw worden verpakt, dat wil zeggen als een subpakket van een ander pakket.
@@ -263,6 +262,6 @@ Met de insteekmodule voor het verpakken van inhoud is deze vergelijkbaar:
         </plugin>
 ```
 
-## Ontwikkel uw Code die op Beste praktijken {#develop-your-code-based-on-best-practices} wordt gebaseerd
+## Ontwikkel uw Code die op Beste praktijken wordt gebaseerd {#develop-your-code-based-on-best-practices}
 
 Adobe Engineering- en Consultingteams hebben een [uitgebreide set met best practices ontwikkeld voor AEM ontwikkelaars](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/best-practices.html).
