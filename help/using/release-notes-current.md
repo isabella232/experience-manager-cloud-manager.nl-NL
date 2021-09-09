@@ -3,7 +3,7 @@ title: Opmerkingen bij de release 2021.9.0
 description: Volg deze pagina voor informatie over Cloud Manager Release 2021.9.0
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: ec180b60b24676bf1affe6369b6af66a10d9e8a0
+source-git-commit: 9e9836ad8793540a57048a6e43e4d158abf91579
 workflow-type: tm+mt
 source-wordcount: '179'
 ht-degree: 1%
@@ -32,7 +32,7 @@ De volgende release is gepland voor 7 oktober 2021.
 
 * De opties in het menu Activiteit-pagina bevatten nu een optie voor het downloaden van logbestanden voor voltooide uitvoering van de Code-generator. Als u deze optie selecteert, wordt het logboek met de stap build gedownload.
 
-* Als u rechtstreeks op de programmakaart klikt, gaat u nu naar de overzichtspagina van Cloud Manager.
+* Als u rechtstreeks op de programmakaart klikt, gaat u nu naar de pagina **Overzicht** van Cloud Manager.
 
 ## Opgeloste problemen {#bug-fixes}
 
