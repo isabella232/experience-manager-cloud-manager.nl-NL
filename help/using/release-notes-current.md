@@ -3,7 +3,7 @@ title: Opmerkingen bij de release 2021.9.0
 description: Volg deze pagina voor informatie over Cloud Manager Release 2021.9.0
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 3fccb0b577662ebc12b65777cbf9624e06d4259d
+source-git-commit: ec180b60b24676bf1affe6369b6af66a10d9e8a0
 workflow-type: tm+mt
 source-wordcount: '179'
 ht-degree: 1%
@@ -19,10 +19,12 @@ In de volgende sectie worden de algemene opmerkingen bij de release voor [!UICON
 
 ## Releasedatum {#release-date}
 
-De datum van de Versie voor [!UICONTROL Cloud Manager] Versie 2021.8.0 is September 09, 2021.
+De datum van de Versie voor [!UICONTROL Cloud Manager] Versie 2021.9.0 is September 09, 2021.
 De volgende release is gepland voor 7 oktober 2021.
 
 ## Wat is er nieuw? {#whats-new}
+
+* De versie van het AEM Projectarchetype dat door de Manager van de Wolk wordt gebruikt is bijgewerkt aan versie 30.
 
 * De programmakaarten op de landingspagina van Cloud Manager en de bijbehorende ervaring zijn vernieuwd.
 
@@ -31,8 +33,6 @@ De volgende release is gepland voor 7 oktober 2021.
 * De opties in het menu Activiteit-pagina bevatten nu een optie voor het downloaden van logbestanden voor voltooide uitvoering van de Code-generator. Als u deze optie selecteert, wordt het logboek met de stap build gedownload.
 
 * Als u rechtstreeks op de programmakaart klikt, gaat u nu naar de overzichtspagina van Cloud Manager.
-
-* De versie van het AEM Projectarchetype dat door de Manager van de Wolk wordt gebruikt is bijgewerkt aan versie 30.
 
 ## Opgeloste problemen {#bug-fixes}
 
