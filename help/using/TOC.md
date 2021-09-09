@@ -1,6 +1,6 @@
 ---
 product: adobe experience manager
-sub-product: Experience Manager-cloudbeheer
+sub-product: experience manager cloud manager
 archetype: administrator
 user-guide-title: Handleiding Experience Manager Cloud Manager
 breadcrumb-title: Cloud Manager Guide voor AEM 6.x
@@ -8,9 +8,9 @@ user-guide-description: Leer hoe u met Adobe Managed Services Experience Manager
 feature-set: Experience Manager Cloud Manager, Experience Manager
 role: Admin
 level: Intermediate
-source-git-commit: c4deb06615652736ff7584566507a2b42a88bfb1
+source-git-commit: 3fccb0b577662ebc12b65777cbf9624e06d4259d
 workflow-type: tm+mt
-source-wordcount: '283'
+source-wordcount: '282'
 ht-degree: 11%
 
 ---
@@ -61,7 +61,8 @@ ht-degree: 11%
    + [Overzicht](overview-productupdate-wizard.md)
    + [Evaluatie](evaluation.md)
 + Releaseopmerkingen {#release-notes}
-   + [Opmerkingen bij de huidige release (2021.8.0)](release-notes-current.md)
+   + [Huidige opmerkingen bij de release (2021.9.0)](release-notes-current.md)
+   + [Opmerkingen bij de release 2021.8.0](release-notes-2021-8-0.md)
    + [Opmerkingen bij de release 2021.7.0](release-notes-2021-7-0.md)
    + [Opmerkingen bij de release 2021.6.0](release-notes-2021-6-0.md)
    + [Opmerkingen bij de release 2021.5.0](release-notes-2021-5-0.md)
