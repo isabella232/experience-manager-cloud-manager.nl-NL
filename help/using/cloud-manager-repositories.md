@@ -1,9 +1,10 @@
 ---
 title: Opslagplaatsen voor Cloud Manager
 description: Opslagplaatsen voor Cloud Manager
-source-git-commit: 7bda34be143d2d7587e61c09dab642f3419dfad9
+exl-id: 384b197d-f7a7-4022-9b16-9d83ab788966
+source-git-commit: 2a1f471f2e4148a424688ab9858c534935c3fe69
 workflow-type: tm+mt
-source-wordcount: '420'
+source-wordcount: '425'
 ht-degree: 0%
 
 ---
@@ -51,7 +52,7 @@ Git-submodules kunnen worden gebruikt om de inhoud van meerdere vertakkingen tij
 $ git submodule update --init
 ```
 
-Dit zal elke submodule in de aangewezen folder uitchecken. Deze techniek is een mogelijk alternatief voor https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/managing-code/working-with-multiple-source-git-repositories.html voor organisaties die vertrouwd zijn met het gebruik van git-submodules en geen extern samenvoegingsproces willen beheren.
+Dit zal elke submodule in de aangewezen folder uitchecken. Deze techniek is een mogelijk alternatief voor [werken met meerdere Git-opslagruimten voor bronnen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/managing-code/working-with-multiple-source-git-repositories.html) voor organisaties die comfortabel zijn met het gebruik van git-submodules en geen extern samenvoegingsproces willen beheren.
 
 Stel dat er drie opslagplaatsen zijn, die elk een enkele vertakking met de naam main bevatten. In de &quot;primaire&quot; opslagplaats, d.w.z. de opslagplaats die in de pijpleidingen is geconfigureerd, heeft de hoofdtak een bestand pom.xml waarin de projecten in de andere twee opslagplaatsen worden aangegeven:
 
@@ -101,4 +102,3 @@ Houd rekening met het volgende wanneer u git-submodules gebruikt:
 * De URL van de it moet exact in de hierboven beschreven syntaxis staan. Sluit om beveiligingsredenen geen referenties in deze URL&#39;s in.
 * Alleen submodules in de hoofdmap van de vertakking worden ondersteund.
 * Git-submoduleverwijzingen worden opgeslagen naar specifieke it-opdrachten. Dientengevolge, wanneer veranderingen in de submodule bewaarplaats worden aangebracht, moet het gecommitteerde referenced worden bijgewerkt, bijvoorbeeld door `git submodule update --remote` te gebruiken.
-
