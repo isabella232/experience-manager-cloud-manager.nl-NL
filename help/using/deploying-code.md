@@ -1,28 +1,28 @@
 ---
 title: Uw code implementeren
-seo-title: Uw code implementeren
+seo-title: Deploy your Code
 description: Geeft een overzicht van het implementatieproces in Cloud Manager
-seo-description: Leer hoe te om uw code op te stellen zodra u uw pijpleiding (bewaarplaats, milieu, en het testen milieu) hebt gevormd
+seo-description: Learn how to deploy your code once you have configured your pipeline (repository, environment, and testing environment)
 uuid: 4e3807e1-437e-4922-ba48-0bcadf293a99
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: 832a4647-9b83-4a9d-b373-30fe16092b15
-feature: Codeimplementatie
+feature: Code Deployment
 exl-id: 3d6610e5-24c2-4431-ad54-903d37f4cdb6
-source-git-commit: df2f598f91201d362f54b17e4092ff6bd6a72cec
+source-git-commit: 2fcefda1e30871d44e3a1353470a4728904d7598
 workflow-type: tm+mt
-source-wordcount: '1020'
+source-wordcount: '1220'
 ht-degree: 0%
 
 ---
 
-# Uw code {#deploy-your-code} implementeren
+# Uw code implementeren {#deploy-your-code}
 
 ## Code implementeren met Cloud Manager {#deploying-code-with-cloud-manager}
 
 >[!NOTE]
->Zie [hier](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/deploy-code.html?lang=en#using-cloud-manager) voor meer informatie over het implementeren van code voor Cloud Manager in AEM als Cloud Service.
+>Zie [hier](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/deploy-code.html?lang=en#using-cloud-manager) voor meer informatie over het implementeren van code voor Cloud Manager in AEM as a Cloud Service.
 
 Nadat u de productiepijpleiding hebt geconfigureerd (opslagruimte, omgeving en testomgeving), kunt u uw code implementeren.
 
@@ -150,7 +150,7 @@ Wanneer de Manager van de Wolk aan niet productietopologieën opstelt, is het do
    >[!NOTE]
    >U kunt de veranderingen van de Balancer van de Lading in ontwikkeling en werkgebiedplaatsingen overslaan, namelijk losmaken en stappen in zowel niet productiepijpleidingen, voor ontwikkelaarmilieu&#39;s, als de productiepijplijn, voor werkgebiedmilieu&#39;s vastmaken.
 
-### Implementatie in productiefase {#deployment-production-phase}
+### Implementatie naar productiefase {#deployment-production-phase}
 
 Het proces voor het opstellen aan productietopologieën verschilt lichtjes om effect aan AEM bezoekers van de Plaats te minimaliseren.
 
@@ -164,3 +164,32 @@ Productie-implementaties volgen doorgaans dezelfde stappen als hierboven, maar o
 1. Implementeer AEM pakketten om te publiceren2 en het verzendingspakket naar dispatcher2 in parallel, uitlijningscachegeheugen.
 1. Plaats dispatcher2 terug in het taakverdelingsmechanisme.
 Dit proces gaat verder tot de plaatsing alle uitgevers en verzenders in de topologie heeft bereikt.
+
+## Uitvoermodus noodleiding {#emergency-pipeline}
+
+In kritieke situaties moeten klanten van Adobe Managed Services mogelijk codewijzigingen implementeren in hun werkgebied- en productieomgeving zonder te wachten tot een volledige testcyclus van Cloud Manager is uitgevoerd.
+
+Om deze situaties aan te pakken, kan de productiepijplijn van de Manager van de Wolk op een *noodsituatie* wijze worden uitgevoerd. Wanneer deze modus wordt gebruikt, worden de beveiligings- en prestatieteststappen niet uitgevoerd; alle andere stappen, met inbegrip van om het even welke gevormde goedkeuringsstappen, worden uitgevoerd zoals op de normale wijze van de pijpleidingsuitvoering.
+
+>[!NOTE]
+>Mogelijkheid tot uitvoering van de noodpijpleiding wordt op programmasleutel geactiveerd door de succestechnici van de klant.
+
+### Uitvoermodus voor noodpijpleiding gebruiken {#using-emergency-pipeline}
+
+Wanneer u een productiepijpuitvoering start en deze functie is geactiveerd, kunt u de uitvoering starten in de normale modus of in de noodmodus vanuit het dialoogvenster, zoals in de onderstaande afbeelding wordt getoond.
+
+![](assets/execution-emergency1.png)
+
+Bovendien, die de pagina bekijken van de details van de pijpleidingsuitvoering voor een uitvoering die in noodmodus in werking wordt gesteld, toont de broodkruimels bij de bovenkant van het scherm een indicator dat de noodwijze voor deze bepaalde uitvoering werd gebruikt.
+
+![](assets/execution-emergency2.png)
+
+
+Het maken van een pijpleiding kan op deze noodwijze ook door de Manager API van de Wolk of CLI worden gedaan. Om een uitvoering op de Wijze van de Noodsituatie te beginnen, voorlegt een verzoek van de PUT aan het uitvoeringsparameter van de pijpleiding met de vraagparameter `?pipelineExecutionMode=EMERGENCY` of, wanneer het gebruiken van CLI:
+
+```
+$ aio cloudmanager:pipeline:create-execution PIPELINE_ID --emergency
+```
+
+>[!IMPORTANT]
+>Als u de markering `--emergency` gebruikt, moet u mogelijk de nieuwste `aio-cli-plugin-cloudmanager`-versie installeren.
