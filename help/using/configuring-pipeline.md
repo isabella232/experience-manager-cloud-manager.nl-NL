@@ -1,8 +1,8 @@
 ---
 title: Uw CI/CD-pijplijn configureren
-seo-title: Uw CI/CD-pijplijn configureren
+seo-title: Configure your CI/CD Pipeline
 description: Volg deze pagina om uw pijpleidingsmontages van de Manager van de Wolk te vormen.
-seo-description: 'Voordat u begint met het implementeren van uw code, moet u de pijpleidinginstellingen configureren in AEM Cloud Manager. '
+seo-description: Before you start to deploy your code, you must configure your pipeline settings from the AEM Cloud Manager.
 uuid: 35fd56ac-dc9c-4aca-8ad6-36c29c4ec497
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 feature: CI-CD Pipeline
 exl-id: d489fa3c-df1e-480b-82d0-ac8cce78a710
-source-git-commit: 1c103b1c43a1e5fe7a6fa27110fc692bba6fb8b2
+source-git-commit: dde991d2dbd02f4b4145f79d67b6d2f1244e5648
 workflow-type: tm+mt
-source-wordcount: '1308'
+source-wordcount: '1378'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 # Uw CI/CD-pijplijn configureren {#configure-your-ci-cd-pipeline}
 
 >[!NOTE]
->Zie [hier](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/configure-pipeline.html?lang=en#using-cloud-manager) voor meer informatie over het configureren van CI/CD Pipeline voor Cloud Manager in AEM als Cloud Service.
+>Zie [hier](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/configure-pipeline.html?lang=en#using-cloud-manager) voor meer informatie over het configureren van CI/CD Pipeline voor Cloud Manager in AEM as a Cloud Service.
 
 De volgende pagina verklaart hoe te om **Pipeline** te vormen. Meer conceptuele informatie over bekijken hoe de pijpleiding [CI/CD pijpleiding overzicht](ci-cd-pipeline.md) ziet.
 
@@ -133,7 +133,7 @@ Als Manager van de Plaatsing, hebt u de kans om een reeks inhoudspaden te vormen
 
 U kunt een afzonderlijke reeks wegen voor de plaatsing van het Stadium en van de Productie vormen. Indien gevormd, zullen deze geheim voorgeheugenacties als deel van de stap van de plaatsingspijpleiding worden uitgevoerd, enkel nadat om het even welke inhoudspakketten worden opgesteld. Deze instellingen gebruiken het standaardgedrag AEM Dispatcher - ongeldig maken voert een cachevalidatie uit, net als wanneer de inhoud van de auteur wordt geactiveerd om te publiceren. flush voert een geheim voorgeheugenschrapping uit.
 
-Over het algemeen verdient het de voorkeur de actie voor invalideren te gebruiken, maar in bepaalde gevallen is leegmaken vereist, met name bij het gebruik van AEM HTML-clientbibliotheken.
+Over het algemeen verdient het de voorkeur de actie voor invalideren te gebruiken, maar er kunnen zich gevallen voordoen waarin flushing vereist is, met name bij gebruik van AEM Client Libraries voor HTML.
 
 >[!NOTE]
 >
@@ -179,30 +179,53 @@ CI/CD de niet productiepijpleidingen zijn verdeeld in twee categorieën, de pijp
 
 >[!VIDEO](https://video.tv.adobe.com/v/26316/)
 
+### Een niet-productiepijpleiding toevoegen {#add-non-production-pipeline}
+
 Op het thuisscherm worden deze pijpleidingen op een nieuwe kaart vermeld:
 
-1. Open de tegel **Niet-productiepijpleidingen** vanuit het startscherm van Cloud Manager.
+1. Open de **Pipelines**-kaart vanuit het startscherm van Cloud Manager. Klik op **+Add** en selecteer **Niet-productiepijplijn toevoegen**.
 
-   ![](/help/using/assets/non-prod-add.png)
+   ![](/help/using/assets/configure-pipelines/nonprod-pipeline-add1.png)
 
-1. Klik op **Add** knoop, om de Naam van de Pijpleiding, het Type van Pijpleiding, en de Tak van het Git te specificeren.
+1. **De vertoningen van de**  de dialoogdoos van de Pijl van de Niet-Productie toevoegen. Selecteer het type pijplijn dat u wilt maken, **Code Quality Pipeline** of **Deployment Pipeline**.
 
-   Bovendien, kunt u de Trigger van de Plaatsing van de opstelling en Belangrijk Gedrag van de Mislukking van de Opties van de Pijpleiding ook plaatsen.
+   Daarnaast kunt u **Implementatietrigger** en **Belangrijk foutgedrag** ook instellen vanuit **Implementatieopties**. Klik op **Doorgaan**.
 
-   ![](assets/non-prod-pipe.png)
+   ![](/help/using/assets/configure-pipelines/nonprod-pipeline-add2.png)
 
-1. Klik **sparen** en de pijpleiding wordt getoond op de kaart op het huisscherm met vijf acties:
 
-   * **Bewerken**  - staat het uitgeven van de pijpleidingsmontages toe
-   * **Details**  - toont de laatste pijpleidingsuitvoering (als er één is)
-   * **Build**  - navigeert aan de uitvoeringspagina, waarvan de pijpleiding kan worden uitgevoerd
-   * **Toegang tot repo-informatie** : hiermee kan de gebruiker de informatie ophalen die nodig is om toegang te krijgen tot de gegevensopslagruimte van Cloud Manager
+1. De nieuwe niet-productiepijplijn wordt nu weergegeven in de **Pipelines**-kaart.
+
+   ![](/help/using/assets/configure-pipelines/nonprod-pipeline-add4.png)
+
+
+   De pijpleiding wordt getoond op de kaart op het huisscherm met drie acties, zoals hieronder getoond:
+
+   * **Voeg toe**  - staat het toevoegen van een nieuwe pijpleiding toe.
+   * **Toegang tot repo-informatie** : hiermee kan de gebruiker de informatie ophalen die nodig is om toegang te krijgen tot de gegevensopslagruimte van Cloud Manager Git.
    * **Leer meer**  - navigeert aan het begrip van de CI/CD bron van de pijpleidingsdocumentatie.
 
-      ![](assets/prod-one.png)
-   >[!NOTE]
-   >
-   >Terwijl de pijpleiding loopt, wordt de huidige stap getoond en slechts is de **Details** actie beschikbaar.
+### Een niet-productiepijplijn bewerken {#editing-nonprod-pipeline}
+
+U kunt de pijpleidingsconfiguraties van **Pipelines kaart** van **Overzicht van het Programma** pagina uitgeven.
+
+Voer de onderstaande stappen uit om de geconfigureerde niet-productiepijplijn te bewerken:
+
+1. Navigeer naar **Pipelines**-kaart van de pagina **Program Overview**.
+
+1. Selecteer de niet-productiepijplijn en klik op **..**. Klik op **Edit**, zoals aangetoond in het hieronder cijfer.
+
+
+1. Het dialoogvenster **Productiepijplijn bewerken** wordt weergegeven.
+
+   1. Met de tab **Configuration** kunt u de **Pipeline Name**, **Deployment Trigger** en **Important Metrics Failed Behavior** bijwerken.
+
+      >[!NOTE]
+      >Zie [Opslagplaatsen toevoegen en beheren](/help/implementing/cloud-manager/managing-code/cloud-manager-repositories.md) voor meer informatie over het toevoegen en beheren van opslagruimten in Cloud Manager.
+
+
+1. Klik op **Update** zodra u klaar bent met het uitgeven van de niet-productiepijplijn.
+
 
 ## De volgende stappen {#the-next-steps}
 
