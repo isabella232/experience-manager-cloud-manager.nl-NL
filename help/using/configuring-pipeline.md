@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 feature: CI-CD Pipeline
 exl-id: d489fa3c-df1e-480b-82d0-ac8cce78a710
-source-git-commit: bdbee51ff0a61c2a72ff7ae3a742e2dd817c671a
+source-git-commit: fd172a7168074630e85f3b110e032f783d39ddca
 workflow-type: tm+mt
-source-wordcount: '1451'
+source-wordcount: '1491'
 ht-degree: 0%
 
 ---
@@ -98,7 +98,9 @@ Voer de volgende stappen uit om het gedrag en de voorkeuren voor uw productiepij
       * **Goedkeuren na** implementatie van het werkgebied is vergelijkbaar met de goedkeuringsfuncties vóór de implementatie van de productie, maar vindt direct plaats na de implementatiestap van het werkgebied, dat wil zeggen voordat er tests worden uitgevoerd, in vergelijking met de goedkeuring vóór de implementatie van de productie, die wordt uitgevoerd nadat alle tests zijn voltooid.
 
       * **Load Balancer overslaan**
-   1. Selecteer **Dispatcher Configurations** voor Stadium.
+   1. Selecteer **Dispatcher Configurations** voor Stadium. Ga de weg in, selecteer de actie van **Type**, en klik **voeg Weg** toe. U kunt maximaal 100 paden per omgeving opgeven.
+
+      ![](/help/using/assets/configure-pipelines/dispatcher-stage.png)
 
    1. Selecteer **Implementatieopties** voor Productie. Nu definieert u de parameters die de productieimplementatie bepalen. De drie beschikbare opties zijn als volgt:
 
@@ -114,11 +116,13 @@ Voer de volgende stappen uit om het gedrag en de voorkeuren voor uw productiepij
          >Als **Gepland** optie wordt geselecteerd, kunt u uw productiesplaatsing aan de pijpleiding **na** de werkgebiedplaatsing (en **Gebruik GoLive Goedkeuring**, als dat is toegelaten) plannen om op een te plaatsen programma te wachten. De gebruiker kan er ook voor kiezen om de productieimplementatie onmiddellijk uit te voeren.
          >
          >Raadpleeg [Uw code implementeren](deploying-code.md) om het implementatieschema in te stellen of de productie direct uit te voeren.
-   1. Stel de **Dispatcher Configurations** voor Productie in.
+   1. Stel de **Dispatcher Configurations** voor Productie in. Ga de weg in, selecteer de actie van **Type**, en klik **voeg Weg** toe. U kunt maximaal 100 paden per omgeving opgeven.
+
+      ![](/help/using/assets/configure-pipelines/dispatcher-prod.png)
 
       Als Manager van de Plaatsing, hebt u de kans om een reeks inhoudspaden te vormen die of **ongeldig** of **flushed** van het geheime voorgeheugen van de AEM Dispatcher voor publicatie instanties zullen zijn, terwijl het opzetten of het uitgeven pijpleiding.
 
-      U kunt een afzonderlijke reeks wegen voor de plaatsing van het Stadium en van de Productie vormen. Indien gevormd, zullen deze geheim voorgeheugenacties als deel van de stap van de plaatsingspijpleiding worden uitgevoerd, enkel nadat om het even welke inhoudspakketten worden opgesteld. Deze instellingen gebruiken het standaardgedrag AEM Dispatcher - ongeldig maken voert een cachevalidatie uit, net als wanneer de inhoud van de auteur wordt geactiveerd om te publiceren. flush voert een geheim voorgeheugenschrapping uit.
+      U kunt een afzonderlijke reeks wegen voor de plaatsing van het Stadium en van de Productie vormen. Indien gevormd, zullen deze geheim voorgeheugenacties als deel van de stap van de plaatsingspijpleiding worden uitgevoerd, enkel nadat om het even welke inhoudspakketten worden opgesteld. Deze instellingen gebruiken het standaardgedrag AEM Dispatcher: invalidate voert een cachevalidatie uit, net als wanneer de inhoud van de auteur wordt geactiveerd om te publiceren. flush voert een geheim voorgeheugenschrapping uit.
 
       Over het algemeen verdient het de voorkeur de actie voor invalideren te gebruiken, maar er kunnen zich gevallen voordoen waarin flushing vereist is, met name bij gebruik van AEM Client Libraries voor HTML.
 
