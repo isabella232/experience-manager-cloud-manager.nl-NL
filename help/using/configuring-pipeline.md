@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 feature: CI-CD Pipeline
 exl-id: d489fa3c-df1e-480b-82d0-ac8cce78a710
-source-git-commit: fd172a7168074630e85f3b110e032f783d39ddca
+source-git-commit: 78a6c939cdb7c4335891e27209b221fc3e6efec2
 workflow-type: tm+mt
-source-wordcount: '1491'
+source-wordcount: '1729'
 ht-degree: 0%
 
 ---
@@ -70,45 +70,45 @@ Voer de volgende stappen uit om het gedrag en de voorkeuren voor uw productiepij
 
 1. **De vertoningen van de** de dialoogdoos van de Pijl van de Productie toevoegen.
 
-   1. Ga de pijpleidingsnaam in. U kunt de **Repository** en **Git Branch** kiezen.
+   1. Voer de **Naam van de pijpleiding** in. U kunt de **Repository** en **Git Branch** kiezen.
 
       ![](/help/using/assets/configure-pipelines/add-prod2.png)
 
-   1. U kunt **Implementatietrigger** en **Belangrijk foutgedrag** instellen vanuit **Implementatieopties**.
+   1. U kunt **Implementatietrigger** en **Belangrijk gedrag voor metrische fouten** instellen vanuit **Implementatieopties**.
 
       ![](/help/using/assets/configure-pipelines/add-prod3.png)
 
 
-      U kunt de trekker bepalen om de pijpleiding te beginnen:
+      U kunt de volgende plaatsingstrekkers toewijzen om de pijpleiding te beginnen:
 
       * **Handmatig**  - de UI gebruikt manueel begint de pijpleiding.
       * **Bij de Veranderingen**  van het Git - begint de pijpleiding CI/CD wanneer er toezeggingen aan de gevormde git tak worden toegevoegd. Zelfs als u deze optie selecteert, kunt u de pijpleiding altijd manueel beginnen.
 
-         >[!NOTE]
-         >Tijdens pijpleidingsopstelling of geef uit, heeft de Manager van de Plaatsing de optie om het gedrag van de pijpleiding te bepalen wanneer een belangrijke mislukking in om het even welke kwaliteitshates wordt ontmoet.
+      Tijdens pijpleidingsopstelling of geef uit, heeft de Manager van de Plaatsing de optie om het gedrag van de pijpleiding te bepalen wanneer een belangrijke mislukking in om het even welke kwaliteitshates wordt ontmoet.
+
       Dit is handig voor klanten die meer geautomatiseerde processen willen. De beschikbare opties zijn:
 
       * **Telkens**  vragen - Dit is de standaardinstelling en u moet handmatig ingrijpen bij elke belangrijke fout.
-      * **Onmiddellijk**  annuleren - Als u deze optie selecteert, wordt de pijplijn geannuleerd wanneer een belangrijke fout optreedt. Dit is in feite het emuleren van een gebruiker die elke fout handmatig afwijst.
-      * **Direct**  goedkeuren - Als geselecteerd, zal de pijpleiding automatisch te werk gaan wanneer een Belangrijke mislukking voorkomt. Dit emuleert hoofdzakelijk een gebruiker manueel goedkeurend elke mislukking.
+      * **Direct**  mislukt - Als deze optie is geselecteerd, wordt de pijplijn geannuleerd wanneer een belangrijke fout optreedt. Dit is in feite het emuleren van een gebruiker die elke fout handmatig afwijst.
+      * **Ga onmiddellijk**  verder - als geselecteerd, zal de pijpleiding automatisch te werk wanneer een Belangrijke mislukking voorkomt. Dit emuleert hoofdzakelijk een gebruiker manueel goedkeurend elke mislukking.
    1. Selecteer **Implementatieopties**.
 
       ![](/help/using/assets/configure-pipelines/add-prod4.png)
 
       * **Goedkeuren na** implementatie van het werkgebied is vergelijkbaar met de goedkeuringsfuncties vóór de implementatie van de productie, maar vindt direct plaats na de implementatiestap van het werkgebied, dat wil zeggen voordat er tests worden uitgevoerd, in vergelijking met de goedkeuring vóór de implementatie van de productie, die wordt uitgevoerd nadat alle tests zijn voltooid.
 
-      * **Load Balancer overslaan**
-   1. Selecteer **Dispatcher Configurations** voor Stadium. Ga de weg in, selecteer de actie van **Type**, en klik **voeg Weg** toe. U kunt maximaal 100 paden per omgeving opgeven.
+      * **Bij de wijzigingen in Load Balancer** overslaan worden de wijzigingen overgeslagen.
+   1. Selecteer **Dispatcher Configuration** for Stage. Ga de weg in, selecteer de actie van **Type**, en klik **voeg Weg** toe. U kunt maximaal 100 paden per omgeving opgeven.
 
       ![](/help/using/assets/configure-pipelines/dispatcher-stage.png)
 
-   1. Selecteer **Implementatieopties** voor Productie. Nu definieert u de parameters die de productieimplementatie bepalen. De drie beschikbare opties zijn als volgt:
+   1. Selecteer **Implementatieopties** voor Productie. Nu definieert u de parameters die de productieimplementatie bepalen.
+
+      ![](/help/using/assets/configure-pipelines/prod-deploymentoptions.png)
+
+      De drie beschikbare opties zijn als volgt:
 
       * **Gebruik Live goedkeuring**  - Een implementatie moet handmatig worden goedgekeurd door een bedrijfseigenaar, projectmanager of implementatiebeheerder via de  [!UICONTROL Cloud Manager] gebruikersinterface.
-      * **Het Toezicht**  van CSE van het gebruik - CSE wordt betrokken om de plaatsing daadwerkelijk te beginnen. Tijdens pijpleidingsopstelling of geef uit wanneer CSE Toezicht wordt toegelaten, heeft de Manager van de Plaatsing de optie om te selecteren:
-
-      * **Elke CSE**: verwijst naar elke beschikbare CSE
-      * **Mijn CSE**: verwijst naar specifieke CSE die aan de klant of hun steun wordt toegewezen, als CSE uit het bureau is
 
       * **Gepland**  - Deze optie staat de gebruiker toe om de geplande productie plaatsing toe te laten.
 
@@ -116,6 +116,11 @@ Voer de volgende stappen uit om het gedrag en de voorkeuren voor uw productiepij
          >Als **Gepland** optie wordt geselecteerd, kunt u uw productiesplaatsing aan de pijpleiding **na** de werkgebiedplaatsing (en **Gebruik GoLive Goedkeuring**, als dat is toegelaten) plannen om op een te plaatsen programma te wachten. De gebruiker kan er ook voor kiezen om de productieimplementatie onmiddellijk uit te voeren.
          >
          >Raadpleeg [Uw code implementeren](deploying-code.md) om het implementatieschema in te stellen of de productie direct uit te voeren.
+
+         * **Het Toezicht**  van CSE van het gebruik - CSE wordt betrokken om de plaatsing daadwerkelijk te beginnen. Tijdens pijpleidingsopstelling of geef uit wanneer CSE Toezicht wordt toegelaten, heeft de Manager van de Plaatsing de optie om te selecteren:
+
+            * **Elke CSE**: verwijst naar elke beschikbare CSE
+            * **Mijn CSE**: verwijst naar specifieke CSE die aan de klant of hun steun wordt toegewezen, als CSE uit het bureau is
    1. Stel de **Dispatcher Configurations** voor Productie in. Ga de weg in, selecteer de actie van **Type**, en klik **voeg Weg** toe. U kunt maximaal 100 paden per omgeving opgeven.
 
       ![](/help/using/assets/configure-pipelines/dispatcher-prod.png)
@@ -158,29 +163,41 @@ Volg de stappen hieronder om de gevormde pijpleiding uit te geven:
 
 1. Klik op **..** van **Pipelines** kaart en klik op **Edit**, zoals aangetoond in hieronder figuur.
 
+   ![](/help/using/assets/configure-pipelines/edit-prod1.png)
 
 1. Het dialoogvenster **Productiepijplijn bewerken** wordt weergegeven.
 
-   1. Met de tab **Configuration** kunt u de **Pipeline Name**, **Deployment Trigger** en **Important Metrics Failed Behavior** bijwerken.
+   1. Met het tabblad **Configuratie** kunt u de **Naam van pijpleiding**, **Bewaarplaats**, **Git Branch**, **Implementatiestriger**, **Gedrag van belangrijke metriefout** bijwerken , **Implementatieopties** en **Dispatcher Configurations**.
 
       >[!NOTE]
       >Zie [Opslagplaatsen toevoegen en beheren](/help/implementing/cloud-manager/managing-code/cloud-manager-repositories.md) voor meer informatie over het toevoegen en beheren van opslagruimten in Cloud Manager.
 
 
-   1. Het **tabblad Bron** biedt u een optie om **Pauzeren te controleren of uit te schakelen voordat u de installatie uitvoert naar Productie** en **Geplande** opties van **Implementatieopties voor productie**.
-
-
-   1. Met de optie **Experience Audit** kunt u nieuwe pagina&#39;s bijwerken of toevoegen.
-
+   1. Het **tabblad Werkgebiedtests** biedt u een optie om uw opties opnieuw te selecteren via **Sites Content Delivery/Distributed Load Weight** en **Assets Performance Testing Distribution**.
 
 1. Klik op **Update** zodra u klaar bent met het uitgeven van de pijpleiding.
 
-1. Klik **De Pijpleiding van de Opstelling** om uw pijpleiding te installeren en te vormen.
+### Aanvullende acties voor productiepijpleiding {#additional-prod-actions}
 
-   ![](assets/Setup-Pipeline.png)
+#### Een productiepijpleiding uitvoeren {#run-prod}
 
+U kunt de productiepijpleiding van de kaart van Pijpleidingen in werking stellen:
 
+1. Navigeer naar **Pipelines**-kaart van de pagina **Program Overview**.
 
+1. Klik op **..** van **Pipelines** kaart en klik op **Run**, zoals aangetoond in hieronder figuur.
+
+   ![](/help/using/assets/configure-pipelines/prod-run.png)
+
+#### Een productiepijpleiding verwijderen {#delete-prod}
+
+U kunt de productiepijpleiding van de kaart van Pijpleidingen schrappen:
+
+1. Navigeer naar **Pipelines**-kaart van de pagina **Program Overview**.
+
+1. Klik op **..** van **Pipelines** kaart en klik op **Delete**, zoals aangetoond in hieronder figuur.
+
+   ![](/help/using/assets/configure-pipelines/prod-delete.png)
 
 ## Uitsluitend pijplijnen zonder productie en codekwaliteit
 
@@ -204,7 +221,7 @@ Op het thuisscherm worden deze pijpleidingen op een nieuwe kaart vermeld:
 
 1. **De vertoningen van de**  de dialoogdoos van de Pijl van de Niet-Productie toevoegen. Selecteer het type pijplijn dat u wilt maken, **Code Quality Pipeline** of **Deployment Pipeline**.
 
-   Daarnaast kunt u **Implementatietrigger** en **Belangrijk foutgedrag** ook instellen vanuit **Implementatieopties**. Klik op **Doorgaan**.
+   Daarnaast kunt u **Implementatietrigger** en **Belangrijk gedrag voor metrische fouten** instellen vanuit **Implementatieopties**. Klik op **Doorgaan**.
 
    ![](/help/using/assets/configure-pipelines/nonprod-pipeline-add2.png)
 
@@ -238,6 +255,17 @@ Voer de onderstaande stappen uit om de geconfigureerde niet-productiepijplijn te
 
    >[!NOTE]
    >Zie [Opslagplaatsen toevoegen en beheren](/help/implementing/cloud-manager/managing-code/cloud-manager-repositories.md) voor meer informatie over het toevoegen en beheren van opslagruimten in Cloud Manager.
+
+   U kunt de volgende plaatsingstrekkers toewijzen om de pijpleiding te beginnen:
+
+   * **Handmatig**  - de UI gebruikt manueel begint de pijpleiding.
+   * **Bij de Veranderingen**  van het Git - begint de pijpleiding CI/CD wanneer er toezeggingen aan de gevormde git tak worden toegevoegd. Zelfs als u deze optie selecteert, kunt u de pijpleiding altijd manueel beginnen.
+
+   Tijdens pijpleidingsopstelling of geef uit, heeft de Manager van de Plaatsing de optie om het gedrag van de pijpleiding te bepalen wanneer een belangrijke mislukking in om het even welke kwaliteitshates wordt ontmoet. Dit is handig voor klanten die meer geautomatiseerde processen willen. De beschikbare opties zijn:
+
+   * **Telkens**  vragen - Dit is de standaardinstelling en u moet handmatig ingrijpen bij elke belangrijke fout.
+   * **Direct**  mislukt - Als deze optie is geselecteerd, wordt de pijplijn geannuleerd wanneer een belangrijke fout optreedt. Dit is in feite het emuleren van een gebruiker die elke fout handmatig afwijst.
+   * **Ga onmiddellijk**  verder - als geselecteerd, zal de pijpleiding automatisch te werk wanneer een Belangrijke mislukking voorkomt. Dit emuleert hoofdzakelijk een gebruiker manueel goedkeurend elke mislukking.
 
 
 1. Klik op **Update** zodra u klaar bent met het uitgeven van de niet-productiepijplijn.
