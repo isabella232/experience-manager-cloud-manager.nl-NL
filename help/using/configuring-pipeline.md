@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 feature: CI-CD Pipeline
 exl-id: d489fa3c-df1e-480b-82d0-ac8cce78a710
-source-git-commit: 78a6c939cdb7c4335891e27209b221fc3e6efec2
+source-git-commit: 1e3dc17d28ab69dcd6b2337280bb38ba07352beb
 workflow-type: tm+mt
-source-wordcount: '1729'
+source-wordcount: '1834'
 ht-degree: 0%
 
 ---
@@ -127,7 +127,7 @@ Voer de volgende stappen uit om het gedrag en de voorkeuren voor uw productiepij
 
       Als Manager van de Plaatsing, hebt u de kans om een reeks inhoudspaden te vormen die of **ongeldig** of **flushed** van het geheime voorgeheugen van de AEM Dispatcher voor publicatie instanties zullen zijn, terwijl het opzetten of het uitgeven pijpleiding.
 
-      U kunt een afzonderlijke reeks wegen voor de plaatsing van het Stadium en van de Productie vormen. Indien gevormd, zullen deze geheim voorgeheugenacties als deel van de stap van de plaatsingspijpleiding worden uitgevoerd, enkel nadat om het even welke inhoudspakketten worden opgesteld. Deze instellingen gebruiken het standaardgedrag AEM Dispatcher: invalidate voert een cachevalidatie uit, net als wanneer de inhoud van de auteur wordt geactiveerd om te publiceren. flush voert een geheim voorgeheugenschrapping uit.
+      U kunt een afzonderlijke reeks wegen voor de plaatsing van het Stadium en van de Productie vormen. Indien gevormd, zullen deze geheim voorgeheugenacties als deel van de stap van de plaatsingspijpleiding worden uitgevoerd, enkel nadat om het even welke inhoudspakketten worden opgesteld. Deze instellingen gebruiken het standaardgedrag AEM Dispatcher - ongeldig maken voert een cachevalidatie uit, net als wanneer de inhoud van de auteur wordt geactiveerd om te publiceren. flush voert een geheim voorgeheugenschrapping uit.
 
       Over het algemeen verdient het de voorkeur de actie voor invalideren te gebruiken, maar er kunnen zich gevallen voordoen waarin flushing vereist is, met name bij gebruik van AEM Client Libraries voor HTML.
 
@@ -199,6 +199,9 @@ U kunt de productiepijpleiding van de kaart van Pijpleidingen schrappen:
 
    ![](/help/using/assets/configure-pipelines/prod-delete.png)
 
+   >[!NOTE]
+   >Een gebruiker in de rol van de Manager van de Plaatsing kan de pijpleiding van de Productie op een zelfbediening manier via **Schrapping** optie van de kaart van de Pijpleiding nu schrappen.
+
 ## Uitsluitend pijplijnen zonder productie en codekwaliteit
 
 Naast de hoofdpijpleiding die zich naar het stadium en de productie ontwikkelt, kunnen klanten extra pijpleidingen opzetten, die als **Niet-productiepijpleidingen** worden bedoeld. Deze pijpleidingen voeren altijd de bouw en de stappen van de codekwaliteit uit. Ze kunnen optioneel ook worden geïmplementeerd in de omgeving van Adobe Managed Services.
@@ -269,6 +272,28 @@ Voer de onderstaande stappen uit om de geconfigureerde niet-productiepijplijn te
 
 
 1. Klik op **Update** zodra u klaar bent met het uitgeven van de niet-productiepijplijn.
+
+### Aanvullende niet-productie pijplijnhandelingen {#additional-nonprod-actions}
+
+#### Een niet-productiepijpleiding uitvoeren {#run-nonprod}
+
+U kunt de productiepijpleiding van de kaart van Pijpleidingen in werking stellen:
+
+1. Navigeer naar **Pipelines**-kaart van de pagina **Program Overview**.
+
+1. Klik op **..** van **Pipelines** kaart en klik op **Run**, zoals aangetoond in hieronder figuur.
+
+   ![](/help/using/assets/configure-pipelines/nonprod-run1.png)
+
+#### Schrapping van een niet-productiepijpleiding {#delete-nonprod}
+
+U kunt de productiepijpleiding van de kaart van Pijpleidingen schrappen:
+
+1. Navigeer naar **Pipelines**-kaart van de pagina **Program Overview**.
+
+1. Klik op **..** van **Pipelines** kaart en klik op **Delete**, zoals aangetoond in hieronder figuur.
+
+   ![](/help/using/assets/configure-pipelines/nonprod-delete.png)
 
 
 ## De volgende stappen {#the-next-steps}
