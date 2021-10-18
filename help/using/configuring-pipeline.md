@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 feature: CI-CD Pipeline
 exl-id: d489fa3c-df1e-480b-82d0-ac8cce78a710
-source-git-commit: 1e3dc17d28ab69dcd6b2337280bb38ba07352beb
+source-git-commit: 9509f83f3cecbeaa81543e3c1f8ec33028009e6a
 workflow-type: tm+mt
 source-wordcount: '1834'
 ht-degree: 0%
@@ -25,14 +25,6 @@ ht-degree: 0%
 
 De volgende pagina verklaart hoe te om **Pipeline** te vormen. Meer conceptuele informatie over bekijken hoe de pijpleiding [CI/CD pijpleiding overzicht](ci-cd-pipeline.md) ziet.
 
-## Videozelfstudie {#video-tutorial-one}
-
-### Pipeline configureren in Cloud Manager {#config-pipeline-video}
-
-De configuratie van de Pijpleiding van de Productie CI/CD bepaalt de trekker die de pijpleiding, parameters zal in werking stellen die de plaatsing van de productie en de parameters van de prestatietest controleren.
-
->[!VIDEO](https://video.tv.adobe.com/v/26314/)
-
 
 ## De stroom begrijpen {#understanding-the-flow}
 
@@ -43,6 +35,14 @@ De Manager van de Plaatsing is verantwoordelijk voor vestiging de pijpleiding. A
 * het bepalen van de trekker die de pijpleiding zal beginnen.
 * het definiëren van de parameters die de productielocatie bepalen.
 * configureren van de testparameters voor prestaties.
+
+## Videozelfstudie {#video-tutorial-one}
+
+### Pipeline configureren in Cloud Manager {#config-pipeline-video}
+
+De configuratie van de Pijpleiding van de Productie CI/CD bepaalt de trekker die de pijpleiding, parameters zal in werking stellen die de plaatsing van de productie en de parameters van de prestatietest controleren.
+
+>[!VIDEO](https://video.tv.adobe.com/v/26314/)
 
 ## De pijplijn instellen {#setting-up-the-pipeline}
 
@@ -56,7 +56,7 @@ Alvorens u begint om uw code op te stellen, moet u uw pijpleidingsmontages van [
 >
 >U kunt de pijpleidingsmontages na aanvankelijke opstelling veranderen.
 
-## Een nieuwe productiepijpleiding toevoegen uit een pijplijnkaart {#adding-production-pipeline}
+### Een nieuwe productiepijpleiding toevoegen uit een pijplijnkaart {#adding-production-pipeline}
 
 Zodra u opstelling uw programma hebt en minstens één milieu gebruikend [!UICONTROL Cloud Manager] UI heeft, bent u bereid om een productiepijplijn toe te voegen.
 
@@ -127,7 +127,7 @@ Voer de volgende stappen uit om het gedrag en de voorkeuren voor uw productiepij
 
       Als Manager van de Plaatsing, hebt u de kans om een reeks inhoudspaden te vormen die of **ongeldig** of **flushed** van het geheime voorgeheugen van de AEM Dispatcher voor publicatie instanties zullen zijn, terwijl het opzetten of het uitgeven pijpleiding.
 
-      U kunt een afzonderlijke reeks wegen voor de plaatsing van het Stadium en van de Productie vormen. Indien gevormd, zullen deze geheim voorgeheugenacties als deel van de stap van de plaatsingspijpleiding worden uitgevoerd, enkel nadat om het even welke inhoudspakketten worden opgesteld. Deze instellingen gebruiken het standaardgedrag AEM Dispatcher - ongeldig maken voert een cachevalidatie uit, net als wanneer de inhoud van de auteur wordt geactiveerd om te publiceren. flush voert een geheim voorgeheugenschrapping uit.
+      U kunt een afzonderlijke reeks wegen voor de plaatsing van het Stadium en van de Productie vormen. Indien gevormd, zullen deze geheim voorgeheugenacties als deel van de stap van de plaatsingspijpleiding worden uitgevoerd, enkel nadat om het even welke inhoudspakketten worden opgesteld. Deze instellingen gebruiken het standaardgedrag AEM Dispatcher: invalidate voert een cachevalidatie uit, net als wanneer de inhoud van de auteur wordt geactiveerd om te publiceren. flush voert een geheim voorgeheugenschrapping uit.
 
       Over het algemeen verdient het de voorkeur de actie voor invalideren te gebruiken, maar er kunnen zich gevallen voordoen waarin flushing vereist is, met name bij gebruik van AEM Client Libraries voor HTML.
 
