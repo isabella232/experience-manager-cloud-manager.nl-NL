@@ -3,7 +3,7 @@ title: Opmerkingen bij de release 2021.11.0
 description: Volg deze pagina voor informatie over Cloud Manager Release 2021.11.0
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 0395fd4263ae37bce49c698e8e72ad7b08af046a
+source-git-commit: e6e5a17c16c42e0b0ed5aedd2f9a6360fd81d8cd
 workflow-type: tm+mt
 source-wordcount: '0'
 ht-degree: 0%
@@ -29,6 +29,8 @@ De volgende release is gepland voor 9 december 2021.
 * De `x-request-id` responsheader is nu zichtbaar in de API-afspeelruimte op [www.adobe.io](https://www.adobe.io/). Deze kopbal is nuttig wanneer het voorleggen van de kwesties van de klantenzorg voor het oplossen van problemen.
 
 * Als gebruiker zie ik een pijplijnkaart met nulpijpleidingen die mij de juiste begeleiding biedt.
+
+* Een nieuwe pagina van de Activiteit is nu beschikbaar waar de activiteiten zoals pijpleiding en codeuitvoering samen met hun bijbehorende details kunnen worden bekeken. In de loop der tijd zullen de activiteiten die op deze pagina worden vermeld, in het toepassingsgebied worden uitgebreid, samen met de verstrekte gegevens.
 
 * Er is nu een nieuwe pagina met pijplijnen beschikbaar met een statuspop-up, zodat u de samenvatting van de details eenvoudig kunt bekijken. De uitvoeringen van de pijpleiding kunnen samen met hun bijbehorende details worden bekeken.
 
