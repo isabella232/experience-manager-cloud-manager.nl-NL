@@ -8,9 +8,9 @@ user-guide-description: Leer hoe u met Adobe Managed Services Experience Manager
 feature-set: Experience Manager Cloud Manager, Experience Manager
 role: Admin
 level: Intermediate
-source-git-commit: dde991d2dbd02f4b4145f79d67b6d2f1244e5648
+source-git-commit: 0ba21a1223c5cee5d8a46e08f38fc59b5188fd40
 workflow-type: tm+mt
-source-wordcount: '285'
+source-wordcount: '288'
 ht-degree: 11%
 
 ---
@@ -35,7 +35,7 @@ ht-degree: 11%
 + Aan de slag {#getting-started}
    + [Eerste aanmelding](first-time-login.md)
    + [Uw programma instellen](setting-up-program.md)
-   + Een AEM toepassingsproject maken {#create-application-project}
+   + Een AEM-toepassingsproject maken {#create-application-project}
       + [De wizard gebruiken](using-the-wizard.md)
       + [Uw project instellen](setting-up-project.md)
       + [Inzicht in de omgeving van de build](build-environment-details.md)
@@ -51,7 +51,7 @@ ht-degree: 11%
    + [Cloud Manager CLI](https://github.com/adobe/aio-cli-plugin-cloudmanager/blob/main/README.md)
    + [Meldingen](notifications.md)
    + [Aangepaste regels voor codekwaliteit](custom-code-quality-rules.md)
-+ Uw code {#managing-code} beheren
++ Uw code beheren {#managing-code}
    + [Maven-projectversiebeheer](activating-maven-project.md)
    + [Opslagplaatsen in Cloud Manager](cloud-manager-repositories.md)
    + [Toegang tot opslagplaatsen](accessing-repos.md)
@@ -61,7 +61,8 @@ ht-degree: 11%
    + [Overzicht](overview-productupdate-wizard.md)
    + [Evaluatie](evaluation.md)
 + Releaseopmerkingen {#release-notes}
-   + [Huidige opmerkingen bij de release (2021.10.0)](release-notes-current.md)
+   + [Huidige opmerkingen bij de release (2021.11.0)](release-notes-current.md)
+   + [Opmerkingen bij de release 2021.10.0](release-notes-2021-10-0.md)
    + [Opmerkingen bij de release 2021.9.0](release-notes-2021-9-0.md)
    + [Opmerkingen bij de release 2021.8.0](release-notes-2021-8-0.md)
    + [Opmerkingen bij de release 2021.7.0](release-notes-2021-7-0.md)
