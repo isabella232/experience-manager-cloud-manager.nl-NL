@@ -3,7 +3,7 @@ title: Opmerkingen bij de release 2021.11.0
 description: Volg deze pagina voor informatie over Cloud Manager Release 2021.11.0
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 0a8373f9613715f8945f482198710cefd84b169d
+source-git-commit: 096468d28d70b84286841dd9818c7aab54662b2b
 workflow-type: tm+mt
 source-wordcount: '368'
 ht-degree: 0%
@@ -20,7 +20,7 @@ In de volgende sectie worden de algemene opmerkingen bij de release beschreven v
 ## Releasedatum {#release-date}
 
 De releasedatum voor [!UICONTROL Cloud Manager] Versie 2021.11.0 is 4 november 2021.
-De volgende release is gepland voor 9 december 2021.
+De volgende release is gepland voor 16 december 2021.
 
 ## Wat is er nieuw? {#whats-new}
 
