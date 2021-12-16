@@ -2,8 +2,7 @@
 title: Opmerkingen bij de release 2021.9.0
 description: Volg deze pagina voor informatie over Cloud Manager Release 2021.9.0
 feature: Release Information
-exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 17f79fdc7278cae532485570a6e2b8700683ef0d
+source-git-commit: 09dd8fe608d95cd9dbc95129cf86b9693c2839b5
 workflow-type: tm+mt
 source-wordcount: '172'
 ht-degree: 1%
@@ -12,14 +11,14 @@ ht-degree: 1%
 
 # Opmerkingen bij de release 2021.9.0 {#release-notes-for}
 
-In de volgende sectie worden de algemene opmerkingen bij de release voor [!UICONTROL Cloud Manager] Release 2021.9.0 beschreven.
+In de volgende sectie worden de algemene opmerkingen bij de release beschreven voor [!UICONTROL Cloud Manager] Release 2021.9.0.
 
 >[!NOTE]
->Raadpleeg [Opmerkingen bij de huidige release](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/release-notes-cloud-manager/release-notes-cm-current.html?lang=en#getting-access) om de meest recente releaseopmerkingen voor Cloud Manager in AEM as a Cloud Service weer te geven.
+>Zie [Opmerkingen bij de huidige release](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/release-notes-cloud-manager/release-notes-cm-current.html?lang=en#getting-access) om de meest recente releaseopmerkingen voor Cloud Manager in AEM as a Cloud Service te bekijken.
 
 ## Releasedatum {#release-date}
 
-De datum van de Versie voor [!UICONTROL Cloud Manager] Versie 2021.9.0 is September 09, 2021.
+De releasedatum voor [!UICONTROL Cloud Manager] Versie 2021.9.0 is 9 september 2021.
 
 ## Wat is er nieuw? {#whats-new}
 
@@ -29,9 +28,9 @@ De datum van de Versie voor [!UICONTROL Cloud Manager] Versie 2021.9.0 is Septem
 
 * Het logbestand met stappen voor codekwaliteit bevat nu uitgebreide logboekgegevens over het OakPal-scanproces.
 
-* De opties in het menu Activiteit-pagina bevatten nu een optie voor het downloaden van logbestanden voor voltooide uitvoering van de Code-generator. Als u deze optie selecteert, wordt het logboek met de stap build gedownload.
+* De opties in het menu Activiteitenpagina bevatten nu de optie &quot;Logbestand downloaden&quot; voor voltooide uitvoering van de Code Generator. Als u deze optie selecteert, wordt het logboek met de stap build gedownload.
 
-* Als u rechtstreeks op de programmakaart klikt, gaat u nu naar de pagina **Overzicht** van Cloud Manager.
+* Als u rechtstreeks op de programmakaart klikt, gaat u nu naar Cloud Manager **Overzicht** pagina.
 
 ## Opgeloste problemen {#bug-fixes}
 

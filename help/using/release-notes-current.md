@@ -1,57 +1,36 @@
 ---
-title: Opmerkingen bij de release 2021.11.0
-description: Volg deze pagina voor informatie over Cloud Manager Release 2021.11.0
+title: Opmerkingen bij de release 2021.12.0
+description: Dit zijn de opmerkingen bij de release 2021.12.0 voor Cloud Manager.
 feature: Release Information
-exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 096468d28d70b84286841dd9818c7aab54662b2b
+source-git-commit: 910def6d82c09e0220a50a3cb34a61f2c7284cb9
 workflow-type: tm+mt
-source-wordcount: '368'
+source-wordcount: '249'
 ht-degree: 0%
 
 ---
 
-# Opmerkingen bij de release 2021.11.0 {#release-notes-for}
+# Opmerkingen bij de release 2021.12.0 voor Cloud Manager {#release-notes}
 
-In de volgende sectie worden de algemene opmerkingen bij de release beschreven voor [!UICONTROL Cloud Manager] Release 2021.11.0.
+In de volgende sectie worden de algemene opmerkingen bij de release beschreven voor [!UICONTROL Cloud Manager] release 2021.12.0.
 
 >[!NOTE]
->Zie [Opmerkingen bij de huidige release](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/release-notes-cloud-manager/release-notes-cm-current.html?lang=en#getting-access) om de meest recente releaseopmerkingen voor Cloud Manager in AEM as a Cloud Service te bekijken.
+>
+>Raadpleeg voor de meest recente releaseopmerkingen voor Cloud Manager in AEM as a Cloud Service de [Cloud Manager in AEM opmerkingen bij de huidige release van het as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/release-notes-cloud-manager/release-notes-cm-current.html)
 
 ## Releasedatum {#release-date}
 
-De releasedatum voor [!UICONTROL Cloud Manager] Versie 2021.11.0 is 4 november 2021.
-De volgende release is gepland voor 16 december 2021.
+De releasedatum voor [!UICONTROL Cloud Manager] release 2021.12.0 is 16 december 2021. De volgende release is gepland voor januari 2022.
 
 ## Wat is er nieuw? {#whats-new}
 
-* De Vastleggingsidentiteitskaart van het Git zal nu in de details van de pijpleidingsuitvoering worden getoond die het gemakkelijker maken om de code te volgen die werd gebouwd.
-
-* De `x-request-id` responsheader is nu zichtbaar in de API-afspeelruimte op [www.adobe.io](https://www.adobe.io/). Deze kopbal is nuttig wanneer het voorleggen van de kwesties van de klantenzorg voor het oplossen van problemen.
-
-* Als gebruiker zie ik een pijplijnkaart met nulpijpleidingen die mij de juiste begeleiding biedt.
-
-* Een nieuwe pagina van de Activiteit is nu beschikbaar waar de activiteiten zoals pijpleiding en codeuitvoering samen met hun bijbehorende details kunnen worden bekeken. In de loop der tijd zullen de activiteiten die op deze pagina worden vermeld, in het toepassingsgebied worden uitgebreid, samen met de verstrekte gegevens.
-
-* Er is nu een nieuwe pagina met pijplijnen beschikbaar met een statuspop-up, zodat u de samenvatting van de details eenvoudig kunt bekijken. De uitvoeringen van de pijpleiding kunnen samen met hun bijbehorende details worden bekeken.
-
-* De Edit Pijpleiding API steunt nu het plaatsen van de invalidatie van de verzender en spoelwegen.
-
-* De Edit Pijpleiding API steunt nu het veranderen van het milieu dat in de plaatsingsfasen wordt gebruikt.
-
-* Voor grote pakketten is een optimalisatie in het OakPal-scanproces geïntroduceerd.
-
-* Het CSV-bestand voor kwaliteitsafgifte bevat nu de tijdstempel voor elke kwaliteitsuitgave.
-
-* De knop Beheren op de pagina Omgevingen is niet meer zichtbaar in de gebruikersinterface.
+* De commit hash, die al zichtbaar is in de UI, wordt nu ook verstrekt in API.
+* De pagina van de Activiteit omvat nu een pop-over voor het runnen van pijpleidingen die een samenvatting van pijpleidingsdetails bij-a-blik verstrekt.
+* Er zijn updates toegevoegd om aanvullende details op de pagina Activiteiten op te nemen.
+* Het tabblad Leren in Cloud Manager bevat nu snelle toegang tot API-hulplijnen en bijbehorende bronnen.
+* Een gebruiker met de rol van de Manager van de Plaatsing kan nu de project/de aanmaaktovenaar van de Tak voor een bewaarplaats zonder takken van het actiemenu op de pagina van bewaarplaatsen in werking stellen.
+* De Manager van de Plaatsing, die in toevoegt of pijpleidingswerkschema uitgeeft, wordt nu geïnformeerd over hoe te om een tak of een project tot stand te brengen als de geselecteerde bewaarplaats geen takken heeft.
+* Als er in het venster Productiepijplijn bewerken meer dan één productiestadium is, is er een vervolgkeuzelijst beschikbaar voor het selecteren van de omgeving.
 
 ## Opgeloste problemen {#bug-fixes}
 
-* Bepaalde unorthodox bouwt configuraties resulteerde in onnodige dossiers die in het geheime voorgeheugen van Maven van de pijpleiding worden opgeslagen die in vreemde netwerk I/O resulteerde toen het beginnen en het tegenhouden van de bouwstijlcontainer.
-
-* De PATCH API van de pijpleiding ontbreekt als de plaatsingsfase niet bestaat.
-
-* De `ClientlibProxyResourceCheck` de kwaliteitsregel leverde fout-positieve problemen op wanneer er clientbibliotheken waren met algemene basispaden.
-
-* Foutbericht wanneer het maximale aantal opslagplaatsen is bereikt, geeft geen reden voor de fout aan.
-
-* In zeldzame gevallen faalden de pijpleidingen vanwege een onjuiste herbehandeling van bepaalde responscodes.
+* De volledige pijpleidingen van de stapelproductie blijven genoemd &quot;Productiepijpleiding&quot;zelfs wanneer de gebruiker een verschillende naam op het naamgebied ingaat.

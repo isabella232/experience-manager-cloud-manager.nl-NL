@@ -2,37 +2,35 @@
 title: Opmerkingen bij de release 2021.3.0
 description: Volg deze pagina voor informatie over Cloud Manager Release 2021.3.0
 feature: Release Information
-exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea,e05b22fe-f071-4b69-9db1-e3d7ee4cfbcc
-translation-type: tm+mt
-source-git-commit: 9c3e748f8aed969af861b505ee336eb5501d826f
+source-git-commit: 09dd8fe608d95cd9dbc95129cf86b9693c2839b5
 workflow-type: tm+mt
-source-wordcount: '242'
+source-wordcount: '240'
 ht-degree: 0%
 
 ---
 
-# Opmerkingen bij de release voor 2021.3.0 {#release-notes-for}
+# Opmerkingen bij de release 2021.3.0 {#release-notes-for}
 
-In de volgende sectie worden de algemene opmerkingen bij de release voor [!UICONTROL Cloud Manager] Release 2021.3.0 beschreven.
+In de volgende sectie worden de algemene opmerkingen bij de release beschreven voor [!UICONTROL Cloud Manager] Release 2021.3.0.
 
 ## Releasedatum {#release-date}
 
-De datum van de Versie voor [!UICONTROL Cloud Manager] Versie 2021.3.0 is 11 Maart, 2021.
+De releasedatum voor [!UICONTROL Cloud Manager] Versie 2021.3.0 is 11 maart 2021.
 De volgende release is gepland voor 8 april 2021.
 
-## Wat is er nieuw?{#whats-new}
+## Wat is er nieuw? {#whats-new}
 
-* Er is een nieuw hulpmiddel [Dispatcher Optimization Tool](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/custom-code-quality-rules.html?lang=en#dispatcher-optimization-tool-rules) geïntroduceerd om de configuratie van de klantdispatcher te valideren.
+* Een nieuw gereedschap voor codekwaliteit [Gereedschap Verzendoptimalisatie](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/custom-code-quality-rules.html?lang=en#dispatcher-optimization-tool-rules) is geïntroduceerd om de configuratie van de klantendispatcher te bevestigen.
 
-* Gebruikers kunnen nu hun rol(en) van de Cloud Manager zien door de optie **Rol(en) van de Cloud Manager weergeven** te selecteren na naar het pictogram Gebruikersprofiel (rechtsboven) van Unified Shell te navigeren.
+* Gebruikers kunnen hun rol(en) in Cloud Manager nu bekijken door de **rol(en) in Cloud Manager weergeven** optie na het navigeren aan het pictogram van het Profiel van de Gebruiker (hoogste recht) van Verenigde Shell.
 
-* Het label **Goedkeuringsaanvraag** is voor meer duidelijkheid opnieuw gelabeld aan **Productiegoedkeuring**.
+* Het label **Goedkeuringsaanvraag** is opnieuw gelabeld aan **Erkenning productie** voor meer duidelijkheid.
 
-* Het **Version**-label is opnieuw gelabeld aan **Git Tag** in het uitvoeringsscherm van de productiepijplijn.
+* De **Versie** label is opnieuw gelabeld aan **Git-tag** in het scherm van de de pijpleiding van de Productie uitvoeren.
 
-* De etiketten die het gedrag bepalen wanneer de belangrijke metriek niet de bepaalde drempel ontmoeten zijn opnieuw geëtiketteerd om op hun ware gedrag te wijzen - **annuleert onmiddellijk** en **goedkeuren Onmiddellijk**. Verwijs naar [Vormend de Montages van de Pijpleiding](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html?lang=en#configuring-the-pipeline-settings-from-cloud-manager) voor meer details.
+* De labels die het gedrag definiëren wanneer belangrijke metriek niet aan de gedefinieerde drempel voldoen, zijn opnieuw gelabeld om hun werkelijke gedrag weer te geven - **Direct annuleren** en **Direct goedkeuren**. Zie [Het vormen van de Montages van de Pijpleiding](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html?lang=en#configuring-the-pipeline-settings-from-cloud-manager) voor meer informatie .
 
-* De lijsten van de klasse en van de methodevervanging zijn bijgewerkt gebaseerd op versie `2021.3.4997.20210303T022849Z-210225` van de AEM Cloud Service SDK.
+* De lijsten met klassen en methoden zijn bijgewerkt op basis van versie `2021.3.4997.20210303T022849Z-210225` van de SDK van AEM Cloud Service.
 
 ## Opgeloste problemen {#bug-fixes}
 

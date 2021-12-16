@@ -8,9 +8,9 @@ user-guide-description: Leer hoe u met Adobe Managed Services Experience Manager
 feature-set: Experience Manager Cloud Manager, Experience Manager
 role: Admin
 level: Intermediate
-source-git-commit: 0ba21a1223c5cee5d8a46e08f38fc59b5188fd40
+source-git-commit: 53c5aed5e42408ae4503b6003350de3ae1f27edf
 workflow-type: tm+mt
-source-wordcount: '288'
+source-wordcount: '291'
 ht-degree: 11%
 
 ---
@@ -56,12 +56,13 @@ ht-degree: 11%
    + [Opslagplaatsen in Cloud Manager](cloud-manager-repositories.md)
    + [Toegang tot opslagplaatsen](accessing-repos.md)
    + [Integreren met Git](setup-cloud-manager-git-integration.md)
-   + [Werken met Meerdere bronopslaglocaties voor Git](/help/using/working-with-multiple-source-git-repos.md)
+   + [Werken met Meerdere opslagplaatsen voor Git-bronnen](/help/using/working-with-multiple-source-git-repos.md)
 + Wizard Productupdates {#product-update-wizard}
    + [Overzicht](overview-productupdate-wizard.md)
    + [Evaluatie](evaluation.md)
 + Releaseopmerkingen {#release-notes}
-   + [Huidige opmerkingen bij de release (2021.11.0)](release-notes-current.md)
+   + [Opmerkingen bij de huidige release](release-notes-current.md)
+   + [Opmerkingen bij de release 2021.11.0](release-notes-2021-11-0.md)
    + [Opmerkingen bij de release 2021.10.0](release-notes-2021-10-0.md)
    + [Opmerkingen bij de release 2021.9.0](release-notes-2021-9-0.md)
    + [Opmerkingen bij de release 2021.8.0](release-notes-2021-8-0.md)

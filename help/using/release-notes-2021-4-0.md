@@ -1,42 +1,40 @@
 ---
 title: Opmerkingen bij de release 2021.4.0
 description: Volg deze pagina om informatie op te halen voor Cloud Manager Release 2021.4.0
-feature: Geen informatie
-exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-translation-type: tm+mt
-source-git-commit: 5f81fdb86b1dfa6c748bb7784ef00dc062c9f8ef
+feature: Release Information
+source-git-commit: 09dd8fe608d95cd9dbc95129cf86b9693c2839b5
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '183'
+ht-degree: 1%
 
 ---
 
-# Opmerkingen bij de release voor 2021.4.0 {#release-notes-for}
+# Opmerkingen bij de release 2021.4.0 {#release-notes-for}
 
-In de volgende sectie worden de algemene opmerkingen bij de release voor [!UICONTROL Cloud Manager] Release 2021.4.0 beschreven.
+In de volgende sectie worden de algemene opmerkingen bij de release beschreven voor [!UICONTROL Cloud Manager] Release 2021.4.0.
 
 ## Releasedatum {#release-date}
 
-De datum van de Versie voor [!UICONTROL Cloud Manager] Versie 2021.4.0 is April 08, 2021.
+De releasedatum voor [!UICONTROL Cloud Manager] Versie 2021.4.0 is 8 april 2021.
 
-## Wat is er nieuw?{#whats-new}
+## Wat is er nieuw? {#whats-new}
 
 * De time-out van de aanvraag voor de prestatietest voor virtuele gebruikers is verhoogd van 20 seconden naar 60 seconden.
 
 * De Manage knoop van de it wordt getoond op de kaart van Pijpleidingen zelfs wanneer geen pijpleidingen zijn gevormd.
 
-* Tijdens de plaatsingsstap van de de uitvoeringspagina van de Pijpleiding zal de gebruiker de voltooide en toekomstige plaatsingsstappen naast huidige stap in UI voor *Bezig* staat kunnen zien.
+* Tijdens de plaatsingsstap van de de uitvoeringspagina van de Pijpleiding zal de gebruiker de voltooide en toekomstige plaatsingsstappen naast huidige stap in UI voor kunnen zien *In uitvoering* status.
 
 * De versie van het AEM projectarchetype dat door de Manager van de Wolk wordt gebruikt is bijgewerkt aan versie 27.
 
 * Het foutbericht bij het starten van een pijpleiding wanneer een omgeving werd verwijderd, is verduidelijkt.
 
-* OSGi-bundels die door Eclipse-projecten worden geleverd, zijn nu uitgesloten van regel `CQBP-84--dependencies`.
+* OSGi-bundels die door Eclipse-projecten worden geleverd, zijn nu van regel uitgesloten `CQBP-84--dependencies`.
 
 ## Opgeloste problemen {#bug-fixes}
 
-* Zeldzame, voorbijgaande fouten die bij *Activa Test* stap in de productiepijplijn kunnen voorkomen.
+* Zelden voorkomende, voorbijgaande fouten die kunnen optreden bij *Elementen testen* stap in de productiepijplijn.
 
 * Een slash in de productiecijplijn Load Test veroorzaakte een fout van 404.
 
-* De `Runmode` controle produceerde valse positieven op niet omslagknopen.
+* De `Runmode` controle leverde valse positieven op niet-omslagknopen op.

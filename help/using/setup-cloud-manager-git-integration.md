@@ -1,21 +1,20 @@
 ---
 title: Git Integration met Adobe Cloud Manager
 description: Een videoreeks die door de opstelling en de integratie van een klant-beheerde (op-gebouw) gogegevensopslagplaats met de Manager van de Adobe Cloud loopt.
-seo-title: Git Integration met Adobe Cloud Manager
-seo-description: Een videoreeks die door de opstelling en de integratie van een klant-beheerde (op-gebouw) gogegevensopslagplaats met de Manager van de Adobe Cloud loopt.
+seo-title: Git Integration with Adobe Cloud Manager
+seo-description: A video series that walks through the set up and integration of a customer-managed (on-premise) git repository with Adobe Cloud Manager.
 feature: Git Repositories
-translation-type: tm+mt
-source-git-commit: fb10d775c930b5bb475b497aac2fd59b053a9a00
+exl-id: e517f8a4-23f0-4486-8278-91396dba76ec
+source-git-commit: 0bc3e775ef2432cdb8d3bd5470953c07c6628148
 workflow-type: tm+mt
-source-wordcount: '405'
-ht-degree: 5%
+source-wordcount: '370'
+ht-degree: 1%
 
 ---
 
-
 # Git Integration met Adobe Cloud Manager
 
-Adobe Cloud Manager wordt geleverd met één git-opslagplaats die wordt gebruikt om code te implementeren via de CI/CD-leidingen van Cloud Manager. Klanten kunnen de git-opslagruimte van Cloud Manager uit de doos gebruiken. Klanten hebben ook de mogelijkheid om een on-premise of **door de klant beheerde** git-opslagplaats te integreren met Cloud Manager.
+Adobe Cloud Manager wordt geleverd met één git-opslagplaats die wordt gebruikt om code te implementeren via de CI/CD-leidingen van Cloud Manager. Klanten kunnen de git-opslagruimte van Cloud Manager uit de doos gebruiken. Klanten hebben ook de mogelijkheid om een on-premise **door de klant beheerd** Opslagplaats maken met Cloud Manager.
 
 ## Overzicht van GIT-integratie
 
@@ -29,7 +28,7 @@ In deze videoreeks worden verschillende gebruiksgevallen besproken met betrekkin
 * [Implementatie van productie](#production-deployment)
 * [Releasetags synchroniseren](#sync-tags)
 
-Voor een volledig overzicht raadpleegt u de [Gebruikershandleiding voor Cloud Manager](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html). De videoreeks veronderstelt een basiskennis van git en broncontrolebeheer. Zie de [aanvullende bronnen onder](#additional-resources) voor meer informatie over git.
+Voor een volledig overzicht raadpleegt u de [Gebruikershandleiding voor Cloud Manager.](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html) De videoreeks veronderstelt een basiskennis van git en broncontrolebeheer. Zie de [extra bronnen onder](#additional-resources) voor meer informatie over git .
 
 >[!NOTE]
 >
@@ -43,11 +42,11 @@ Eerste stappen voor het synchroniseren van een door de klant beheerde Git-opslag
 
 ## Basisvertakkingsstrategie {#branching-strategy}
 
-Stel een basisvertakkingsstrategie in om te profiteren van de [productie- en niet-productiepijpleidingen](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html) van Cloud Manager.
+Een basisvertakkingsstrategie instellen om te profiteren van de voordelen van Cloud Manager [productie- en niet-productiepijpleidingen.](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html)
 
 >[!VIDEO](https://video.tv.adobe.com/v/28712/?quality=12)
 
-## Ontwikkeling van filialen met functies {#feature-development}
+## Ontwikkeling van de functiescherm {#feature-development}
 
 Gebruik een eigenschapvertakking om codeveranderingen in een klant-beheerde git bewaarplaats te isoleren en met de git bewaarplaats van de Manager van de Wolk te synchroniseren om een niet productiepijplijn voor codekwaliteit en bevestigingstests te gebruiken.
 
@@ -67,7 +66,7 @@ Synchroniseer releasetags van een cloudbeheeropslagplaats naar een door de klant
 
 ## Aanvullende bronnen {#additional-resources}
 
-* [Documentatie voor Cloud Manager](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html)
+* [Documentatie voor Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html)
 * [GitHub-bronnen](https://try.github.io)
 * [Atlassian Git Tutorials](https://www.atlassian.com/git/tutorials/what-is-version-control)
 * [Git Cheat Sheet](https://education.github.com/git-cheat-sheet-education.pdf)
