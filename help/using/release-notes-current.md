@@ -2,9 +2,10 @@
 title: Opmerkingen bij de release 2021.12.0
 description: Dit zijn de opmerkingen bij de release 2021.12.0 voor Cloud Manager.
 feature: Release Information
-source-git-commit: 910def6d82c09e0220a50a3cb34a61f2c7284cb9
+exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
+source-git-commit: 61f2d1e0882b752d1a1d5e62f9c028aa71941efe
 workflow-type: tm+mt
-source-wordcount: '249'
+source-wordcount: '265'
 ht-degree: 0%
 
 ---
@@ -30,6 +31,7 @@ De releasedatum voor [!UICONTROL Cloud Manager] release 2021.12.0 is 16 december
 * Een gebruiker met de rol van de Manager van de Plaatsing kan nu de project/de aanmaaktovenaar van de Tak voor een bewaarplaats zonder takken van het actiemenu op de pagina van bewaarplaatsen in werking stellen.
 * De Manager van de Plaatsing, die in toevoegt of pijpleidingswerkschema uitgeeft, wordt nu geïnformeerd over hoe te om een tak of een project tot stand te brengen als de geselecteerde bewaarplaats geen takken heeft.
 * Als er in het venster Productiepijplijn bewerken meer dan één productiestadium is, is er een vervolgkeuzelijst beschikbaar voor het selecteren van de omgeving.
+* De versie van het AEM Project Archetype dat wordt gebruikt door Cloud Manager is bijgewerkt naar versie 32.
 
 ## Opgeloste problemen {#bug-fixes}
 
