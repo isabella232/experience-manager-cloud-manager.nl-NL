@@ -1,38 +1,33 @@
 ---
-title: Opmerkingen bij de release 2021.12.0
-description: Dit zijn de opmerkingen bij de release 2021.12.0 voor Cloud Manager.
+title: Opmerkingen bij de release 2022.01.0
+description: Dit zijn de opmerkingen bij de release 2022.01.0 voor Cloud Manager.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 61f2d1e0882b752d1a1d5e62f9c028aa71941efe
+source-git-commit: ebbbbdca2bfd834bc3dc0ff06ffb318df42713ee
 workflow-type: tm+mt
-source-wordcount: '265'
-ht-degree: 0%
+source-wordcount: '145'
+ht-degree: 1%
 
 ---
 
 # Opmerkingen bij de release 2021.12.0 voor Cloud Manager {#release-notes}
 
-In de volgende sectie worden de algemene opmerkingen bij de release beschreven voor [!UICONTROL Cloud Manager] release 2021.12.0.
+In de volgende sectie worden de algemene opmerkingen voor de release weergegeven [!UICONTROL Cloud Manager] release 2022.01.0.
 
 >[!NOTE]
 >
->Raadpleeg voor de meest recente releaseopmerkingen voor Cloud Manager in AEM as a Cloud Service de [Cloud Manager in AEM opmerkingen bij de huidige release van het as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/release-notes-cloud-manager/release-notes-cm-current.html)
+>Raadpleeg voor de meest recente releaseopmerkingen voor Cloud Manager in AEM as a Cloud Service de [Cloud Manager in AEM opmerkingen bij de huidige release van as a Cloud Service.](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/release-notes-cloud-manager/release-notes-cm-current.html)
 
 ## Releasedatum {#release-date}
 
-De releasedatum voor [!UICONTROL Cloud Manager] release 2021.12.0 is 16 december 2021. De volgende release is gepland voor januari 2022.
+De releasedatum voor [!UICONTROL Cloud Manager] release 2022.01.0 is 20 januari 2022. De volgende release is gepland voor 10 februari 2022.
 
 ## Wat is er nieuw? {#whats-new}
 
-* De commit hash, die al zichtbaar is in de UI, wordt nu ook verstrekt in API.
-* De pagina van de Activiteit omvat nu een pop-over voor het runnen van pijpleidingen die een samenvatting van pijpleidingsdetails bij-a-blik verstrekt.
-* Er zijn updates toegevoegd om aanvullende details op de pagina Activiteiten op te nemen.
-* Het tabblad Leren in Cloud Manager bevat nu snelle toegang tot API-hulplijnen en bijbehorende bronnen.
-* Een gebruiker met de rol van de Manager van de Plaatsing kan nu de project/de aanmaaktovenaar van de Tak voor een bewaarplaats zonder takken van het actiemenu op de pagina van bewaarplaatsen in werking stellen.
-* De Manager van de Plaatsing, die in toevoegt of pijpleidingswerkschema uitgeeft, wordt nu geïnformeerd over hoe te om een tak of een project tot stand te brengen als de geselecteerde bewaarplaats geen takken heeft.
-* Als er in het venster Productiepijplijn bewerken meer dan één productiestadium is, is er een vervolgkeuzelijst beschikbaar voor het selecteren van de omgeving.
-* De versie van het AEM Project Archetype dat wordt gebruikt door Cloud Manager is bijgewerkt naar versie 32.
+* Cloud Manager wordt [vermijd het herbouwen van de codebasis wanneer het ontdekt dat het zelfde git begaan wordt gebruikt](/help/using/setting-up-project.md#build-artifact-reuse) in veelvoudige volledige uitgevoerde stapelpijpleiding.
+* Na het genereren van een wachtwoord voor het afsluiten wordt de vervaldatum weergegeven.
 
 ## Opgeloste problemen {#bug-fixes}
 
-* De volledige pijpleidingen van de stapelproductie blijven genoemd &quot;Productiepijpleiding&quot;zelfs wanneer de gebruiker een verschillende naam op het naamgebied ingaat.
+* Er is een oplossing gevonden voor het steeds vaker voorkomen van fout-positieve pijpleidingstoringen.
+* Voor programma&#39;s met slechts één opslagplaats, zal het pijpleidingsuitvoeringsscherm nu de bewaarplaatsnaam tonen.
