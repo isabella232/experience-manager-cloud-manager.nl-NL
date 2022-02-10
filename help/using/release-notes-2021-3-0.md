@@ -2,9 +2,10 @@
 title: Opmerkingen bij de release 2021.3.0
 description: Volg deze pagina voor informatie over Cloud Manager Release 2021.3.0
 feature: Release Information
-source-git-commit: 09dd8fe608d95cd9dbc95129cf86b9693c2839b5
+exl-id: e05b22fe-f071-4b69-9db1-e3d7ee4cfbcc
+source-git-commit: 71d44c7e3673ca62fcd2203ecc0bc4ed9fa22002
 workflow-type: tm+mt
-source-wordcount: '240'
+source-wordcount: '231'
 ht-degree: 0%
 
 ---
@@ -28,7 +29,7 @@ De volgende release is gepland voor 8 april 2021.
 
 * De **Versie** label is opnieuw gelabeld aan **Git-tag** in het scherm van de de pijpleiding van de Productie uitvoeren.
 
-* De labels die het gedrag definiëren wanneer belangrijke metriek niet aan de gedefinieerde drempel voldoen, zijn opnieuw gelabeld om hun werkelijke gedrag weer te geven - **Direct annuleren** en **Direct goedkeuren**. Zie [Het vormen van de Montages van de Pijpleiding](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html?lang=en#configuring-the-pipeline-settings-from-cloud-manager) voor meer informatie .
+* De labels die het gedrag definiëren wanneer belangrijke metriek niet aan de gedefinieerde drempel voldoen, zijn opnieuw gelabeld om hun werkelijke gedrag weer te geven - **Direct annuleren** en **Direct goedkeuren**. Het document raadplegen [Productiepijpleidingen configureren](configuring-production-pipelines.md) voor meer informatie .
 
 * De lijsten met klassen en methoden zijn bijgewerkt op basis van versie `2021.3.4997.20210303T022849Z-210225` van de SDK van AEM Cloud Service.
 

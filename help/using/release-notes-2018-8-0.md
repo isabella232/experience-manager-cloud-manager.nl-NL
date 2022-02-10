@@ -1,36 +1,35 @@
 ---
 title: Opmerkingen bij de release 2018.8.0
-seo-title: Opmerkingen bij de release AEM Cloud Manager voor 2018.8.0
+seo-title: AEM Cloud Manager Release Notes for 2018.8.0
 description: Volg deze pagina voor informatie over Cloud Manager Release 2018.8.0.
-seo-description: Volg deze pagina voor informatie over AEM Cloud Manager Release 2018.8.0.
+seo-description: Follow this page to get information for AEM Cloud Manager Release 2018.8.0.
 uuid: e8aaba32-89b4-4bc5-b295-09b753252612
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: release-notes
 discoiquuid: 9222ac3b-525e-47c1-b481-ac9d22e3d559
 feature: Release Information
-translation-type: tm+mt
-source-git-commit: fb10d775c930b5bb475b497aac2fd59b053a9a00
+exl-id: 20f87048-30f7-4869-aad0-13ca383a404b
+source-git-commit: 4f0e1d163001fd18cfa838256c813152d65c3b4c
 workflow-type: tm+mt
-source-wordcount: '331'
+source-wordcount: '312'
 ht-degree: 1%
 
 ---
 
+# Opmerkingen bij de release 2018.8.0 {#release-notes-for}
 
-# Opmerkingen bij de release voor 2018.8.0 {#release-notes-for}
-
-De [!UICONTROL Cloud Manager] Versie 2018.8.0 voegt steun voor het teweegbrengen van de pijpleiding toe CI/CD automatisch op git begaat en een nieuwe tovenaar voor het creëren van toepassingsprojecten in git die op het AEM Archieftype van Project wordt gebaseerd.
+De [!UICONTROL Cloud Manager] De Versie van 2018.8.0 voegt steun voor het teweegbrengen van de pijpleiding toe CI/CD automatisch op git begaat en een nieuwe tovenaar voor het creëren van toepassingsprojecten in git die op het Archetype van het AEM Project wordt gebaseerd.
 
 ## Releasedatum {#release-date}
 
-De releasedatum voor [!UICONTROL Cloud Manager] versie 2018.8.0 is 4 oktober 2018.
+De releasedatum voor [!UICONTROL Cloud Manager] Versie 2018.8.0 is 4 oktober 2018.
 
-## Wat is er nieuw?{#what-s-new}
+## Wat is er nieuw? {#what-s-new}
 
-* **De Opstelling**  van het programma - Nieuwe tovenaar om een toepassingsproject in git tot stand te brengen gebruikend het Archetype van het Project van de AEM
+* **Programma instellen** - Nieuwe wizard om een toepassingsproject te maken in het git met behulp van het AEM Project Archetype
 
-* **CI/CD Pipeline**  - De volgende veranderingen worden toegevoegd aan CI/CD Pijpleiding. Gelieve te verwijzen naar [vorm uw CI/CD Pijpleiding](configuring-pipeline.md) om meer te leren.
+* **CI/CD Pipet** - De volgende wijzigingen worden toegevoegd aan CI/CD Pipeline. Raadpleeg het document [Productiepijpleidingen configureren](configuring-production-pipelines.md) voor meer informatie.
 
    * Bij de Trekker van de Veranderingen van het Git, die de pijpleiding CI/CD begint wanneer er toezeggingen aan de gevormde git tak worden toegevoegd.
    * Kaarten op het huisscherm verbinden nu diep in specifieke secties van de pagina van de pijpleidingsuitvoering.
@@ -39,10 +38,10 @@ De releasedatum voor [!UICONTROL Cloud Manager] versie 2018.8.0 is 4 oktober 201
    * De pagina voor het uitvoeren van de pijpleiding geeft nu de versie/tagnaam weer die voor de uitvoering is gemaakt.
    * Apache Maven-versie bijgewerkt naar 3.5.3.
 
-* **Navigatie**  - De volgende wijzigingen worden toegevoegd aan de  [!UICONTROL Cloud Manager]code.
+* **Navigatie** - De volgende wijzigingen worden toegevoegd aan de [!UICONTROL Cloud Manager].
 
    * De verbinding van middelen in globale navigatie zal aan Runbook in Sharepoint navigeren.
-   * Het menu Help is gereorganiseerd en bevat nu meer [!UICONTROL Cloud Manager]-specifieke inhoud.
+   * Het menu Help is opnieuw ingedeeld en bevat nu meer [!UICONTROL Cloud Manager]-specifieke inhoud.
 
 ## Opgeloste problemen {#bug-fixes}
 
@@ -55,5 +54,4 @@ De releasedatum voor [!UICONTROL Cloud Manager] versie 2018.8.0 is 4 oktober 201
 ## Bekende problemen {#known-issues}
 
 * De takken die gebruikend de Tovenaar van het Project van de Toepassing worden gecreeerd kunnen geen streepjes bevatten.
-* De meldingszijbalk [!UICONTROL Experience Cloud] laadt meldingen mogelijk niet consistent. Meldingen zijn echter zichtbaar in [!UICONTROL Experience Cloud] en worden, indien geconfigureerd, nog steeds verzonden via e-mail.
-
+* De [!UICONTROL Experience Cloud] meldingen op het zijpaneel van de melding worden mogelijk niet consistent geladen. Meldingen zijn echter zichtbaar in het dialoogvenster [!UICONTROL Experience Cloud] en, indien geconfigureerd, nog steeds via e-mail worden verzonden.

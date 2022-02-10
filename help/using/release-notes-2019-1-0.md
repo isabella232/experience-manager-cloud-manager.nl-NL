@@ -1,37 +1,36 @@
 ---
 title: Opmerkingen bij de release 2019.1.0
-seo-title: Opmerkingen bij de release AEM Cloud Manager voor 2019.1.0
+seo-title: AEM Cloud Manager Release Notes for 2019.1.0
 description: Volg deze pagina voor informatie over Cloud Manager Release 2019.1.0.
-seo-description: Volg deze pagina voor informatie over AEM Cloud Manager Release 2019.1.0.
+seo-description: Follow this page to get information for AEM Cloud Manager Release 2019.1.0.
 uuid: 3af5808f-828f-4846-bee4-1e62194b48ad
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: release-notes
 discoiquuid: 85a1dcf3-2eef-4ba8-b4d1-09e4a88c7bd0
 feature: Release Information
-translation-type: tm+mt
-source-git-commit: c5d32d49782c899d013fcc60b9c4d2b67e9350ae
+exl-id: 383ca5a0-4b0b-48e9-aa48-1d1388875329
+source-git-commit: 4f0e1d163001fd18cfa838256c813152d65c3b4c
 workflow-type: tm+mt
-source-wordcount: '337'
+source-wordcount: '315'
 ht-degree: 1%
 
 ---
 
+# Opmerkingen bij de release 2019.1.0 {#release-notes-for}
 
-# Opmerkingen bij de release voor 2019.1.0 {#release-notes-for}
-
-De [!UICONTROL Cloud Manager] Versie van 2018.9.0 voegt steun het testen AEM Assets programma&#39;s evenals extra pijpleidingstypes toe die de bouw en de stappen van de codekwaliteit in werking stellen, naar keuze opstellend aan een niet productiemilieu.
+De [!UICONTROL Cloud Manager] De Versie van 2018.9.0 voegt steun het testen van de programma&#39;s van AEM Assets evenals extra pijpleidingstypes toe die de bouw en de stappen van de codekwaliteit in werking stellen, optioneel opstellend aan een niet productiemilieu.
 
 ## Releasedatum {#release-date}
 
-De releasedatum voor [!UICONTROL Cloud Manager] versie 2019.1.0 is 17 januari 2019.
+De releasedatum voor [!UICONTROL Cloud Manager] Versie 2019.1.0 is 17 januari 2019.
 
-## Wat is er nieuw?{#whats-new}
+## Wat is er nieuw? {#whats-new}
 
-* Extra ondersteuning voor het testen van prestaties van AEM Assets. Gelieve te verwijzen om uw [CI/CD Pijpleiding](configuring-pipeline.md)voor meer details te vormen.
-* Toegevoegde ondersteuning voor pijpleidingen die alleen stappen van de bouw- en codekwaliteit uitvoeren en voor pijpleidingen die worden geïmplementeerd in niet-productieomgevingen. Gelieve te verwijzen naar **Niet-Productie &amp; de Kwaliteit van de Code slechts Pijpleidingen** sectie in [vorm uw CI/CD Pijpleiding](configuring-pipeline.md) voor meer details.
+* Extra ondersteuning voor het testen van prestaties van AEM Assets. Raadpleeg het document [Productiepijpleidingen configureren](configuring-production-pipelines.md) voor meer informatie.
+* Toegevoegde ondersteuning voor pijpleidingen die alleen stappen van de bouw- en codekwaliteit uitvoeren en voor pijpleidingen die worden geïmplementeerd in niet-productieomgevingen. Raadpleeg het document [Niet-productiepijpleidingen configureren](configuring-non-production-pipelines.md) voor meer informatie.
 * Extra ondersteuning voor aangepaste omgevingsvariabelen in de ontwikkelomgeving.
-* Voor klanten met veelvoudige stadium of productiemilieu&#39;s, is de selectie van welke milieu als deel van de productiepijplijn zal worden opgesteld beschikbaar in [vorm uw Cd-/Pijpleiding](configuring-pipeline.md) pagina.
+* Voor klanten met meerdere stadium- of productieomgevingen is een selectie beschikbaar waarop de omgeving als onderdeel van de productiepijplijn zal worden ingezet. Raadpleeg het document [Productiepijpleidingen configureren](configuring-production-pipelines.md) voor meer informatie.
 * httxt2dbm is toegevoegd om container te bouwen.
 * Met alle Help-menu-items wordt een nieuw tabblad geopend.
 
@@ -49,4 +48,4 @@ De releasedatum voor [!UICONTROL Cloud Manager] versie 2019.1.0 is 17 januari 20
 
 ## Bekende problemen {#known-issues}
 
-* Wanneer het openen van een programma dat Plaatsen, maar niet Activa heeft, geplaatst KPIs, zien alle gebruikers een vraag aan actiekaart met een **knoop van het Programma van de Opstelling**. Nochtans, slechts kunnen de gebruikers in de rol Bedrijfs van de Eigenaar eigenlijk op **Programma van de Opstelling** knoop klikken.
+* Wanneer het openen van een programma dat Plaatsen, maar niet Activa heeft, geplaatst KPIs, zien alle gebruikers een vraag aan actiekaart met een **Installatieprogramma** knop. Nochtans, slechts kunnen de gebruikers in de rol van BedrijfsEigenaar eigenlijk op **Installatieprogramma** knop.

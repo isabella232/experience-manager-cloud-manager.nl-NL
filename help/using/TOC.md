@@ -8,10 +8,10 @@ user-guide-description: Leer hoe u met Adobe Managed Services Experience Manager
 feature-set: Experience Manager Cloud Manager, Experience Manager
 role: Admin
 level: Intermediate
-source-git-commit: e3f0759437707f73dfc6851608e06e30064c0f16
+source-git-commit: 4f0e1d163001fd18cfa838256c813152d65c3b4c
 workflow-type: tm+mt
-source-wordcount: '294'
-ht-degree: 11%
+source-wordcount: '303'
+ht-degree: 10%
 
 ---
 
@@ -42,7 +42,10 @@ ht-degree: 11%
    + [Configureer uw releasevertakkingen](configure-your-release-branches.md)
    + [Uw Dispatcher-configuraties beheren](dispatcher-configurations.md)
 + Het gebruik {#how-to-use}
-   + [Uw CI/CD-pijplijn configureren](configuring-pipeline.md)
+   + CI/CD-pijpleidingen {#pipelines}
+      + [Productiepijpleidingen configureren](configuring-production-pipelines.md)
+      + [Niet-productiepijpleidingen configureren](configuring-non-production-pipelines.md)
+      + [Pijpleidingen beheren](managing-pipelines.md)
    + [Uw code implementeren](deploying-code.md)
    + [Inzicht in de testresultaten](understand-your-test-results.md)
    + [Uw omgevingen beheren](manage-your-environment.md)
@@ -62,6 +65,7 @@ ht-degree: 11%
    + [Evaluatie](evaluation.md)
 + Releaseopmerkingen {#release-notes}
    + [Opmerkingen bij de huidige release](release-notes-current.md)
+   + [Opmerkingen bij de release 2022.1.0](release-notes-2022-1-0.md)
    + [Opmerkingen bij de release 2021.12.0](release-notes-2021-12-0.md)
    + [Opmerkingen bij de release 2021.11.0](release-notes-2021-11-0.md)
    + [Opmerkingen bij de release 2021.10.0](release-notes-2021-10-0.md)

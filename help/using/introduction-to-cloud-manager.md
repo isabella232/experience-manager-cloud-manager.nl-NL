@@ -11,9 +11,9 @@ discoiquuid: ebcc91a5-be9e-4684-8146-d88f4013d4d1
 feature: Getting Started
 level: Beginner
 exl-id: 58344d8a-b869-4177-a9cf-6a8b7dfe9588
-source-git-commit: 08d831c560510d58062ed81fab809c12169810cb
+source-git-commit: 71d44c7e3673ca62fcd2203ecc0bc4ed9fa22002
 workflow-type: tm+mt
-source-wordcount: '814'
+source-wordcount: '812'
 ht-degree: 3%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 3%
 
 ## Inleiding {#introduction}
 
-[!UICONTROL Cloud Manager] voor Adobe Experience Manager biedt ontwikkelaars de mogelijkheid om effectieve klantervaringen te maken via gestroomlijnde workflows, op basis van Adobe Experience Manager best practices. CI/CD pijpleidingen die voor Adobe Experience Manager worden geoptimaliseerd, staan u toe om ontwikkelingswerkschema&#39;s eenvoudig samen te voegen door uw code in te checken en al manier te bewegen tot productie-klaar zijn. Tijdens de bouwstijlfase, worden uw updates van de douanecode grondig getest gebruikend beproefde en geleerde beste praktijken om daadwerkelijke digitale ervaringen voor uw klanten te leveren. Cloud Manager gebruikt een open API-benadering en biedt u de mogelijkheid om uw systemen te integreren zonder bestaande processen en gereedschappen te onderbreken.
+[!UICONTROL Cloud Manager] voor Adobe Experience Manager biedt ontwikkelaars de mogelijkheid om effectieve klantervaringen te maken via gestroomlijnde workflows, op basis van Adobe Experience Manager best practices. CI/CD pijpleidingen die voor Adobe Experience Manager worden geoptimaliseerd, staan u toe om ontwikkelingswerkschema&#39;s eenvoudig samen te voegen door uw code in te checken en zich helemaal te bewegen aan productie-klaar zijn. Tijdens de bouwstijlfase, worden uw updates van de douanecode grondig getest gebruikend beproefde en geleerde beste praktijken om daadwerkelijke digitale ervaringen voor uw klanten te leveren. Cloud Manager gebruikt een open API-benadering en biedt u de mogelijkheid om uw systemen te integreren zonder bestaande processen en gereedschappen te onderbreken.
 
 In deze documentatiesite worden specifiek de functies en functies beschreven van Cloud Manager voor klanten van Adobe Managed Services (AMS). De equivalente documentatie voor AEM as a Cloud Service klanten is te vinden in de [Uitvoering van aanvragen voor AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/home.html?lang=en).
 
@@ -65,7 +65,7 @@ Een van de belangrijkste mogelijkheden van [!UICONTROL Cloud Manager] is de moge
 
 Via de [!UICONTROL Cloud Manager] UI, kunnen de klanten hun CI/CD pijpleiding vormen en schoppen. Tijdens deze pijpleiding, wordt een grondig codescannen uitgevoerd om ervoor te zorgen dat slechts de toepassingen van hoge kwaliteit door aan het productiemilieu overgaan.
 
-Meer leren over het vormen pijpleiding van [!UICONTROL Cloud Manager]s UI, zie [Uw CI/CD-pijplijn configureren](https://helpx.adobe.com/experience-manager/cloud-manager/using/configuring-pipeline.html).
+Meer leren over het vormen pijpleiding van [!UICONTROL Cloud Manager]s UI, zie de documenten [Productiepijpleidingen configureren](configuring-production-pipelines.md) en [Niet-productiepijpleidingen configureren.](configuring-non-production-pipelines.md)
 
 ### Flexibele implementatiemodi {#flexible-deployment-modes}
 

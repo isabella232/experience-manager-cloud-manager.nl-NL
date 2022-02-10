@@ -2,8 +2,7 @@
 title: Opmerkingen bij de release 2021.11.0
 description: Volg deze pagina voor informatie over Cloud Manager Release 2021.11.0
 feature: Release Information
-exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 6852df51d4b9b4947f1d5ce0b5a284bef94d0589
+source-git-commit: 099a4490e3a8578b9f3485fd1514d1e97db977ab
 workflow-type: tm+mt
 source-wordcount: '368'
 ht-degree: 0%
