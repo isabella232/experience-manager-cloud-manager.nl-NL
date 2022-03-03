@@ -1,17 +1,18 @@
 ---
-title: Opmerkingen bij de release 2022.01.0
-description: Dit zijn de opmerkingen bij de release 2022.01.0 voor Cloud Manager.
+title: Opmerkingen bij de release 2022.1.0
+description: Dit zijn de opmerkingen bij de release 2022.1.0 voor Cloud Manager.
 feature: Release Information
-source-git-commit: 099a4490e3a8578b9f3485fd1514d1e97db977ab
+exl-id: 9cc40326-cb8e-415f-b2ad-937d42189ee3
+source-git-commit: 797731ff0f9a499fe359d2e4e6044877fdcac702
 workflow-type: tm+mt
 source-wordcount: '145'
 ht-degree: 1%
 
 ---
 
-# Opmerkingen bij de release 2021.12.0 voor Cloud Manager {#release-notes}
+# Opmerkingen bij de release 2022.1.0 voor Cloud Manager {#release-notes}
 
-In de volgende sectie worden de algemene opmerkingen voor de release weergegeven [!UICONTROL Cloud Manager] release 2022.01.0.
+In de volgende sectie worden de algemene opmerkingen voor de release weergegeven [!UICONTROL Cloud Manager] release 2022.1.0.
 
 >[!NOTE]
 >
@@ -19,7 +20,7 @@ In de volgende sectie worden de algemene opmerkingen voor de release weergegeven
 
 ## Releasedatum {#release-date}
 
-De releasedatum voor [!UICONTROL Cloud Manager] release 2022.01.0 is 20 januari 2022. De volgende release is gepland voor 10 februari 2022.
+De releasedatum voor [!UICONTROL Cloud Manager] release 2022.1.0 is 20 januari 2022. De volgende release is gepland voor 10 februari 2022.
 
 ## Wat is er nieuw? {#whats-new}
 
