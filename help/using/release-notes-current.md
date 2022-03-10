@@ -3,10 +3,10 @@ title: Opmerkingen bij de release 2022.3.0
 description: Dit zijn de opmerkingen bij de release 2022.3.0 voor Cloud Manager.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 0d14adda454889eebbb0a875978ceeaa5ee4f7ea
+source-git-commit: 79b2729814af483844d095ed8d6db6cead2ceaf7
 workflow-type: tm+mt
-source-wordcount: '197'
-ht-degree: 1%
+source-wordcount: '229'
+ht-degree: 0%
 
 ---
 
@@ -26,13 +26,14 @@ De releasedatum voor [!UICONTROL Cloud Manager] release 2022.3.0 is 10 maart 202
 ## Wat is er nieuw? {#what-is-new}
 
 * (Alleen Cloud Service) U kunt het logboek AEM omgeving openen met de rol Developer.
-* De [`reliability_rating` kritisch metrisch](understand-your-test-results.md) is uitgeschakeld.
+* (AMS): De verzoeken van HTTP van de grenzen van HTTP van activa zullen nu uit een Vaste IP waaier komen.
 
 
 ## Opgeloste problemen {#bug-fixes}
 
-* [De **Wijzigingen in taakverdeling overslaan** option](configuring-production-pipelines.md#adding-production-pipeline) kan nu correct worden uitgeschakeld.
-* [De **Wijzigingen in taakverdeling overslaan** option](configuring-production-pipelines.md#adding-production-pipeline) wordt nu weergegeven voor de workflow van de distributiepijplijn.
-* Een subset van handmatig gemaakte git-opslagplaatsen had onjuiste naamwaarden die van invloed waren op [de functie voor hergebruik van bouwartefacten.](setting-up-project.md#build-artifact-reuse) De namen van deze opslagruimten zijn gewijzigd en gebruikers zien de gecorrigeerde naam in de API/UI van Cloud Manager.
-* [Wanneer het toevoegen van of het uitgeven van een pijpleiding van de codekwaliteit,](configuring-non-production-pipelines.md) de opties voor de afhandeling van metrische fouten worden niet meer weergegeven.
-* De onverwachte configuraties van de pijpleidingsvariabele veroorzaken niet meer fouten in de bouwstijlstap.
+* (Alleen AMS) De **Wijzigingen in taakverdeling overslaan** kan niet worden uitgeschakeld.
+* (AMS) De **Wijzigingen in taakverdeling overslaan** Deze optie is niet weergegeven op de AMS Dev-implementatie **Pipetworkflow bewerken**.
+* Een subset van handmatig gemaakte it-opslagruimten had een onjuiste naamwaarde waardoor de functie voor hergebruik van bouwmateriaal niet doeltreffend was. De namen van deze opslagruimten zijn gewijzigd en gebruikers zien de gecorrigeerde naam in de API/UI van Cloud Manager.
+* Bij de productie van volledige stapelleidingen werden bouwartefacten van niet-productiepijpleidingen onjuist opnieuw gebruikt.
+* Wanneer het toevoegen van of het uitgeven van een pijpleiding van de codekwaliteit, worden de opties om metrische mislukkingen te behandelen niet meer getoond.
+* Sommige onverwachte configuraties van pijpleidingsvariabele konden in de bouwstijlstap veroorzaken.
