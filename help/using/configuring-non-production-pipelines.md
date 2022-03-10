@@ -1,13 +1,13 @@
 ---
 title: Niet-productiepijpleidingen configureren
 description: Leer hoe u met Cloud Manager niet-productiepijpleidingen kunt maken en configureren om uw code te implementeren.
-source-git-commit: 205113735cc743e11e140b1161413002844f5b79
+exl-id: ccf4b4a2-6e29-4ede-821c-36318b568e5c
+source-git-commit: 154b95e1b43717097b9ae9076a15792517dd613d
 workflow-type: tm+mt
-source-wordcount: '624'
+source-wordcount: '627'
 ht-degree: 0%
 
 ---
-
 
 # Niet-productiepijpleidingen configureren {#configuring-non-production-pipelines}
 
@@ -71,7 +71,7 @@ Nadat u uw programma hebt ingesteld en minstens één omgeving hebt gebruikt met
 
       * **Handmatig** - Gebruik deze optie om de pijpleiding manueel te beginnen.
       * **Wijzigingen in Git** - Deze opties beginnen de pijpleiding wanneer de verbintenissen aan de gevormde git tak worden toegevoegd. Met deze optie, kunt u de pijpleiding nog manueel zoals vereist beginnen.
-   1. Onder **Belangrijk gedrag metrische fouten**, definieert u het gedrag van de pijpleiding wanneer een belangrijke fout optreedt in een van de kwaliteitspoorten.
+   1. Voor uitzettingsleidingen, onder **Belangrijk gedrag metrische fouten**, definieert u het gedrag van de pijpleiding wanneer een belangrijke fout optreedt in een van de kwaliteitspoorten.
 
       * **Telkens vragen** - Dit is de standaardinstelling en u moet handmatig ingrijpen bij belangrijke fouten.
       * **Direct mislukken** - Indien geselecteerd, zal de pijpleiding worden geannuleerd wanneer een belangrijke mislukking voorkomt. Dit is in feite het emuleren van een gebruiker die elke fout handmatig afwijst.
