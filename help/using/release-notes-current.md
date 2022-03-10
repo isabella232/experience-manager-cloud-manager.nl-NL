@@ -3,7 +3,7 @@ title: Opmerkingen bij de release 2022.3.0
 description: Dit zijn de opmerkingen bij de release 2022.3.0 voor Cloud Manager.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 7611667d8c617d501f9b69cbc7c854c195a5ebbe
+source-git-commit: 4a5ddf3144ec50f1a7a4ac367b5c99bc9b486752
 workflow-type: tm+mt
 source-wordcount: '0'
 ht-degree: 0%
@@ -31,7 +31,7 @@ De releasedatum voor [!UICONTROL Cloud Manager] release 2022.3.0 is 10 maart 202
 ## Opgeloste problemen {#bug-fixes}
 
 * De **Wijzigingen in taakverdeling overslaan** kan niet worden uitgeschakeld.
-*The **Wijzigingen in taakverdeling overslaan** Deze optie is niet weergegeven op de AMS Dev-implementatie **Pipetworkflow bewerken**.
+* De **Wijzigingen in taakverdeling overslaan** Deze optie is niet weergegeven op de AMS Dev-implementatie **Pipetworkflow bewerken**.
 * Een subset van handmatig gemaakte it-opslagruimten had een onjuiste naamwaarde waardoor de functie voor hergebruik van bouwmateriaal niet doeltreffend was. De namen van deze opslagruimten zijn gewijzigd en gebruikers zien de gecorrigeerde naam in de API/UI van Cloud Manager.
 * Bij de productie van volledige stapelleidingen werden bouwartefacten van niet-productiepijpleidingen onjuist opnieuw gebruikt.
 * Wanneer het toevoegen van of het uitgeven van een pijpleiding van de codekwaliteit, worden de opties om metrische mislukkingen te behandelen niet meer getoond.
