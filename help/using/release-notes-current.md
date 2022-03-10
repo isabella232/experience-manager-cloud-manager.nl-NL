@@ -3,7 +3,7 @@ title: Opmerkingen bij de release 2022.3.0
 description: Dit zijn de opmerkingen bij de release 2022.3.0 voor Cloud Manager.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 6e98f9d2fcd69799bad86d1e247212b26273bd0b
+source-git-commit: 0d14adda454889eebbb0a875978ceeaa5ee4f7ea
 workflow-type: tm+mt
 source-wordcount: '197'
 ht-degree: 1%
@@ -25,8 +25,9 @@ De releasedatum voor [!UICONTROL Cloud Manager] release 2022.3.0 is 10 maart 202
 
 ## Wat is er nieuw? {#what-is-new}
 
-* [De `reliability_rating` kritisch metrisch](understand-your-test-results.md) is uitgeschakeld.
-* Een gebruiker kan nu sorteren op de kolommen in het dialoogvenster **Pijpleidingen** in Cloud Manager.
+* (Alleen Cloud Service) U kunt het logboek AEM omgeving openen met de rol Developer.
+* De [`reliability_rating` kritisch metrisch](understand-your-test-results.md) is uitgeschakeld.
+
 
 ## Opgeloste problemen {#bug-fixes}
 
