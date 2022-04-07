@@ -1,19 +1,19 @@
 ---
-title: Opmerkingen bij de release 2022.3.0
-description: Dit zijn de opmerkingen bij de release 2022.3.0 voor Cloud Manager.
+title: Opmerkingen bij de release 2022.4.0
+description: Dit zijn de opmerkingen bij de release 2022.4.0 voor Cloud Manager.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 4a5ddf3144ec50f1a7a4ac367b5c99bc9b486752
+source-git-commit: 3d4eea13c0f2e9c4030bbfd3b7c5c25336548498
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '277'
 ht-degree: 0%
 
 ---
 
 
-# Opmerkingen bij de release 2022.3.0 voor Cloud Manager {#release-notes}
+# Opmerkingen bij de release 2022.4.0 voor Cloud Manager {#release-notes}
 
-Op deze pagina worden de opmerkingen bij de release voor [!UICONTROL Cloud Manager] release 2022.3.0.
+Op deze pagina worden de opmerkingen bij de release voor [!UICONTROL Cloud Manager] release 2022.4.0.
 
 >[!NOTE]
 >
@@ -21,18 +21,15 @@ Op deze pagina worden de opmerkingen bij de release voor [!UICONTROL Cloud Manag
 
 ## Releasedatum {#release-date}
 
-De releasedatum voor [!UICONTROL Cloud Manager] release 2022.3.0 is 10 maart 2022. De volgende release is gepland voor 7 april 2022.
+De releasedatum voor [!UICONTROL Cloud Manager] release 2022.4.0 is 7 april 2022. De volgende release is gepland voor 5 mei 2022.
 
 ## Wat is er nieuw? {#what-is-new}
 
-* De verzoeken van HTTP van de grenzen van HTTP van activa zullen nu uit een Vaste IP waaier komen.
-
-
-## Opgeloste problemen {#bug-fixes}
-
-* De **Wijzigingen in taakverdeling overslaan** kan niet worden uitgeschakeld.
-* De **Wijzigingen in taakverdeling overslaan** Deze optie is niet weergegeven op de AMS Dev-implementatie **Pipetworkflow bewerken**.
-* Een subset van handmatig gemaakte it-opslagruimten had een onjuiste naamwaarde waardoor de functie voor hergebruik van bouwmateriaal niet doeltreffend was. De namen van deze opslagruimten zijn gewijzigd en gebruikers zien de gecorrigeerde naam in de API/UI van Cloud Manager.
-* Bij de productie van volledige stapelleidingen werden bouwartefacten van niet-productiepijpleidingen onjuist opnieuw gebruikt.
-* Wanneer het toevoegen van of het uitgeven van een pijpleiding van de codekwaliteit, worden de opties om metrische mislukkingen te behandelen niet meer getoond.
-* Sommige onverwachte configuraties van pijpleidingsvariabele konden in de bouwstijlstap veroorzaken.
+* De verbeteringen van de duur en het succespercentage van pijpleiding bouwstappen zijn uitgevoerd en zullen incrementeel aan alle klanten door de maand van April worden uitgevoerd.
+* U kunt nu gemakkelijk een git-vertakking vinden door de eerste paar tekens van de naam in het invoerveld te typen in de wizard voor toevoegen en bewerken van de pijpleiding en door uit voorgestelde overeenkomsten te selecteren.
+* De **Pijpleidingen** pagina heeft nu paginering om de bruikbaarheid voor programma &#39; s met een groot aantal pijpleidingen te verbeteren .
+   * Er worden 50 rijen per pagina weergegeven in de tabel.
+* De versie van de [Projectarchetype AEM](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) gebruikt door Cloud Manager is bijgewerkt naar versie 36.
+* Oracle JDK is nu de standaard-JDK voor de ontwikkeling en werking van AEM toepassingen. Het buildproces van Cloud Manager wordt automatisch overgeschakeld op het gebruik van Oracle JDK, zelfs als er expliciet een andere optie is geselecteerd in de Maven-toolchain.
+   * Voor meer informatie over het schakelen naar Oracle JDK raadpleegt u [de documentatie van het Milieu van de Bouwstijl.](/help/using/build-environment-details.md#using-java-support)
+   * Zie [het Java-ondersteuningsbeleid voor Adobe Experience Manager - Veelgestelde vragen](https://experienceleague.adobe.com/docs/experience-manager-65/assets/Java_Policy_for_Adobe_Experience_Manager.pdf) gemeenschappelijke vragen over deze wijziging te beantwoorden.
