@@ -1,0 +1,34 @@
+---
+title: Opmerkingen bij de release 2022.4.0
+description: Dit zijn de opmerkingen bij de release 2022.4.0 voor Cloud Manager.
+feature: Release Information
+source-git-commit: dd7f22e378cdb0b0e2d1c7d318a970e1f719f47b
+workflow-type: tm+mt
+source-wordcount: '277'
+ht-degree: 0%
+
+---
+
+
+# Opmerkingen bij de release 2022.4.0 voor Cloud Manager {#release-notes}
+
+Op deze pagina worden de opmerkingen bij de release voor [!UICONTROL Cloud Manager] release 2022.4.0.
+
+>[!NOTE]
+>
+>Raadpleeg voor de meest recente releaseopmerkingen voor Cloud Manager in AEM as a Cloud Service de [Cloud Manager in AEM opmerkingen bij de huidige release van as a Cloud Service.](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/release-notes-cloud-manager/release-notes-cm-current.html)
+
+## Releasedatum {#release-date}
+
+De releasedatum voor [!UICONTROL Cloud Manager] release 2022.4.0 is 7 april 2022. De volgende release is gepland voor 5 mei 2022.
+
+## Wat is er nieuw? {#what-is-new}
+
+* De verbeteringen van de duur en het succespercentage van pijpleiding bouwstappen zijn uitgevoerd en zullen incrementeel aan alle klanten door de maand van April worden uitgevoerd.
+* U kunt nu gemakkelijk een git-vertakking vinden door de eerste paar tekens van de naam in het invoerveld te typen in de wizard voor toevoegen en bewerken van de pijpleiding en door uit voorgestelde overeenkomsten te selecteren.
+* De **Pijpleidingen** pagina heeft nu paginering om de bruikbaarheid voor programma &#39; s met een groot aantal pijpleidingen te verbeteren .
+   * Er worden 50 rijen per pagina weergegeven in de tabel.
+* De versie van de [Projectarchetype AEM](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) gebruikt door Cloud Manager is bijgewerkt naar versie 36.
+* Oracle JDK is nu de standaard-JDK voor de ontwikkeling en werking van AEM toepassingen. Het buildproces van Cloud Manager wordt automatisch overgeschakeld op het gebruik van Oracle JDK, zelfs als er expliciet een andere optie is geselecteerd in de Maven-toolchain.
+   * Voor meer informatie over het schakelen naar Oracle JDK raadpleegt u [de documentatie van het Milieu van de Bouwstijl.](/help/using/build-environment-details.md#using-java-support)
+   * Zie [het Java-ondersteuningsbeleid voor Adobe Experience Manager - Veelgestelde vragen](https://experienceleague.adobe.com/docs/experience-manager-65/assets/Java_Policy_for_Adobe_Experience_Manager.pdf) gemeenschappelijke vragen over deze wijziging te beantwoorden.

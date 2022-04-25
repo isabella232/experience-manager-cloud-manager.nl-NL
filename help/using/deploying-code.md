@@ -10,7 +10,7 @@ topic-tags: using
 discoiquuid: 832a4647-9b83-4a9d-b373-30fe16092b15
 feature: Code Deployment
 exl-id: 3d6610e5-24c2-4431-ad54-903d37f4cdb6
-source-git-commit: 2fcefda1e30871d44e3a1353470a4728904d7598
+source-git-commit: 0ba7c49b3550666030249562219b2d0dc51f4ae1
 workflow-type: tm+mt
 source-wordcount: '1220'
 ht-degree: 0%
@@ -22,17 +22,17 @@ ht-degree: 0%
 ## Code implementeren met Cloud Manager {#deploying-code-with-cloud-manager}
 
 >[!NOTE]
->Zie [hier](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/deploy-code.html?lang=en#using-cloud-manager) voor meer informatie over het implementeren van code voor Cloud Manager in AEM as a Cloud Service.
+>Ga voor meer informatie over het implementeren van code voor Cloud Manager in AEM as a Cloud Service naar [hier](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/deploy-code.html?lang=en#using-cloud-manager).
 
 Nadat u de productiepijpleiding hebt geconfigureerd (opslagruimte, omgeving en testomgeving), kunt u uw code implementeren.
 
-1. Klik op **Implementeren** in Cloud Manager om het implementatieproces te starten.
+1. Klikken **Implementeren** van Cloud Manager om het implementatieproces te starten.
 
    ![](assets/Deploy1.png)
 
-1. De **Uitvoering van de pijpleiding** het schermvertoningen.
+1. De **Uitvoering pijpleiding** weergegeven.
 
-   Klik **Bouwstijl** om het proces te beginnen.
+   Klikken **Opbouwen** om het proces te starten.
 
    ![](assets/Deploy2.png)
 
@@ -51,46 +51,46 @@ Nadat u de productiepijpleiding hebt geconfigureerd (opslagruimte, omgeving en t
    De **Fase-implementatie** omvat de volgende stappen:
 
    * Validatie: Deze stap zorgt ervoor dat de pijpleiding wordt gevormd om de momenteel beschikbare middelen te gebruiken, bijvoorbeeld, dat de gevormde tak bestaat, zijn de milieu&#39;s beschikbaar.
-   * Testen van build en eenheid: Deze stap stelt een containerized bouwstijlproces in werking. Zie [Het begrip van het Milieu van de Bouwstijl](/help/using/build-environment-details.md) voor details op het bouwstijlmilieu.
-   * Codescannen: Deze stap evalueert de kwaliteit van uw toepassingscode. Zie [Uw testresultaten begrijpen](understand-your-test-results.md) voor meer informatie over het testproces.
+   * Testen van build en eenheid: Deze stap stelt een containerized bouwstijlproces in werking. Zie [Inzicht in de omgeving van de build](/help/using/build-environment-details.md) voor meer informatie over de ontwikkelomgeving.
+   * Codescannen: Deze stap evalueert de kwaliteit van uw toepassingscode. Zie [De testresultaten begrijpen](understand-your-test-results.md) voor meer informatie over het testproces.
    * Distribueren naar werkgebied
 
    ![](assets/Stage_Deployment1.png)
 
-   Bij de **Werkgebiedtests** worden de volgende stappen uitgevoerd:
+   De **Werkgebiedtests**, omvat de volgende stappen:
 
-   * Beveiligingstest: Deze stap evalueert het effect van uw toepassingscode op de AEM milieu. Zie [Uw testresultaten begrijpen](understand-your-test-results.md) voor meer informatie over het testproces.
-   * Prestatietesten: Deze stap evalueert de prestaties van uw toepassingscode. Zie [Uw testresultaten begrijpen](understand-your-test-results.md) voor meer informatie over het testproces.
+   * Beveiligingstest: Deze stap evalueert het effect van uw toepassingscode op de AEM milieu. Zie [De testresultaten begrijpen](understand-your-test-results.md) voor meer informatie over het testproces.
+   * Prestatietesten: Deze stap evalueert de prestaties van uw toepassingscode. Zie [De testresultaten begrijpen](understand-your-test-results.md) voor meer informatie over het testproces.
 
    ![](assets/Stage_Testing1.png)
 
-   De **Implementatie van de productie**, omvat de volgende stappen:
+   De **Implementatie van productie**, omvat de volgende stappen:
 
-   * **Goedkeuringsaanvraag**  (indien ingeschakeld)
-   * **Implementatie**  van productieplanning (indien ingeschakeld)
-   * **CSE-ondersteuning**  (indien ingeschakeld)
+   * **Goedkeuringsaanvraag** (indien ingeschakeld)
+   * **Implementatie van planningsproductie** (indien ingeschakeld)
+   * **CSE-ondersteuning** (indien ingeschakeld)
    * **Distribueren naar productie**
 
    ![](assets/Prod_Deployment1.png)
 
    >[!NOTE]
    >
-   >**De Plaatsing van de Productie van het Programma** wordt toegelaten terwijl het vormen van de pijpleiding.
+   >De **Implementatie van planningsproductie** wordt toegelaten terwijl het vormen van de pijpleiding.
    >
    >
-   >Met deze optie kunt u de productieimplementatie plannen of op **Now** klikken om de productieimplementatie direct uit te voeren.
+   >Met deze optie kunt u uw productieimplementatie plannen of op **Nu** de productie onmiddellijk te implementeren.
    >
    >
    >De geplande datum en tijd worden gespecificeerd in termen van de tijdzone van de gebruiker.
    >
    >
-   >Klik **Bevestig** om uw montages te verifiëren.
+   >Klikken **Bevestigen** om uw instellingen te verifiëren.
 
    ![](assets/Production_Deployment1.png)
 
    Zodra u het plaatsingsprogramma bevestigt, voltooit uw codeplaatsing.
 
-   Het volgende scherm wordt weergegeven wanneer de optie **Now** is geselecteerd in de bovenstaande stap.
+   Het volgende scherm wordt weergegeven wanneer **Nu** is geselecteerd in de bovenstaande stap.
 
    ![](assets/Production_Deployment2.png)
 
@@ -100,12 +100,12 @@ Er wordt een time-out toegepast in de volgende stappen als er op feedback van ge
 
 | Stap | Time-out |
 |--- |--- |
-| Testen van de codekwaliteit | 7 dagen |
-| Beveiligingstests | 7 dagen |
-| Prestatietesten | 7 dagen |
-| Goedkeuringsaanvraag | 7 dagen |
-| Implementatie van planningsproductie | 7 dagen |
-| CSE-ondersteuning | 7 dagen |
+| Testen van de codekwaliteit | 14 dagen |
+| Beveiligingstests | 14 dagen |
+| Prestatietesten | 14 dagen |
+| Goedkeuringsaanvraag | 14 dagen |
+| Implementatie van planningsproductie | 14 dagen |
+| CSE-ondersteuning | 14 dagen |
 
 ## Implementatieproces {#deployment-process}
 
@@ -138,7 +138,7 @@ Wanneer de Manager van de Wolk aan niet productietopologieën opstelt, is het do
 
    1. Er wordt een back-up gemaakt van de huidige configuraties en deze worden naar een tijdelijke locatie gekopieerd
    1. Alle configuraties worden verwijderd, behalve de onveranderlijke bestanden. Raadpleeg Uw Dispatcher Configurations beheren voor meer informatie. Hierdoor worden de mappen gewist zodat er geen zwevende bestanden achterblijven.
-   1. Het artefact wordt geëxtraheerd naar de map `httpd`.  Onveranderbare bestanden worden niet overschreven. Wijzigingen die u aanbrengt in onveranderlijke bestanden in uw it-opslagplaats, worden genegeerd op het moment van implementatie.  Deze bestanden vormen de kern van het AMS-verzenderframework en kunnen niet worden gewijzigd.
+   1. Het artefact wordt geëxtraheerd naar de `httpd` directory.  Onveranderbare bestanden worden niet overschreven. Wijzigingen die u aanbrengt in onveranderlijke bestanden in uw it-opslagplaats, worden genegeerd op het moment van implementatie.  Deze bestanden vormen de kern van het AMS-verzenderframework en kunnen niet worden gewijzigd.
    1. Apache voert een configuratietest uit. Als er geen fouten worden gevonden, wordt de service opnieuw geladen. Als er een fout optreedt, worden de configuraties hersteld vanaf de back-up, wordt de service opnieuw geladen en wordt de fout gemeld aan Cloud Manager.
    1. Elk pad dat in de pijplijnconfiguratie is opgegeven, wordt ongeldig gemaakt of verwijderd uit het cachegeheugen van de verzender.
 
@@ -154,7 +154,7 @@ Wanneer de Manager van de Wolk aan niet productietopologieën opstelt, is het do
 
 Het proces voor het opstellen aan productietopologieën verschilt lichtjes om effect aan AEM bezoekers van de Plaats te minimaliseren.
 
-Productie-implementaties volgen doorgaans dezelfde stappen als hierboven, maar op doorlopende wijze:
+Productieimplementaties volgen doorgaans dezelfde stappen als hierboven, maar op een voortschrijdende manier:
 
 1. Implementeer AEM pakketten naar de auteur.
 1. Dispatcher1 loskoppelen van het taakverdelingsmechanisme.
@@ -169,7 +169,7 @@ Dit proces gaat verder tot de plaatsing alle uitgevers en verzenders in de topol
 
 In kritieke situaties moeten klanten van Adobe Managed Services mogelijk codewijzigingen implementeren in hun werkgebied- en productieomgeving zonder te wachten tot een volledige testcyclus van Cloud Manager is uitgevoerd.
 
-Om deze situaties aan te pakken, kan de productiepijplijn van de Manager van de Wolk op een *noodsituatie* wijze worden uitgevoerd. Wanneer deze modus wordt gebruikt, worden de beveiligings- en prestatieteststappen niet uitgevoerd; alle andere stappen, met inbegrip van om het even welke gevormde goedkeuringsstappen, worden uitgevoerd zoals op de normale wijze van de pijpleidingsuitvoering.
+Om deze situaties aan te pakken, kan de productiepijplijn van de Manager van de Wolk in een uitvoeren *noodsituatie* in. Wanneer deze modus wordt gebruikt, worden de beveiligings- en prestatieteststappen niet uitgevoerd; alle andere stappen, met inbegrip van om het even welke gevormde goedkeuringsstappen, worden uitgevoerd zoals op de normale wijze van de pijpleidingsuitvoering.
 
 >[!NOTE]
 >Mogelijkheid tot uitvoering van de noodpijpleiding wordt op programmasleutel geactiveerd door de succestechnici van de klant.
@@ -185,11 +185,11 @@ Bovendien, die de pagina bekijken van de details van de pijpleidingsuitvoering v
 ![](assets/execution-emergency2.png)
 
 
-Het maken van een pijpleiding kan op deze noodwijze ook door de Manager API van de Wolk of CLI worden gedaan. Om een uitvoering op de Wijze van de Noodsituatie te beginnen, voorlegt een verzoek van de PUT aan het uitvoeringsparameter van de pijpleiding met de vraagparameter `?pipelineExecutionMode=EMERGENCY` of, wanneer het gebruiken van CLI:
+Het maken van een pijpleiding kan op deze noodwijze ook door de Manager API van de Wolk of CLI worden gedaan. Om een uitvoering op de Wijze van de Noodsituatie te beginnen, leg een verzoek van de PUT aan het uitvoeringsparameter van de pijpleiding met de vraagparameter voor `?pipelineExecutionMode=EMERGENCY` of, bij gebruik van de CLI:
 
 ```
 $ aio cloudmanager:pipeline:create-execution PIPELINE_ID --emergency
 ```
 
 >[!IMPORTANT]
->Als u de markering `--emergency` gebruikt, moet u mogelijk de nieuwste `aio-cli-plugin-cloudmanager`-versie installeren.
+>Gebruiken `--emergency` markering moet mogelijk worden bijgewerkt naar de laatste `aio-cli-plugin-cloudmanager` versie.

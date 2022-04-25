@@ -8,9 +8,9 @@ user-guide-description: Leer hoe u met Adobe Managed Services Experience Manager
 feature-set: Experience Manager Cloud Manager, Experience Manager
 role: Admin
 level: Intermediate
-source-git-commit: f1d359921a11ab8a6117a15cd5eb72362bbb8360
+source-git-commit: 5dd9471e1044ce0dcc6a03099256d182b1776f02
 workflow-type: tm+mt
-source-wordcount: '309'
+source-wordcount: '312'
 ht-degree: 10%
 
 ---
@@ -65,6 +65,7 @@ ht-degree: 10%
    + [Evaluatie](evaluation.md)
 + Releaseopmerkingen {#release-notes}
    + [Opmerkingen bij de huidige release](release-notes-current.md)
+   + [Opmerkingen bij de release 2022.4.0](release-notes-2022-4-0.md)
    + [Opmerkingen bij de release 2022.3.0](release-notes-2022-3-0.md)
    + [Opmerkingen bij de release 2022.2.0](release-notes-2022-2-0.md)
    + [Opmerkingen bij de release 2022.1.0](release-notes-2022-1-0.md)

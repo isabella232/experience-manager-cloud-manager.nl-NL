@@ -1,19 +1,19 @@
 ---
-title: Opmerkingen bij de release 2022.4.0
-description: Dit zijn de opmerkingen bij de release 2022.4.0 voor Cloud Manager.
+title: Opmerkingen bij de release 2022.5.0
+description: Dit zijn de opmerkingen bij de release 2022.5.0 voor Cloud Manager.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 3d4eea13c0f2e9c4030bbfd3b7c5c25336548498
+source-git-commit: 5dd9471e1044ce0dcc6a03099256d182b1776f02
 workflow-type: tm+mt
-source-wordcount: '277'
-ht-degree: 0%
+source-wordcount: '82'
+ht-degree: 2%
 
 ---
 
 
-# Opmerkingen bij de release 2022.4.0 voor Cloud Manager {#release-notes}
+# Opmerkingen bij de release 2022.5.0 van Cloud Manager {#release-notes}
 
-Op deze pagina worden de opmerkingen bij de release voor [!UICONTROL Cloud Manager] release 2022.4.0.
+Op deze pagina worden de opmerkingen bij de release voor [!UICONTROL Cloud Manager] release 2022.5.0.
 
 >[!NOTE]
 >
@@ -21,15 +21,8 @@ Op deze pagina worden de opmerkingen bij de release voor [!UICONTROL Cloud Manag
 
 ## Releasedatum {#release-date}
 
-De releasedatum voor [!UICONTROL Cloud Manager] release 2022.4.0 is 7 april 2022. De volgende release is gepland voor 5 mei 2022.
+De releasedatum voor [!UICONTROL Cloud Manager] release 2022.5.0 is 5 mei 2022. De volgende release is gepland voor 9 juni 2022.
 
 ## Wat is er nieuw? {#what-is-new}
 
-* De verbeteringen van de duur en het succespercentage van pijpleiding bouwstappen zijn uitgevoerd en zullen incrementeel aan alle klanten door de maand van April worden uitgevoerd.
-* U kunt nu gemakkelijk een git-vertakking vinden door de eerste paar tekens van de naam in het invoerveld te typen in de wizard voor toevoegen en bewerken van de pijpleiding en door uit voorgestelde overeenkomsten te selecteren.
-* De **Pijpleidingen** pagina heeft nu paginering om de bruikbaarheid voor programma &#39; s met een groot aantal pijpleidingen te verbeteren .
-   * Er worden 50 rijen per pagina weergegeven in de tabel.
-* De versie van de [Projectarchetype AEM](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) gebruikt door Cloud Manager is bijgewerkt naar versie 36.
-* Oracle JDK is nu de standaard-JDK voor de ontwikkeling en werking van AEM toepassingen. Het buildproces van Cloud Manager wordt automatisch overgeschakeld op het gebruik van Oracle JDK, zelfs als er expliciet een andere optie is geselecteerd in de Maven-toolchain.
-   * Voor meer informatie over het schakelen naar Oracle JDK raadpleegt u [de documentatie van het Milieu van de Bouwstijl.](/help/using/build-environment-details.md#using-java-support)
-   * Zie [het Java-ondersteuningsbeleid voor Adobe Experience Manager - Veelgestelde vragen](https://experienceleague.adobe.com/docs/experience-manager-65/assets/Java_Policy_for_Adobe_Experience_Manager.pdf) gemeenschappelijke vragen over deze wijziging te beantwoorden.
+## Opgeloste problemen {#bug-fixes}
