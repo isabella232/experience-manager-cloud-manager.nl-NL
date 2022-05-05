@@ -3,10 +3,10 @@ title: Opmerkingen bij de release 2022.5.0
 description: Dit zijn de opmerkingen bij de release 2022.5.0 voor Cloud Manager.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 5dd9471e1044ce0dcc6a03099256d182b1776f02
+source-git-commit: 0ddfd152cb15731882d198d043dd8897b5073ab4
 workflow-type: tm+mt
-source-wordcount: '82'
-ht-degree: 2%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -25,4 +25,11 @@ De releasedatum voor [!UICONTROL Cloud Manager] release 2022.5.0 is 5 mei 2022. 
 
 ## Wat is er nieuw? {#what-is-new}
 
+Toegang tot het logbestand voor AEM omgeving kan worden uitgevoerd met de rol van de ontwikkelaar.
+
 ## Opgeloste problemen {#bug-fixes}
+
+* Een subset van handmatig gemaakte it-opslagruimten had een onjuiste naamwaarde waardoor de functie voor hergebruik van bouwmateriaal niet doeltreffend was. De namen van deze opslagruimten zijn gewijzigd en gebruikers zien de gecorrigeerde naam in de API/UI van Cloud Manager.
+* Bij de productie van volledige stapelleidingen werden bouwartefacten van niet-productiepijpleidingen onjuist opnieuw gebruikt.
+* Wanneer het toevoegen van of het uitgeven van een pijpleiding van de codekwaliteit, worden de opties om metrische mislukkingen te behandelen niet meer getoond.
+* Sommige onverwachte configuraties van pijpleidingsvariabele konden fouten in de bouwstijlstap veroorzaken.

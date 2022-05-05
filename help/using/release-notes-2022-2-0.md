@@ -3,9 +3,9 @@ title: Opmerkingen bij de release 2022.2.0
 description: Dit zijn de opmerkingen bij de release 2022.2.0 voor Cloud Manager.
 feature: Release Information
 exl-id: c13ee200-197e-4855-a08c-99d36b471bb6
-source-git-commit: d074bc1af7e681377ec5b961db23f0bde5d1aaca
+source-git-commit: 0ddfd152cb15731882d198d043dd8897b5073ab4
 workflow-type: tm+mt
-source-wordcount: '139'
+source-wordcount: '136'
 ht-degree: 1%
 
 ---
@@ -26,7 +26,7 @@ De releasedatum voor [!UICONTROL Cloud Manager] release 2022.2.0 is 10 februari 
 
 Hier is wat nieuw is in de release van februari:
 
-* (Alleen Cloud Service) U kunt het logboek AEM omgeving openen met de rol Developer.
+* Toegang tot het logbestand voor AEM omgeving kan worden uitgevoerd met de rol van de ontwikkelaar.
 * U kunt betrouwbaarheid_rating kritieke metrisch nu onbruikbaar maken.
 
 ## Opgeloste problemen {#bug-fixes}
