@@ -3,9 +3,9 @@ title: Opmerkingen bij de release 2022.5.0
 description: Dit zijn de opmerkingen bij de release 2022.5.0 voor Cloud Manager.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 0ddfd152cb15731882d198d043dd8897b5073ab4
+source-git-commit: 84cc4352488002ad40102ea2c507af652d9012a1
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '210'
 ht-degree: 0%
 
 ---
@@ -25,11 +25,13 @@ De releasedatum voor [!UICONTROL Cloud Manager] release 2022.5.0 is 5 mei 2022. 
 
 ## Wat is er nieuw? {#what-is-new}
 
-Toegang tot het logbestand voor AEM omgeving kan worden uitgevoerd met de rol van de ontwikkelaar.
+De verzoeken van HTTP van de grenzen van HTTP van activa zullen nu uit een Vaste IP waaier komen.
 
 ## Opgeloste problemen {#bug-fixes}
 
-* Een subset van handmatig gemaakte it-opslagruimten had een onjuiste naamwaarde waardoor de functie voor hergebruik van bouwmateriaal niet doeltreffend was. De namen van deze opslagruimten zijn gewijzigd en gebruikers zien de gecorrigeerde naam in de API/UI van Cloud Manager.
+* De optie Load Balancer overslaan kan niet worden uitgeschakeld.
+* De optie Wijzigingen taakverdeling overslaan is niet weergegeven in de workflow van de AMS Dev Deploy-installatiepijplijn.
+* Een subset van handmatig gemaakte GIT-opslagruimten had een onjuiste naamwaarde waardoor de functie voor hergebruik van bouwmateriaal niet doeltreffend was. De namen van deze opslagruimten zijn gewijzigd en gebruikers zien de gecorrigeerde naam in de API/UI van Cloud Manager.
 * Bij de productie van volledige stapelleidingen werden bouwartefacten van niet-productiepijpleidingen onjuist opnieuw gebruikt.
 * Wanneer het toevoegen van of het uitgeven van een pijpleiding van de codekwaliteit, worden de opties om metrische mislukkingen te behandelen niet meer getoond.
 * Sommige onverwachte configuraties van pijpleidingsvariabele konden fouten in de bouwstijlstap veroorzaken.
