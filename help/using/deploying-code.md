@@ -10,9 +10,9 @@ topic-tags: using
 discoiquuid: 832a4647-9b83-4a9d-b373-30fe16092b15
 feature: Code Deployment
 exl-id: 3d6610e5-24c2-4431-ad54-903d37f4cdb6
-source-git-commit: 0ba7c49b3550666030249562219b2d0dc51f4ae1
+source-git-commit: 9a9d7067a1369e80ccf9b2925369a466b3da2901
 workflow-type: tm+mt
-source-wordcount: '1220'
+source-wordcount: '1615'
 ht-degree: 0%
 
 ---
@@ -184,7 +184,6 @@ Bovendien, die de pagina bekijken van de details van de pijpleidingsuitvoering v
 
 ![](assets/execution-emergency2.png)
 
-
 Het maken van een pijpleiding kan op deze noodwijze ook door de Manager API van de Wolk of CLI worden gedaan. Om een uitvoering op de Wijze van de Noodsituatie te beginnen, leg een verzoek van de PUT aan het uitvoeringsparameter van de pijpleiding met de vraagparameter voor `?pipelineExecutionMode=EMERGENCY` of, bij gebruik van de CLI:
 
 ```
@@ -193,3 +192,73 @@ $ aio cloudmanager:pipeline:create-execution PIPELINE_ID --emergency
 
 >[!IMPORTANT]
 >Gebruiken `--emergency` markering moet mogelijk worden bijgewerkt naar de laatste `aio-cli-plugin-cloudmanager` versie.
+
+## Een productieimplementatie opnieuw uitvoeren {#Reexecute-Deployment}
+
+Heruitvoering van de productieleidingsstap wordt ondersteund voor uitvoeringen waarbij de productieleidingsstap is voltooid. Het type voltooiing is niet belangrijk - de implementatie kan succesvol zijn (alleen voor AMS-programma&#39;s), geannuleerd of mislukt. Dit gezegd zijnde, wordt verwacht dat het primaire gebruiksgeval gevallen is waarin de productielocatie om tijdelijke redenen is mislukt. De heruitvoering leidt tot een nieuwe uitvoering gebruikend de zelfde pijpleiding. Deze nieuwe uitvoering bestaat uit drie stappen:
+
+1. Bevestig stap - dit is hoofdzakelijk de zelfde bevestiging die tijdens een normale pijpleidingsuitvoering voorkomt.
+1. De bouwstijlstap - in de context van een heruitvoering, kopieert de bouwstijlstap artefacten, niet echt voert een nieuw bouwstijlproces uit.
+1. De stap van de productieleiding - dit gebruikt de zelfde configuratie en de opties zoals de stap van de productieleiding in een normale pijpleidingsuitvoering.
+
+De bouwstijlstap kan lichtjes verschillend geëtiketteerd in UI zijn om erop te wijzen dat het artefacten kopieert, niet herbouwt.
+
+![](assets/Re-deploy.png)
+
+Beperkingen:
+
+* Het opnieuw uitvoeren van de stap van de productieplaatsing zal slechts bij de laatste uitvoering beschikbaar zijn.
+* Heruitvoering is niet beschikbaar voor terugdraaiacties.
+* Als de laatste uitvoering een terugdraaiuitvoering is, is wederuitvoering niet mogelijk.
+* Als de laatste uitvoering een uitvoering van een push-update is, is het niet mogelijk deze opnieuw uit te voeren.
+* Als de laatste uitvoering is mislukt op een willekeurig punt vóór de stap voor de implementatie van de productie, is het niet mogelijk de productie opnieuw uit te voeren.
+
+### API opnieuw uitvoeren {#Reexecute-API}
+
+### Identificatie van een uitvoering van de uitvoering
+
+Om te bepalen of een uitvoering een uitvoering is die opnieuw wordt uitgevoerd, kan het triggerveld worden gecontroleerd. De waarde ervan zal *RE_EXECUTE*.
+
+### Nieuwe uitvoering activeren
+
+Om een heruitvoering te activeren, moet een verzoek van de PUT aan de Verbinding van het HAL &lt; (<http://ns.adobe.com/adobecloud/rel/pipeline/reExecute>)> op de status van de stap Implementeren van de productie. Als deze koppeling aanwezig is, kan de uitvoering vanaf die stap opnieuw worden gestart. Als dit niet het geval is, kan de uitvoering niet vanaf die stap opnieuw worden gestart. In de aanvankelijke versie, zal deze verbinding slechts ooit op de productie zijn opstellen stap maar de toekomstige versies kunnen het beginnen van de pijpleiding van andere stappen steunen. Voorbeeld:
+
+```Javascript
+ {
+  "_links": {
+    "http://ns.adobe.com/adobecloud/rel/pipeline/logs": {
+      "href": "/api/program/4/pipeline/1/execution/953671/phase/1575676/step/2983530/logs",
+      "templated": false
+    },
+    "http://ns.adobe.com/adobecloud/rel/pipeline/reExecute": {
+      "href": "/api/program/4/pipeline/1/execution?stepId=2983530",
+      "templated": false
+    },
+    "http://ns.adobe.com/adobecloud/rel/pipeline/metrics": {
+      "href": "/api/program/4/pipeline/1/execution/953671/phase/1575676/step/2983530/metrics",
+      "templated": false
+    },
+    "self": {
+      "href": "/api/program/4/pipeline/1/execution/953671/phase/1575676/step/2983530",
+      "templated": false
+    }
+  },
+  "id": "6187842",
+  "stepId": "2983530",
+  "phaseId": "1575676",
+  "action": "deploy",
+  "environment": "weretail-global-b75-prod",
+  "environmentType": "prod",
+  "environmentId": "59254",
+  "startedAt": "2022-01-20T14:47:41.247+0000",
+  "finishedAt": "2022-01-20T15:06:19.885+0000",
+  "updatedAt": "2022-01-20T15:06:20.803+0000",
+  "details": {
+  },
+  "status": "FINISHED"
+```
+
+
+De syntaxis van de HAL-koppeling *href*  bovenstaande waarde is niet bedoeld als referentiepunt. De werkelijke waarde moet altijd worden gelezen van de HAL-koppeling en niet worden gegenereerd.
+
+Een *PUT* verzoek aan dit eindpunt zal resulteren in een *201* de nieuwe executie zal , indien succesvol en als responsinstantie , worden voorgesteld . Dit is vergelijkbaar met het starten van een normale uitvoering via de API.
