@@ -3,9 +3,9 @@ title: Opmerkingen bij de release 2022.5.0
 description: Dit zijn de opmerkingen bij de release 2022.5.0 voor Cloud Manager.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: d183e470db271bde0b5725f93b2a7bf97f00a89d
+source-git-commit: f2b8670baa81e0ddb1ef374d42d6b3192299c1e9
 workflow-type: tm+mt
-source-wordcount: '138'
+source-wordcount: '126'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,6 @@ De releasedatum voor [!UICONTROL Cloud Manager] release 2022.5.0 is 5 mei 2022. 
 
 ## Wat is er nieuw? {#what-is-new}
 
-* De pagina Omgevingen heeft een kolom om de AEM Versie van milieu te tonen.
 * De uitvoering van de pijpleiding zal nu fouten op het hoogste niveau UI op het uitvoeringsscherm tonen.
 * De standaardconfiguratie die wordt bijgewerkt om pauze aan configuratie te omvatten B/G.
 
