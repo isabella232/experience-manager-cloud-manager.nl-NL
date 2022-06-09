@@ -1,19 +1,19 @@
 ---
-title: Opmerkingen bij de release 2022.5.0
-description: Dit zijn de opmerkingen bij de release 2022.5.0 voor Cloud Manager.
+title: Opmerkingen bij de release 2022.6.0
+description: Dit zijn de opmerkingen bij de release 2022.6.0 voor Cloud Manager.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: dc28bbacfe86a68f416a525d386a2d8d1c1b0190
+source-git-commit: 844aa7c697c793af05766048ef4263a1bba87c94
 workflow-type: tm+mt
-source-wordcount: '134'
+source-wordcount: '132'
 ht-degree: 1%
 
 ---
 
 
-# Opmerkingen bij de release 2022.5.0 van Cloud Manager {#release-notes}
+# Opmerkingen bij de release 2022.6.0 voor Cloud Manager {#release-notes}
 
-Op deze pagina worden de opmerkingen bij de release voor [!UICONTROL Cloud Manager] release 2022.5.0.
+Op deze pagina worden de opmerkingen bij de release voor [!UICONTROL Cloud Manager] release 2022.6.0.
 
 >[!NOTE]
 >
@@ -21,15 +21,12 @@ Op deze pagina worden de opmerkingen bij de release voor [!UICONTROL Cloud Manag
 
 ## Releasedatum {#release-date}
 
-De releasedatum voor [!UICONTROL Cloud Manager] release 2022.5.0 is 5 mei 2022. De volgende release is gepland voor 9 juni 2022.
+De releasedatum voor [!UICONTROL Cloud Manager] release 2022.6.0 is 9 juni 2022. De volgende release is gepland voor 30 juni 2022.
 
 ## Wat is er nieuw? {#what-is-new}
 
-* De uitvoering van de pijpleiding zal nu fouten op het hoogste niveau UI op het uitvoeringsscherm tonen.
-* De standaardconfiguratie die wordt bijgewerkt om pauze aan configuratie te omvatten B/G.
-* Voer de stap Productie-implementatie opnieuw uit via de gebruikersinterface van Cloud Manager.
+* Een nieuwe welkomstkaart op de landingspagina van Cloud Manager biedt gebruikers snel toegang tot zelfstudies aan boord en voortgangsgegevens voor de huurder.
+   * Deze functie wordt in de week na de release van 2022.06.0 geleidelijk ingevoerd.
+* [Buildartefacten kunnen nu opnieuw worden gebruikt](/help/using/setting-up-project.md#build-artifact-reuse) bij gebruik van git spiegelen.
 
 ## Opgeloste problemen {#bug-fixes}
-
-* Verkeerd testresultaat voor prestaties met een time-outfout van 504.
-* Sommige executies bleven vastzitten in de context van het plegen van een trigger en het annuleren van een goedkeuringsstap.
