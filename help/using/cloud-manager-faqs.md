@@ -5,9 +5,9 @@ description: Raadpleeg de veelgestelde vragen over probleemoplossing in Cloud Ma
 seo-description: Follow this page to get answers on Cloud Manager FAQs
 feature: Getting Started
 exl-id: 52c1ca23-5b42-4eae-b63a-4b22ef1a5aee
-source-git-commit: 71d44c7e3673ca62fcd2203ecc0bc4ed9fa22002
+source-git-commit: 6dce1f48b66c6970c3ba025031f0adcbd01195dd
 workflow-type: tm+mt
-source-wordcount: '881'
+source-wordcount: '874'
 ht-degree: 0%
 
 ---
@@ -28,11 +28,13 @@ AEM de build van Cloud Manager mislukt tijdens een poging om te schakelen van Ja
 
 * Voor het samenstellen van Cloud Manager mislukt de gemaakte insteekmodule voor afdwingbare bestanden met een fout `"[main] [WARNING] Rule 1: org.apache.maven.plugins.enforcer.RequireJavaVersion"`. Dit is een bekend probleem vanwege het gebruik van een andere Java-versie voor het uitvoeren van de gedeelde opdracht in plaats van het compileren van code. Op dit moment weglaten `requireJavaVersion` van uw gefabriceerde afdwingbare plug-inconfiguraties.
 
-## Onze implementatie is vastgelopen omdat de kwaliteitscontrole voor de code is mislukt. Is er een manier om deze controle te omzeilen? {#deployment-stuck}
+## Onze implementatie is vastgelopen omdat de kwaliteitscontrole van de code is mislukt. Is er een manier om deze controle te omzeilen? {#deployment-stuck}
 
-Alle kwaliteitsfouten in de code, behalve *Beveiligingsbeoordeling* zijn niet-kritieke metriek, zodat kunnen zij worden omzeild door de punten in resultatenUI uit te breiden.
+Ja. Alle fouten in de codekwaliteit, behalve *Beveiligingsbeoordeling* zijn niet-kritieke metriek, zodat kunnen zij als deel van een plaatsingspijpleiding worden overgeslagen door de punten in resultatenUI uit te breiden.
 
-Een gebruiker met [Implementatiebeheer, projectmanager of bedrijfseigenaar](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/requirements/setting-up-users-and-roles.html?lang=en#requirements) de rol kan de kwesties met voeten treden, waarin de pijpleiding te werk gaat of zij de kwesties kunnen goedkeuren, waarbij de pijpleiding met een mislukking stopt.  Zie [Drievoudige Gates terwijl het runnen van een Pijpleiding](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/understand-your-test-results.html?lang=en#how-to-use) voor meer informatie .
+Een gebruiker met [Implementatiebeheer, projectmanager of bedrijfseigenaar](/help/using/setting-up-users-and-roles.md#role-definitions) de rol kan de kwesties met voeten treden, waarin de pijpleiding te werk gaat of zij de kwesties kunnen goedkeuren, waarbij de pijpleiding met een mislukking stopt.
+
+Zie de documenten [Drievoudige Gates terwijl het runnen van een Pijpleiding](/help/using/understand-your-test-results.md#three-tier-gates-while-running-a-pipeline) en [Niet-productiepijpleidingen configureren](/help/using/configuring-non-production-pipelines.md#understanding-the-flow) voor meer informatie .
 
 ## Implementaties van Cloud Manager mislukken bij het testen van de prestaties in omgevingen met Adobe Managed Services. Hoe zuiveren wij dit om de kritieke metriek over te gaan? {#debug-critical-metrics}
 
