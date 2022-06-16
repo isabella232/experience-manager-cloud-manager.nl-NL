@@ -3,9 +3,9 @@ title: Inzicht in de omgeving van de build
 description: Volg deze pagina voor meer informatie over omgevingen
 feature: Environments
 exl-id: b3543320-66d4-4358-8aba-e9bdde00d976
-source-git-commit: 17f79fdc7278cae532485570a6e2b8700683ef0d
+source-git-commit: 9959f649e553d0ff6d41a70a468bec3e2e854d75
 workflow-type: tm+mt
-source-wordcount: '996'
+source-wordcount: '997'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Cloud Manager bouwt en test uw code gebruikend een gespecialiseerde bouwstijlmil
 * De ontwikkelomgeving is gebaseerd op Linux en is afgeleid van Ubuntu 18.04.
 * Apache Maven 3.6.0 is geïnstalleerd.
 * De geïnstalleerde Java-versies zijn Oracle JDK 8u202, Azul Zulu 8u292, Oracle JDK 11.0.2, en Azul Zulu 11.0.11.
-* Standaard wordt de omgevingsvariabele JAVA_HOME ingesteld op `/usr/lib/jvm/jdk1.8.0_202` die Oracle JDK 8u202 bevat. Zie [JDK-versie](#alternate-maven) van Alternate Maven Execution voor meer informatie.
+* De omgevingsvariabele JAVA_HOME is standaard ingesteld op `/usr/lib/jvm/jdk1.8.0_202` die Oracle JDK 8u202 bevat. Zie [JDK-versie van alternatieve uitvoering](#alternate-maven) voor meer informatie.
 * Er zijn enkele extra systeempakketten geïnstalleerd die nodig zijn:
 
    * bzip2
@@ -26,7 +26,7 @@ Cloud Manager bouwt en test uw code gebruikend een gespecialiseerde bouwstijlmil
    * imagemagick
    * grafiesmagick
 
-* Andere pakketten kunnen worden geïnstalleerd tijdens het samenstellen zoals beschreven [hieronder](#installing-additional-system-packages).
+* Andere pakketten kunnen worden geïnstalleerd tijdens het samenstellen zoals beschreven [onder](#installing-additional-system-packages).
 * Elke bouw wordt gedaan op een ongerepte milieu; de bouwstijlcontainer houdt geen staat tussen uitvoeringen.
 * Maven wordt altijd uitgevoerd met deze drie opdrachten:
 
@@ -34,11 +34,11 @@ Cloud Manager bouwt en test uw code gebruikend een gespecialiseerde bouwstijlmil
    * `mvn --batch-mode org.apache.maven.plugins:maven-clean-plugin:3.1.0:clean -Dmaven.clean.failOnError=false`
    * `mvn --batch-mode org.jacoco:jacoco-maven-plugin:prepare-agent package`
 
-* Maven wordt op systeemniveau geconfigureerd met een settings.xml-bestand dat automatisch de openbare Adobe **Artifact**-opslagplaats bevat met een profiel met de naam `adobe-public`.
-Raadpleeg [Adobe Public Maven Repository](https://repo.adobe.com/) voor meer informatie.
+* Maven is geconfigureerd op systeemniveau met een bestand settings.xml dat automatisch de openbare Adobe bevat **Artefact** opslagplaats met een profiel genaamd `adobe-public`.
+Zie [Adobe Public Maven Repository](https://repo1.maven.org/) voor meer informatie .
 
 >[!NOTE]
->Hoewel Cloud Manager geen specifieke versie van `jacoco-maven-plugin` definieert, moet de gebruikte versie ten minste `0.7.5.201505241946` zijn.
+>Hoewel in Cloud Manager geen specifieke versie van het dialoogvenster `jacoco-maven-plugin`moet de gebruikte versie ten minste `0.7.5.201505241946`.
 
 
 >[!NOTE]
@@ -54,7 +54,7 @@ Standaard worden projecten gemaakt door het buildproces van Cloud Manager met Or
 
 ### Maven Toolketins {#maven-toolchains}
 
-Met de [Insteekmodule Gemaakt gereedschap](https://maven.apache.org/plugins/maven-toolchains-plugin/) kunnen projecten een specifieke JDK (of *toolchain*) selecteren die moet worden gebruikt in de context van Maven-ins met gereedschapsketens. Dit wordt gedaan in het `pom.xml` dossier van het project door een verkoper en versiewaarde te specificeren. Een voorbeeldsectie in het `pom.xml` dossier is:
+De [Insteekmodule Maven Toolketins](https://maven.apache.org/plugins/maven-toolchains-plugin/) staat projecten toe om een specifieke JDK (of *toolchain*) die moet worden gebruikt in de context van Maven-plug-ins die geschikt zijn voor toolketens. Dit wordt gedaan in het project `pom.xml` door een leverancier- en versiewaarde op te geven. Een voorbeeldsectie in de `pom.xml` bestand is:
 
 ```xml
         <plugin>
@@ -81,7 +81,7 @@ Met de [Insteekmodule Gemaakt gereedschap](https://maven.apache.org/plugins/mave
 
 Hierdoor wordt voor alle plug-ins met behoud van gereedschappen het Oracle JDK, versie 11, gebruikt.
 
-Wanneer u deze methode gebruikt, wordt Maven zelf nog steeds uitgevoerd met de standaard-JDK (Oracle 8) en wordt de omgevingsvariabele `JAVA_HOME` niet gewijzigd. Daarom werkt het controleren of afdwingen van de Java-versie via plug-ins zoals de [Apache Maven Enforcer Plugin](https://maven.apache.org/enforcer/maven-enforcer-plugin/) niet en mogen dergelijke plug-ins niet worden gebruikt.
+Wanneer u deze methode gebruikt, wordt Maven zelf nog steeds uitgevoerd met de standaard-JDK (Oracle 8) en de `JAVA_HOME` omgevingsvariabele wordt niet gewijzigd. De Java-versie controleren of afdwingen via plug-ins zoals de [Insteekmodule Apache Maven Enforcer](https://maven.apache.org/enforcer/maven-enforcer-plugin/) werkt niet en dergelijke plug-ins mogen niet worden gebruikt.
 
 De momenteel beschikbare leverancier/versiecombinaties zijn:
 
@@ -97,9 +97,9 @@ De momenteel beschikbare leverancier/versiecombinaties zijn:
 
 ### JDK-versie van alternatieve uitvoering {#alternate-maven}
 
-Het is ook mogelijk om Azul 8 of Azul 11 te selecteren als JDK voor de volledige executie Maven. In tegenstelling tot de opties van toolketins, verandert dit JDK die voor alle stop-ins wordt gebruikt tenzij de toolketenconfiguratie ook wordt geplaatst waarin de toolkettenconfiguratie nog voor toolketens-bewuste Maven plugins wordt toegepast. Hierdoor werkt het controleren en afdwingen van de Java-versie met de [Apache Maven Enforcer Plugin](https://maven.apache.org/enforcer/maven-enforcer-plugin/).
+Het is ook mogelijk om Azul 8 of Azul 11 te selecteren als JDK voor de volledige executie Maven. In tegenstelling tot de opties van toolketins, verandert dit JDK die voor alle stop-ins wordt gebruikt tenzij de toolketenconfiguratie ook wordt geplaatst waarin de toolkettenconfiguratie nog voor toolketens-bewuste Maven plugins wordt toegepast. Hierdoor wordt de Java-versie gecontroleerd en afgedwongen met de [Insteekmodule Apache Maven Enforcer](https://maven.apache.org/enforcer/maven-enforcer-plugin/) werkt.
 
-Hiertoe maakt u een bestand met de naam `.cloudmanager/java-version` in de vertakking van de it-opslagruimte die door de pijplijn wordt gebruikt. Dit bestand kan de inhoud 11 of 8 hebben. Eventuele andere waarden worden genegeerd. Als 11 wordt gespecificeerd, wordt Azul 11 gebruikt en JAVA_HOME milieuvariabele wordt geplaatst aan `/usr/lib/jvm/jdk-11.0.11`. Als 8 wordt gespecificeerd, wordt Azul 8 gebruikt en JAVA_HOME milieuvariabele wordt geplaatst aan `/usr/lib/jvm/jdk-8.0.292`.
+Hiertoe maakt u een bestand met de naam `.cloudmanager/java-version` in de door de pijpleiding gebruikte vertakking van de git-opslagplaats. Dit bestand kan de inhoud 11 of 8 hebben. Eventuele andere waarden worden genegeerd. Als 11 wordt gespecificeerd, wordt Azul 11 gebruikt en JAVA_HOME milieuvariabele wordt geplaatst aan `/usr/lib/jvm/jdk-11.0.11`. Als 8 wordt gespecificeerd, wordt Azul 8 gebruikt en JAVA_HOME milieuvariabele wordt geplaatst aan `/usr/lib/jvm/jdk-8.0.292`.
 
 ## Omgevingsvariabelen {#environment-variables}
 
@@ -125,7 +125,7 @@ Ter ondersteuning hiervan voegt Cloud Manager deze standaardomgevingsvariabelen 
 
 In sommige gevallen, kan het bouwstijlproces van een klant van specifieke configuratievariabelen afhangen die om in de bewaarplaats van het Git ongepast zouden zijn te plaatsen of tussen pijpleidingsuitvoeringen moeten variëren gebruikend de zelfde tak.
 
-Met Cloud Manager kunnen deze variabelen per pijpleiding worden geconfigureerd via de Cloud Manager API of Cloud Manager CLI. Variabelen kunnen worden opgeslagen als onbewerkte tekst of in rust worden versleuteld. In beide gevallen worden variabelen binnen de ontwikkelomgeving beschikbaar gemaakt als een omgevingsvariabele waarnaar vervolgens kan worden verwezen vanuit het `pom.xml`-bestand of andere constructiescripts.
+Met Cloud Manager kunnen deze variabelen per pijpleiding worden geconfigureerd via de Cloud Manager API of Cloud Manager CLI. Variabelen kunnen worden opgeslagen als onbewerkte tekst of in rust worden versleuteld. In beide gevallen worden variabelen binnen de ontwikkelomgeving beschikbaar gemaakt als een omgevingsvariabele die vervolgens van binnen de `pom.xml` of andere build-scripts.
 
 Om een variabele te plaatsen die CLI gebruiken, stel een bevel als in werking:
 
@@ -137,7 +137,7 @@ Huidige variabelen kunnen worden weergegeven:
 
 Namen van variabelen mogen alleen alfanumerieke tekens en onderstrepingstekens (_) bevatten. Volgens de conventie moeten de namen allemaal hoofdletters zijn. Er is een grens van 200 variabelen per pijpleiding, moet elke naam minder dan 100 karakters zijn en elke waarde moet minder dan 2048 karakters in het geval van koordtypevariabelen en 500 karakters in het geval van geheimString typevariabelen zijn.
 
-Bij gebruik in een `Maven pom.xml`-bestand is het doorgaans handig om deze variabelen toe te wijzen aan Ge-maven-eigenschappen met behulp van een soortgelijke syntaxis:
+Indien gebruikt binnen een `Maven pom.xml` Deze variabelen kunt u doorgaans aan Maven-eigenschappen toewijzen met een vergelijkbare syntaxis:
 
 ```xml
         <profile>
@@ -156,7 +156,7 @@ Bij gebruik in een `Maven pom.xml`-bestand is het doorgaans handig om deze varia
 
 ## Extra systeempakketten installeren {#installing-additional-system-packages}
 
-Voor sommige builds moeten extra systeempakketten worden geïnstalleerd om volledig te kunnen functioneren. Een build kan bijvoorbeeld een Python- of ruby-script aanroepen en moet daarom een geschikte taalinterpreter hebben geïnstalleerd. Dit kan worden gedaan door [exec-maven-plugin](https://www.mojohaus.org/exec-maven-plugin/) te roepen om APT aan te halen. Deze uitvoering moet doorgaans worden opgenomen in een specifiek Maven-profiel voor Cloud Manager. Zo kunt u bijvoorbeeld python installeren:
+Voor sommige builds moeten extra systeempakketten worden geïnstalleerd om volledig te kunnen functioneren. Een build kan bijvoorbeeld een Python- of ruby-script aanroepen en moet daarom een geschikte taalinterpreter hebben geïnstalleerd. Dit kan door te roepen [exec-maven-plugin](https://www.mojohaus.org/exec-maven-plugin/) om APT aan te roepen. Deze uitvoering moet doorgaans worden opgenomen in een specifiek Maven-profiel voor Cloud Manager. Zo kunt u bijvoorbeeld python installeren:
 
 ```xml
         <profile>
@@ -209,7 +209,7 @@ Voor sommige builds moeten extra systeempakketten worden geïnstalleerd om volle
         </profile>
 ```
 
-Deze zelfde techniek kan worden gebruikt om taalspecifieke pakketten te installeren, d.w.z. gebruikend `gem` voor RubyGems of `pip` voor Python Pakketten.
+Dezelfde techniek kan worden gebruikt om taalspecifieke pakketten te installeren, d.w.z. `gem` voor RubyGems of `pip` voor Python Packages.
 
 >[!NOTE]
->Als u een systeempakket op deze manier installeert, wordt dit **niet** geïnstalleerd in de runtimeomgeving die voor het uitvoeren van Adobe Experience Manager wordt gebruikt. Als u een systeempakket nodig hebt dat op de AEM-omgeving is geïnstalleerd, neemt u contact op met uw Adobe-vertegenwoordiger.
+>Als u een systeempakket op deze manier installeert, gebeurt dit **niet** installeer de toepassing in de runtimeomgeving die voor het uitvoeren van Adobe Experience Manager wordt gebruikt. Als u een systeempakket nodig hebt dat op de AEM-omgeving is geïnstalleerd, neemt u contact op met uw Adobe-vertegenwoordiger.

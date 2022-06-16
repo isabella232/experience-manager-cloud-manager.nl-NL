@@ -7,9 +7,9 @@ topic-tags: using
 discoiquuid: d2338c74-3278-49e6-a186-6ef62362509f
 feature: Code Quality Rules
 exl-id: 7d118225-5826-434e-8869-01ee186e0754
-source-git-commit: 834508109e34eb1e052abac482e981735c72d43d
+source-git-commit: d4c92a36ca3af123730d68fedf1dbf7ee819c66b
 workflow-type: tm+mt
-source-wordcount: '3611'
+source-wordcount: '3609'
 ht-degree: 3%
 
 ---
@@ -21,7 +21,7 @@ Op deze pagina worden de kwaliteitsregels voor aangepaste code beschreven die do
 
 >[!NOTE]
 >
->Raadpleeg voor meer informatie over de aangepaste kwaliteitsregels voor Cloud Manager in AEM as a Cloud Service [aan deze documentatie.](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/test-results/custom-code-quality-rules.html#using-cloud-manager).
+>Raadpleeg voor meer informatie over de aangepaste kwaliteitsregels voor Cloud Manager in AEM as a Cloud Service [aan deze documentatie](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/test-results/custom-code-quality-rules.html#using-cloud-manager).
 
 >[!NOTE]
 >
@@ -321,7 +321,7 @@ In het algemeen, zou het INFO logboekniveau moeten worden gebruikt om belangrijk
 
 >[!NOTE]
 >
->Dit is niet op access.log-type registreren voor elke verzoeken van toepassing.
+>Dit is niet op access.log-type registreren voor elk verzoek van toepassing.
 
 #### Niet-compatibele code {#non-compliant-code-8}
 
@@ -651,7 +651,7 @@ AEM Componenten die een Klassieke UI dialoog hebben zouden altijd een overeenkom
 * Een component met een dialoogvenster voor het ontwerpen van een klassieke gebruikersinterface (d.w.z. een `design_dialog` knooppunt) moet een corresponderend dialoogvenster voor het ontwerpen van een aanraakinterface hebben (dat wil zeggen een `cq:design_dialog` onderliggende node).
 * Een component met zowel een dialoogvenster voor klassieke gebruikersinterface als een dialoogvenster voor klassieke gebruikersinterface moet zowel een corresponderend dialoogvenster voor aanraakinterface als een overeenkomstig dialoogvenster voor aanraakgebruikersinterface hebben.
 
-De documentatie van de Hulpmiddelen van de Modernisering van het AEM verstrekt details en tooling voor hoe te om componenten van Klassieke UI in Aanraakinterface om te zetten. Zie [De documentatie van de AEM Moderniseringshulpmiddelen ](https://opensource.adobe.com/aem-modernize-tools/pages/tools.html) voor meer informatie .
+De documentatie van de Hulpmiddelen van de Modernisering van het AEM verstrekt details en tooling voor hoe te om componenten van Klassieke UI in Aanraakinterface om te zetten. Zie [De documentatie van de AEM Moderniseringshulpmiddelen ](https://opensource.adobe.com/aem-modernize-tools/) voor meer informatie .
 
 ### Pakketten mogen geen MIP-bestand en onveranderbare inhoud mengen {#oakpal-packages-immutable}
 

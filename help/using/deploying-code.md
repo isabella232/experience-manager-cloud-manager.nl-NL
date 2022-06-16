@@ -10,7 +10,7 @@ topic-tags: using
 discoiquuid: 832a4647-9b83-4a9d-b373-30fe16092b15
 feature: Code Deployment
 exl-id: 3d6610e5-24c2-4431-ad54-903d37f4cdb6
-source-git-commit: 9a9d7067a1369e80ccf9b2925369a466b3da2901
+source-git-commit: 4c86446127c8cd66f964b192f3602f02fd2ddf8e
 workflow-type: tm+mt
 source-wordcount: '1615'
 ht-degree: 0%
@@ -221,7 +221,7 @@ Om te bepalen of een uitvoering een uitvoering is die opnieuw wordt uitgevoerd, 
 
 ### Nieuwe uitvoering activeren
 
-Om een heruitvoering te activeren, moet een verzoek van de PUT aan de Verbinding van het HAL &lt; (<http://ns.adobe.com/adobecloud/rel/pipeline/reExecute>)> op de status van de stap Implementeren van de productie. Als deze koppeling aanwezig is, kan de uitvoering vanaf die stap opnieuw worden gestart. Als dit niet het geval is, kan de uitvoering niet vanaf die stap opnieuw worden gestart. In de aanvankelijke versie, zal deze verbinding slechts ooit op de productie zijn opstellen stap maar de toekomstige versies kunnen het beginnen van de pijpleiding van andere stappen steunen. Voorbeeld:
+Om een re-uitvoering teweeg te brengen, moet een verzoek van de PUT aan de Verbinding van de HAL worden gedaan ```http://ns.adobe.com/adobecloud/rel/pipeline/reExecute``` op de productie opstellen stapstaat. Als deze koppeling aanwezig is, kan de uitvoering vanaf die stap opnieuw worden gestart. Als dit niet het geval is, kan de uitvoering niet vanaf die stap opnieuw worden gestart. In de aanvankelijke versie, zal deze verbinding slechts ooit op de productie zijn opstellen stap maar de toekomstige versies kunnen het beginnen van de pijpleiding van andere stappen steunen. Voorbeeld:
 
 ```Javascript
  {

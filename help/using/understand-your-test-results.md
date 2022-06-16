@@ -7,9 +7,9 @@ topic-tags: using
 discoiquuid: 83299ed8-4b7a-4b1c-bd56-1bfc7e7318d4
 feature: CI-CD Pipeline, Test Results
 exl-id: 6a574858-a30e-4768-bafc-8fe79f928294
-source-git-commit: 2179314120911cac8a0dd99a8b57974751959871
+source-git-commit: bfcb0fb5b9cf8317eb75e3b7b46455b14cd9d7b7
 workflow-type: tm+mt
-source-wordcount: '2897'
+source-wordcount: '2896'
 ht-degree: 1%
 
 ---
@@ -26,7 +26,7 @@ Deze worden gerapporteerd met behulp van een driegistair ratingsysteem zoals ged
 
 >[!NOTE]
 >
->Als u meer wilt weten over tests die worden ondersteund door Cloud Manager voor AEM as a Cloud Service, raadpleegt u de [AEM as a Cloud Service documentatie.](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/test-results/overview-test-results.html).
+>Als u meer wilt weten over tests die worden ondersteund door Cloud Manager voor AEM as a Cloud Service, raadpleegt u de [as a Cloud Service documentatie AEM](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/test-results/overview-test-results.html).
 
 
 ## Waarderingen met drie lagen  {#three-tier-gates-while-running-a-pipeline}
@@ -76,7 +76,7 @@ De resultaten van het testen van de codekwaliteit worden geleverd zoals **rating
 
 >[!NOTE]
 >
->Zie [Metrische definities van SonarQube](https://docs.sonarqube.org/display/SONAR/Metric+Definitions) voor meer gedetailleerde informatie.
+>Zie [Metrische definities van SonarQube](https://docs.sonarqube.org/latest/user-guide/metric-definitions/) voor meer gedetailleerde informatie.
 
 >[!NOTE]
 >
@@ -309,3 +309,4 @@ Een speciaal geval kan voorkomen wanneer het &quot;alle&quot;inhoudspakket een c
 >
 >* Deze optimalisatie heeft geen invloed op de pakketten die worden geïmplementeerd op AEM.
 >* Omdat de overeenkomst tussen de ingesloten inhoudspakketten en de overgeslagen inhoudspakketten is gebaseerd op bestandsnamen, kan deze optimalisatie niet worden uitgevoerd als meerdere overgeslagen inhoudspakketten exact dezelfde bestandsnaam hebben of als de bestandsnaam tijdens het insluiten is gewijzigd.
+
