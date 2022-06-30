@@ -7,9 +7,9 @@ topic-tags: using
 discoiquuid: 83299ed8-4b7a-4b1c-bd56-1bfc7e7318d4
 feature: CI-CD Pipeline, Test Results
 exl-id: 6a574858-a30e-4768-bafc-8fe79f928294
-source-git-commit: bfcb0fb5b9cf8317eb75e3b7b46455b14cd9d7b7
+source-git-commit: fefb267793e5e1dc6f604a753e89cce2bf2620dd
 workflow-type: tm+mt
-source-wordcount: '2896'
+source-wordcount: '2917'
 ht-degree: 1%
 
 ---
@@ -160,7 +160,12 @@ Het aantal virtuele gebruikers of containers dat wordt gespun door de Manager va
 
 #### Crawler {#crawler}
 
-Vóór het begin van de testperiode van 30 minuten, zal de Manager van de Wolk de het opvoeren omgeving kruipen gebruikend een reeks van één of meerdere zaadURLs die door de Ingenieur van het Succes van de Klant wordt gevormd. Vanaf deze URL&#39;s wordt de HTML van elke pagina geïnspecteerd en worden koppelingen in de breedteeerste modus doorlopen. Dit schuifproces is beperkt tot maximaal 5000 pagina&#39;s. De verzoeken van de kruipper hebben een vaste onderbreking van 10 seconden.
+Vóór het begin van de testperiode van 30 minuten, zal de Manager van de Wolk de het opvoeren omgeving kruipen gebruikend een reeks van één of meerdere zaadURLs die door de Ingenieur van het Succes van de Klant wordt gevormd. Vanaf deze URL&#39;s wordt de HTML van elke pagina geïnspecteerd en worden koppelingen in de breedteeerste modus doorlopen.
+
+* Dit schuifproces is standaard beperkt tot maximaal 5000 pagina&#39;s.
+* Het maximumaantal pagina&#39;s dat moet worden getest, kan worden overschreven door het instellen van de [omgevingsvariabele](build-environment-details.md#environment-variables) `MAX_PAGES`.
+   * Toegestane waarden zijn `2000` - `7000`.
+* De verzoeken van de kruipper hebben een vaste onderbreking van 10 seconden.
 
 #### Paginasets voor testen {#page-sets}
 

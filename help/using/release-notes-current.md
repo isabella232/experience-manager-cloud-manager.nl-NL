@@ -1,19 +1,19 @@
 ---
-title: Opmerkingen bij de release 2022.6.0
-description: Dit zijn de opmerkingen bij de release 2022.6.0 voor Cloud Manager.
+title: Opmerkingen bij de release 2022.7.0
+description: Dit zijn de opmerkingen bij de release 2022.7.0 voor Cloud Manager.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: dab08a2499b521b7026ab2bd17b82cb241f26fb6
+source-git-commit: 1b5510af0cdb0ccb3267723836910f6c5711122e
 workflow-type: tm+mt
-source-wordcount: '179'
+source-wordcount: '140'
 ht-degree: 1%
 
 ---
 
 
-# Opmerkingen bij de release 2022.6.0 voor Cloud Manager {#release-notes}
+# Opmerkingen bij de release 2022.7.0 voor Cloud Manager {#release-notes}
 
-Op deze pagina worden de opmerkingen bij de release voor [!UICONTROL Cloud Manager] release 2022.6.0.
+Op deze pagina worden de opmerkingen bij de release voor [!UICONTROL Cloud Manager] release 2022.7.0.
 
 >[!NOTE]
 >
@@ -21,16 +21,13 @@ Op deze pagina worden de opmerkingen bij de release voor [!UICONTROL Cloud Manag
 
 ## Releasedatum {#release-date}
 
-De releasedatum voor [!UICONTROL Cloud Manager] release 2022.6.0 is 9 juni 2022. De volgende release is gepland voor 30 juni 2022.
+De releasedatum voor [!UICONTROL Cloud Manager] release 2022.7.0 is 30 juni 2022. De volgende release is gepland voor 11 augustus 2022.
 
 ## Wat is er nieuw? {#what-is-new}
 
-* Een nieuwe welkomstkaart op de landingspagina van Cloud Manager biedt gebruikers snel toegang tot zelfstudies aan boord en voortgangsgegevens voor de huurder.
-   * Deze functie wordt in de week na de release van 2022.06.0 geleidelijk ingevoerd.
-* [Buildartefacten kunnen nu opnieuw worden gebruikt](/help/using/setting-up-project.md#build-artifact-reuse) bij gebruik van git spiegelen.
+* Gebruikers van Cloud Manager kunnen nu nuttige videozelfstudies openen vanaf de openingspagina **Welkom** op elk gewenst moment.
+* Het maximumaantal te testen pagina&#39;s [kan nu worden overschreven door de MAX_PAGES-omgevingsvariabele in te stellen.](understand-your-test-results.md#crawler)
 
-## API-wijzigingen {#api-changes}
+## Opgeloste problemen {#bug-fixes}
 
-* De [`List Programs`](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/getPrograms) API is vervangen en [`List Programs for Tenant`](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/getProgramsForTenant) moet worden gebruikt.
-   * `List Programs` blijft werken, maar het gebruik ervan zal waarschuwingsberichten in logboeken genereren.
-   * Na drie maanden wordt er geen steun meer verleend.
+* Een probleem werd opgelost waar na de goedkeuring van een frontend pijpleiding geen vraag werd gemaakt om de plaatsingsstap uit te voeren.
