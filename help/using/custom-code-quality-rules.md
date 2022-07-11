@@ -1,15 +1,10 @@
 ---
 title: Aangepaste regels voor codekwaliteit
-description: Op deze pagina worden de regels voor de kwaliteit van aangepaste code beschreven die door Cloud Manager worden uitgevoerd als onderdeel van het testen van de kwaliteit van de code. Zij zijn gebaseerd op beste praktijken van AEM Techniek.
-uuid: a7feb465-1982-46be-9e57-e67b59849579
-products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
-topic-tags: using
-discoiquuid: d2338c74-3278-49e6-a186-6ef62362509f
-feature: Code Quality Rules
+description: Meer informatie over de regels voor de kwaliteit van aangepaste code die door Cloud Manager worden uitgevoerd als onderdeel van het testen van de kwaliteit van de code, op basis van de aanbevolen procedures van AEM Engineering.
 exl-id: 7d118225-5826-434e-8869-01ee186e0754
-source-git-commit: d4c92a36ca3af123730d68fedf1dbf7ee819c66b
+source-git-commit: 5fe0d20d9020e6b90353ef5a54e49c93be5c00be
 workflow-type: tm+mt
-source-wordcount: '3609'
+source-wordcount: '3575'
 ht-degree: 3%
 
 ---
@@ -17,11 +12,7 @@ ht-degree: 3%
 
 # Aangepaste regels voor codekwaliteit {#custom-code-quality-rules}
 
-Op deze pagina worden de kwaliteitsregels voor aangepaste code beschreven die door Cloud Manager worden uitgevoerd als onderdeel van [testen van de codekwaliteit.](understand-your-test-results.md) Zij zijn gebaseerd op beste praktijken van AEM Techniek.
-
->[!NOTE]
->
->Raadpleeg voor meer informatie over de aangepaste kwaliteitsregels voor Cloud Manager in AEM as a Cloud Service [aan deze documentatie](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/test-results/custom-code-quality-rules.html#using-cloud-manager).
+Meer informatie over de aangepaste kwaliteitsregels voor code die door Cloud Manager worden uitgevoerd als onderdeel van [testen van de codekwaliteit;](/help/using/code-quality-testing.md) gebaseerd op de beste praktijken van AEM Engineering.
 
 >[!NOTE]
 >
