@@ -2,9 +2,9 @@
 title: Inleiding tot Cloud Manager voor AMS
 description: Begin hier om Cloud Manager voor Adobe Managed Services (AMS) te leren kennen en hoe organisaties Adobe Experience Manager in de cloud kunnen beheren.
 exl-id: 58344d8a-b869-4177-a9cf-6a8b7dfe9588
-source-git-commit: b0dbb602253939464ff034941ffbad84b7df77df
+source-git-commit: 22d40a1f07f56ee7a7dddb4897e4079f1e346674
 workflow-type: tm+mt
-source-wordcount: '854'
+source-wordcount: '1292'
 ht-degree: 3%
 
 ---
@@ -29,7 +29,7 @@ Begin hier om Cloud Manager for Adobe Manage Services (AMS) te leren kennen en h
 >
 >In deze documentatie worden specifiek de functies en functies van Cloud Manager voor Adobe Managed Services (AMS) beschreven.
 >
->De equivalente documentatie voor AEM as a Cloud Service is te vinden in de [AEM as a Cloud Service documentatie.](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/home.html)
+>De equivalente documentatie voor AEM as a Cloud Service is te vinden in de [AEM as a Cloud Service documentatie.](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/home.html)
 
 Met Cloud Manager beschikt uw ontwikkelteam over de volgende functies:
 
@@ -39,7 +39,7 @@ Met Cloud Manager beschikt uw ontwikkelteam over de volgende functies:
 
 * API-connectiviteit als aanvulling op bestaande DevOps-processen
 
-* Autoscaling die intelligent de behoefte aan verhoogde capaciteit ontdekt en automatisch online extra verzenders/het publiceren segmenten brengt
+* Autoscaling die intelligent de behoefte aan verhoogde capaciteit ontdekt en automatisch extra Verzender/het publiceren segmenten online brengt
 
 Dit beeld illustreert de CI/CD processtroom die in wordt gebruikt [!UICONTROL Cloud Manager]:
 
@@ -75,14 +75,59 @@ Onafhankelijk van de plaatsingstrekker, worden de kwaliteitscontroles altijd uit
 
 Meer informatie over het opstellen van code en kwaliteitscontroles, zie het document [Code implementeren.](/help/using/code-deployment.md)
 
+## Optionele functies in Cloud Manager {#optional-features-in-cloud-manager}
+
+Cloud Manager biedt extra, geavanceerde functies die gunstig kunnen zijn voor uw project, afhankelijk van de instellingen en behoeften van uw specifieke omgeving. Als deze functies u interesseren, kunt u contact opnemen met uw Customer Success Engineer (CSE) of Adobe-medewerker om verder te bespreken.
+
 ### Automatisch schalen {#autoscaling}
 
-wanneer de productieomgeving te kampen heeft met een ongewoon hoge belasting, [!UICONTROL Cloud Manager] detecteert de behoefte aan extra capaciteit en brengt automatisch extra capaciteit online met behulp van de functie voor automatisch schalen.
+Wanneer de productieomgeving aan ongewoon hoge belasting onderhevig is, [!UICONTROL Cloud Manager] detecteert de behoefte aan extra capaciteit en brengt automatisch extra capaciteit online met behulp van de functie voor automatisch schalen.
 
-In dat geval [!UICONTROL Cloud Manager] activeert automatisch het inrichtingsproces voor automatisch schalen, verzendt een melding van de gebeurtenis voor automatisch schalen en plaatst binnen enkele minuten extra capaciteit online. De extra capaciteit wordt geleverd in de productieomgeving, in dezelfde regio of regio&#39;s en overeenkomstig dezelfde systeemspecificaties als de actieve verzender/publicatieknooppunten.
+In dat geval [!UICONTROL Cloud Manager] activeert automatisch het inrichtingsproces voor automatisch schalen, verzendt een melding van de gebeurtenis voor automatisch schalen en plaatst binnen enkele minuten extra capaciteit online. De extra capaciteit wordt geleverd in de productieomgeving, in dezelfde regio of regio&#39;s en overeenkomstig dezelfde systeemspecificaties als de actieve Dispatcher/publishing-knooppunten.
 
-De functie voor automatisch schalen is alleen van toepassing op de verzender/publicatielaag en wordt uitgevoerd met een horizontale schaalmethode, met minimaal één extra segment van een verzender/publicatiepaar tot maximaal tien segmenten. Eventuele extra capaciteit die wordt geleverd, wordt handmatig geschaald binnen een periode van tien werkdagen, zoals bepaald door de CSE (Customer Success Engineer).
+De functie voor automatisch schalen is alleen van toepassing op de laag Dispatcher/publishing en wordt uitgevoerd met een horizontale schaalmethode, met minimaal één extra segment van een paar Dispatcher/publishing tot maximaal tien segmenten. Eventuele extra capaciteit die wordt geleverd, wordt handmatig geschaald binnen een periode van tien werkdagen, zoals bepaald door de CSE (Customer Success Engineer).
 
 >[!NOTE]
 >
->Klanten die willen nagaan of autoscaling geschikt is voor hun toepassing, moeten contact opnemen met hun CSE of Adobe-vertegenwoordiger.
+>Neem contact op met uw CSE of Adobe als u graag wilt weten of automatische schaling geschikt is voor uw toepassing.
+
+### Blauwe/groene implementaties {#blue-green}
+
+Blauwe/groene implementatie is een techniek die downtime en risico&#39;s vermindert door twee identieke productieomgevingen uit te voeren, die blauw en groen worden genoemd.
+
+Op elk ogenblik, is slechts één van de milieu&#39;s levend, met het levende milieu dat al productieverkeer dient. Over het algemeen is blauw de huidige live omgeving en groen is inactief.
+
+* Blauwe/groene implementatie is een add-on bij Ci/cd-pijpleidingen van Cloud Manager waarin een tweede set groene publicatie- en Dispatcher-instanties wordt gemaakt en gebruikt voor implementaties. De groene instanties worden vervolgens gekoppeld aan het taakverdelingsmechanisme voor de productie en de oude (blauwe) exemplaren worden verwijderd en beëindigd.
+* Deze implementatie van blauw/groen behandelt instanties als voorbijgaand en elke herhaling van een blauwe/groene pijpleiding zal tot een nieuwe reeks publiceren en servers van de Verzender leiden.
+* Als onderdeel van de installatie wordt een groene taakverdelingsmechanisme gemaakt. Dit taakverdelingsmechanisme wordt nooit gewijzigd en verwijst naar de groene of &quot;test&quot;-URL.
+* Tijdens een blauwe/groene implementatie wordt een exacte replica van de bestaande publicatie-/Dispatcher-lagen gemaakt (zoals gelezen van de TDL).
+
+#### Blauwe/groene implementatiestroom {#flow}
+
+Wanneer de blauwe/groene plaatsing wordt toegelaten, verschilt de plaatsingsstroom van de standaard Cloud Service plaatsingsstroom.
+
+| Stap | Blauwe/groene implementatie | Standaardimplementatie |
+|---|---|---|
+| 1 | Implementatie aan auteur | Implementatie aan auteur |
+| 2 | Onderbreken voor testen | - |
+| 3 | Groene infrastructuur wordt gemaakt | - |
+| 4 | Implementatie in groene publicatie-/Dispatcher-lagen | Implementatie aan uitgever |
+| 5 | Onderbreken voor testen (maximaal 24 uur) | - |
+| 6 | Groene infrastructuur wordt toegevoegd aan het taakverdelingsmechanisme voor productie | - |
+| 7 | Blauwe infrastructuur wordt verwijderd uit het productielast-taakverdelingsmechanisme- |
+| 8 | Blauwe infrastructuur wordt automatisch beëindigd | - |
+
+#### Blauw/groen implementeren {#implementing}
+
+Alle AMS-gebruikers die Cloud Manager gebruiken voor productieimplementaties, kunnen gebruikmaken van een blauwe/groene implementatie. Het gebruik van een blauw/groene implementatie vereist echter extra validatie van uw omgevingen en installatie door een Adobe-CSE.
+
+Als u in blauwe/groene plaatsing geinteresseerd bent, te overwegen gelieve de volgende vereisten en beperkingen en uw CSE te contacteren.
+
+#### Eisen en beperkingen {#limitations}
+
+* Blauw/groen is alleen beschikbaar voor publicatie/verzender-paren.
+* De paren van de Verzending van de voorproef/publiceren maken geen deel uit van blauwe/groene plaatsingen.
+* Elk paar Dispatcher/publish is gelijk aan elk ander paar Dispatcher/publish.
+* Blauw/groen is alleen beschikbaar in de productieomgeving.
+* Blauw/groen is zowel beschikbaar in AWS als in Azure.
+* Blauw/groen is niet alleen beschikbaar voor klanten met middelen.
