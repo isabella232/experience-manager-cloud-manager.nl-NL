@@ -2,9 +2,9 @@
 title: Inleiding tot Cloud Manager voor AMS
 description: Begin hier om Cloud Manager voor Adobe Managed Services (AMS) te leren kennen en hoe organisaties Adobe Experience Manager in de cloud kunnen beheren.
 exl-id: 58344d8a-b869-4177-a9cf-6a8b7dfe9588
-source-git-commit: 22d40a1f07f56ee7a7dddb4897e4079f1e346674
+source-git-commit: 14e35882765783b234ca35da14257279af5130a0
 workflow-type: tm+mt
-source-wordcount: '1292'
+source-wordcount: '1287'
 ht-degree: 3%
 
 ---
@@ -100,7 +100,7 @@ Op elk ogenblik, is slechts één van de milieu&#39;s levend, met het levende mi
 * Blauwe/groene implementatie is een add-on bij Ci/cd-pijpleidingen van Cloud Manager waarin een tweede set groene publicatie- en Dispatcher-instanties wordt gemaakt en gebruikt voor implementaties. De groene instanties worden vervolgens gekoppeld aan het taakverdelingsmechanisme voor de productie en de oude (blauwe) exemplaren worden verwijderd en beëindigd.
 * Deze implementatie van blauw/groen behandelt instanties als voorbijgaand en elke herhaling van een blauwe/groene pijpleiding zal tot een nieuwe reeks publiceren en servers van de Verzender leiden.
 * Als onderdeel van de installatie wordt een groene taakverdelingsmechanisme gemaakt. Dit taakverdelingsmechanisme wordt nooit gewijzigd en verwijst naar de groene of &quot;test&quot;-URL.
-* Tijdens een blauwe/groene implementatie wordt een exacte replica van de bestaande publicatie-/Dispatcher-lagen gemaakt (zoals gelezen van de TDL).
+* Tijdens een blauwe/groene implementatie wordt een exacte replica van de bestaande publicatie-/Dispatcher-lagen gemaakt.
 
 #### Blauwe/groene implementatiestroom {#flow}
 
@@ -111,7 +111,7 @@ Wanneer de blauwe/groene plaatsing wordt toegelaten, verschilt de plaatsingsstro
 | 1 | Implementatie aan auteur | Implementatie aan auteur |
 | 2 | Onderbreken voor testen | - |
 | 3 | Groene infrastructuur wordt gemaakt | - |
-| 4 | Implementatie in groene publicatie-/Dispatcher-lagen | Implementatie aan uitgever |
+| 4 | Implementatie in groene publicatie-/verzendingslagen | Implementatie aan uitgever |
 | 5 | Onderbreken voor testen (maximaal 24 uur) | - |
 | 6 | Groene infrastructuur wordt toegevoegd aan het taakverdelingsmechanisme voor productie | - |
 | 7 | Blauwe infrastructuur wordt verwijderd uit het productielast-taakverdelingsmechanisme- |
