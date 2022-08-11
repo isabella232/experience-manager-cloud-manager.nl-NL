@@ -1,19 +1,19 @@
 ---
-title: Opmerkingen bij de release 2022.7.0
-description: Dit zijn de opmerkingen bij de release 2022.7.0 voor Cloud Manager.
+title: Opmerkingen bij de release 2022.8.0
+description: Dit zijn de opmerkingen bij de release 2022.8.0 voor Cloud Manager.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 6572c16aea2c5d2d1032ca5b0f5d75ade65c3a19
+source-git-commit: 1c4fe7407dc059773cfd0c1779a11c1ba1acad22
 workflow-type: tm+mt
-source-wordcount: '138'
+source-wordcount: '150'
 ht-degree: 1%
 
 ---
 
 
-# Opmerkingen bij de release 2022.7.0 voor Cloud Manager {#release-notes}
+# Opmerkingen bij de release 2022.8.0 voor Cloud Manager {#release-notes}
 
-Op deze pagina worden de opmerkingen bij de release voor [!UICONTROL Cloud Manager] release 2022.7.0.
+Op deze pagina worden de opmerkingen bij de release voor [!UICONTROL Cloud Manager] release 2022.8.0.
 
 >[!NOTE]
 >
@@ -21,13 +21,14 @@ Op deze pagina worden de opmerkingen bij de release voor [!UICONTROL Cloud Manag
 
 ## Releasedatum {#release-date}
 
-De releasedatum voor [!UICONTROL Cloud Manager] release 2022.7.0 is 30 juni 2022. De volgende release is gepland voor 11 augustus 2022.
+De releasedatum voor [!UICONTROL Cloud Manager] release 2022.8.0 is 11 augustus 2022. De volgende release is gepland voor 9 september 2022.
 
 ## Wat is er nieuw? {#what-is-new}
 
-* Gebruikers van Cloud Manager kunnen nu nuttige videozelfstudies openen vanaf de openingspagina **Welkom** op elk gewenst moment.
-* Het maximumaantal te testen pagina&#39;s [kan nu worden overschreven door het instellen van `MAX_PAGES` omgevingsvariabele.](/help/using/code-quality-testing.md#crawler)
+* In bepaalde scenario&#39;s, zal een stil mechanisme van het re-try helpen ervoor zorgen dat de plaatsingspijpleiding niet in een foutenstaat resulteert.
+* [Het AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) in Cloud Manager is bijgewerkt naar versie 37.
 
 ## Opgeloste problemen {#bug-fixes}
 
-* Een probleem werd opgelost waar na de goedkeuring van een frontend pijpleiding geen vraag werd gemaakt om de plaatsingsstap uit te voeren.
+* Bepaalde gevallen van onregelmatige fouten bij het aanmaken van de opslagplaats zijn veerkrachtiger gemaakt.
+* Zeldzame voorvallen van VSTS org opstellingsfouten worden nu verminderd toe te schrijven aan geïntroduceerde herpogingen.
