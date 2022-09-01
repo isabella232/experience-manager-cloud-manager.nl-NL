@@ -2,9 +2,9 @@
 title: Eerste aanmelding
 description: Volg deze pagina als u algemene configuraties hebt ingesteld en u voor het eerst Cloud Manager kunt gebruiken.
 exl-id: eb043437-8566-4a8d-8c5c-c8cf1d33daeb
-source-git-commit: d033b7cf53d4d9faf074f1dc09e2958eb91afe3b
+source-git-commit: 43d05eed9c2e7c4cf6c3becdbc3e4522428722b7
 workflow-type: tm+mt
-source-wordcount: '188'
+source-wordcount: '181'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ Zodra u opstelling de algemene configuratie voor [!UICONTROL Cloud Manager], ben
 
 ## Aanmelden voor de eerste keer {#logging-in-for-the-first-time}
 
-1. Aanmelden bij Adobe [!UICONTROL Experience Cloud] en je ziet de lijst van programma &#39; s .
+1. Aanmelden bij Adobe [!UICONTROL Experience Cloud] en je ziet de lijst met programma &#39; s .
 
 1. Selecteer het programma.
 
@@ -34,7 +34,7 @@ Zodra u opstelling de algemene configuratie voor [!UICONTROL Cloud Manager], ben
 
 1. Klikken **Installatieprogramma** om uw programmabeschrijving in te stellen en belangrijke prestatie-indicatoren (KPI&#39;s) te definiëren.
 
-Ga door met het document [Programma instellen](https://helpx.adobe.com/experience-manager/cloud-manager/using/program-setup.html) voor de volgende stappen in het instellen van uw programma.
+Ga door met het document [Programma instellen](/help/getting-started/program-setup.md) voor de volgende stappen in het instellen van uw programma.
 
 ## Activiteit van cloudbeheer {#activity}
 
