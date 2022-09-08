@@ -1,19 +1,19 @@
 ---
-title: Opmerkingen bij de release 2022.8.0
-description: Dit zijn de opmerkingen bij de release 2022.8.0 voor Cloud Manager.
+title: Opmerkingen bij de release 2022.9.0
+description: Dit zijn de opmerkingen bij de release 2022.9.0 voor Cloud Manager.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 1c4fe7407dc059773cfd0c1779a11c1ba1acad22
+source-git-commit: e74d386d0b2d50a7e276bb7ead7594ef448742ae
 workflow-type: tm+mt
-source-wordcount: '150'
+source-wordcount: '196'
 ht-degree: 1%
 
 ---
 
 
-# Opmerkingen bij de release 2022.8.0 voor Cloud Manager {#release-notes}
+# Opmerkingen bij de release 2022.9.0 van Cloud Manager {#release-notes}
 
-Op deze pagina worden de opmerkingen bij de release voor [!UICONTROL Cloud Manager] release 2022.8.0.
+Op deze pagina worden de opmerkingen bij de release voor [!UICONTROL Cloud Manager] release 2022.9.0.
 
 >[!NOTE]
 >
@@ -21,14 +21,16 @@ Op deze pagina worden de opmerkingen bij de release voor [!UICONTROL Cloud Manag
 
 ## Releasedatum {#release-date}
 
-De releasedatum voor [!UICONTROL Cloud Manager] release 2022.8.0 is 11 augustus 2022. De volgende release is gepland voor 9 september 2022.
+De releasedatum voor [!UICONTROL Cloud Manager] release 2022.9.0 is 8 september 2022. De volgende release is gepland voor 6 oktober 2022.
 
 ## Wat is er nieuw? {#what-is-new}
 
-* In bepaalde scenario&#39;s, zal een stil mechanisme van het re-try helpen ervoor zorgen dat de plaatsingspijpleiding niet in een foutenstaat resulteert.
-* [Het AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) in Cloud Manager is bijgewerkt naar versie 37.
+* Ondersteuning voor Cloud Manager voor automatisch schalen met meerdere regio&#39;s.
+* Nieuwe welkomstpaginakaart die is aangepast voor gebruikers met alleen een rol van gebruiker van Cloud Manager die hen begeleidt bij het navigeren naar AEM omgevingen en de beperkte toegang tot programma&#39;s.
+* Klanten zonder de rol Cloud Manager hebben geen toegang tot de programmatiedetails. Ze kunnen echter wel naar de eindpunten van de auteur navigeren vanaf de opvoerpagina van CM.
+* Elimineer pijplijnmislukkingen die uit retry mislukkingen voortvloeien die door grotere veerkracht worden bereikt.
 
 ## Opgeloste problemen {#bug-fixes}
 
-* Bepaalde gevallen van onregelmatige fouten bij het aanmaken van de opslagplaats zijn veerkrachtiger gemaakt.
-* Zeldzame voorvallen van VSTS org opstellingsfouten worden nu verminderd toe te schrijven aan geïntroduceerde herpogingen.
+* Verbeterde klantfeedback met betrekking tot de build van de AEM-app wanneer de klant wordt geconfronteerd met connectiviteitsproblemen met privérepo&#39;s.
+* In zeldzame gevallen, wanneer het systeem van de gezondheidscontrole geen geldige gezondheidsscore kan terugwinnen, zal een auto-schaalgebeurtenis niet teweeggebracht worden.
