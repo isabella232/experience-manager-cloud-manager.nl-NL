@@ -2,9 +2,9 @@
 title: Eerste aanmelding
 description: Volg deze pagina als u algemene configuraties hebt ingesteld en u voor het eerst Cloud Manager kunt gebruiken.
 exl-id: eb043437-8566-4a8d-8c5c-c8cf1d33daeb
-source-git-commit: 43d05eed9c2e7c4cf6c3becdbc3e4522428722b7
+source-git-commit: d8f16deacfe52c76ff6b0aee0344d50bfe2b9c74
 workflow-type: tm+mt
-source-wordcount: '181'
+source-wordcount: '255'
 ht-degree: 0%
 
 ---
@@ -39,3 +39,7 @@ Ga door met het document [Programma instellen](/help/getting-started/program-set
 ## Activiteit van cloudbeheer {#activity}
 
 Cloud Manager biedt een geconsolideerde weergave van de activiteit van een programma, waarin alle uitgevoerde CI-/CD-pijpleidingen, zowel de productie als de niet-productie, worden vermeld, zodat de activiteiten in het verleden en heden zichtbaar zijn.
+
+>[!NOTE]
+>
+>Een gebruiker met toegang tot een AEM-omgeving heeft standaard ook de rol Gebruiker van Cloud Manager. Deze rol op zich is ontoereikend om de gebruiker toegang te geven tot de mening van de programmadetails. Een dergelijke gebruiker met alleen de gebruikersrol van Cloud Manager kan via de opties in het programmamenu naar de auteur-URL van de AEM omgeving navigeren (als er omgevingen zijn). Dergelijke gebruikers moeten hun beheerder contacteren als zij programma-vlakke toegang willen krijgen.
