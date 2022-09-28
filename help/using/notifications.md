@@ -2,7 +2,7 @@
 title: Meldingen
 description: Leer hoe Cloud Manager u op de hoogte brengt van belangrijke gebeurtenissen.
 exl-id: cfd5655f-2d2c-4304-b25c-6cdffe7ff64c
-source-git-commit: 804b537bbd61105a92b42960d44ecedabfb13099
+source-git-commit: e767d9ff5e3df0047d2cf47d7b0842854101a01a
 workflow-type: tm+mt
 source-wordcount: '563'
 ht-degree: 0%
@@ -82,7 +82,7 @@ U kunt het gedrag van de waarschuwingen definiëren.
 * **Waarschuwingen moeten op het scherm blijven staan totdat ik ze afsluit** - Controleert of de waarschuwingen zouden moeten voortbestaan tenzij u hen actief ontslaat
 * **Duur** - Hiermee bepaalt u hoe lang de waarschuwing op het scherm moet blijven als u niet hebt gekozen dat deze op het scherm moet blijven.
 
-## E-mails {#emails}
+### E-mails {#emails}
 
 Meldingen zijn beschikbaar in de webgebruikersinterface van Adobe [!UICONTROL Experience Cloud] oplossingen. U kunt ervoor kiezen deze meldingen via e-mail te verzenden in het dialoogvenster **E-mails** sectie.
 
