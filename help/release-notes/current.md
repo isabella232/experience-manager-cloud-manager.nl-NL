@@ -1,19 +1,19 @@
 ---
-title: Opmerkingen bij de release 2022.10.0
-description: Dit zijn de opmerkingen bij de release 2022.10.0 voor Cloud Manager.
+title: Opmerkingen bij de release 2022.11.0
+description: Dit zijn de opmerkingen bij de release 2022.11.0 voor Cloud Manager.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 69c1c8a1136c037a5eea635a75f2d4d187f2ac4d
+source-git-commit: 2defbdbee0221540f66f7d824ccf1bd33179c9d9
 workflow-type: tm+mt
-source-wordcount: '120'
+source-wordcount: '128'
 ht-degree: 1%
 
 ---
 
 
-# Opmerkingen bij de release 2022.10.0 voor Cloud Manager {#release-notes}
+# Opmerkingen bij de release 2022.11.0 voor Cloud Manager {#release-notes}
 
-Op deze pagina worden de opmerkingen bij de release voor [!UICONTROL Cloud Manager] release 2022.10.0.
+Op deze pagina worden de opmerkingen bij de release voor [!UICONTROL Cloud Manager] release 2022.11.0.
 
 >[!NOTE]
 >
@@ -21,12 +21,12 @@ Op deze pagina worden de opmerkingen bij de release voor [!UICONTROL Cloud Manag
 
 ## Releasedatum {#release-date}
 
-De releasedatum voor [!UICONTROL Cloud Manager] release 2022.10.0 is 6 oktober 2022. De volgende release is gepland voor 3 november 2022.
+De releasedatum voor [!UICONTROL Cloud Manager] release 2022.11.0 is 3 november 2022. De volgende release is gepland voor 29 november 2022.
 
 ## Wat is er nieuw? {#what-is-new}
 
-* De versie van de [Project archetype AEM](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) gebruikt door Cloud Manager is bijgewerkt naar versie 39.
+* Wanneer een milieu verbonden aan een pijpleiding een status heeft die niet de pijpleiding om toelaat worden uitgevoerd, wordt de looppasactie onbruikbaar gemaakt met verklarende tooltip.
 
 ## Opgeloste problemen {#bug-fixes}
 
-* De betrouwbaarheid van de prestatietests voor activa werd verbeterd door onder bepaalde omstandigheden nieuwe pogingen toe te voegen.
+* De feedback tijdens de bewerkingsproductiepijplijn is verbeterd en komt niet vaak voor in een of meer ontbrekende omgevingen.
