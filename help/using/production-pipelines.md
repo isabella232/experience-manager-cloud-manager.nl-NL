@@ -2,7 +2,7 @@
 title: Productiepijpleidingen configureren
 description: Leer hoe u met Cloud Manager productiepijpleidingen kunt maken en configureren om uw code te implementeren.
 exl-id: d489fa3c-df1e-480b-82d0-ac8cce78a710
-source-git-commit: 99325c28c379103db2ba4c19bb6d206849c6e126
+source-git-commit: 39b38da17ed1cadf4f2e9633a9e76b537325316f
 workflow-type: tm+mt
 source-wordcount: '1296'
 ht-degree: 0%
@@ -93,8 +93,9 @@ Als u eenmaal [!UICONTROL Cloud Manager] UI om uw programma op te zetten en mins
 
             1. Onder **PAD** geef een inhoudspad op.
             1. Onder **TYPE** selecteert u de actie die op dat pad moet worden uitgevoerd.
-            * **Uitspoelen** - Voer een cachevalidatie uit, net als wanneer inhoud wordt geactiveerd van een ontwerpinstantie naar een publicatieinstantie.
-            * **Ongeldige** - Hiermee wordt het cachegeheugen verwijderd.
+
+               * **Uitspoelen** - Een cache verwijderen.
+               * **Ongeldige** - Voer een cachevalidatie uit, net als wanneer inhoud wordt geactiveerd van een ontwerpinstantie naar een publicatieinstantie.
             1. Klikken **Pad toevoegen** om het opgegeven pad toe te voegen. U kunt maximaal 100 paden per omgeving toevoegen.
 
          ![Dispatcher-configuratie](/help/assets/configure-pipelines/dispatcher-stage.png)
@@ -125,7 +126,6 @@ Als u eenmaal [!UICONTROL Cloud Manager] UI om uw programma op te zetten en mins
             ![Implementatieopties voor productie](/help/assets/configure-pipelines/prod-deploymentoptions.png)
 
          * **Dispatcher Configuration** - Definieer de configuratie van de verzender voor uw productieomgeving. De opties zijn hetzelfde als die voor de testomgeving.
-
 
 
 
