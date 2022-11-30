@@ -3,10 +3,10 @@ title: Opmerkingen bij de release 2022.12.0
 description: Dit zijn de opmerkingen bij de release 2022.12.0 voor Cloud Manager.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 5c97e8bfa30ed6bbbaf361e5d3987aa2a0bf5b13
+source-git-commit: 1fe5fb860da07105ac7e8ce21fce683b238637c1
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '120'
+ht-degree: 1%
 
 ---
 
@@ -26,4 +26,5 @@ De releasedatum voor [!UICONTROL Cloud Manager] release 2022.12.0 is 29 november
 ## Wat is er nieuw? {#what-is-new}
 
 * Automatisch schalen in meerdere regio&#39;s is nu beschikbaar. Bepaalde beperkingen kunnen van toepassing zijn.
+   * Deze wijziging zal geleidelijk worden doorgevoerd in de vier tot zes weken na de release van 2022.12.0.
 * Verbeteringen van de beschikbaarheid en betrouwbaarheid van [Pipetten van Cloud Manager](/help/overview/ci-cd-pipelines.md) zijn gemaakt.
