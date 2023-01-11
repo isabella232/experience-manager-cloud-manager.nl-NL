@@ -2,9 +2,9 @@
 title: De Build-omgeving
 description: Meer informatie over de gespecialiseerde ontwikkelomgeving die gebruikers van Cloud Manager gebruiken om uw code te maken en testen.
 exl-id: b3543320-66d4-4358-8aba-e9bdde00d976
-source-git-commit: 60a6fd062a3878230dafdc34d9ce289ade361120
+source-git-commit: 42cafc03a607ace183d58adbe1c397c1a6c5c22f
 workflow-type: tm+mt
-source-wordcount: '1139'
+source-wordcount: '1152'
 ht-degree: 0%
 
 ---
@@ -138,7 +138,7 @@ Zowel normale omgevingsvariabelen als geheimen kunnen worden gebruikt in de ontw
 
 #### Dispatcher {#dispatcher}
 
-Alleen normale omgevingsvariabelen kunnen op de verzender worden gebruikt. Geheimen kunnen niet worden gebruikt.
+Alleen normale omgevingsvariabelen kunnen worden gebruikt met [de verzender.](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html) Geheimen kunnen niet worden gebruikt.
 
 Omgevingsvariabelen kunnen echter niet worden gebruikt in `IfDefine` richtlijnen.
 
@@ -148,7 +148,7 @@ Omgevingsvariabelen kunnen echter niet worden gebruikt in `IfDefine` richtlijnen
 
 #### OSGi-configuraties {#osgi}
 
-Zowel kunnen de regelmatige omgevingsvariabelen als de geheimen in configuraties OSGi worden gebruikt.
+Zowel normale omgevingsvariabelen als geheimen kunnen worden gebruikt in [OSGi-configuraties.](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-osgi.html)
 
 ### Pipetvariabelen {#pipeline-variables}
 
