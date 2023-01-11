@@ -2,9 +2,9 @@
 title: De Build-omgeving
 description: Meer informatie over de gespecialiseerde ontwikkelomgeving die gebruikers van Cloud Manager gebruiken om uw code te maken en testen.
 exl-id: b3543320-66d4-4358-8aba-e9bdde00d976
-source-git-commit: 4c051cd1696f8a00d0278131c9521ad4dcb956a3
+source-git-commit: 60a6fd062a3878230dafdc34d9ce289ade361120
 workflow-type: tm+mt
-source-wordcount: '1044'
+source-wordcount: '1139'
 ht-degree: 0%
 
 ---
@@ -91,11 +91,11 @@ De momenteel beschikbare leverancier/versiecombinaties zijn:
 
 | Leverancier | Versie |
 |---|---|
-| oracle | 1,8 |
-| oracle | 1,11 |
+| oracle | 1.8 |
+| oracle | 1.11 |
 | oracle | 11 |
-| zon | 1,8 |
-| zon | 1,11 |
+| zon | 1.8 |
+| zon | 1.11 |
 | zon | 11 |
 
 >[!NOTE]
@@ -127,6 +127,28 @@ Ter ondersteuning hiervan voegt Cloud Manager voor elke uitvoering standaardomge
 | `CM_PROGRAM_ID` | De numerieke programma-id |
 | `CM_PROGRAM_NAME` | De naam van het programma |
 | `ARTIFACTS_VERSION` | Voor een staging- of productiepijplijn wordt de synthetische versie gegenereerd door Cloud Manager |
+
+### Beschikbaarheid van standaardomgevingsvariabele {#availability}
+
+Standaardomgevingsvariabelen kunnen op een aantal plaatsen worden gebruikt.
+
+#### Auteur, Voorvertoning en Publiceren {#author-preview-publish}
+
+Zowel normale omgevingsvariabelen als geheimen kunnen worden gebruikt in de ontwerpomgeving, voorvertoningsomgeving en in de publicatieomgeving.
+
+#### Dispatcher {#dispatcher}
+
+Alleen normale omgevingsvariabelen kunnen op de verzender worden gebruikt. Geheimen kunnen niet worden gebruikt.
+
+Omgevingsvariabelen kunnen echter niet worden gebruikt in `IfDefine` richtlijnen.
+
+>[!TIP]
+>
+>U moet het gebruik van omgevingsvariabelen valideren met de [lokale verzender](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/dispatcher-tools.html) voordat u gaat implementeren.
+
+#### OSGi-configuraties {#osgi}
+
+Zowel kunnen de regelmatige omgevingsvariabelen als de geheimen in configuraties OSGi worden gebruikt.
 
 ### Pipetvariabelen {#pipeline-variables}
 
