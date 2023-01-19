@@ -1,19 +1,19 @@
 ---
-title: Opmerkingen bij de release 2022.12.0
-description: Dit zijn de opmerkingen bij de release 2022.12.0 voor Cloud Manager.
+title: Opmerkingen bij de release 2023.1.0
+description: Dit zijn de opmerkingen bij de release 2023.1.0 voor Cloud Manager.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 1fe5fb860da07105ac7e8ce21fce683b238637c1
+source-git-commit: 3e4937fc262016cef5c5c692c06244f411b28c0f
 workflow-type: tm+mt
-source-wordcount: '120'
+source-wordcount: '121'
 ht-degree: 1%
 
 ---
 
 
-# Opmerkingen bij de release 2022.12.0 voor Cloud Manager {#release-notes}
+# Opmerkingen bij de release 2023.1.0 voor Cloud Manager {#release-notes}
 
-Op deze pagina worden de opmerkingen bij de release voor [!UICONTROL Cloud Manager] release 2022.12.0.
+Op deze pagina worden de opmerkingen bij de release voor [!UICONTROL Cloud Manager] release 2023.1.0.
 
 >[!NOTE]
 >
@@ -21,10 +21,12 @@ Op deze pagina worden de opmerkingen bij de release voor [!UICONTROL Cloud Manag
 
 ## Releasedatum {#release-date}
 
-De releasedatum voor [!UICONTROL Cloud Manager] release 2022.12.0 is 29 november 2022. De volgende release is gepland voor 19 januari 2023.
+De releasedatum voor [!UICONTROL Cloud Manager] release 2023.1.0 is 19 januari 2023. De volgende release is gepland voor 16 februari 2023.
 
 ## Wat is er nieuw? {#what-is-new}
 
-* Automatisch schalen in meerdere regio&#39;s is nu beschikbaar. Bepaalde beperkingen kunnen van toepassing zijn.
-   * Deze wijziging zal geleidelijk worden doorgevoerd in de vier tot zes weken na de release van 2022.12.0.
-* Verbeteringen van de beschikbaarheid en betrouwbaarheid van [Pipetten van Cloud Manager](/help/overview/ci-cd-pipelines.md) zijn gemaakt.
+* De bruikbaarheidsverbeteringen waren het bijwerken van cursorstijlen die onderscheid maken tussen de plaats waar gebruikers actie kunnen ondernemen en de standaardaanwijzer.
+
+## Opgeloste problemen {#bug-fixes}
+
+* De Manager van de wolk zal twee pijpleiding verhinderen om bij (of bijna tezelfdertijd te beginnen, waarbij pijpleidingsmislukkingen worden vermeden.
