@@ -3,9 +3,9 @@ title: Opmerkingen bij de release 2023.1.0
 description: Dit zijn de opmerkingen bij de release 2023.1.0 voor Cloud Manager.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 3e4937fc262016cef5c5c692c06244f411b28c0f
+source-git-commit: dc534e6339f910014a3edbd684f7b1535079f039
 workflow-type: tm+mt
-source-wordcount: '121'
+source-wordcount: '160'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,9 @@ De releasedatum voor [!UICONTROL Cloud Manager] release 2023.1.0 is 19 januari 2
 
 ## Wat is er nieuw? {#what-is-new}
 
-* De bruikbaarheidsverbeteringen waren het bijwerken van cursorstijlen die onderscheid maken tussen de plaats waar gebruikers actie kunnen ondernemen en de standaardaanwijzer.
+* Ondersteuning voor [zelfbedieningsinhoud kopiëren](/help/using/content-copy.md) zal na deze release beschikbaar worden gesteld via een gefaseerde uitrol. Bepaalde beperkingen kunnen van toepassing zijn.
+* In lijsten met omgevingen en leidinggevende uitvoeringen kunt u nu toegang krijgen tot details door op de afzonderlijke rij te klikken.
+* De bruikbaarheidsverbeteringen zijn aangebracht door cursorstijlen bij te werken die onderscheid maken tussen de plaats waar gebruikers actie kunnen ondernemen en de standaardaanwijzer.
 
 ## Opgeloste problemen {#bug-fixes}
 

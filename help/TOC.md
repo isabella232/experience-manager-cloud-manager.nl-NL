@@ -6,9 +6,9 @@ breadcrumb-title: Documentatie van Cloud Manager voor AEM 6.x
 user-guide-description: Leer hoe u met Cloud Manager Adobe Experience Manager for AMS in de cloud zelf kunt beheren.
 feature-set: Experience Manager Cloud Manager, Experience Manager
 role: Admin
-source-git-commit: 69e46e4c9181ab5147c446cbf558d7342cf694c0
+source-git-commit: b42a849e9e9e776be1b5055971b68fd0c19871e2
 workflow-type: tm+mt
-source-wordcount: '318'
+source-wordcount: '320'
 ht-degree: 9%
 
 ---
@@ -52,6 +52,7 @@ ht-degree: 9%
    + [Cloud Manager CLI](https://github.com/adobe/aio-cli-plugin-cloudmanager/blob/main/README.md)
    + [Meldingen](using/notifications.md)
    + [Aangepaste regels voor codekwaliteit](using/custom-code-quality-rules.md)
+   + [Inhoud kopiëren](using/content-copy.md)
 + Code beheren {#managing-code}
    + [Maven-projectversiebeheer](managing-code/maven-project-version.md)
    + [Opslagplaatsen](managing-code/repositories.md)
