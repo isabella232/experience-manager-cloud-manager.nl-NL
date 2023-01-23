@@ -1,9 +1,9 @@
 ---
 title: Het gereedschap Inhoud kopiëren
 description: Met het hulpprogramma voor het kopiëren van inhoud van Cloud Manager kunnen gebruikers op verzoek muterende inhoud kopiëren van hun AEM productieomgeving naar lagere omgevingen voor testdoeleinden.
-source-git-commit: e32e51f7d10e753b7ecb2a63adb36d1b6c90fcc1
+source-git-commit: 360cbf7e3a21e530a4e43f13f6d414dae4afa104
 workflow-type: tm+mt
-source-wordcount: '1040'
+source-wordcount: '1017'
 ht-degree: 0%
 
 ---
@@ -33,12 +33,7 @@ Wanneer het kopiëren van inhoud, is het bronmilieu de bron van waarheid.
 
 ## Machtigingen {#permissions}
 
-Voor het gebruik van het gereedschap Inhoud kopiëren zijn bepaalde machtigingen vereist in zowel de bronomgeving als de doelomgeving.
-
-| Functie voor kopiëren van inhoud | In AEM beheerdersgroep? | In de Rol van de Manager van de Plaatsing? |
-|---|---|---|
-| Maken en wijzigen [inhoudssets](#create-content-set) | Ja | Nee |
-| Start of annuleer de [kopiëren van inhoud, proces](#copy-content) | Ja | Ja |
+Als u het gereedschap Inhoud kopiëren wilt gebruiken, moet de gebruiker aan de **Implementatiebeheer** rol in de bron- en doelomgevingen.
 
 ## Een inhoudsset maken {#create-content-set}
 
