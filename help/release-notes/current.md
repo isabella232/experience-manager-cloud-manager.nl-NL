@@ -1,19 +1,19 @@
 ---
-title: Opmerkingen bij de release 2023.1.0
-description: Dit zijn de opmerkingen bij de release 2023.1.0 voor Cloud Manager.
+title: Opmerkingen bij de release 2023.2.0
+description: Dit zijn de opmerkingen bij de release 2023.2.0 voor Cloud Manager.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: dc534e6339f910014a3edbd684f7b1535079f039
+source-git-commit: ab1747e14be783004544681f9aefefaa0587302e
 workflow-type: tm+mt
-source-wordcount: '160'
-ht-degree: 1%
+source-wordcount: '78'
+ht-degree: 0%
 
 ---
 
 
-# Opmerkingen bij de release 2023.1.0 voor Cloud Manager {#release-notes}
+# Opmerkingen bij de release 2023.2.0 voor Cloud Manager {#release-notes}
 
-Op deze pagina worden de opmerkingen bij de release voor [!UICONTROL Cloud Manager] release 2023.1.0.
+Op deze pagina worden de opmerkingen bij de release voor [!UICONTROL Cloud Manager] release 2023.2.0.
 
 >[!NOTE]
 >
@@ -21,14 +21,4 @@ Op deze pagina worden de opmerkingen bij de release voor [!UICONTROL Cloud Manag
 
 ## Releasedatum {#release-date}
 
-De releasedatum voor [!UICONTROL Cloud Manager] release 2023.1.0 is 19 januari 2023. De volgende release is gepland voor 16 februari 2023.
-
-## Wat is er nieuw? {#what-is-new}
-
-* Ondersteuning voor [zelfbedieningsinhoud kopiëren](/help/using/content-copy.md) zal na deze release beschikbaar worden gesteld via een gefaseerde uitrol. Bepaalde beperkingen kunnen van toepassing zijn.
-* In lijsten met omgevingen en leidinggevende uitvoeringen kunt u nu toegang krijgen tot details door op de afzonderlijke rij te klikken.
-* De bruikbaarheidsverbeteringen zijn aangebracht door cursorstijlen bij te werken die onderscheid maken tussen de plaats waar gebruikers actie kunnen ondernemen en de standaardaanwijzer.
-
-## Opgeloste problemen {#bug-fixes}
-
-* De Manager van de wolk zal twee pijpleiding verhinderen om bij (of bijna tezelfdertijd te beginnen, waarbij pijpleidingsmislukkingen worden vermeden.
+De releasedatum voor [!UICONTROL Cloud Manager] release 2023.1.0 is 16 februari 2023. De volgende release is gepland voor 16 maart 2023.
