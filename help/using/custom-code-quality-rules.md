@@ -2,10 +2,10 @@
 title: Aangepaste regels voor codekwaliteit
 description: Meer informatie over de regels voor de kwaliteit van aangepaste code die door Cloud Manager worden uitgevoerd als onderdeel van het testen van de kwaliteit van de code, op basis van de aanbevolen procedures van AEM Engineering.
 exl-id: 7d118225-5826-434e-8869-01ee186e0754
-source-git-commit: 5fe0d20d9020e6b90353ef5a54e49c93be5c00be
+source-git-commit: 611cd8f874e8e0d21a475365f4aceb6ae2565644
 workflow-type: tm+mt
-source-wordcount: '3575'
-ht-degree: 3%
+source-wordcount: '3537'
+ht-degree: 2%
 
 ---
 
@@ -16,7 +16,7 @@ Meer informatie over de aangepaste kwaliteitsregels voor code die door Cloud Man
 
 >[!NOTE]
 >
->De hier gegeven codevoorbeelden zijn slechts voor illustratieve doeleinden. Zie [Documentatie bij Concepts van SonarQube](https://docs.sonarqube.org/7.4/user-guide/concepts/) kennis te nemen van zijn concepten en kwaliteitsregels.
+>De hier gegeven codevoorbeelden zijn slechts voor illustratieve doeleinden. Zie [Documentatie bij Concepts van SonarQube](https://docs.sonarqube.org/latest/) kennis te nemen van zijn concepten en kwaliteitsregels.
 
 ## SonarQube-regels {#sonarqube-rules}
 
@@ -29,7 +29,7 @@ In de volgende sectie worden SonarQube-regels beschreven die door Cloud Manager 
 * **Ernst**: Majoor
 * **Sinds**: Versie 2018.4.0
 
-De methoden `Thread.stop()` en `Thread.interrupt()` kan problemen veroorzaken die moeilijk te reproduceren zijn en, in sommige gevallen, veiligheidskwetsbaarheden. Het gebruik ervan moet zorgvuldig worden gecontroleerd en gevalideerd. Over het algemeen is het doorgeven van berichten een veiligere manier om vergelijkbare doelen te bereiken.
+De methoden `Thread.stop()` en `Thread.interrupt()` kan problemen veroorzaken die moeilijk te reproduceren zijn en, soms, veiligheidskwetsbaarheden. Het gebruik ervan moet zorgvuldig worden gecontroleerd en gevalideerd. Over het algemeen is het doorgeven van berichten een veiligere manier om vergelijkbare doelen te bereiken.
 
 #### Niet-compatibele code {#non-compliant-code}
 
@@ -104,7 +104,7 @@ protected void doPost(SlingHttpServletRequest request, SlingHttpServletResponse 
 * **Ernst**: Kritiek
 * **Sinds**: Versie 2018.6.0
 
-Wanneer het uitvoeren van HTTP- verzoeken van binnen een AEM toepassing, is het kritiek om ervoor te zorgen dat juiste onderbrekingen worden gevormd om onnodige draadconsumptie te vermijden. Jammer genoeg, het standaardgedrag van allebei de standaardHTTP- Cliënt van Java, `java.net.HttpUrlConnection`en de veelgebruikte client voor Apache HTTP Components moet nooit een time-out maken. Daarom moeten time-outs expliciet worden ingesteld. Als beste praktijken, zouden deze onderbrekingen niet meer dan 60 seconden moeten zijn.
+Wanneer het uitvoeren van HTTP- verzoeken van binnen een AEM toepassing, is het kritiek om ervoor te zorgen dat juiste onderbrekingen worden gevormd om onnodige draadconsumptie te vermijden. Jammer genoeg, het standaardgedrag van allebei de standaardHTTP- Cliënt van Java™, `java.net.HttpUrlConnection`en de veelgebruikte client voor Apache HTTP Components moet nooit een time-out maken. Daarom moeten time-outs expliciet worden ingesteld. Als beste praktijken, zouden deze onderbrekingen niet meer dan 60 seconden moeten zijn.
 
 #### Niet-compatibele code {#non-compliant-code-2}
 
@@ -181,7 +181,7 @@ public void orDoThis() {
 
 `ResourceResolver` objecten verkregen uit `ResourceResolverFactory` verbruikt systeembronnen. Hoewel er maatregelen bestaan om deze middelen terug te vorderen wanneer een `ResourceResolver` niet meer in gebruik is, is het efficiënter om geopende `ResourceResolver` objecten aanroepen `close()` methode.
 
-Eén relatief gebruikelijke misvatting is dat `ResourceResolver` objecten die met een bestaande JCR-sessie zijn gemaakt, mogen niet expliciet worden gesloten of de onderliggende JCR-sessie wordt afgesloten. Dat is niet het geval. Ongeacht hoe een `ResourceResolver` wordt geopend, moet het worden gesloten wanneer het niet meer wordt gebruikt. Sinds `ResourceResolver` implementeert de `Closeable` -interface, is het ook mogelijk de `try-with-resources` syntaxis in plaats van expliciet aan te roepen `close()`.
+Eén algemene misvatting is dat `ResourceResolver` objecten die met een bestaande JCR-sessie zijn gemaakt, mogen niet expliciet worden gesloten of de onderliggende JCR-sessie moet worden gesloten. Dat is niet het geval. Ongeacht hoe een `ResourceResolver` wordt geopend, moet het worden gesloten wanneer het niet meer wordt gebruikt. Sinds `ResourceResolver` implementeert de `Closeable` -interface, is het ook mogelijk de `try-with-resources` syntaxis in plaats van expliciet aan te roepen `close()`.
 
 #### Niet-compatibele code {#non-compliant-code-4}
 
@@ -221,7 +221,7 @@ public void orDoThis(Session session) throws Exception {
 * **Ernst**: Majoor
 * **Sinds**: Versie 2018.4.0
 
-Zoals beschreven in het [Verkoopdocumentatie](http://sling.apache.org/documentation/the-sling-engine/servlets.html)bindingen van servlets via paden worden afgeraden. Padgebonden servers kunnen geen standaard JCR-toegangsbesturingselementen gebruiken en vereisen daarom extra beveiligingsstrengheid. In plaats van het gebruiken van weg-gebonden servlets, wordt het geadviseerd om knopen in de bewaarplaats tot stand te brengen en servlets te registreren door middeltype.
+Zoals beschreven in het [Verkoopdocumentatie](https://sling.apache.org/documentation/the-sling-engine/servlets.html)bindingen van servlets via paden worden afgeraden. Padgebonden servers kunnen geen standaard JCR-toegangsbesturingselementen gebruiken en vereisen daarom extra beveiligingsstrengheid. In plaats van het gebruiken van weg-gebonden servlets, wordt het geadviseerd om knopen in de bewaarplaats tot stand te brengen en servlets te registreren door middeltype.
 
 #### Niet-compatibele code {#non-compliant-code-5}
 
@@ -283,7 +283,7 @@ public void orDoThis() throws MyCustomException {
 * **Ernst**: Klein
 * **Sinds**: Versie 2018.4.0
 
-Een ander gemeenschappelijk patroon te vermijden is een bericht te registreren en dan onmiddellijk een uitzondering te werpen. Dit geeft doorgaans aan dat het uitzonderingsbericht uiteindelijk wordt gedupliceerd in logbestanden.
+Een ander gemeenschappelijk patroon te vermijden is een bericht te registreren en dan onmiddellijk een uitzondering te werpen. Dit geeft meestal aan dat het uitzonderingsbericht wordt gedupliceerd in logbestanden.
 
 #### Niet-compatibele code {#non-compliant-code-7}
 
@@ -308,7 +308,7 @@ public void doThis() throws Exception {
 * **Type**: Code Smell
 * **Ernst**: Klein
 
-In het algemeen, zou het INFO logboekniveau moeten worden gebruikt om belangrijke acties te afbakenen en, door gebrek, AEM wordt gevormd om bij het INFO niveau of boven te registreren. GET- en HEAD-methoden mogen nooit alleen-lezen zijn en vormen dus geen belangrijke acties. Het registreren op het niveau INFO in antwoord op GET of HEAD verzoeken zal waarschijnlijk tot significante logboeklawaai leiden daardoor het moeilijker maken om nuttige informatie in logboekdossiers te identificeren. Het registreren wanneer de behandeling van GET of HEAD- verzoeken of op de niveaus van de WAARSCHUWING of van de FOUT zou moeten zijn wanneer iets verkeerd is gegaan of op de niveaus DEBUG of van de TRACE als de diepere het oplossen van problemeninformatie nuttig zou zijn.
+In het algemeen, zou het INFO logboekniveau moeten worden gebruikt om belangrijke acties te afbakenen en, door gebrek, AEM wordt gevormd om bij het INFO niveau of boven te registreren. GET- en HEAD-methoden mogen nooit alleen-lezen zijn en vormen dus geen belangrijke acties. Het registreren op het niveau INFO in antwoord op GET of HEAD verzoeken zal waarschijnlijk tot significante logboeklawaai leiden, die het moeilijker maken om nuttige informatie in logboekdossiers te identificeren. Het registreren wanneer de behandeling van GET of HEAD- verzoeken of op de niveaus van de WAARSCHUWING of van de FOUT zou moeten zijn wanneer iets verkeerd is gegaan of op de niveaus DEBUG of van de TRACE als de diepere het oplossen van problemeninformatie nuttig zou zijn.
 
 >[!NOTE]
 >
@@ -337,7 +337,7 @@ public void doGet() throws Exception {
 * **Ernst**: Klein
 * **Sinds**: Versie 2018.4.0
 
-Als beste praktijken, zouden de logboekberichten contextuele informatie over moeten verstrekken waar in de toepassing een uitzondering is voorgekomen. Hoewel de context ook door het gebruik van stapelsporen kan worden bepaald, over het algemeen zal het logboekbericht gemakkelijker zijn te lezen en te begrijpen. Dientengevolge, wanneer het registreren van een uitzondering, is het een slechte praktijk om het bericht van de uitzondering als logboekbericht te gebruiken. Het uitzonderingsbericht zal bevatten wat verkeerd ging terwijl het logboekbericht zou moeten worden gebruikt om een logboeklezer te vertellen wat de toepassing deed toen de uitzondering gebeurde. Het uitzonderingsbericht zal nog worden geregistreerd. Door uw eigen bericht te specificeren zullen de logboeken enkel gemakkelijker te begrijpen zijn.
+Als beste praktijken, zouden de logboekberichten contextuele informatie over moeten verstrekken waar in de toepassing een uitzondering is voorgekomen. Terwijl de context ook door stapelsporen te gebruiken kan worden bepaald, over het algemeen zal het logboekbericht gemakkelijker zijn te lezen en te begrijpen. Dientengevolge, wanneer het registreren van een uitzondering, is het een slechte praktijk om het bericht van de uitzondering als logboekbericht te gebruiken. Het uitzonderingsbericht bevat wat verkeerd ging terwijl het logboekbericht zou moeten worden gebruikt om een logboeklezer te vertellen wat de toepassing deed toen de uitzondering gebeurde. Het uitzonderingsbericht wordt nog geregistreerd. Door uw eigen bericht te specificeren, zijn de logboeken gemakkelijker te begrijpen.
 
 #### Niet-compatibele code {#non-compliant-code-9}
 
@@ -370,7 +370,7 @@ public void doThis() {
 * **Ernst**: Klein
 * **Sinds**: Versie 2018.4.0
 
-Zoals de naam al aangeeft, moeten Java-uitzonderingen altijd worden gebruikt in uitzonderlijke omstandigheden. Dientengevolge, wanneer een uitzondering wordt gevangen, is het belangrijk om ervoor te zorgen dat de logboekberichten op het aangewezen niveau worden geregistreerd: WAARSCHUWING of FOUT. Dit zorgt ervoor dat die berichten correct in de logboeken verschijnen.
+Zoals de naam al aangeeft, moeten Java™-uitzonderingen altijd in uitzonderlijke omstandigheden worden gebruikt. Dientengevolge, wanneer een uitzondering wordt gevangen, is het belangrijk om ervoor te zorgen dat de logboekberichten op het aangewezen niveau worden geregistreerd: WAARSCHUWING of FOUT. Dit zorgt ervoor dat die berichten correct in de logboeken verschijnen.
 
 #### Niet-compatibele code {#non-compliant-code-10}
 
@@ -403,7 +403,7 @@ public void doThis() {
 * **Ernst**: Klein
 * **Sinds**: Versie 2018.4.0
 
-De context is kritiek wanneer het begrip van logboekberichten. Gebruiken `Exception.printStackTrace()` zorgt ervoor dat alleen de stacktracering wordt uitgevoerd naar de standaardfoutenstream, waardoor alle context verloren gaat. Bovendien kunnen in een multithread-toepassing, zoals AEM, meerdere uitzonderingen parallel met deze methode worden afgedrukt, de stacksporen ervan overlappen, wat tot grote verwarring leidt. De uitzonderingen zouden door het registrerenkader slechts moeten worden geregistreerd.
+De context is kritiek wanneer het begrip van logboekberichten. Gebruiken `Exception.printStackTrace()` zorgt ervoor dat alleen de stacktracering wordt uitgevoerd naar de standaardfoutenstream, waarbij alle context verloren gaat. Bovendien kunnen in een multithread-toepassing, zoals AEM, meerdere uitzonderingen parallel met deze methode worden afgedrukt, de stacksporen ervan overlappen, wat tot grote verwarring leidt. De uitzonderingen zouden door het registrerenkader slechts moeten worden geregistreerd.
 
 #### Niet-compatibele code {#non-compliant-code-11}
 
@@ -436,7 +436,7 @@ public void doThis() {
 * **Ernst**: Klein
 * **Sinds**: Versie 2018.4.0
 
-Het registreren in AEM zou altijd door het registrerenkader, SLF4J moeten worden gedaan. De uitvoer rechtstreeks naar de standaardoutput of de standaardfoutenstromen verliest de structurele en contextafhankelijke informatie die door het registrerenkader wordt verstrekt en kan, in sommige gevallen, prestatieskwesties veroorzaken.
+Het registreren in AEM zou altijd door het registrerenkader, SLF4J moeten worden gedaan. De uitvoer rechtstreeks naar de standaarduitvoer of standaardfoutenstromen verliest de structurele en contextuele informatie die door het registrerenkader wordt verstrekt en kan, soms, prestatieskwesties veroorzaken.
 
 #### Niet-compatibele code {#non-compliant-code-12}
 
@@ -494,9 +494,9 @@ public void doThis(Resource resource) {
 * **Ernst**: Klein
 * **Sinds**: Versie 2020.5.0
 
-De Planner van de Verkoop moet niet voor taken worden gebruikt die een gewaarborgde uitvoering vereisen. Het verkopen van Geplande Banen garandeert uitvoering en beter geschikt voor zowel gegroepeerde als niet-gegroepeerde milieu&#39;s.
+Gebruik Sling Scheduler niet voor taken waarvoor een gegarandeerde uitvoering is vereist. Het verkopen van Geplande Banen garandeert uitvoering en beter geschikt voor zowel gegroepeerde als niet-gegroepeerde milieu&#39;s.
 
-Zie [Apache Sling Event- en Job Handling-documentatie](https://sling.apache.org/documentation/bundles/apache-sling-eventing-and-job-handling.html) om meer over te leren hoe het Verdelen van Banen in een gegroepeerde milieu&#39;s worden behandeld.
+Zie [Apache Sling Event- en Job Handling-documentatie](https://sling.apache.org/documentation/bundles/apache-sling-eventing-and-job-handling.html) om meer over te leren hoe het Verdelen van Banen in gegroepeerde milieu&#39;s worden behandeld.
 
 ### Verouderde API&#39;s AEM niet mogen worden gebruikt {#sonarqube-aem-deprecated}
 
@@ -507,9 +507,9 @@ Zie [Apache Sling Event- en Job Handling-documentatie](https://sling.apache.org/
 
 Het AEM API-oppervlak wordt voortdurend herzien om te bepalen voor welke API&#39;s het gebruik wordt ontmoedigd en dus als afgekeurd wordt beschouwd.
 
-In veel gevallen worden deze API&#39;s vervangen door de standaard Java *@Deprecated* annotatie en, als zodanig, zoals geïdentificeerd door `squid:CallToDeprecatedMethod`.
+Deze API&#39;s zijn vaak verouderd met de standaard Java™ *@Deprecated* annotatie en, als zodanig, zoals geïdentificeerd door `squid:CallToDeprecatedMethod`.
 
-Er zijn echter gevallen waarin een API afgekeurd is in de context van AEM, maar in andere contexten niet mag worden afgekeurd. Deze regel identificeert deze tweede klasse.
+Er zijn echter gevallen waarin een API in de context van AEM verouderd is, maar in andere contexten niet mag worden vervangen. Deze regel identificeert deze tweede klasse.
 
 ## Regels voor OakPAL-inhoud {#oakpal-rules}
 
@@ -526,11 +526,11 @@ In de volgende sectie worden de OakPAL-controles beschreven die door Cloud Manag
 * **Ernst**: Kritiek
 * **Sinds**: Versie 2018.7.0
 
-De AEM-API bevat Java-interfaces en -klassen die alleen door aangepaste code mogen worden gebruikt, maar niet geïmplementeerd. De interface `com.day.cq.wcm.api.Page` is bijvoorbeeld ontworpen om alleen door AEM te worden geïmplementeerd.
+De AEM-API bevat Java™-interfaces en -klassen die alleen door aangepaste code moeten worden gebruikt, maar niet geïmplementeerd. De interface `com.day.cq.wcm.api.Page` wordt alleen door AEM geïmplementeerd.
 
 Wanneer nieuwe methoden aan deze interfaces worden toegevoegd, beïnvloeden deze aanvullende methoden geen bestaande code die deze interfaces gebruikt en daardoor wordt de toevoeging van nieuwe methoden aan deze interfaces beschouwd als compatibel met eerdere versies. Als echter door aangepaste code één van deze interfaces wordt geïmplementeerd, heeft deze aangepaste code een risico voor compatibiliteit met eerdere versies voor de klant geïntroduceerd.
 
-Interfaces en klassen die alleen door AEM moeten worden geïmplementeerd, zijn voorzien van een annotatie `org.osgi.annotation.versioning.ProviderType` of, in sommige gevallen, een gelijkaardige erfenisaantekening `aQute.bnd.annotation.ProviderType`. Deze regel identificeert de gevallen waarin een dergelijke interface wordt uitgevoerd of een klasse door douanecode wordt uitgebreid.
+Interfaces en klassen die alleen door AEM moeten worden geïmplementeerd, zijn voorzien van een annotatie `org.osgi.annotation.versioning.ProviderType` of, soms, een gelijkaardige erfenisaantekening `aQute.bnd.annotation.ProviderType`. Deze regel identificeert de gevallen waarin een dergelijke interface wordt uitgevoerd of een klasse door douanecode wordt uitgebreid.
 
 #### Niet-compatibele code {#non-compliant-code-3}
 
@@ -549,7 +549,7 @@ public class DontDoThis implements Page {
 * **Ernst**: Blocker
 * **Sinds**: Versie 2019.6.0
 
-Het is al lang een goede praktijk dat de `/libs` de inhoudsstructuur in de AEM-inhoudgegevensopslagruimte moet door klanten als alleen-lezen worden beschouwd. Knooppunten en eigenschappen wijzigen onder `/libs` brengt een aanzienlijk risico met zich mee voor belangrijke en kleine updates. Wijzigingen in `/libs` alleen door Adobe via officiële kanalen te doen.
+Het is al lang een goede praktijk dat de `/libs` de inhoudsstructuur in de AEM-inhoudgegevensopslagruimte moet door klanten als alleen-lezen worden beschouwd. Knooppunten en eigenschappen wijzigen onder `/libs` brengt een aanzienlijk risico met zich mee voor belangrijke en kleine updates. Wijzigingen in `/libs` uitsluitend via officiële kanalen door Adobe wordt gemaakt.
 
 ### Pakketten mogen geen dubbele OSGi-configuraties bevatten {#oakpal-package-osgi}
 
@@ -558,9 +558,9 @@ Het is al lang een goede praktijk dat de `/libs` de inhoudsstructuur in de AEM-i
 * **Ernst**: Majoor
 * **Sinds**: Versie 2019.6.0
 
-Een gemeenschappelijk probleem dat op complexe projecten voorkomt is waar de zelfde component OSGi veelvoudige tijden wordt gevormd. Dit leidt tot een dubbelzinnigheid over welke configuratie zal opereerbaar zijn. Deze regel is &quot;runmode-bewust&quot;in die zin dat het slechts kwesties zal identificeren waar de zelfde component veelvoudige tijden op de zelfde runmode of combinatie runmodes wordt gevormd.
+Een gemeenschappelijk probleem dat op complexe projecten voorkomt is waar de zelfde component OSGi veelvoudige tijden wordt gevormd. Dit leidt tot een dubbelzinnigheid over welke configuratie operabel is. Deze regel is &quot;runmode-bewust&quot;in die zin dat het slechts kwesties zal identificeren waar de zelfde component veelvoudige tijden op de zelfde looppaswijze of de combinatie looppaswijzen wordt gevormd.
 
-#### Niet-conforme code {#non-compliant-code-osgi}
+#### Niet-compatibele code {#non-compliant-code-osgi}
 
 ```text
 + apps
@@ -590,9 +590,9 @@ Een gemeenschappelijk probleem dat op complexe projecten voorkomt is waar de zel
 
 Om veiligheidsredenen, paden die `/config/` en `/install/` alleen leesbaar zijn door administratieve gebruikers in AEM en alleen moeten worden gebruikt voor OSGi-configuratie en OSGi-bundels. Als u andere typen inhoud onder paden plaatst die deze segmenten bevatten, resulteert dit in toepassingsgedrag dat per ongeluk verschilt tussen gebruikers met en zonder beheerdersrechten.
 
-Een veelvoorkomend probleem is het gebruik van knooppunten met de naam `config` binnen componentendialogen of wanneer het specificeren van de rijke configuratie van de tekstredacteur voor gealigneerde het uitgeven. Om dit op te lossen zou de beledigende knoop aan een volgzame naam moeten worden anders genoemd. Voor de rijke configuratie van de tekstredacteur gebruik maken van `configPath` eigenschap op de `cq:inplaceEditing` knooppunt om de nieuwe locatie op te geven.
+Een veelvoorkomend probleem is het gebruik van knooppunten met de naam `config` binnen componentendialogen of wanneer het specificeren van de rijke configuratie van de tekstredacteur voor gealigneerde het uitgeven. Om dit op te lossen, zou de beledigende knoop aan een volgzame naam moeten worden anders genoemd. Voor de rijke configuratie van de tekstredacteur, gebruik `configPath` eigenschap op de `cq:inplaceEditing` knooppunt om de nieuwe locatie op te geven.
 
-#### Niet-conforme code {#non-compliant-code-config-install}
+#### Niet-compatibele code {#non-compliant-code-config-install}
 
 ```text
 + cq:editConfig [cq:EditConfig]
@@ -627,7 +627,7 @@ Vergelijkbaar met de [De pakketten zouden geen dubbele OSGi configuratieregel mo
 * **Ernst**: Klein
 * **Sinds**: Versie 2020.5.0
 
-De OSGi-configuratie `com.day.cq.wcm.core.impl.AuthoringUIModeServiceImpl` definieert de standaardontwerpmodus in AEM. Omdat [de klassieke gebruikersinterface sinds AEM 6.4 is afgekeurd,](https://experienceleague.adobe.com/docs/experience-manager-64/release-notes/deprecated-removed-features.html) een kwestie zal nu worden opgeheven wanneer de standaard auteurswijze aan Klassieke UI wordt gevormd.
+De OSGi-configuratie `com.day.cq.wcm.core.impl.AuthoringUIModeServiceImpl` definieert de standaardontwerpmodus in AEM. Omdat [de klassieke gebruikersinterface sinds AEM 6.4 is afgekeurd,](https://experienceleague.adobe.com/docs/experience-manager-64/release-notes/deprecated-removed-features.html) een kwestie wordt nu opgeheven wanneer de standaard auteurswijze aan Klassieke UI wordt gevormd.
 
 ### Componenten met dialoogvensters moeten aanraakinterface-dialoogvensters hebben {#oakpal-components-dialogs}
 
@@ -651,7 +651,7 @@ De documentatie van de Hulpmiddelen van de Modernisering van het AEM verstrekt d
 * **Ernst**: Klein
 * **Sinds**: Versie 2020.5.0
 
-Om compatibel te zijn met het implementatiemodel van de Cloud Service, moeten afzonderlijke inhoudspakketten ofwel inhoud bevatten voor de onveranderlijke gebieden van de opslagplaats (dat wil zeggen: `/apps` en `/libs`) of het veranderbare gebied (dat wil zeggen alles niet in `/apps` of `/libs`), maar niet beide. Bijvoorbeeld een pakket dat beide bevat `/apps/myco/components/text and /etc/clientlibs/myco` niet verenigbaar is met de Cloud Service en ertoe zal leiden dat een probleem wordt gerapporteerd.
+Om compatibel te zijn met het implementatiemodel van de Cloud Service, moeten afzonderlijke inhoudspakketten ofwel inhoud bevatten voor de onveranderlijke gebieden van de opslagplaats (dat wil zeggen: `/apps` en `/libs`) of het veranderbare gebied (dat wil zeggen alles niet in `/apps` of `/libs`), maar niet beide. Bijvoorbeeld een pakket dat beide bevat `/apps/myco/components/text and /etc/clientlibs/myco` is niet verenigbaar met de Cloud Service en veroorzaakt een probleem dat moet worden gerapporteerd.
 
 Zie [AEM documentatie over de projectstructuur](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/aem-project-content-package-structure.html) voor meer informatie .
 
@@ -679,7 +679,7 @@ De klanten die omgekeerde replicatie gebruiken zouden Adobe voor alternatieve op
 
 AEM clientbibliotheken kunnen statische bronnen bevatten, zoals afbeeldingen en lettertypen. Zoals beschreven in het [Gebruikend Cliënt-zij documentatie van Bibliotheken,](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html#using-preprocessors) bij het gebruik van proxy-clientbibliotheken moeten deze statische bronnen zich in een onderliggende map bevinden met de naam `resources` om effectief naar de publicatie-instanties te kunnen verwijzen.
 
-#### Niet-conforme code {#non-compliant-proxy-enabled}
+#### Niet-compatibele code {#non-compliant-proxy-enabled}
 
 ```text
 + apps
@@ -719,7 +719,7 @@ Het migratiehulpmiddel in [AEM Assets as a Cloud Service GitHub-opslagplaats](ht
 * **Ernst**: Klein
 * **Sinds**: Versie 2021.2.0
 
-Terwijl het gebruik van statische malplaatjes historisch zeer algemeen in AEM projecten is geweest, worden de editable malplaatjes hoogst geadviseerd aangezien zij de meeste flexibiliteit verstrekken en extra eigenschappen steunen die niet in statische malplaatjes aanwezig zijn. Meer informatie vindt u in de [Paginasjablonen - Bewerkbare documentatie.](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/templates/page-templates-editable.html)
+Terwijl het gebruik van statische malplaatjes in AEM Projecten historisch algemeen is geweest, worden de editable malplaatjes hoogst geadviseerd aangezien zij de meeste flexibiliteit verstrekken en extra eigenschappen steunen die niet in statische malplaatjes aanwezig zijn. Meer informatie vindt u in de [Paginasjablonen - Bewerkbare documentatie.](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/templates/page-templates-editable.html)
 
 De migratie van statische aan editable malplaatjes kan grotendeels worden geautomatiseerd gebruikend [AEM moderniseringsinstrumenten.](https://opensource.adobe.com/aem-modernize-tools/)
 
@@ -734,14 +734,14 @@ De oudere Componenten van de Stichting (d.w.z. componenten onder `/libs/foundati
 
 Deze conversie kan worden vergemakkelijkt door de [AEM moderniseringsinstrumenten.](https://opensource.adobe.com/aem-modernize-tools/)
 
-### Alleen ondersteunde namen en volgorde van de uitvoermodus mogen worden gebruikt {#oakpal-supported-runmodes}
+### Alleen ondersteunde namen en bestellingen van de uitvoermodus mogen worden gebruikt {#oakpal-supported-runmodes}
 
 * **Sleutel**: SupportedRunmode
 * **Type**: Code Smell
 * **Ernst**: Klein
 * **Sinds**: Versie 2021.2.0
 
-AEM Cloud Service past een strikt naamgevingsbeleid toe voor runmode-namen en een strikte volgorde voor deze runmodes. De lijst met ondersteunde runmodi vindt u in het gedeelte [Distribueren naar AEM as a Cloud Service documentatie](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html#runmodes) en elke afwijking hiervan zal als een kwestie worden aangemerkt .
+AEM Cloud Service past een strikt naamgevingsbeleid toe voor namen van uitvoermodi en een strikte volgorde voor deze uitvoermodi. De lijst met ondersteunde uitvoermodi vindt u in het gedeelte [Distribueren naar AEM as a Cloud Service documentatie](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html#runmodes) en elke afwijking hiervan wordt als een probleem aangemerkt.
 
 ### De de definitieknoden van de indexdefinitie van het Onderzoek van de douane moeten directe kinderen van /eikel zijn:index {#oakpal-custom-search}
 
@@ -768,7 +768,7 @@ AEM Cloud Service vereist dat definities van aangepaste zoekindexen (dat wil zeg
 * **Ernst**: Klein
 * **Sinds**: Versie 2021.2.0
 
-Problemen met moeilijk op te lossen problemen kunnen optreden wanneer een definitieknoopknooppunt van een aangepaste zoekindex niet-geordende onderliggende knooppunten bevat. Om dit te voorkomen, wordt aanbevolen dat alle afstammende knooppunten van een `oak:QueryIndexDefinition` knooppunt is van type `nt:unstructured`.
+Problemen met moeilijk op te lossen problemen kunnen optreden wanneer een definitieknoopknooppunt van een aangepaste zoekindex ongeordende onderliggende knooppunten bevat. Om dit te voorkomen, wordt aanbevolen dat alle afstammende knooppunten van een `oak:QueryIndexDefinition` knooppunt is van type `nt:unstructured`.
 
 ### Knooppunten voor aangepaste zoekindexdefinitie moeten een onderliggende node met de naam indexRules bevatten die onderliggende items bevat {#oakpal-custom-search-index}
 
@@ -847,10 +847,10 @@ In de volgende sectie worden de controles vermeld die door Cloud Manager zijn ui
 
 * [Elke Dispatcher-farm moet een unieke naam hebben](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---each-dispatcher-farm-should-have-a-unique-name)
 
-* [De Dispatcher publiceert landbouwbedrijfgeheime voorgeheugen zou zijn ignoreUrlParams regels moeten hebben die op een manier van de lijst van gewenste personen worden gevormd](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-cache-should-have-its-ignoreurlparams-rules-configured-in-an-allow-list-manner)
+* [Dispatcher publiceert landbouwbedrijfgeheime voorgeheugen zou zijn ignoreUrlParams regels moeten hebben die op een manier van de lijst van gewenste personen worden gevormd](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-cache-should-have-its-ignoreurlparams-rules-configured-in-an-allow-list-manner)
 
-* [De Dispatcher publiceert landbouwbedrijfsfilters zouden de toegestane het Verdelen selecteurs op de manier van de lijst van gewenste personen moeten specificeren](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-filters-should-specify-the-allowed-sling-selectors-in-an-allow-list-manner)
+* [De Dispatcher publiceert landbouwbedrijffilters zou de toegestane het Verdelen selecteurs op een manier van de lijst van gewenste personen moeten specificeren](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-filters-should-specify-the-allowed-sling-selectors-in-an-allow-list-manner)
 
-* [De Dispatcher publiceert de landbouwbedrijffilters zouden de toegestane het achtervoegselpatronen van het Sling op de manier van de lijst van gewenste personen moeten specificeren](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-filters-should-specify-the-allowed-sling-suffix-patterns-in-an-allow-list-manner)
+* [De Dispatcher publiceert landbouwbedrijffilters zouden de toegestane het achtervoegselpatronen van het Sling op een manier van de lijst van gewenste personen moeten specificeren](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-filters-should-specify-the-allowed-sling-suffix-patterns-in-an-allow-list-manner)
 
-* [De &quot;Vereisen allen verleend&quot;richtlijn zou niet in een sectie van de Folder VirtualHost met een wortel folder-weg moeten worden gebruikt](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-require-all-granted-directive-should-not-be-used-in-a-virtualhost-directory-section-with-a-root-directory-path)
+* [Gebruik niet de &#39;Alle toegekende&#39; instructie &#39;vereisen&#39; in een VirtualHost Directory-sectie met een hoofddirectory-pad](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-require-all-granted-directive-should-not-be-used-in-a-virtualhost-directory-section-with-a-root-directory-path)
