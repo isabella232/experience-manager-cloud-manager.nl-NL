@@ -1,19 +1,19 @@
 ---
-title: Opmerkingen bij de release 2023.2.0
-description: Dit zijn de opmerkingen bij de release 2023.2.0 voor Cloud Manager.
+title: Opmerkingen bij de release 2023.3.0
+description: Dit zijn de opmerkingen bij de release 2023.3.0 voor Cloud Manager.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: ab1747e14be783004544681f9aefefaa0587302e
+source-git-commit: 6ff44d7a7ccccc64f937df4dca854788c973bfd0
 workflow-type: tm+mt
-source-wordcount: '78'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
 
 
-# Opmerkingen bij de release 2023.2.0 voor Cloud Manager {#release-notes}
+# Opmerkingen bij de release 2023.3.0 voor Cloud Manager {#release-notes}
 
-Op deze pagina worden de opmerkingen bij de release voor [!UICONTROL Cloud Manager] release 2023.2.0.
+Op deze pagina worden de opmerkingen bij de release voor [!UICONTROL Cloud Manager] release 2023.3.0.
 
 >[!NOTE]
 >
@@ -21,4 +21,8 @@ Op deze pagina worden de opmerkingen bij de release voor [!UICONTROL Cloud Manag
 
 ## Releasedatum {#release-date}
 
-De releasedatum voor [!UICONTROL Cloud Manager] release 2023.1.0 is 16 februari 2023. De volgende release is gepland voor 16 maart 2023.
+De releasedatum voor [!UICONTROL Cloud Manager] release 2023.3.0 is 16 maart 2023. De volgende release is gepland voor 13 april 2023.
+
+## Opgeloste problemen {#bug-fixes}
+
+* De titel van de handel op de **Meer informatie** van Cloud Manager navigeert de gebruiker nu naar de juiste pagina.
