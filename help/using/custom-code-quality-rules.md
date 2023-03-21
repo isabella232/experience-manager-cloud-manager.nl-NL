@@ -2,9 +2,9 @@
 title: Aangepaste regels voor codekwaliteit
 description: Meer informatie over de regels voor de kwaliteit van aangepaste code die door Cloud Manager worden uitgevoerd als onderdeel van het testen van de kwaliteit van de code, op basis van de aanbevolen procedures van AEM Engineering.
 exl-id: 7d118225-5826-434e-8869-01ee186e0754
-source-git-commit: 611cd8f874e8e0d21a475365f4aceb6ae2565644
+source-git-commit: ef87e13eb81faf5605cdd16c6fd46d5f7b3233a9
 workflow-type: tm+mt
-source-wordcount: '3537'
+source-wordcount: '3531'
 ht-degree: 2%
 
 ---
@@ -627,7 +627,7 @@ Vergelijkbaar met de [De pakketten zouden geen dubbele OSGi configuratieregel mo
 * **Ernst**: Klein
 * **Sinds**: Versie 2020.5.0
 
-De OSGi-configuratie `com.day.cq.wcm.core.impl.AuthoringUIModeServiceImpl` definieert de standaardontwerpmodus in AEM. Omdat [de klassieke gebruikersinterface sinds AEM 6.4 is afgekeurd,](https://experienceleague.adobe.com/docs/experience-manager-64/release-notes/deprecated-removed-features.html) een kwestie wordt nu opgeheven wanneer de standaard auteurswijze aan Klassieke UI wordt gevormd.
+De OSGi-configuratie `com.day.cq.wcm.core.impl.AuthoringUIModeServiceImpl` definieert de standaardontwerpmodus in AEM. Omdat Klassieke UI sinds AEM 6.4 is afgekeurd, wordt een kwestie nu opgeheven wanneer de standaard auteurswijze aan Klassieke UI wordt gevormd.
 
 ### Componenten met dialoogvensters moeten aanraakinterface-dialoogvensters hebben {#oakpal-components-dialogs}
 
