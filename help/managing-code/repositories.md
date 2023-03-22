@@ -2,9 +2,9 @@
 title: Opslagplaatsen voor Cloud Manager
 description: Leer hoe u opslagruimten voor uw Cloud Manager-programma's kunt openen, maken en bewerken.
 exl-id: 384b197d-f7a7-4022-9b16-9d83ab788966
-source-git-commit: 6572c16aea2c5d2d1032ca5b0f5d75ade65c3a19
+source-git-commit: 63cbcf8724a840efa67b8fafc4c321e04a5d70d9
 workflow-type: tm+mt
-source-wordcount: '666'
+source-wordcount: '796'
 ht-degree: 0%
 
 ---
@@ -81,9 +81,19 @@ Voer de volgende stappen uit om opslagruimten te bewerken en weer te geven in Cl
 
 1. Van de **Programmaoverzicht** pagina, klik op **Opslagplaatsen** en navigeer naar de **Opslagplaatsen** pagina. Hier kunt u de details van uw bestaande opslagplaatsen bekijken.
 
-1. Selecteer de opslagplaats en klik op de ellipsknop helemaal rechts van de tabel om **Repository-URL kopiëren**, **Weergeven en bijwerken** of **Verwijderen** uw opslagplaats.
+1. Selecteer de opslagplaats en klik op de ellipsknop helemaal rechts van de tabel om **Repository-URL kopiëren** of **Weergeven en bijwerken** uw opslagplaats.
 
 ![Repo bewerken](/help/assets/create-repo3.png)
+
+## Opslagplaatsen verwijderen {#delete-repos}
+
+Als u een gegevensopslagruimte wilt verwijderen, voert u dezelfde stappen uit [om opslagruimten te bekijken en te bewerken](#edit-repos) maar op de **Opslagplaatsen** pagina selecteren **Verwijderen** van de ellipse knoop van de bewaarplaats die moet worden geschrapt.
+
+Wanneer een opslagplaats wordt verwijderd in Cloud Manager, wordt deze gemarkeerd als verwijderd en is deze niet langer toegankelijk voor de gebruiker, maar wordt deze in het systeem onderhouden voor hersteldoeleinden.
+
+Als u een nieuwe repository probeert te maken na het verwijderen van een repository met dezelfde naam, ontvangt u het foutbericht &quot;Er is een fout opgetreden tijdens het maken van een repository. Neem contact op met uw CSE of Adobe Support.&quot;
+
+Als u dit foutbericht ontvangt, neemt u contact op met de Adobe Support zodat deze gebruikers kunnen helpen de naam van de verwijderde opslagplaats te wijzigen of een andere naam voor de nieuwe opslagplaats kunnen kiezen.
 
 ## Ondersteuning voor Git-submodule {#git-submodule-support}
 
