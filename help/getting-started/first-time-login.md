@@ -2,9 +2,9 @@
 title: Eerste aanmelding
 description: Volg deze pagina als u algemene configuraties hebt ingesteld en u voor het eerst Cloud Manager kunt gebruiken.
 exl-id: eb043437-8566-4a8d-8c5c-c8cf1d33daeb
-source-git-commit: d8f16deacfe52c76ff6b0aee0344d50bfe2b9c74
+source-git-commit: 413edd167b5eda51c207113aaa00a92c808fb09f
 workflow-type: tm+mt
-source-wordcount: '255'
+source-wordcount: '257'
 ht-degree: 0%
 
 ---
@@ -20,13 +20,13 @@ Zodra u opstelling de algemene configuratie voor [!UICONTROL Cloud Manager], ben
 
 ## Aanmelden voor de eerste keer {#logging-in-for-the-first-time}
 
-1. Aanmelden bij Adobe [!UICONTROL Experience Cloud] en je ziet de lijst met programma &#39; s .
+1. Aanmelden bij Cloud Manager [`my.cloudmanager.adobe.com`](https://my.cloudmanager.adobe.com/) en je ziet de lijst met programma&#39;s.
 
-1. Selecteer het programma.
+   ![Cloud Manager-console](/help/assets/cloud-manager-console.png)
 
-1. Selecteer op de kaart van uw programma de knop voor ovaal en vervolgens **Cloud Manager** om naar Cloud Manager te navigeren **Overzicht** pagina.
+1. Selecteer op de kaart van uw programma de knop voor ovaal en vervolgens **Programmaoverzicht** om naar Cloud Manager te navigeren **Overzicht** pagina.
 
-   ![Cloud Manager, optie](/help/assets/navigate-cm1.png)
+   ![Cloud Manager, optie](/help/assets/program-overview-option.png)
 
 1. Cloud Manager wordt geopend voor **Overzicht** pagina.
 
