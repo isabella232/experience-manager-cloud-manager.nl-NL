@@ -2,10 +2,10 @@
 title: Testen van de codekwaliteit
 description: Leer hoe het testen van de codekwaliteit van pijpleidingen werkt en hoe het de kwaliteit van uw plaatsingen kan verbeteren.
 exl-id: 6a574858-a30e-4768-bafc-8fe79f928294
-source-git-commit: 6572c16aea2c5d2d1032ca5b0f5d75ade65c3a19
+source-git-commit: 8c3b59ab9e00d6ee3b90b9255d025d9e19b3b89a
 workflow-type: tm+mt
 source-wordcount: '2863'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -152,7 +152,7 @@ Het aantal virtuele gebruikers of containers dat wordt gespun door de Manager va
 Vóór het begin van de testperiode van 30 minuten, zal de Manager van de Wolk de het opvoeren omgeving kruipen gebruikend een reeks van één of meerdere zaadURLs die door de Ingenieur van het Succes van de Klant wordt gevormd. Vanaf deze URL&#39;s wordt de HTML van elke pagina geïnspecteerd en worden koppelingen in de breedteeerste modus doorlopen.
 
 * Dit schuifproces is standaard beperkt tot maximaal 5000 pagina&#39;s.
-* Het maximumaantal pagina&#39;s dat moet worden getest, kan worden overschreven door het instellen van de [omgevingsvariabele](/help/getting-started/build-environment.md#environment-variables) `MAX_PAGES`.
+* Het maximumaantal pagina&#39;s dat moet worden getest, kan worden overschreven door het instellen van de [omgevingsvariabele](/help/getting-started/build-environment.md#environment-variables) `CM_PERF_TEST_CRAWLER_MAX_PAGES`.
    * Toegestane waarden zijn `2000` - `7000`.
 * De verzoeken van de kruipper hebben een vaste onderbreking van 10 seconden.
 
