@@ -2,9 +2,9 @@
 title: Aangepaste regels voor codekwaliteit
 description: Meer informatie over de regels voor de kwaliteit van aangepaste code die door Cloud Manager worden uitgevoerd als onderdeel van het testen van de kwaliteit van de code, op basis van de aanbevolen procedures van AEM Engineering.
 exl-id: 7d118225-5826-434e-8869-01ee186e0754
-source-git-commit: ef87e13eb81faf5605cdd16c6fd46d5f7b3233a9
+source-git-commit: 1ba4ed6c311eeaff9c71313d265531f427ef2736
 workflow-type: tm+mt
-source-wordcount: '3531'
+source-wordcount: '3566'
 ht-degree: 2%
 
 ---
@@ -17,6 +17,10 @@ Meer informatie over de aangepaste kwaliteitsregels voor code die door Cloud Man
 >[!NOTE]
 >
 >De hier gegeven codevoorbeelden zijn slechts voor illustratieve doeleinden. Zie [Documentatie bij Concepts van SonarQube](https://docs.sonarqube.org/latest/) kennis te nemen van zijn concepten en kwaliteitsregels.
+
+>[!NOTE]
+>
+>Volledige SonarQube-regels zijn niet beschikbaar voor downloaden vanwege Adobe-eigen informatie. U kunt de volledige lijst met regels downloaden [gebruiken van deze verbinding.](/help/assets/CodeQuality-rules-latest-AMS.xlsx) Lees dit document verder voor beschrijvingen en voorbeelden van de regels.
 
 ## SonarQube-regels {#sonarqube-rules}
 
