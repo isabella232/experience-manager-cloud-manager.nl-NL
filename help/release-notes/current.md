@@ -1,19 +1,19 @@
 ---
-title: Opmerkingen bij de release 2023.4.0
-description: Dit zijn de opmerkingen bij de release 2023.4.0 voor Cloud Manager.
+title: Opmerkingen bij de release 2023.5.0
+description: Dit zijn de opmerkingen bij de release 2023.5.0 voor Cloud Manager.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 0ea63c0c8a4fa216ac3d70db1fb12add7f036495
+source-git-commit: 5a92ceb98de68025ca917c9b9cb358d54282b235
 workflow-type: tm+mt
-source-wordcount: '114'
+source-wordcount: '107'
 ht-degree: 1%
 
 ---
 
 
-# Opmerkingen bij de release 2023.4.0 voor Cloud Manager {#release-notes}
+# Opmerkingen bij de release 2023.5.0 van Cloud Manager {#release-notes}
 
-Op deze pagina worden de opmerkingen bij de release voor [!UICONTROL Cloud Manager] release 2023.4.0.
+Op deze pagina worden de opmerkingen bij de release voor [!UICONTROL Cloud Manager] release 2023.5.0.
 
 >[!NOTE]
 >
@@ -21,12 +21,8 @@ Op deze pagina worden de opmerkingen bij de release voor [!UICONTROL Cloud Manag
 
 ## Releasedatum {#release-date}
 
-De releasedatum voor [!UICONTROL Cloud Manager] release 2023.4.0 is 13 april 2023. De volgende release is gepland voor 11 mei 2023.
+De releasedatum voor [!UICONTROL Cloud Manager] release 2023.5.0 is 11 mei 2023. De volgende release is gepland voor 8 juni 2023.
 
 ## Wat is er nieuw? {#what-is-new}
 
-* [Het AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) is bijgewerkt naar versie 41.
-
-## Opgeloste problemen {#bug-fixes}
-
-* Blauwe verzenders zijn niet meer gekoppeld aan de groene ELB als de [blauwe/groene implementatie](/help/introduction.md#blue-green) mislukt.
+* [Self-service inhoud kopiëren](/help/using/content-copy.md) is nu beschikbaar vanuit een hogere omgeving naar een lagere omgeving via de interface van Cloud Manager. Neem contact op met uw Customer Success Engineer voor meer informatie.

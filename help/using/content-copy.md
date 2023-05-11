@@ -2,9 +2,9 @@
 title: Het gereedschap Inhoud kopiëren
 description: Met het hulpprogramma voor het kopiëren van inhoud van Cloud Manager kunnen gebruikers op verzoek muterende inhoud kopiëren van hun AEM productieomgeving naar lagere omgevingen voor testdoeleinden.
 exl-id: 97915e58-a1d3-453f-b5ce-cad55ed73262
-source-git-commit: 7ef29a244688de82537da0b879fbf397900427c0
+source-git-commit: 65cca64cb230686617af7f797fa86b754658e46d
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '1123'
 ht-degree: 0%
 
 ---
@@ -31,9 +31,9 @@ Wanneer het kopiëren van inhoud, is het bronmilieu de bron van waarheid.
 * Als de inhoud in de bestemmingsmilieu is gewijzigd, zal het door inhoud in de bron worden beschreven, als de wegen het zelfde zijn.
 * Als de paden verschillend zijn, wordt de inhoud van de bron samengevoegd met de inhoud in de bestemming.
 
-   >[!NOTE]
-   >
-   >Alleen op archivering gebaseerde topologieën voor bestandsgegevens worden ondersteund.
+>[!NOTE]
+>
+>Neem contact op met uw Customer Success Engineer (CSE) om deze functie in te schakelen.
 
 ## Machtigingen {#permissions}
 
@@ -158,7 +158,8 @@ Het gereedschap voor het kopiëren van inhoud heeft de volgende beperkingen.
 
 * Een inhoudkopie kan niet worden uitgevoerd van een lagere omgeving naar een hogere omgeving.
 * Het kopiëren van inhoud kan alleen worden uitgevoerd binnen dezelfde laag (dus auteur of publicatie).
-* Kopiëren van inhoud tussen programma&#39;s is niet mogelijk.
+* Kopiëren van inhoud tussen programma&#39;s en regio&#39;s is niet mogelijk.
+* Het exemplaar van de inhoud voor de opslag van de wolkengegevens kan gebaseerde topologie slechts worden uitgevoerd wanneer bron en bestemmingsmilieu op de zelfde wolkenleverancier zijn.
 * Het uitvoeren van gelijktijdige bewerkingen voor het kopiëren van inhoud in dezelfde omgeving is niet mogelijk.
 * Het exemplaar van de inhoud kan niet worden uitgevoerd als er om het even welke actieve verrichting die op of het doel of bronmilieu zoals een pijpleiding CI/CD loopt.
 * Per inhoudenset kunnen maximaal vijftig paden worden opgegeven. Uitgesloten paden zijn niet beperkt.
@@ -166,3 +167,4 @@ Het gereedschap voor het kopiëren van inhoud heeft de volgende beperkingen.
 * Het gereedschap voor het kopiëren van inhoud heeft geen versiemogelijkheid en kan niet automatisch gewijzigde inhoud of nieuw gemaakte inhoud detecteren in de bronomgeving in een inhoudenset sinds de laatste bewerking voor het kopiëren van inhoud.
    * Als u de doelomgeving pas wilt bijwerken nadat de inhoud voor het laatst is gekopieerd, moet u een inhoudsset maken. Geef in die set de paden op in de broninstantie waar wijzigingen zijn aangebracht sinds de laatste bewerking voor het kopiëren van inhoud.
 * Versiegegevens worden niet opgenomen in een inhoudskopie.
+* Een inhoudkopie kan niet worden gepauzeerd of geannuleerd nadat deze is gestart.
