@@ -31,10 +31,10 @@ Deze lijst vat de rollen samen.
 
 | [!UICONTROL Cloud Manager] Rol | Beschrijving |
 |--- |--- |
-| Zakelijke eigenaar | Deze gebruiker is verantwoordelijk voor het definiëren van KPI&#39;s, het goedkeuren van productieimplementaties en het overschrijven van belangrijke 3-tivelige fouten indien nodig. |
-| Programmabeheerder | Deze gebruiker gebruikt [!UICONTROL Cloud Manager] om teamopstelling uit te voeren, status te herzien, KPIs te bekijken, en kan belangrijke 3-rij mislukkingen goedkeuren wanneer noodzakelijk. |
-| Implementatiebeheer | Deze gebruiker beheert implementatiebewerkingen en gebruikt [!UICONTROL Cloud Manager] om het opvoeren/productie plaatsingen uit te voeren, CI/CD pijpleidingen uit te geven, belangrijke 3-rij mislukkingen goed te keuren wanneer nodig, en tot de git bewaarplaats te kunnen toegang hebben. |
-| Ontwikkelaar | Deze gebruiker ontwikkelt en test de code van de douanetoepassing en hoofdzakelijk gebruikt [!UICONTROL Cloud Manager] om de implementatiestatus te bekijken en toegang te krijgen tot de git-opslagplaats voor codeverplichtingen. |
+| Business Owner | Deze gebruiker is verantwoordelijk voor het definiëren van KPI&#39;s, het goedkeuren van productieimplementaties en het overschrijven van belangrijke 3-tivelige fouten indien nodig. |
+| Program Manager | Deze gebruiker gebruikt [!UICONTROL Cloud Manager] om teamopstelling uit te voeren, status te herzien, KPIs te bekijken, en kan belangrijke 3-rij mislukkingen goedkeuren wanneer noodzakelijk. |
+| Deployment Manager | Deze gebruiker beheert implementatiebewerkingen en gebruikt [!UICONTROL Cloud Manager] om het opvoeren/productie plaatsingen uit te voeren, CI/CD pijpleidingen uit te geven, belangrijke 3-rij mislukkingen goed te keuren wanneer nodig, en tot de git bewaarplaats te kunnen toegang hebben. |
+| Developer | Deze gebruiker ontwikkelt en test de code van de douanetoepassing en hoofdzakelijk gebruikt [!UICONTROL Cloud Manager] om de implementatiestatus te bekijken en toegang te krijgen tot de git-opslagplaats voor codeverplichtingen. |
 | Klantsuccesvolle technicus | Deze gebruiker steunt over het algemeen klantensucces voor klanten AMS en wisselt met [!UICONTROL Cloud Manager] voor het uitvoeren van implementaties die toezicht op de bedrijfsorganisatie vereisen. |
 | Inhoudsauteur | Deze gebruiker communiceert doorgaans niet met [!UICONTROL Cloud Manager] maar kan [!UICONTROL Cloud Manager] programmaschakelaar om tot AEM toegang te hebben. |
 
@@ -50,10 +50,10 @@ De Admin Console is een centrale plaats voor het beheren van uw rechten van de A
 
 Om de aangewezen op rol-gebaseerde toestemmingen te verstrekken aan [!UICONTROL Cloud Manager] gebruikers, moet een beheerder in de organisatie van de klant nieuwe productprofielen tot stand brengen onder [!UICONTROL AEM Managed Services] productcontext die overeenkomt met elk van de vier [!UICONTROL Cloud Manager] rollen:
 
-* Zakelijke eigenaar
-* Implementatiebeheer
-* Ontwikkelaar
-* Programmabeheerder
+* Business Owner
+* Deployment Manager
+* Developer
+* Program Manager
 
 Met de Admin Console kunt u gebruikers/groepen maken of toevoegen aan deze productprofielen.
 
@@ -81,10 +81,10 @@ Met de Admin Console kunt u gebruikers/groepen maken of toevoegen aan deze produ
 
    | Rol | Weergavenaam (vereist) | Aanbevolen profielnaam |
    |---|---|---|
-   | Zakelijke eigenaar | `CM_BUSINESS_OWNER_ROLE_PROFILE` | [!UICONTROL Cloud Manager] - Rol bedrijfseigenaar |
-   | Implementatiebeheer | `CM_DEPLOYMENT_MANAGER_ROLE_PROFILE` | [!UICONTROL Cloud Manager] - Rol van implementatiebeheer |
-   | Ontwikkelaar | `CM_DEVELOPER_ROLE_PROFILE` | [!UICONTROL Cloud Manager] - Rol van ontwikkelaar |
-   | Programmabeheerder | `CM_PROGRAM_MANAGER_ROLE_PROFILE` | [!UICONTROL Cloud Manager] - Rol van programmamanager |
+   | Business Owner | `CM_BUSINESS_OWNER_ROLE_PROFILE` | [!UICONTROL Cloud Manager] - Rol bedrijfseigenaar |
+   | Deployment Manager | `CM_DEPLOYMENT_MANAGER_ROLE_PROFILE` | [!UICONTROL Cloud Manager] - Rol van implementatiebeheer |
+   | Developer | `CM_DEVELOPER_ROLE_PROFILE` | [!UICONTROL Cloud Manager] - Rol van ontwikkelaar |
+   | Program Manager | `CM_PROGRAM_MANAGER_ROLE_PROFILE` | [!UICONTROL Cloud Manager] - Rol van programmamanager |
 
 
 1. Klikken **Gereed** om het nieuwe profiel op te slaan.

@@ -5,7 +5,7 @@ exl-id: b66533fb-db93-40e8-919d-581261fdbf24
 source-git-commit: 522e5fbc650a8159602eb1aeaf42d64f4e23e8b4
 workflow-type: tm+mt
 source-wordcount: '539'
-ht-degree: 14%
+ht-degree: 4%
 
 ---
 
@@ -36,7 +36,7 @@ Deze lijst maakt een lijst van de rollen u in de Admin Console kunt toewijzen.
 Elk van de rollen heeft specifieke bijbehorende preconfigured toestemmingen. Deze lijst maakt een lijst van de beschikbare toestemmingen en de rollen die hen kunnen uitvoeren.
 
 
-| Machtiging | Beschrijving | Zakelijke eigenaar | Implementatiebeheer | Programmabeheerder | Ontwikkelaar | CSE |
+| Machtiging | Beschrijving | Business Owner | Deployment Manager | Program Manager | Developer | CSE |
 |--- |--- |--- |--- |--- |--- |--- |
 | Toepassing lezen | KPI&#39;s van programma lezen | x | x | x | x | x |
 | Toepassing schrijven | Programma instellen of bewerken | x |  |  |  |  |
