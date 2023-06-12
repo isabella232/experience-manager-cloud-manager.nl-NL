@@ -2,9 +2,9 @@
 title: Het gereedschap Inhoud kopiëren
 description: Met het hulpprogramma voor het kopiëren van inhoud van Cloud Manager kunnen gebruikers op verzoek muterende inhoud kopiëren van hun AEM productieomgeving naar lagere omgevingen voor testdoeleinden.
 exl-id: 97915e58-a1d3-453f-b5ce-cad55ed73262
-source-git-commit: 65cca64cb230686617af7f797fa86b754658e46d
+source-git-commit: 435efe2e6cecae738a62869c55034113c09f70e7
 workflow-type: tm+mt
-source-wordcount: '1123'
+source-wordcount: '1090'
 ht-degree: 0%
 
 ---
@@ -119,7 +119,6 @@ Nadat u een inhoudsset hebt gemaakt, kunt u deze gebruiken om inhoud te kopiëre
    >* De gebruiker beschikt niet over de juiste machtigingen.
    >* Het milieu heeft een lopende pijpleiding of een verrichting van de exemplaarinhoud lopend.
 
-
 1. In de **Inhoud kopiëren** geeft u de bron en de bestemming op voor de actie Kopiëren van inhoud.
 
 1. U kunt ervoor kiezen om paden voor uitsluiten te verwijderen of te behouden in de doelomgeving. Selectievakje selecteren `Do not delete exclude paths from destination` als u de uitsluitingspaden wilt behouden die in de inhoudenset zijn opgegeven. Als het selectievakje uitgeschakeld blijft, worden paden uitgesloten uit de doelomgeving.
@@ -164,7 +163,6 @@ Het gereedschap voor het kopiëren van inhoud heeft de volgende beperkingen.
 * Het exemplaar van de inhoud kan niet worden uitgevoerd als er om het even welke actieve verrichting die op of het doel of bronmilieu zoals een pijpleiding CI/CD loopt.
 * Per inhoudenset kunnen maximaal vijftig paden worden opgegeven. Uitgesloten paden zijn niet beperkt.
 * Het gereedschap voor het kopiëren van inhoud mag niet worden gebruikt als een kloon- of spiegelgereedschap omdat het geen verplaatste of verwijderde inhoud van de bron kan bijhouden.
-* Het gereedschap voor het kopiëren van inhoud heeft geen versiemogelijkheid en kan niet automatisch gewijzigde inhoud of nieuw gemaakte inhoud detecteren in de bronomgeving in een inhoudenset sinds de laatste bewerking voor het kopiëren van inhoud.
-   * Als u de doelomgeving pas wilt bijwerken nadat de inhoud voor het laatst is gekopieerd, moet u een inhoudsset maken. Geef in die set de paden op in de broninstantie waar wijzigingen zijn aangebracht sinds de laatste bewerking voor het kopiëren van inhoud.
-* Versiegegevens worden niet opgenomen in een inhoudskopie.
 * Een inhoudkopie kan niet worden gepauzeerd of geannuleerd nadat deze is gestart.
+* Met het gereedschap voor het kopiëren van inhoud kopieert u elementen samen met dynamische metagegevens over media van de hogere omgeving naar de geselecteerde lagere omgeving.
+   * Gekopieerde elementen moeten vervolgens opnieuw worden verwerkt met de opdracht [Workflow voor DAM-procesmiddelen](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/assets-workflow.html) in de lagere omgeving om de respectieve dynamische mediasonfiguratie te gebruiken.
