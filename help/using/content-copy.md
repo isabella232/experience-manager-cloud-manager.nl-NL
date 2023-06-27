@@ -1,21 +1,22 @@
 ---
 title: Het gereedschap Inhoud kopiëren
-description: Met het hulpprogramma voor het kopiëren van inhoud van Cloud Manager kunnen gebruikers op verzoek muterende inhoud kopiëren van hun AEM productieomgeving naar lagere omgevingen voor testdoeleinden.
+description: Met het hulpprogramma voor het kopiëren van inhoud van Cloud Manager kunnen gebruikers op verzoek muterende inhoud kopiëren van hun AMS-gehoste AEM 6.x-productieomgevingen naar lagere omgevingen voor testdoeleinden.
 exl-id: 97915e58-a1d3-453f-b5ce-cad55ed73262
-source-git-commit: 435efe2e6cecae738a62869c55034113c09f70e7
+source-git-commit: 223b547d6bc94137dfbb7d92862a508fa67799d2
 workflow-type: tm+mt
-source-wordcount: '1090'
+source-wordcount: '1096'
 ht-degree: 0%
 
 ---
 
+
 # Het gereedschap Inhoud kopiëren {#content-copy}
 
-Met het hulpprogramma voor het kopiëren van inhoud van Cloud Manager kunnen gebruikers op verzoek muterende inhoud kopiëren van hun AEM productieomgeving naar lagere omgevingen voor testdoeleinden.
+Met het hulpprogramma voor het kopiëren van inhoud van Cloud Manager kunnen gebruikers op verzoek muterende inhoud kopiëren van hun AMS-gehoste AEM 6.x-productieomgevingen naar lagere omgevingen voor testdoeleinden.
 
 ## Inleiding {#introduction}
 
-De huidige, echte gegevens zijn waardevol voor het testen, de bevestiging, en de gebruiker-aanvaarding doeleinden. Met het gereedschap Inhoud kopiëren kunt u inhoud van uw productie AEM omgeving kopiëren naar een testomgeving.
+De huidige, echte gegevens zijn waardevol voor het testen, de bevestiging, en de gebruiker-aanvaarding doeleinden. Met het gereedschap Inhoud kopiëren kunt u inhoud van uw productie-AMS-gehoste AEM 6.x-omgeving kopiëren naar een testomgeving.
 
 De inhoud die moet worden gekopieerd, wordt gedefinieerd door een inhoudsset. Een inhoudsset bestaat uit een lijst met JCR-paden die de veranderbare inhoud bevatten die vanuit een bronomgeving naar een doelomgeving binnen hetzelfde programma van Cloud Manager moet worden gekopieerd. De volgende paden zijn toegestaan in een inhoudsset.
 
