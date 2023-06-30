@@ -1,19 +1,19 @@
 ---
-title: Opmerkingen bij de release 2023.6.0
-description: Dit zijn de opmerkingen bij de release 2023.6.0 voor Cloud Manager.
+title: Opmerkingen bij de release 2023.7.0
+description: Dit zijn de opmerkingen bij de release 2023.7.0 voor Cloud Manager.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 1bbdc88a2c7a86e258d5fd56fab504aa7232e9fc
+source-git-commit: 950fef5781c53f9bccf4c33c8b9d958edd5a0327
 workflow-type: tm+mt
-source-wordcount: '95'
-ht-degree: 2%
+source-wordcount: '119'
+ht-degree: 0%
 
 ---
 
 
-# Opmerkingen bij de release 2023.6.0 voor Cloud Manager {#release-notes}
+# Opmerkingen bij de release 2023.7.0 voor Cloud Manager {#release-notes}
 
-Op deze pagina worden de opmerkingen bij de release voor [!UICONTROL Cloud Manager] release 2023.6.0.
+Op deze pagina worden de opmerkingen bij de release voor [!UICONTROL Cloud Manager] release 2023.7.0.
 
 >[!NOTE]
 >
@@ -21,8 +21,9 @@ Op deze pagina worden de opmerkingen bij de release voor [!UICONTROL Cloud Manag
 
 ## Releasedatum {#release-date}
 
-De releasedatum voor [!UICONTROL Cloud Manager] release 2023.6.0 is 8 juni 2023. De volgende release is gepland voor 6 juli 2023.
+De releasedatum voor [!UICONTROL Cloud Manager] release 2023.7.0 is 29 juni 2023. De volgende release is gepland voor 10 augustus 2023.
 
-## Wat is er nieuw? {#what-is-new}
+## Opgeloste problemen {#bug-fixes}
 
-* Bij het hervatten van een [productiepijpleiding,](/help/using/production-pipelines.md) er wordt nu een bevestigingsvenster weergegeven bij de stap Goedkeuren.
+* Kaarten op de landingspagina van Cloud Manager geven nu aan of [verbeterde beveiliging](/help/getting-started/program-setup.md) is ingeschakeld voor hun programma&#39;s.
+* Wanneer [het bewerken van een productiepijplijn;](/help/using/managing-pipelines.md#editing-pipelines) als de gebruiker een element probeert te verwijderen uit de **Werkgebiedtests** wordt een fout weergegeven.
