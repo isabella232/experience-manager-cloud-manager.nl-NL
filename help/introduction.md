@@ -2,9 +2,9 @@
 title: Inleiding tot Cloud Manager voor AMS
 description: Begin hier om Cloud Manager voor Adobe Managed Services (AMS) te leren kennen en hoe organisaties Adobe Experience Manager in de cloud kunnen beheren.
 exl-id: 58344d8a-b869-4177-a9cf-6a8b7dfe9588
-source-git-commit: 14e35882765783b234ca35da14257279af5130a0
+source-git-commit: a2cea28061304d109a3c9a48650d01255579443c
 workflow-type: tm+mt
-source-wordcount: '1287'
+source-wordcount: '1298'
 ht-degree: 3%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 3%
 
 # Inleiding tot [!UICONTROL Cloud Manager] voor AMS {#introduction-to-cloud-manager}
 
-Begin hier om Cloud Manager for Adobe Manage Services (AMS) te leren kennen en hoe organisaties Adobe Experience Manager in de cloud kunnen beheren.
+Begin hier om Cloud Manager voor Adobe Manage Services (AMS) te leren kennen en hoe organisaties Adobe Experience Manager in de cloud kunnen beheren.
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_cloudmanager_introduction"
@@ -41,7 +41,7 @@ Met Cloud Manager beschikt uw ontwikkelteam over de volgende functies:
 
 * Autoscaling die intelligent de behoefte aan verhoogde capaciteit ontdekt en automatisch extra Verzender/het publiceren segmenten online brengt
 
-Dit beeld illustreert de CI/CD processtroom die in wordt gebruikt [!UICONTROL Cloud Manager]:
+Dit beeld illustreert de CI/CD processtroom in [!UICONTROL Cloud Manager]:
 
 ![Cd/cd-stroom](/help/assets/screen_shot_2018-05-12at73843pm.png)
 
@@ -55,7 +55,7 @@ De gebruikersinterface (UI) voor [!UICONTROL Cloud Manager] kunt u eenvoudig toe
 
 U definieert toepassingsspecifieke prestatiekernindicatoren (KPI&#39;s) (zoals piekpaginaweergaven per minuut en verwachte responstijd voor een paginabelasting) die de basis vormen voor het meten van een geslaagde implementatie. Rollen en machtigingen voor verschillende teamleden kunnen eenvoudig worden gedefinieerd. De zelfbedieningsinterface plaatst controle in uw handen, maar het biedt ook verbindingen aan beste praktijkmiddelen en toegang tot deskundigen binnen Adobe aan die de noodzakelijke begeleiding kunnen verstrekken zoals nodig.
 
-Verkennen en aan de slag gaan met [!UICONTROL Cloud Manager]De gebruikersinterface van het document, zie [Eerste aanmelding.](/help/getting-started/first-time-login.md)
+Verkennen en beginnen met [!UICONTROL Cloud Manager]De gebruikersinterface van het document, zie [Eerste aanmelding.](/help/getting-started/first-time-login.md)
 
 ### CI/CD Pipet {#ci-cd-pipeline}
 
@@ -81,7 +81,7 @@ Cloud Manager biedt extra, geavanceerde functies die gunstig kunnen zijn voor uw
 
 ### Automatisch schalen {#autoscaling}
 
-Wanneer de productieomgeving aan ongewoon hoge belasting onderhevig is, [!UICONTROL Cloud Manager] detecteert de behoefte aan extra capaciteit en brengt automatisch extra capaciteit online met behulp van de functie voor automatisch schalen.
+Wanneer de productieomgeving te kampen heeft met een ongewoon hoge belasting, [!UICONTROL Cloud Manager] detecteert de behoefte aan extra capaciteit en brengt automatisch extra capaciteit online met behulp van de functie voor automatisch schalen.
 
 In dat geval [!UICONTROL Cloud Manager] activeert automatisch het inrichtingsproces voor automatisch schalen, verzendt een melding van de gebeurtenis voor automatisch schalen en plaatst binnen enkele minuten extra capaciteit online. De extra capaciteit wordt geleverd in de productieomgeving, in dezelfde regio of regio&#39;s en overeenkomstig dezelfde systeemspecificaties als de actieve Dispatcher/publishing-knooppunten.
 
@@ -114,8 +114,10 @@ Wanneer de blauwe/groene plaatsing wordt toegelaten, verschilt de plaatsingsstro
 | 4 | Implementatie in groene publicatie-/verzendingslagen | Implementatie aan uitgever |
 | 5 | Onderbreken voor testen (maximaal 24 uur) | - |
 | 6 | Groene infrastructuur wordt toegevoegd aan het taakverdelingsmechanisme voor productie | - |
-| 7 | Blauwe infrastructuur wordt verwijderd uit het productielast-taakverdelingsmechanisme- |
-| 8 | Blauwe infrastructuur wordt automatisch beëindigd | - |
+| 7 | Blauwe infrastructuur wordt verwijderd uit het productietraagtaakverdelingsmechanisme- |
+| 8 | Pauzeren voor afmelding (maximaal 24 uur) | - |
+| 9 | Blauwe infrastructuur wordt automatisch beëindigd | - |
+| 10 | Pipet voltooid | - |
 
 #### Blauw/groen implementeren {#implementing}
 
