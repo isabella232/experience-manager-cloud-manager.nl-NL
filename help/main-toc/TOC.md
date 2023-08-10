@@ -7,9 +7,9 @@ user-guide-description: Leer hoe u met Cloud Manager zelf in de cloud Adobe Expe
 feature-set: Experience Manager Cloud Manager, Experience Manager
 feature: Cloud Manager
 role: Admin
-source-git-commit: 0e5753fe4bb575d1382ead4c273d8a654df82ba5
+source-git-commit: d2c4503fdcccb62d2e25799e81f1ce823c2b1cbe
 workflow-type: tm+mt
-source-wordcount: '339'
+source-wordcount: '342'
 ht-degree: 15%
 
 ---
@@ -48,7 +48,7 @@ ht-degree: 15%
    + [Codeimplementatie](/help/using/code-deployment.md)
    + [Testen van de codekwaliteit](/help/using/code-quality-testing.md)
    + [Omgevingen beheren](/help/using/managing-environments.md)
-   + [Monitoringomgevingen](/help/using/monitoring-environments.md)
+   + [Controleomgevingen](/help/using/monitoring-environments.md)
    + [Cloud Manager-API](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/)
    + [Cloud Manager CLI](https://github.com/adobe/aio-cli-plugin-cloudmanager/blob/main/README.md)
    + [Meldingen](/help/using/notifications.md)
@@ -65,6 +65,7 @@ ht-degree: 15%
 + Releaseopmerkingen {#release-notes}
    + [Opmerkingen bij de huidige release](/help/release-notes/current.md)
    + 2023 {#2023}
+      + [Opmerkingen bij de release 2023.7.0](/help/release-notes/2023/2023-7-0.md)
       + [Opmerkingen bij de release 2023.6.0](/help/release-notes/2023/2023-6-0.md)
       + [Opmerkingen bij de release 2023.5.0](/help/release-notes/2023/2023-5-0.md)
       + [Opmerkingen bij de release 2023.4.0](/help/release-notes/2023/2023-4-0.md)
