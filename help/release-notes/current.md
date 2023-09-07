@@ -1,19 +1,19 @@
 ---
-title: Opmerkingen bij de release 2023.8.0
-description: Dit zijn de opmerkingen bij de release 2023.8.0 voor Cloud Manager.
+title: Opmerkingen bij de release 2023.9.0
+description: Dit zijn de opmerkingen bij de release 2023.9.0 voor Cloud Manager.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: f930f12b5f50dd96a1677ff7a56cf0e92a400556
+source-git-commit: 326e47e769c4f183fa3ee7d26952cb0f58e5067a
 workflow-type: tm+mt
-source-wordcount: '212'
-ht-degree: 0%
+source-wordcount: '82'
+ht-degree: 2%
 
 ---
 
 
-# Opmerkingen bij de release 2023.8.0 voor Cloud Manager {#release-notes}
+# Opmerkingen bij de release 2023.9.0 van Cloud Manager {#release-notes}
 
-Op deze pagina worden de opmerkingen bij de release voor [!UICONTROL Cloud Manager] release 2023.8.0.
+Op deze pagina worden de opmerkingen bij de release voor [!UICONTROL Cloud Manager] release 2023.9.0.
 
 >[!NOTE]
 >
@@ -21,18 +21,8 @@ Op deze pagina worden de opmerkingen bij de release voor [!UICONTROL Cloud Manag
 
 ## Releasedatum {#release-date}
 
-De releasedatum voor [!UICONTROL Cloud Manager] release 2023.8.0 is 10 augustus 2023. De volgende release is gepland voor 7 september 2023.
+De releasedatum voor [!UICONTROL Cloud Manager] release 2023.9.0 is 7 september 2023. De volgende release is gepland voor 5 oktober 2023.
 
 ## Wat is er nieuw? {#what-is-new}
 
-* Er zijn verbeteringen aangebracht om de begrijpelijkheid en het omgaan met foutberichten in de gebruikersinterface van Cloud Manager te verbeteren.
-
 ## Opgeloste problemen {#bug-fixes}
-
-* Niet frequente gevallen [inhoudskopie](/help/using/content-copy.md) processen die vastlopen , zijn aangepakt .
-* Er is een tijdelijk testprobleem opgelost voor klanten die geen New Relic One gebruiken.
-* [De kwaliteitsregels voor aangepaste code](/help/using/custom-code-quality-rules.md) `SupportedRunmode` en `ImmutableMutableMixedPackage` uit SonarQube zijn verwijderd, omdat ze alleen van toepassing zijn op AEM as a Cloud Service.
-* Gebruikers zullen niet meer geconfronteerd worden met vastgezette pijpleidingen die in bedrijf lijken te zijn.
-* De **Omgevingen** wordt nu gesloten na het activeren van de **[Inhoud kopiëren](/help/using/content-copy.md)** modal.
-* [Een wederuitvoering van de pijpleiding](/help/using/code-deployment.md#reexecute-deployment) is niet meer toegestaan als de vorige uitvoering geen `commitId` reeks op de bouwstijlstaat.
-* Een begrijpelijker bericht wordt nu getoond voor zeldzame fouten wanneer een gebruiker op een pijpleiding in klikt **Activiteit** of **Pijpleiding** schermen.
