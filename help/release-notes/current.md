@@ -1,19 +1,18 @@
 ---
-title: Opmerkingen bij de release 2023.9.0
-description: Dit zijn de opmerkingen bij de release 2023.9.0 voor Cloud Manager.
+title: Opmerkingen bij de release 2023.8.0
+description: Dit zijn de opmerkingen bij de release 2023.8.0 voor Cloud Manager.
 feature: Release Information
-exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 74381d5d154f7c61135a990d2806fa9e39be7690
+source-git-commit: 26c4c945e18f21b812f65dbabc14a4e8ab9f6b43
 workflow-type: tm+mt
-source-wordcount: '155'
-ht-degree: 1%
+source-wordcount: '212'
+ht-degree: 0%
 
 ---
 
 
-# Opmerkingen bij de release 2023.9.0 van Cloud Manager {#release-notes}
+# Opmerkingen bij de release 2023.8.0 voor Cloud Manager {#release-notes}
 
-Op deze pagina worden de opmerkingen bij de release voor [!UICONTROL Cloud Manager] release 2023.9.0.
+Op deze pagina worden de opmerkingen bij de release voor [!UICONTROL Cloud Manager] release 2023.8.0.
 
 >[!NOTE]
 >
@@ -21,14 +20,18 @@ Op deze pagina worden de opmerkingen bij de release voor [!UICONTROL Cloud Manag
 
 ## Releasedatum {#release-date}
 
-De releasedatum voor [!UICONTROL Cloud Manager] release 2023.9.0 is 7 september 2023. De volgende release is gepland voor 5 oktober 2023.
+De releasedatum voor [!UICONTROL Cloud Manager] release 2023.8.0 is 10 augustus 2023. De volgende release is gepland voor 14 september 2023.
 
 ## Wat is er nieuw? {#what-is-new}
 
-Deze versie bevat foutoplossingen.
+* Er zijn verbeteringen aangebracht om de begrijpelijkheid en het omgaan met foutberichten in de gebruikersinterface van Cloud Manager te verbeteren.
 
 ## Opgeloste problemen {#bug-fixes}
 
-* Wanneer een programma wordt geschrapt, wordt om het even welke bijbehorende, lopende pijpleiding ook geschrapt, die ervoor zorgen dat de pijpleiding niet verkeerd als ontbroken status wordt aangewezen.
-* Af en toe, wanneer alle stappen van een pijpleidingsuitvoering &quot;voltooid&quot;zijn, wordt de status van de pijpleiding beschouwd als &quot;lopend&quot;, die het schijnen in een vastgelopen staat te zijn. Het wordt nu beschouwd als een &#39;complete&#39;.
-* Voor bewaarplaatsaftakkingen die gebruikend het archetype van de codegenerator worden geproduceerd, ontbreekt de pijpleiding van CI/CD.
+* Niet frequente gevallen [inhoudskopie](/help/using/content-copy.md) processen die vastlopen , zijn aangepakt .
+* Er is een tijdelijk testprobleem opgelost voor klanten die geen New Relic One gebruiken.
+* [De kwaliteitsregels voor aangepaste code](/help/using/custom-code-quality-rules.md) `SupportedRunmode` en `ImmutableMutableMixedPackage` uit SonarQube zijn verwijderd, omdat ze alleen van toepassing zijn op AEM as a Cloud Service.
+* Gebruikers zullen niet meer geconfronteerd worden met vastgezette pijpleidingen die in bedrijf lijken te zijn.
+* De **Omgevingen** wordt nu gesloten na het activeren van de **[Inhoud kopiëren](/help/using/content-copy.md)** modal.
+* [Een wederuitvoering van de pijpleiding](/help/using/code-deployment.md#reexecute-deployment) is niet meer toegestaan als de vorige uitvoering geen `commitId` reeks op de bouwstijlstaat.
+* Een begrijpelijker bericht wordt nu getoond voor zeldzame fouten wanneer een gebruiker op een pijpleiding in klikt **Activiteit** of **Pijpleiding** schermen.
