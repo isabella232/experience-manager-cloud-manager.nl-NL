@@ -3,10 +3,10 @@ title: Opmerkingen bij de release 2023.10.0
 description: Dit zijn de opmerkingen bij de release 2023.10.0 voor Cloud Manager.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: a5a304541409bc1775090eef2a669e1e0bcf005e
+source-git-commit: 851364e74864c28b3bcd9285dfbe06ddb530eb10
 workflow-type: tm+mt
-source-wordcount: '185'
-ht-degree: 1%
+source-wordcount: '222'
+ht-degree: 0%
 
 ---
 
@@ -29,5 +29,8 @@ De releasedatum voor [!UICONTROL Cloud Manager] release 2023.10.0 is 5 oktober 2
    * Deze geheim voorgeheugenacties zullen als deel van de stap van de plaatsingspijpleiding worden uitgevoerd, enkel nadat om het even welke inhoudspakketten worden opgesteld.
    * Deze instellingen gebruiken het standaardgedrag AEM Dispatcher.
 * Met de release van oktober 2023 van Cloud Manager worden Java-versies bijgewerkt via een gefaseerde implementatie.
-   * De Java-versies worden bijgewerkt naar Oracle JDK 8u371 en Oracle JDK 11.0.20.
+   * De kleine versies voor Java 8 en 11 en Maven zijn bijgewerkt en zullen in de komende twee maanden geleidelijk worden geïmplementeerd. De nieuwe versie heeft veelvoudige veiligheidsmoeilijke situaties en insecten. De nieuwe versies zijn:
+   * *Gemaakt: 3.8.8*
+   * *Java 8-versie: /usr/lib/jvm/jdk1.8.0_371*
+   * *Java 11-versie: /usr/lib/jvm/jdk-11.0.20*
    * [Zie het advies van OpenJDK](https://openjdk.org/groups/vulnerability/advisories/) voor meer informatie over de beveiliging en foutoplossingen in deze JDK-updates.
