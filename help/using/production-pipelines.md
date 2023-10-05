@@ -2,7 +2,7 @@
 title: Productiepijpleidingen configureren
 description: Leer hoe u met Cloud Manager productiepijpleidingen kunt maken en configureren om uw code te implementeren.
 exl-id: d489fa3c-df1e-480b-82d0-ac8cce78a710
-source-git-commit: 39b38da17ed1cadf4f2e9633a9e76b537325316f
+source-git-commit: 33ccb0f2139162845cc1b72505b6a5bfc7cf43e7
 workflow-type: tm+mt
 source-wordcount: '1296'
 ht-degree: 0%
@@ -23,7 +23,7 @@ Met de **Instellingen Pipet** tegel in [!UICONTROL Cloud Manager] u kunt twee ve
 
 Dit document richt zich op productiepijpleidingen. Zie het document voor meer informatie over het configureren van niet-productiepijpleidingen [Niet-productiepijpleidingen configureren.](/help/using/non-production-pipelines.md)
 
-De **Implementatiebeheer** de pijpleiding moet worden opgezet . De configuratie van de pijpleiding bestaat uit:
+De **Implementatiebeheer** de pijpleiding moet worden opgezet . Configuratie van pijpleidingen bestaat uit:
 
 1. Het bepalen van de trekker die de pijpleiding zal beginnen.
 1. De parameters definiëren die de productieimplementatie bepalen.
@@ -33,15 +33,9 @@ De **Implementatiebeheer** de pijpleiding moet worden opgezet . De configuratie 
 >
 >Een pijpleiding kan niet opstelling tot zijn bijbehorende git bewaarplaats minstens één tak heeft en [programma instellen](/help/getting-started/program-setup.md) is voltooid.
 
-## Videozelfstudie {#video-tutorial-one}
-
-Deze video biedt een overzicht van het proces voor het maken van pijpleidingen, dat in dit document wordt beschreven.
-
->[!VIDEO](https://video.tv.adobe.com/v/26314/)
-
 ## Een nieuwe productiepijpleiding toevoegen {#adding-production-pipeline}
 
-Als u eenmaal [!UICONTROL Cloud Manager] UI om uw programma op te zetten en minstens één milieu te hebben, bent u bereid om een productiepijplijn toe te voegen.
+Als u eenmaal de [!UICONTROL Cloud Manager] UI om uw programma op te zetten en minstens één milieu te hebben, bent u bereid om een productiepijplijn toe te voegen.
 
 1. Aanmelden bij Cloud Manager [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) en selecteert u de gewenste organisatie en het juiste programma.
 
@@ -56,6 +50,7 @@ Als u eenmaal [!UICONTROL Cloud Manager] UI om uw programma op te zetten en mins
    1. Onder de **Broncode** sectie, bepaalt u waar de pijpleiding de code terugwint het zal verwerken.
 
       * **Bewaarplaats** - Deze optie bepaalt waarvan git repo de pijpleiding de code zou moeten terugwinnen.
+
       >[!TIP]
       >
       >Zie het document [Programma instellen](/help/getting-started/program-setup.md) voor meer informatie over het toevoegen en beheren van opslagruimten in Cloud Manager.
@@ -65,7 +60,7 @@ Als u eenmaal [!UICONTROL Cloud Manager] UI om uw programma op te zetten en mins
 
       ![Repo&#39;s voor de pijpleiding definiëren](/help/assets/configure-pipelines/add-prod2.png)
 
-   1. Onder de **Omgevingen** in de sectie, definieert u wat een implementatie activeert en hoe deze per omgeving moet worden geïmplementeerd.
+   1. Onder de **Omgevingen** sectie, bepaalt u wat een plaatsing teweegbrengt en hoe het per milieu zou moeten worden uitgevoerd.
 
       1. In de **WERKGEBIED** sectie, kunt u bepalen hoe de pijpleiding uit aan uw het opvoeren milieu voortkomt.
 
@@ -73,9 +68,10 @@ Als u eenmaal [!UICONTROL Cloud Manager] UI om uw programma op te zetten en mins
 
             * **Handmatig** - Gebruik deze optie om de pijplijn handmatig te starten met de interface van Cloud Manager.
             * **Wijzigingen in Git** - Deze opties beginnen de pijpleiding CI/CD wanneer de bemoeienis aan de gevormde git tak wordt toegevoegd. Met deze optie, kunt u de pijpleiding nog manueel zoals vereist beginnen.
+
          * **Belangrijk gedrag metrische fouten** - Tijdens pijpleidingsopstelling of geef uit, heeft de Manager van de Plaatsing de optie om het gedrag van de pijpleiding te bepalen wanneer een belangrijke mislukking in om het even welke kwaliteitshates wordt ontmoet. De beschikbare opties zijn:
 
-            * **Telkens vragen** - Dit is de standaardinstelling en u moet handmatig ingrijpen bij belangrijke fouten.
+            * **Telkens vragen** - Dit is de standaardinstelling en u moet handmatig ingrijpen als een belangrijke fout optreedt.
             * **Direct mislukken** - Indien geselecteerd, zal de pijpleiding worden geannuleerd wanneer een belangrijke mislukking voorkomt. Dit is in feite het emuleren van een gebruiker die elke fout handmatig afwijst.
             * **Direct doorgaan** - Indien geselecteerd, zal de pijpleiding automatisch te werk gaan wanneer een belangrijke mislukking voorkomt. Dit emuleert hoofdzakelijk een gebruiker manueel goedkeurend elke mislukking.
 
@@ -89,13 +85,14 @@ Als u eenmaal [!UICONTROL Cloud Manager] UI om uw programma op te zetten en mins
 
          ![Implementatieopties stapelen](/help/assets/configure-pipelines/add-prod4.png)
 
-         * **Dispatcher Configuration** - de **Implementatiebeheer** De rol kan een reeks inhoudspaden vormen die of ongeldig of uit het geheime voorgeheugen van de AEM van de Verzender zal worden gespoeld wanneer een pijpleiding in werking wordt gesteld. Deze geheim voorgeheugenacties zullen als deel van de stap van de plaatsingspijpleiding worden uitgevoerd, enkel nadat om het even welke inhoudspakketten worden opgesteld. Deze instellingen gebruiken het standaardgedrag AEM Dispatcher. Configureren:
+         * **Dispatcher Configuration** - de **Implementatiebeheer** De rol kan een reeks inhoudspaden vormen die of ongeldig of uit het geheime voorgeheugen van de AEM van de Verzender zal worden gespoeld wanneer een pijpleiding in werking wordt gesteld. Deze geheim voorgeheugenacties zullen als deel van de stap van de plaatsingspijpleiding worden uitgevoerd, enkel nadat om het even welke inhoudspakketten worden opgesteld. Deze instellingen gebruiken het standaardgedrag AEM Dispatcher. Om te vormen:
 
             1. Onder **PAD** geef een inhoudspad op.
             1. Onder **TYPE** selecteert u de actie die op dat pad moet worden uitgevoerd.
 
                * **Uitspoelen** - Een cache verwijderen.
-               * **Ongeldige** - Voer een cachevalidatie uit, net als wanneer inhoud wordt geactiveerd van een ontwerpinstantie naar een publicatieinstantie.
+               * **Invalidate** - Voer een cachevalidatie uit, net als wanneer inhoud wordt geactiveerd van een ontwerpinstantie naar een publicatieinstantie.
+
             1. Klikken **Pad toevoegen** om het opgegeven pad toe te voegen. U kunt maximaal 100 paden per omgeving toevoegen.
 
          ![Dispatcher-configuratie](/help/assets/configure-pipelines/dispatcher-stage.png)
@@ -112,35 +109,26 @@ Als u eenmaal [!UICONTROL Cloud Manager] UI om uw programma op te zetten en mins
             * **Gepland** - Met deze optie wordt de pijpleiding vóór de implementatie van de productie gestopt, zodat deze kan worden gepland. Als deze optie wordt geselecteerd, zal de pijpleiding na plaatsing aan het opvoeren milieu stoppen en de gebruiker voor de te nemen actie vragen.
                * **Nu** - Deze optie wordt onmiddellijk ingezet voor productie, waardoor de pijpleiding effectief wordt voltooid.
                * **Datum** - Met deze optie kan de gebruiker een tijdstip plannen waarop de implementatie moet worden voltooid.
-               * **Uitvoering stoppen** - Met deze optie wordt de implementatie afgebroken.
+               * **Uitvoering stoppen** - Met deze optie wordt de implementatie naar de productie afgebroken.
 
-            >[!TIP]
-            >
-            >Raadpleeg het document [Implementatie van code](/help/using/code-deployment.md) leren hoe te om het plaatsingsprogramma te plaatsen of de pijpleiding onmiddellijk uit te voeren.
+           >[!TIP]
+           >
+           >Raadpleeg het document [Implementatie van code](/help/using/code-deployment.md) leren hoe te om het plaatsingsprogramma te plaatsen of de pijpleiding onmiddellijk uit te voeren.
 
-            * **CSE-overzicht gebruiken** - Als deze optie is geselecteerd, wordt een CSE ingeschakeld om de implementatie daadwerkelijk te starten. Wanneer u een pijplijn maakt of bewerkt terwijl deze optie is ingeschakeld, **Implementatiebeheer** De rol heeft de volgende opties.
+            * **CSE-overzicht gebruiken** - Als deze optie is geselecteerd, wordt een CSE ingeschakeld om de implementatie daadwerkelijk te starten. Wanneer u een pijplijn maakt of bewerkt terwijl deze optie is ingeschakeld, wordt **Implementatiebeheer** De rol heeft de volgende opties.
 
                * **Elke CSE** - Met deze optie kan elke beschikbare CSE de implementatie starten.
                * **Mijn CSE** - Deze optie staat slechts specifieke CSE toe die aan de klant wordt toegewezen om de plaatsing te beginnen. Dit geldt ook voor de aangewezen back-up van de CSE als de toegewezen CSE niet beschikbaar is.
 
-            ![Implementatieopties voor productie](/help/assets/configure-pipelines/prod-deploymentoptions.png)
+           ![Implementatieopties voor productie](/help/assets/configure-pipelines/prod-deploymentoptions.png)
 
          * **Dispatcher Configuration** - Definieer de configuratie van de verzender voor uw productieomgeving. De opties zijn hetzelfde als die voor de testomgeving.
 
-
-
-
-
-
-
-
-
-
-1. Klikken op **Doorgaan** aan **Werkgebiedtests** tabblad waarop u AEM Sites en AEM Assets Performance Testing kunt configureren, afhankelijk van de producten waarvoor u een licentie hebt.
+1. Klikken op **Doorgaan** aan de **Werkgebiedtests** tabblad waarop u AEM Sites en AEM Assets Performance Testing kunt configureren, afhankelijk van de producten waarvoor u een licentie hebt.
 
    >[!TIP]
    >
-   >Het document raadplegen [Testen van de codekwaliteit](/help/using/code-quality-testing.md#performance-testing) voor meer informatie over de opties die beschikbaar zijn op de **Werkgebiedtests** tab.
+   >Het document raadplegen [Testen van de codekwaliteit](/help/using/code-quality-testing.md#performance-testing) voor meer informatie over de opties op de **Werkgebiedtests** tab.
 
    1. Onder de **Sites Content Delivery/Distributed Load Weight** in de sectie, definieert u hoe de prestaties van sites worden getest op basis van de weging van paginaverzoeken tussen de drie paginasets, die kunnen worden in- of uitgeschakeld.
 
@@ -150,23 +138,27 @@ Als u eenmaal [!UICONTROL Cloud Manager] UI om uw programma op te zetten en mins
 
       ![Belastingsgewicht van sites](/help/assets/configure-pipelines/add-prod5.png)
 
-   1. Onder de **Distributie voor tests op middelenprestaties** kunt u de testverdeling van afbeeldingen en PDF definiëren en uw eigen testelementen definiëren.
+   1. Onder de **Distributie voor tests op middelenprestaties** definieert u de testverdeling van afbeeldingen en PDF en definieert u uw eigen testelementen.
 
       * **Afbeeldingen** - Pas de schuifregelaar aan om de testsplitsing tussen afbeeldingen en PDF aan te passen.
       * **PDF** - Pas de schuifregelaar aan om de testsplitsing tussen afbeeldingen en PDF aan te passen.
 
       * Definieer uw eigen aangepaste elementen door deze te uploaden.
 
-         1. **OPMAAK** - Bepaal of uw aangepaste element een PDF van een afbeelding is.
+         1. **INDELING** - Bepaal of uw aangepaste element een PDF van een afbeelding is.
          1. **FILENAME** - Gebruik de knop voor de bestandsbrowser om een afbeelding op uw lokale computer te selecteren.
          1. **Testbestand toevoegen** - Klik om uw geselecteerde element te uploaden.
 
       ![Distributie van middelen testen](/help/assets/configure-pipelines/add-prod6.png)
-
-
 
 1. Klikken **Opslaan** om het toevoegen van uw productiepijplijn te voltooien.
 
 ## De volgende stappen {#the-next-steps}
 
 Zodra u de pijpleiding hebt gevormd, moet u uw code opstellen. Zie het document [Codeimplementatie](/help/using/code-deployment.md) voor meer informatie .
+
+## Videozelfstudie {#video-tutorial-one}
+
+Deze video biedt een overzicht van het proces voor het maken van pijpleidingen, dat in dit document wordt beschreven.
+
+>[!VIDEO](https://video.tv.adobe.com/v/26314/)

@@ -1,18 +1,19 @@
 ---
-title: Opmerkingen bij de release 2023.9.0
-description: Dit zijn de opmerkingen bij de release 2023.9.0 voor Cloud Manager.
+title: Opmerkingen bij de release 2023.10.0
+description: Dit zijn de opmerkingen bij de release 2023.10.0 voor Cloud Manager.
 feature: Release Information
-source-git-commit: f15a4b739150ee40b6dc48de0fbc20859093c79c
+exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
+source-git-commit: a5a304541409bc1775090eef2a669e1e0bcf005e
 workflow-type: tm+mt
-source-wordcount: '141'
-ht-degree: 0%
+source-wordcount: '185'
+ht-degree: 1%
 
 ---
 
 
-# Opmerkingen bij de release 2023.9.0 van Cloud Manager {#release-notes}
+# Opmerkingen bij de release 2023.10.0 voor Cloud Manager {#release-notes}
 
-Op deze pagina worden de opmerkingen bij de release voor [!UICONTROL Cloud Manager] release 2023.9.0.
+Op deze pagina worden de opmerkingen bij de release voor [!UICONTROL Cloud Manager] release 2023.10.0.
 
 >[!NOTE]
 >
@@ -20,10 +21,13 @@ Op deze pagina worden de opmerkingen bij de release voor [!UICONTROL Cloud Manag
 
 ## Releasedatum {#release-date}
 
-De releasedatum voor [!UICONTROL Cloud Manager] release 2023.9.0 is 14 september 2023. De volgende release is gepland voor 5 oktober 2023.
+De releasedatum voor [!UICONTROL Cloud Manager] release 2023.10.0 is 5 oktober 2023. De volgende release is gepland voor 2 november 2023.
 
-## Opgeloste problemen {#bug-fixes}
+## Wat is er nieuw? {#what-is-new}
 
-* Wanneer een programma wordt geschrapt, wordt om het even welke bijbehorende, lopende pijpleiding nu ook geschrapt.
-* Er is een incidentele fout gecorrigeerd waarbij alle stappen van een uitvoering van een pijpleiding zijn gemarkeerd als voltooid, maar de status van de pijpleiding nog steeds actief was, waardoor er een geplakte toestand werd weergegeven.
-* Er is een fout gecorrigeerd wanneer CI/CD-pijpleidingen zijn mislukt voor vertakkingen in de repository die het archetype hebben gegenereerd.
+* De **Implementatiebeheer** rol kan [vormt een reeks inhoudspaden die of ongeldig of uit het geheime voorgeheugen van de AEM Dispatcher zal worden gespoeld wanneer een niet productiepijplijn in werking wordt gesteld.](/help/using/non-production-pipelines.md)
+   * Deze geheim voorgeheugenacties zullen als deel van de stap van de plaatsingspijpleiding worden uitgevoerd, enkel nadat om het even welke inhoudspakketten worden opgesteld.
+   * Deze instellingen gebruiken het standaardgedrag AEM Dispatcher.
+* Met de release van oktober 2023 van Cloud Manager worden Java-versies bijgewerkt via een gefaseerde implementatie.
+   * De Java-versies worden bijgewerkt naar Oracle JDK 8u371 en Oracle JDK 11.0.20.
+   * [Zie het advies van OpenJDK](https://openjdk.org/groups/vulnerability/advisories/) voor meer informatie over de beveiliging en foutoplossingen in deze JDK-updates.
