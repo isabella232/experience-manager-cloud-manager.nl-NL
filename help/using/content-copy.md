@@ -2,9 +2,9 @@
 title: Het gereedschap Inhoud kopiëren
 description: Met het hulpprogramma voor het kopiëren van inhoud van Cloud Manager kunnen gebruikers op verzoek muterende inhoud kopiëren van hun AMS-gehoste AEM 6.x-productieomgevingen naar lagere omgevingen voor testdoeleinden.
 exl-id: 97915e58-a1d3-453f-b5ce-cad55ed73262
-source-git-commit: 223b547d6bc94137dfbb7d92862a508fa67799d2
+source-git-commit: fe5de4e1ab5cd0d0e317cd399b8e44758a6312c4
 workflow-type: tm+mt
-source-wordcount: '1096'
+source-wordcount: '1139'
 ht-degree: 0%
 
 ---
@@ -42,13 +42,13 @@ Als u het gereedschap Inhoud kopiëren wilt gebruiken, moet de gebruiker aan de 
 
 ## Een inhoudsset maken {#create-content-set}
 
-Voordat inhoud kan worden gekopieerd, moet een inhoudsset zijn gedefinieerd. Als deze eenmaal is gedefinieerd, kunnen inhoudssets opnieuw worden gebruikt om inhoud te kopiëren. Ga als volgt te werk om een inhoudenset te maken.
+Voordat inhoud kan worden gekopieerd, moet een inhoudsset zijn gedefinieerd. Wanneer deze is gedefinieerd, kunnen inhoudssets opnieuw worden gebruikt om inhoud te kopiëren. Ga als volgt te werk om een inhoudenset te maken.
 
 1. Aanmelden bij Cloud Manager [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) en selecteert u de gewenste organisatie en het juiste programma.
 
 1. Ga naar de **Omgevingen** van het scherm **Overzicht** pagina.
 
-1. Ga naar de **Inhoudssets** pagina van **Omgevingen** scherm.
+1. Ga naar de **Inhoudssets** pagina van de **Omgevingen** scherm.
 
 1. Tik of klik op de knop **Inhoudsset toevoegen** aan de rechterbovenhoek van het scherm.
 
@@ -56,7 +56,7 @@ Voordat inhoud kan worden gekopieerd, moet een inhoudsset zijn gedefinieerd. Als
 
 1. Op de **Details** Geef een naam en een beschrijving voor de inhoudenset op en tik of klik op **Doorgaan**.
 
-   ![Details inhoudset](/help/assets/add-content-set-details.png)
+   ![Details van inhoudsset](/help/assets/add-content-set-details.png)
 
 1. Op de **Inhoudspaden** van de wizard, geeft u de paden op van de inhoud die u wilt wijzigen.
 
@@ -107,11 +107,11 @@ Nadat u een inhoudsset hebt gemaakt, kunt u deze gebruiken om inhoud te kopiëre
 
 1. Ga naar de **Omgevingen** van het scherm **Overzicht** pagina.
 
-1. Ga naar de **Inhoudssets** pagina van **Omgevingen** scherm.
+1. Ga naar de **Inhoudssets** pagina van de **Omgevingen** scherm.
 
 1. Selecteer een inhoudsset in de console en selecteer **Inhoud kopiëren** in het ovaalmenu.
 
-   ![Kopie van inhoud](/help/assets/copy-content.png)
+   ![Inhoud kopiëren](/help/assets/copy-content.png)
 
    >[!NOTE]
    >
@@ -122,7 +122,9 @@ Nadat u een inhoudsset hebt gemaakt, kunt u deze gebruiken om inhoud te kopiëre
 
 1. In de **Inhoud kopiëren** geeft u de bron en de bestemming op voor de actie Kopiëren van inhoud.
 
-1. U kunt ervoor kiezen om paden voor uitsluiten te verwijderen of te behouden in de doelomgeving. Selectievakje selecteren `Do not delete exclude paths from destination` als u de uitsluitingspaden wilt behouden die in de inhoudenset zijn opgegeven. Als het selectievakje uitgeschakeld blijft, worden paden uitgesloten uit de doelomgeving.
+1. U kunt ervoor kiezen om de paden voor uitsluiten te verwijderen of te behouden in de doelomgeving. Selectievakje selecteren `Do not delete exclude paths from destination` als u de uitsluitingspaden wilt behouden die in de inhoudenset zijn opgegeven. Als het selectievakje uitgeschakeld blijft, worden paden uitgesloten uit de doelomgeving.
+
+1. U kunt versiehistorie kopiëren van de paden die van bron naar doelomgeving worden gekopieerd. Selectievakje selecteren `Copy Versions` als u alle versiehistorie wilt kopiëren.
 
    ![Inhoud kopiëren](/help/assets/copying-content.png)
 
@@ -138,7 +140,7 @@ U kunt de status van uw kopieerprocessen in de **Inhoudsactiviteit kopiëren** p
 
 1. Ga naar de **Omgevingen** van het scherm **Overzicht** pagina.
 
-1. Ga naar de **Inhoudsactiviteit kopiëren** pagina van **Omgevingen** scherm.
+1. Ga naar de **Inhoudsactiviteit kopiëren** pagina van de **Omgevingen** scherm.
 
 ![Activiteit voor kopiëren van inhoud](/help/assets/copy-content-activity.png)
 
@@ -159,11 +161,12 @@ Het gereedschap voor het kopiëren van inhoud heeft de volgende beperkingen.
 * Een inhoudkopie kan niet worden uitgevoerd van een lagere omgeving naar een hogere omgeving.
 * Het kopiëren van inhoud kan alleen worden uitgevoerd binnen dezelfde laag (dus auteur of publicatie).
 * Kopiëren van inhoud tussen programma&#39;s en regio&#39;s is niet mogelijk.
-* Het exemplaar van de inhoud voor de opslag van de wolkengegevens kan gebaseerde topologie slechts worden uitgevoerd wanneer bron en bestemmingsmilieu op de zelfde wolkenleverancier zijn.
+* Inhoudskopie voor topologie op basis van gegevensopslag in de cloud kan alleen worden uitgevoerd wanneer de bron- en doelomgeving zich op dezelfde cloudprovider en hetzelfde gebied bevinden.
 * Het uitvoeren van gelijktijdige bewerkingen voor het kopiëren van inhoud in dezelfde omgeving is niet mogelijk.
 * Het exemplaar van de inhoud kan niet worden uitgevoerd als er om het even welke actieve verrichting die op of het doel of bronmilieu zoals een pijpleiding CI/CD loopt.
 * Per inhoudenset kunnen maximaal vijftig paden worden opgegeven. Uitgesloten paden zijn niet beperkt.
 * Het gereedschap voor het kopiëren van inhoud mag niet worden gebruikt als een kloon- of spiegelgereedschap omdat het geen verplaatste of verwijderde inhoud van de bron kan bijhouden.
 * Een inhoudkopie kan niet worden gepauzeerd of geannuleerd nadat deze is gestart.
 * Met het gereedschap voor het kopiëren van inhoud kopieert u elementen samen met dynamische metagegevens over media van de hogere omgeving naar de geselecteerde lagere omgeving.
-   * Gekopieerde elementen moeten vervolgens opnieuw worden verwerkt met de opdracht [Workflow voor DAM-procesmiddelen](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/assets-workflow.html) in de lagere omgeving om de respectieve dynamische mediasonfiguratie te gebruiken.
+   * Gekopieerde elementen moeten vervolgens opnieuw worden verwerkt met de opdracht [Workflow voor DAM-procesmiddelen](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/assets-workflow.html) op de lagere omgeving om de respectieve dynamische mediasonfiguratie te gebruiken.
+* Het kopiëren van inhoud gaat aanzienlijk sneller als de versiegeschiedenis niet wordt gekopieerd.
