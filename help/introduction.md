@@ -1,6 +1,6 @@
 ---
 title: Inleiding tot Cloud Manager voor AMS
-description: Begin hier om Cloud Manager voor Adobe Managed Services (AMS) te leren kennen en hoe organisaties Adobe Experience Manager in de cloud kunnen beheren.
+description: Begin hier om Cloud Manager for Adobe Managed Services (AMS) te leren kennen en hoe organisaties Adobe Experience Manager in de cloud kunnen beheren.
 exl-id: 58344d8a-b869-4177-a9cf-6a8b7dfe9588
 source-git-commit: a2cea28061304d109a3c9a48650d01255579443c
 workflow-type: tm+mt
@@ -12,7 +12,7 @@ ht-degree: 3%
 
 # Inleiding tot [!UICONTROL Cloud Manager] voor AMS {#introduction-to-cloud-manager}
 
-Begin hier om Cloud Manager voor Adobe Manage Services (AMS) te leren kennen en hoe organisaties Adobe Experience Manager in de cloud kunnen beheren.
+Begin hier om Cloud Manager for Adobe Manage Services (AMS) te leren kennen en hoe organisaties Adobe Experience Manager in de cloud kunnen beheren.
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_cloudmanager_introduction"
@@ -27,7 +27,7 @@ Begin hier om Cloud Manager voor Adobe Manage Services (AMS) te leren kennen en 
 
 >[!NOTE]
 >
->In deze documentatie worden specifiek de functies en functies van Cloud Manager voor Adobe Managed Services (AMS) beschreven.
+>In deze documentatie worden specifiek de functies en functies van Cloud Manager for Adobe Managed Services (AMS) beschreven.
 >
 >De equivalente documentatie voor AEM as a Cloud Service is te vinden in de [AEM as a Cloud Service documentatie.](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/home.html)
 
@@ -77,7 +77,7 @@ Meer informatie over het opstellen van code en kwaliteitscontroles, zie het docu
 
 ## Optionele functies in Cloud Manager {#optional-features-in-cloud-manager}
 
-Cloud Manager biedt extra, geavanceerde functies die gunstig kunnen zijn voor uw project, afhankelijk van de instellingen en behoeften van uw specifieke omgeving. Als deze functies u interesseren, kunt u contact opnemen met uw Customer Success Engineer (CSE) of Adobe-medewerker om verder te bespreken.
+Cloud Manager biedt extra, geavanceerde functies die gunstig kunnen zijn voor uw project, afhankelijk van de instellingen en behoeften van uw specifieke omgeving. Als deze functies u interesseren, kunt u contact opnemen met uw Customer Success Engineer (CSE) of Adobe vertegenwoordiger om verder te bespreken.
 
 ### Automatisch schalen {#autoscaling}
 
@@ -89,7 +89,7 @@ De functie voor automatisch schalen is alleen van toepassing op de laag Dispatch
 
 >[!NOTE]
 >
->Neem contact op met uw CSE of Adobe als u graag wilt weten of automatische schaling geschikt is voor uw toepassing.
+>Neem contact op met uw CSE of Adobe als u wilt weten of autoscaling geschikt is voor uw toepassing.
 
 ### Blauwe/groene implementaties {#blue-green}
 
