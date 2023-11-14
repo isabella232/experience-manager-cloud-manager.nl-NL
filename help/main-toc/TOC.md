@@ -7,9 +7,9 @@ user-guide-description: Leer hoe u met Cloud Manager zelf in de cloud Adobe Expe
 feature-set: Experience Manager Cloud Manager, Experience Manager
 feature: Cloud Manager
 role: Admin
-source-git-commit: f1f1d53181362e4a92ad6918182107d710724496
+source-git-commit: 76a3dc6df41032488a3cfe11d0c72769562b96df
 workflow-type: tm+mt
-source-wordcount: '348'
+source-wordcount: '359'
 ht-degree: 14%
 
 ---
@@ -30,6 +30,7 @@ ht-degree: 14%
    + [Broncodeopslagplaats](/help/requirements/source-code-repository.md)
    + [Op rollen gebaseerde machtigingen](/help/requirements/role-based-permissions.md)
    + [Gebruikers en rollen instellen](/help/requirements/users-and-roles.md)
+   + [Aangepaste machtigingen](/help/using/custom-permissions.md)
    + [Levering van omgeving](/help/requirements/environment-provisioning.md)
 + Aan de slag {#getting-started}
    + [Eerste aanmelding](/help/getting-started/first-time-login.md)
@@ -59,12 +60,14 @@ ht-degree: 14%
    + [Opslagplaatsen](/help/managing-code/repositories.md)
    + [Integreren met it](/help/managing-code/git-integration.md)
    + [Werken met meerdere opslagplaatsen voor git](/help/managing-code/multiple-git-repos.md)
+   + [Werken met uw eigen GitHub-opslagruimten](/help/managing-code/byo-github.md)
 + Wizard Productupdates {#product-update-wizard}
    + [Overzicht](/help/product-update-wizard/overview.md)
    + [Evaluatie](/help/product-update-wizard/evaluation.md)
 + Releaseopmerkingen {#release-notes}
    + [Opmerkingen bij de huidige release](/help/release-notes/current.md)
    + 2023 {#2023}
+      + [Opmerkingen bij de release 2023.10.0](/help/release-notes/2023/2023-10-0.md)
       + [Opmerkingen bij de release 2023.9.0](/help/release-notes/2023/2023-9-0.md)
       + [Opmerkingen bij de release 2023.8.0](/help/release-notes/2023/2023-8-0.md)
       + [Opmerkingen bij de release 2023.7.0](/help/release-notes/2023/2023-7-0.md)

@@ -2,9 +2,9 @@
 title: Het gereedschap Inhoud kopiëren
 description: Met het hulpprogramma voor het kopiëren van inhoud van Cloud Manager kunnen gebruikers op verzoek muterende inhoud kopiëren van hun AMS-gehoste AEM 6.x-productieomgevingen naar lagere omgevingen voor testdoeleinden.
 exl-id: 97915e58-a1d3-453f-b5ce-cad55ed73262
-source-git-commit: fe5de4e1ab5cd0d0e317cd399b8e44758a6312c4
+source-git-commit: c7803c75bcfcc967877808214704c5746015481d
 workflow-type: tm+mt
-source-wordcount: '1139'
+source-wordcount: '1128'
 ht-degree: 0%
 
 ---
@@ -31,10 +31,6 @@ Wanneer het kopiëren van inhoud, is het bronmilieu de bron van waarheid.
 
 * Als de inhoud in de bestemmingsmilieu is gewijzigd, zal het door inhoud in de bron worden beschreven, als de wegen het zelfde zijn.
 * Als de paden verschillend zijn, wordt de inhoud van de bron samengevoegd met de inhoud in de bestemming.
-
->[!NOTE]
->
->Neem contact op met uw Customer Success Engineer (CSE) om deze functie in te schakelen.
 
 ## Machtigingen {#permissions}
 

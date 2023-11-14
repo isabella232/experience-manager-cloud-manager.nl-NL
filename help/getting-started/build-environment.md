@@ -2,7 +2,7 @@
 title: De Build-omgeving
 description: Meer informatie over de gespecialiseerde ontwikkelomgeving die gebruikers van Cloud Manager gebruiken om uw code te maken en testen.
 exl-id: b3543320-66d4-4358-8aba-e9bdde00d976
-source-git-commit: 42cafc03a607ace183d58adbe1c397c1a6c5c22f
+source-git-commit: 7f9866976667b485124cef60453ec3908ba41ec8
 workflow-type: tm+mt
 source-wordcount: '1152'
 ht-degree: 0%
@@ -19,9 +19,11 @@ Meer informatie over de gespecialiseerde ontwikkelomgeving die gebruikers van Cl
 De buildomgevingen van Cloud Manager hebben de volgende kenmerken.
 
 * De ontwikkelomgeving is gebaseerd op Linux en is afgeleid van Ubuntu 18.04.
-* Apache Maven 3.6.0 is geïnstalleerd.
-* De geïnstalleerde Java-versies zijn Oracle JDK 8u202 en Oracle JDK 11.0.2.
-* Standaard worden de `JAVA_HOME`  omgevingsvariabele is ingesteld op `/usr/lib/jvm/jdk1.8.0_202` die Oracle JDK 8u202 bevat. Zie de sectie [JDK-versie van alternatieve uitvoering](#alternate-maven) voor meer informatie.
+* Apache Maven 3.8.8 is geïnstalleerd.
+* De geïnstalleerde Java-versies zijn Oracle JDK 8u371 en Oracle JDK 11.0.20.
+   * `/usr/lib/jvm/jdk1.8.0_371`
+   * `/usr/lib/jvm/jdk-11.0.20`
+* Standaard worden de `JAVA_HOME`  omgevingsvariabele is ingesteld op `/usr/lib/jvm/jdk1.8.0_371` die Oracle JDK 8u371 bevat. Zie de sectie [JDK-versie van alternatieve uitvoering](#alternate-maven) voor meer informatie.
 * Er zijn enkele extra systeempakketten geïnstalleerd die nodig zijn.
    * `bzip2`
    * `unzip`
@@ -34,8 +36,8 @@ De buildomgevingen van Cloud Manager hebben de volgende kenmerken.
    * `mvn --batch-mode org.apache.maven.plugins:maven-dependency-plugin:3.1.2:resolve-plugins`
    * `mvn --batch-mode org.apache.maven.plugins:maven-clean-plugin:3.1.0:clean -Dmaven.clean.failOnError=false`
    * `mvn --batch-mode org.jacoco:jacoco-maven-plugin:prepare-agent package`
-* Maven is geconfigureerd op systeemniveau met een `settings.xml` bestand dat automatisch de openbare gegevensopslagplaats voor Adobe-artefacten bevat met een profiel met de naam `adobe-public`.
-   * Zie de [Adobe public Maven repository](https://repo1.maven.org/) voor meer informatie .
+* Maven is geconfigureerd op systeemniveau met een `settings.xml` bestand dat automatisch de openbare gegevensopslagruimte voor Adoben bevat met een profiel met de naam `adobe-public`.
+   * Zie de [Adobe openbare Maven-opslagplaats](https://repo1.maven.org/) voor meer informatie .
 
 >[!NOTE]
 >
@@ -47,7 +49,6 @@ De buildomgevingen van Cloud Manager hebben de volgende kenmerken.
 >* [aio-cli-plugin-cloudmanager](https://github.com/adobe/aio-cli-plugin-cloudmanager)
 >* [API-integratie maken](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/create-api-integration/)
 >* [API-machtigingen](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/permissions/)
-
 
 ## Een specifieke Java-versie gebruiken {#using-java-version}
 
@@ -85,9 +86,9 @@ De [Maven Toolketins-plug-in](https://maven.apache.org/plugins/maven-toolchains-
 
 Hierdoor wordt voor alle plug-ins met behoud van gereedschappen het Oracle JDK, versie 11, gebruikt.
 
-Wanneer u deze methode gebruikt, wordt Maven zelf nog steeds uitgevoerd met de standaard-JDK (Oracle 8) en de `JAVA_HOME` omgevingsvariabele wordt niet gewijzigd. De Java-versie controleren of afdwingen via plug-ins zoals de [Insteekmodule Apache Maven Enforcer](https://maven.apache.org/enforcer/maven-enforcer-plugin/) werkt niet en dergelijke plug-ins mogen niet worden gebruikt.
+Wanneer u deze methode gebruikt, wordt Maven zelf nog steeds uitgevoerd met de standaard-JDK (Oracle 8) en de `JAVA_HOME` omgevingsvariabele wordt niet gewijzigd. Daarom de Java-versie controleren of afdwingen via plug-ins zoals de [Insteekmodule Apache Maven Enforcer](https://maven.apache.org/enforcer/maven-enforcer-plugin/) werkt niet en dergelijke plug-ins mogen niet worden gebruikt.
 
-De momenteel beschikbare leverancier/versiecombinaties zijn:
+De momenteel beschikbare combinaties leverancier/versie zijn:
 
 | Leverancier | Versie |
 |---|---|
@@ -122,10 +123,10 @@ Ter ondersteuning hiervan voegt Cloud Manager voor elke uitvoering standaardomge
 |---|---|
 | `CM_BUILD` | Altijd instellen op `true` |
 | `BRANCH` | De gevormde tak voor de uitvoering |
-| `CM_PIPELINE_ID` | De numerieke identificatie van de pijpleiding |
+| `CM_PIPELINE_ID` | De numerieke identificatie van de pijplijn |
 | `CM_PIPELINE_NAME` | De pijpleidingsnaam |
 | `CM_PROGRAM_ID` | De numerieke programma-id |
-| `CM_PROGRAM_NAME` | De naam van het programma |
+| `CM_PROGRAM_NAME` | De programmenaam |
 | `ARTIFACTS_VERSION` | Voor een staging- of productiepijplijn wordt de synthetische versie gegenereerd door Cloud Manager |
 
 ### Beschikbaarheid van standaardomgevingsvariabele {#availability}
@@ -138,13 +139,13 @@ Zowel normale omgevingsvariabelen als geheimen kunnen worden gebruikt in de ontw
 
 #### Dispatcher {#dispatcher}
 
-Alleen normale omgevingsvariabelen kunnen worden gebruikt met [de verzender.](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html) Geheimen kunnen niet worden gebruikt.
+Alleen normale omgevingsvariabelen kunnen worden gebruikt [de verzender.](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html) Geheimen kunnen niet worden gebruikt.
 
 Omgevingsvariabelen kunnen echter niet worden gebruikt in `IfDefine` richtlijnen.
 
 >[!TIP]
 >
->U moet het gebruik van omgevingsvariabelen valideren met de [lokale verzender](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/dispatcher-tools.html) voordat u gaat implementeren.
+>U moet het gebruik van omgevingsvariabelen valideren met de [lokale verzender](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/dispatcher-tools.html) vóór implementatie.
 
 #### OSGi-configuraties {#osgi}
 
@@ -154,7 +155,7 @@ Zowel normale omgevingsvariabelen als geheimen kunnen worden gebruikt in [OSGi-c
 
 In sommige gevallen, kan uw bouwstijlproces van specifieke configuratievariabelen afhangen die om in de git bewaarplaats ongepast zouden zijn te plaatsen of tussen pijpleidinguitvoeringen moeten variëren gebruikend de zelfde tak.
 
-Met Cloud Manager kunnen deze variabelen per pijpleiding worden geconfigureerd via de Cloud Manager API of Cloud Manager CLI. Variabelen kunnen worden opgeslagen als onbewerkte tekst of in rust worden versleuteld. In beide gevallen worden variabelen binnen de ontwikkelomgeving beschikbaar gemaakt als een omgevingsvariabele die vervolgens van binnen de `pom.xml` of andere build-scripts.
+Met Cloud Manager kunnen deze variabelen per pijpleiding worden geconfigureerd via de Cloud Manager API of Cloud Manager CLI. Variabelen kunnen worden opgeslagen als normale tekst of in rust worden versleuteld. In beide gevallen worden variabelen binnen de ontwikkelomgeving beschikbaar gemaakt als een omgevingsvariabele die vervolgens van binnen de `pom.xml` of andere build-scripts.
 
 Om een variabele te plaatsen die CLI gebruiken, stel een bevel in werking gelijkend op het volgende.
 
