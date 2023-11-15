@@ -3,9 +3,9 @@ title: Opmerkingen bij de release 2023.11.0
 description: Dit zijn de opmerkingen bij de release 2023.11.0 voor Cloud Manager.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: c7803c75bcfcc967877808214704c5746015481d
+source-git-commit: 264c7ffcbc9e10903880a511a4ca605be666f7e8
 workflow-type: tm+mt
-source-wordcount: '347'
+source-wordcount: '382'
 ht-degree: 0%
 
 ---
@@ -28,8 +28,10 @@ De releasedatum voor [!UICONTROL Cloud Manager] release 2023.11.0 is 14 november
 * [De pagina met details over de uitvoering van de pijpleiding](/help/using/managing-pipelines.md#view-details) zullen nu alle stappen in een pijpleidingsuitvoering tonen met degenen die nog niet grayed zijn begonnen.
 * Op beide **[Activiteit](/help/using/managing-pipelines.md#activity)** en **[Pijpleidingen](/help/using/managing-pipelines.md#pipelines)** pagina&#39;s, is een samenvatting van de pijpleidingsuitvoering nu beschikbaar wanneer het klikken op een pijpleiding met een lopende status.
 * Een nieuwe **Duur** is toegevoegd aan de [pagina met details over pijplijn](/help/using/managing-pipelines.md#view-details) dit omvat de gemiddelde duur van de pijpleidingstap op basis van de historische trend voor dat programma.
-* Op de pagina van de pijpleidingsuitvoering, tonen de gebeëindigde stappen nu duur
+* Op de [pagina voor de uitvoering van pijpleidingen,](/help/using/managing-pipelines.md#activity-window) De voltooide stappen worden nu weergegeven
 * Cloud Manager [inhoudskopie](/help/using/content-copy.md) Hiermee kunnen gebruikers op verzoek muteerbare inhoud van hun AMS-gehoste AEM 6.x-productieomgeving kopiëren naar lagere omgevingen voor testdoeleinden.
+* Uitvoeringen die [constructieartefacten opnieuw gebruiken](/help/getting-started/project-setup.md#build-artifact-reuse) De koppeling naar de uitvoering die deze artefacten aanvankelijk heeft gemaakt, wordt nu weergegeven.
+* De optie om te selecteren **Belangrijke metrische fouten** kan nu worden geconfigureerd voor [pijpleidingen van codekwaliteit](/help/using/non-production-pipelines.md) ook.
 
 ## Programma voor vroegtijdige adoptie {#early-adoption}
 
