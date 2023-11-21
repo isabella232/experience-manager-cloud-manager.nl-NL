@@ -1,9 +1,9 @@
 ---
 title: Aangepaste machtigingen
 description: Leer hoe u douanetoestemmingen kunt gebruiken om nieuwe profielen van de douanetoestemming met configureerbare toestemmingen tot stand te brengen om toegang tot programma's, pijpleidingen en milieu's voor de gebruikers van de Managers van de Wolk te beperken.
-source-git-commit: e1a3814041a8a7842e39ab09289c83e9c935b4ab
+source-git-commit: 769538ec21b21e612619b0c96718f27982574f6c
 workflow-type: tm+mt
-source-wordcount: '1444'
+source-wordcount: '1489'
 ht-degree: 1%
 
 ---
@@ -129,6 +129,11 @@ De volgende machtigingen zijn beschikbaar voor het maken van aangepaste profiele
 | Belangrijke metrische fouten negeren/negeren | Gebruikers toestaan belangrijke metrische fouten te negeren/af te wijzen |
 | Plan voor productieimplementaties | Gebruikers toestaan een stap voor productieimplementatie te plannen |
 | Toegang tot opslaggegevens | Gebruikers toegang geven tot dataopslag en een wachtwoord voor toegang genereren |
+| Opslagplaats maken | Gebruikers toestaan nieuwe it-opslagruimten te maken |
+| Opslagplaats verwijderen | Gebruikers mogen it-opslagruimten verwijderen |
+| Bewerken opslagplaats | Gebruikers mogen it-opslagruimten bewerken |
+| Code opslagplaats genereren | Gebruikers toestaan een project te genereren op basis van het archetype |
+| Inhoud kopiëren beheren | Gebruikers toestaan bewerkingen voor het kopiëren van inhoud te beheren |
 
 ### Rechten op organisatieniveau {#organization-level}
 
