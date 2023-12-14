@@ -1,21 +1,17 @@
 ---
 title: Aangepaste machtigingen
 description: Leer hoe u douanetoestemmingen kunt gebruiken om nieuwe profielen van de douanetoestemming met configureerbare toestemmingen tot stand te brengen om toegang tot programma's, pijpleidingen en milieu's voor de gebruikers van de Managers van de Wolk te beperken.
-source-git-commit: 769538ec21b21e612619b0c96718f27982574f6c
+exl-id: a81eda9f-aa89-40ea-8e4c-52367a0a6aba
+source-git-commit: 16eef51d86647ae4f2515f3f3c4cb2d15e948854
 workflow-type: tm+mt
-source-wordcount: '1489'
+source-wordcount: '1474'
 ht-degree: 1%
 
 ---
 
-
 # Aangepaste machtigingen {#custom-permissions}
 
 Leer hoe u douanetoestemmingen kunt gebruiken om nieuwe profielen van de douanetoestemming met configureerbare toestemmingen tot stand te brengen om toegang tot programma&#39;s, pijpleidingen en milieu&#39;s voor de gebruikers van de Managers van de Wolk te beperken.
-
->[!NOTE]
->
->Deze functie is alleen beschikbaar voor [het programma voor vroegtijdige adoptie .](/help/release-notes/current.md#early-adoption)
 
 ## Inleiding {#introduction}
 

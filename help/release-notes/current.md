@@ -1,19 +1,19 @@
 ---
-title: Opmerkingen bij de release 2023.11.0
-description: Dit zijn de opmerkingen bij de release 2023.11.0 voor Cloud Manager.
+title: Opmerkingen bij de release 2023.12.0
+description: Dit zijn de opmerkingen bij de release 2023.12.0 voor Cloud Manager.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 264c7ffcbc9e10903880a511a4ca605be666f7e8
+source-git-commit: 16eef51d86647ae4f2515f3f3c4cb2d15e948854
 workflow-type: tm+mt
-source-wordcount: '382'
+source-wordcount: '212'
 ht-degree: 0%
 
 ---
 
 
-# Opmerkingen bij de release 2023.11.0 voor Cloud Manager {#release-notes}
+# Opmerkingen bij de release 2023.12.0 voor Cloud Manager {#release-notes}
 
-Op deze pagina worden de opmerkingen bij de release voor [!UICONTROL Cloud Manager] release 2023.11.0.
+Op deze pagina worden de opmerkingen bij de release voor [!UICONTROL Cloud Manager] release 2023.12.0.
 
 >[!NOTE]
 >
@@ -21,17 +21,11 @@ Op deze pagina worden de opmerkingen bij de release voor [!UICONTROL Cloud Manag
 
 ## Releasedatum {#release-date}
 
-De releasedatum voor [!UICONTROL Cloud Manager] release 2023.11.0 is 14 november 2023. De volgende release is gepland voor 7 december 2023.
+De releasedatum voor [!UICONTROL Cloud Manager] release 2023.12.0 is 14 december 2023. De volgende release is gepland voor 18 januari 2024.
 
 ## Wat is er nieuw? {#what-is-new}
 
-* [De pagina met details over de uitvoering van de pijpleiding](/help/using/managing-pipelines.md#view-details) zullen nu alle stappen in een pijpleidingsuitvoering tonen met degenen die nog niet grayed zijn begonnen.
-* Op beide **[Activiteit](/help/using/managing-pipelines.md#activity)** en **[Pijpleidingen](/help/using/managing-pipelines.md#pipelines)** pagina&#39;s, is een samenvatting van de pijpleidingsuitvoering nu beschikbaar wanneer het klikken op een pijpleiding met een lopende status.
-* Een nieuwe **Duur** is toegevoegd aan de [pagina met details over pijplijn](/help/using/managing-pipelines.md#view-details) dit omvat de gemiddelde duur van de pijpleidingstap op basis van de historische trend voor dat programma.
-* Op de [pagina voor de uitvoering van pijpleidingen,](/help/using/managing-pipelines.md#activity-window) De voltooide stappen worden nu weergegeven
-* Cloud Manager [inhoudskopie](/help/using/content-copy.md) Hiermee kunnen gebruikers op verzoek muteerbare inhoud van hun AMS-gehoste AEM 6.x-productieomgeving kopiëren naar lagere omgevingen voor testdoeleinden.
-* Uitvoeringen die [constructieartefacten opnieuw gebruiken](/help/getting-started/project-setup.md#build-artifact-reuse) De koppeling naar de uitvoering die deze artefacten aanvankelijk heeft gemaakt, wordt nu weergegeven.
-* De optie om te selecteren **Belangrijke metrische fouten** kan nu worden geconfigureerd voor [pijpleidingen van codekwaliteit](/help/using/non-production-pipelines.md) ook.
+* [Aangepaste machtigingen voor Cloud Manager](/help/using/custom-permissions.md) Hiermee kunt u nieuwe aangepaste machtigingsprofielen maken met configureerbare machtigingen om de toegang tot programma&#39;s, pijpleidingen en omgevingen voor gebruikers van Cloud Manager te beperken.
 
 ## Programma voor vroegtijdige adoptie {#early-adoption}
 
@@ -42,9 +36,3 @@ Maak deel uit van ons programma voor vroege goedkeuring en heb de kans om een aa
 Als u GitHub gebruikt om uw bewaarplaatsen te beheren, [u kunt code binnen uw bewaarplaatsen van GitHub door de Manager van de Wolk nu bevestigen.](/help/managing-code/byo-github.md) Door deze integratie is het niet nodig de code consistent te synchroniseren met de opslagplaats van de Adobe en kunt u terugtrekkingsverzoeken verifiëren voordat u ze samenvoegt in de hoofdvertakkingen.
 
 Als je deze nieuwe functie wilt testen en je feedback wilt delen, stuur dan een e-mail naar `Grp-CloudManager_BYOG@adobe.com` van uw e-mailadres dat aan uw Adobe ID is gekoppeld.
-
-### Aangepaste machtigingen {#custom-permissions}
-
-[Aangepaste machtigingen voor Cloud Manager](/help/using/custom-permissions.md) Hiermee kunt u nieuwe aangepaste machtigingsprofielen maken met configureerbare machtigingen om de toegang tot programma&#39;s, pijpleidingen en omgevingen voor gebruikers van Cloud Manager te beperken.
-
-Als u interesse hebt in het testen van deze nieuwe functie en het delen van uw feedback, kunt u een e-mail sturen `Grp-CloudManager_ams_custompermissions@adobe.com` van uw e-mailadres dat aan uw Adobe ID is gekoppeld.
