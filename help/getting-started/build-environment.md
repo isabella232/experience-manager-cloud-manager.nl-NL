@@ -2,9 +2,9 @@
 title: De Build-omgeving
 description: Meer informatie over de gespecialiseerde ontwikkelomgeving die gebruikers van Cloud Manager gebruiken om uw code te maken en testen.
 exl-id: b3543320-66d4-4358-8aba-e9bdde00d976
-source-git-commit: 7f9866976667b485124cef60453ec3908ba41ec8
+source-git-commit: 2ac254508e4015fea21c4fcd087703ac5fbeeec6
 workflow-type: tm+mt
-source-wordcount: '1152'
+source-wordcount: '1283'
 ht-degree: 0%
 
 ---
@@ -18,8 +18,9 @@ Meer informatie over de gespecialiseerde ontwikkelomgeving die gebruikers van Cl
 
 De buildomgevingen van Cloud Manager hebben de volgende kenmerken.
 
-* De ontwikkelomgeving is gebaseerd op Linux en is afgeleid van Ubuntu 18.04.
+* De ontwikkelomgeving is gebaseerd op Linux en is afgeleid van Ubuntu 22.04.
 * Apache Maven 3.8.8 is geïnstalleerd.
+   * Adobe raadt gebruikers aan [hun Maven repositories bijwerken om HTTPS in plaats van HTTP te gebruiken.](#https-maven)
 * De geïnstalleerde Java-versies zijn Oracle JDK 8u371 en Oracle JDK 11.0.20.
    * `/usr/lib/jvm/jdk1.8.0_371`
    * `/usr/lib/jvm/jdk-11.0.20`
@@ -38,6 +39,7 @@ De buildomgevingen van Cloud Manager hebben de volgende kenmerken.
    * `mvn --batch-mode org.jacoco:jacoco-maven-plugin:prepare-agent package`
 * Maven is geconfigureerd op systeemniveau met een `settings.xml` bestand dat automatisch de openbare gegevensopslagruimte voor Adoben bevat met een profiel met de naam `adobe-public`.
    * Zie de [Adobe openbare Maven-opslagplaats](https://repo1.maven.org/) voor meer informatie .
+* Node.js 18 is beschikbaar voor [voorkant en volledige stapelleidingen.](/help/overview/ci-cd-pipelines.md)
 
 >[!NOTE]
 >
@@ -49,6 +51,14 @@ De buildomgevingen van Cloud Manager hebben de volgende kenmerken.
 >* [aio-cli-plugin-cloudmanager](https://github.com/adobe/aio-cli-plugin-cloudmanager)
 >* [API-integratie maken](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/create-api-integration/)
 >* [API-machtigingen](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/permissions/)
+
+## Via HTTPS gemaakte opslagplaatsen {#https-maven}
+
+Cloud Manager [release 2023.10.0](/help/release-notes/2023/2023-10-0.md) begon een het rollen update aan het bouwstijlmilieu (die met versie 2023.12.0) voltooide, die een update aan Maven 3.8.8 omvatte. Een belangrijke wijziging die werd aangebracht in Maven 3.8.1 was een verbetering van de beveiliging die bedoeld was om potentiële kwetsbaarheden te beperken. Met name Maven schakelt nu alles onveilig uit `http://*` spiegels standaard, zoals wordt beschreven in het dialoogvenster [Opmerkingen bij de release Maven.](http://maven.apache.org/docs/3.8.1/release-notes.html#cve-2021-26291)
+
+Als gevolg van deze beveiligingsuitbreiding kunnen sommige gebruikers problemen ondervinden tijdens de constructiestap, met name wanneer ze artefacten downloaden van Geweven opslagplaatsen die onveilige HTTP-verbindingen gebruiken.
+
+Om ervoor te zorgen dat de bijgewerkte versie probleemloos wordt uitgevoerd, raadt Adobe gebruikers aan hun Geweven opslagplaatsen bij te werken om HTTPS in plaats van HTTP te gebruiken. Deze aanpassing sluit aan op de groeiende verschuiving van de industrie naar veilige communicatieprotocollen en helpt een veilig en betrouwbaar bouwproces in stand te houden.
 
 ## Een specifieke Java-versie gebruiken {#using-java-version}
 
@@ -92,11 +102,11 @@ De momenteel beschikbare combinaties leverancier/versie zijn:
 
 | Leverancier | Versie |
 |---|---|
-| oracle | 1.8 |
-| oracle | 1.11 |
+| oracle | 1,8 |
+| oracle | 1,11 |
 | oracle | 11 |
-| zon | 1.8 |
-| zon | 1.11 |
+| zon | 1,8 |
+| zon | 1,11 |
 | zon | 11 |
 
 >[!NOTE]
