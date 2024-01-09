@@ -2,7 +2,8 @@
 title: Werken met uw eigen GitHub-opslagplaatsen in Cloud Manager
 description: Leer hoe te de Manager van de opstelling Cloud om met uw eigen bewaarplaatsen te werken GitHub.
 feature: Release Information
-source-git-commit: 76a3dc6df41032488a3cfe11d0c72769562b96df
+exl-id: e0d103c9-c147-4040-bf53-835e93d78a0b
+source-git-commit: 3bb59686a3c25e47e5c747bb8d5f626055e54a06
 workflow-type: tm+mt
 source-wordcount: '753'
 ht-degree: 0%
@@ -54,7 +55,7 @@ Cloud Manager weet nu van uw bewaarplaats GitHub, maar het heeft nog toegang tot
    ![Eigendom van privéopslagplaats valideren](/help/assets/repositories/private-repo-validate.png)
 
 1. Cloud Manager gebruikt een GitHub-app om veilig te communiceren met uw opslagplaats.
-   * Een eigenaar van uw GitHub-organisatie moet de toepassing installeren die zich bevindt op `https://github.com/apps/cloud-manager-for-aem-stage` en toegang verlenen tot de gegevensopslagruimte.
+   * Een eigenaar van uw GitHub-organisatie moet de toepassing installeren die zich bevindt op `https://github.com/apps/cloud-manager-for-aem` en toegang verlenen tot de gegevensopslagruimte.
    * Gelieve te verwijzen naar de documentatie van GitHub voor details over hoe dit wordt gedaan.
 
 1. Om de beveiliging te verbeteren, moet u een geheim bestand maken in de standaardvertakking van uw opslagplaats. Tik of klik op **Genereren**.
