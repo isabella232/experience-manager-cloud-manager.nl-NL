@@ -1,21 +1,21 @@
 ---
 product: Adobe Experience Manager
 sub-product: Cloud Manager
-user-guide-title: Documentatie voor Cloud Manager
+user-guide-title: Cloud Manager-documentatie
 breadcrumb-title: Cloud Manager-documentatie voor AEM 6.x
 user-guide-description: Leer hoe u met Cloud Manager zelf in de cloud Adobe Experience Manager voor AMS kunt beheren.
 feature-set: Experience Manager Cloud Manager, Experience Manager
 feature: Cloud Manager
 role: Admin
-source-git-commit: 76a3dc6df41032488a3cfe11d0c72769562b96df
+source-git-commit: b901c7bf9d821f6e84fc513e5e6cba5eab8ea894
 workflow-type: tm+mt
-source-wordcount: '359'
-ht-degree: 14%
+source-wordcount: '482'
+ht-degree: 7%
 
 ---
 
 
-# Documentatie voor Cloud Manager {#content}
+# Cloud Manager-documentatie {#content}
 
 + [Cloud Manager voor AMS](/help/introduction.md)
 + Overzicht {#overview}
@@ -56,7 +56,7 @@ ht-degree: 14%
    + [Aangepaste regels voor codekwaliteit](/help/using/custom-code-quality-rules.md)
    + [Inhoud kopiëren](/help/using/content-copy.md)
 + Code beheren {#managing-code}
-   + [Maven-projectversiebeheer](/help/managing-code/maven-project-version.md)
+   + [Maven Project Version Handling](/help/managing-code/maven-project-version.md)
    + [Opslagplaatsen](/help/managing-code/repositories.md)
    + [Integreren met it](/help/managing-code/git-integration.md)
    + [Werken met meerdere opslagplaatsen voor git](/help/managing-code/multiple-git-repos.md)
@@ -64,9 +64,11 @@ ht-degree: 14%
 + Wizard Productupdates {#product-update-wizard}
    + [Overzicht](/help/product-update-wizard/overview.md)
    + [Evaluatie](/help/product-update-wizard/evaluation.md)
-+ Releaseopmerkingen {#release-notes}
++ Opmerkingen bij de release {#release-notes}
    + [Opmerkingen bij de huidige release](/help/release-notes/current.md)
    + 2023 {#2023}
+      + [Opmerkingen bij de release 2023.12.0](/help/release-notes/2023/2023-12-0.md)
+      + [Opmerkingen bij de release 2023.11.0](/help/release-notes/2023/2023-11-0.md)
       + [Opmerkingen bij de release 2023.10.0](/help/release-notes/2023/2023-10-0.md)
       + [Opmerkingen bij de release 2023.9.0](/help/release-notes/2023/2023-9-0.md)
       + [Opmerkingen bij de release 2023.8.0](/help/release-notes/2023/2023-8-0.md)
@@ -115,7 +117,7 @@ ht-degree: 14%
       + [Opmerkingen bij de release 2020.3.0](/help/release-notes/2020/2020-3-0.md)
       + [Opmerkingen bij de release 2020.2.0](/help/release-notes/2020/2020-2-0.md)
       + [Opmerkingen bij de release 2020.1.0](/help/release-notes/2020/2020-1-0.md)
-   + 2019 {#2019}
+   + 19 {#2019}
       + [Opmerkingen bij de release 2019.12.0](/help/release-notes/2019/2019-12-0.md)
       + [Opmerkingen bij de release 2019.11.0](/help/release-notes/2019/2019-11-0.md)
       + [Opmerkingen bij de release 2019.10.0](/help/release-notes/2019/2019-10-0.md)
@@ -128,7 +130,7 @@ ht-degree: 14%
       + [Opmerkingen bij de release 2019.3.0](/help/release-notes/2019/2019-3-0.md)
       + [Opmerkingen bij de release 2019.2.0](/help/release-notes/2019/2019-2-0.md)
       + [Opmerkingen bij de release 2019.1.0](/help/release-notes/2019/2019-1-0.md)
-   + 2018 {#2018}
+   + 18 {#2018}
       + [Opmerkingen bij de release 2018.9.0](/help/release-notes/2018/2018-9-0.md)
       + [Opmerkingen bij de release 2018.8.0](/help/release-notes/2018/2018-8-0.md)
       + [Opmerkingen bij de release 2018.7.0](/help/release-notes/2018/2018-7-0.md)
