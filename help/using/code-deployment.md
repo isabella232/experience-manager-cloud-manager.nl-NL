@@ -2,9 +2,9 @@
 title: Codeimplementatie
 description: Leer hoe u uw code implementeert en wat er gebeurt in Cloud Manager wanneer u dat doet.
 exl-id: 3d6610e5-24c2-4431-ad54-903d37f4cdb6
-source-git-commit: b85bd1bdf38360885bf2777d75bf7aa97c6da7ee
+source-git-commit: 70e68f8af17b0acf644176c2ed3afaf8fc219063
 workflow-type: tm+mt
-source-wordcount: '1655'
+source-wordcount: '1650'
 ht-degree: 0%
 
 ---
@@ -84,12 +84,13 @@ Er wordt een time-out toegepast in de volgende stappen als er op feedback van ge
 
 | Stap | Time-out |
 |--- |--- |
-| Testen van de codekwaliteit | 14 dagen |
-| Beveiligingstests | 14 dagen |
-| Prestatietesten | 14 dagen |
-| Goedkeuringsaanvraag | 14 dagen |
+| Testen van de codekwaliteit | 7 dagen |
+| Beveiligingstests | 7 dagen |
+| Prestatietesten | 7 dagen |
+| Goedkeuringsaanvraag (fase) | 7 dagen |
+| Goedkeuringsaanvraag (productie) | 14 dagen |
 | Implementatie van planningsproductie | 14 dagen |
-| CSE-ondersteuning | 14 dagen |
+| Implementatie van beheerde productie | 14 dagen |
 
 ## Implementatieproces — details {#deployment-process}
 
@@ -152,7 +153,7 @@ Dit proces gaat verder tot de plaatsing alle uitgevers en verzenders in de topol
 
 ## Uitvoermodus noodleiding {#emergency-pipeline}
 
-In kritieke situaties moeten klanten van Adobe Managed Services mogelijk codewijzigingen implementeren in hun werkgebied- en productieomgeving zonder te wachten tot een volledige testcyclus van Cloud Manager is uitgevoerd.
+In kritieke situaties moeten Adobe Managed Services-klanten mogelijk codewijzigingen implementeren in hun werkgebied- en productieomgeving zonder te wachten tot een volledige testcyclus van Cloud Manager wordt uitgevoerd.
 
 Om deze situaties aan te pakken, kan de productiepijplijn van de Manager van de Wolk op een noodwijze worden uitgevoerd. Als deze modus wordt gebruikt, worden de stappen voor de beveiligings- en prestatietest niet uitgevoerd. Alle andere stappen, met inbegrip van om het even welke gevormde goedkeuringsstappen, worden uitgevoerd zoals op de normale wijze van de pijpleidingsuitvoering.
 
