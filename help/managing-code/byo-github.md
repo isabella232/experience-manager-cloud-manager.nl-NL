@@ -3,9 +3,9 @@ title: Werken met uw eigen GitHub-opslagplaatsen in Cloud Manager
 description: Leer hoe te de Manager van de opstelling Cloud om met uw eigen bewaarplaatsen te werken GitHub.
 feature: Release Information
 exl-id: e0d103c9-c147-4040-bf53-835e93d78a0b
-source-git-commit: 3bb59686a3c25e47e5c747bb8d5f626055e54a06
+source-git-commit: b5907179d3de329e8b86546bb8aa99608a5b351a
 workflow-type: tm+mt
-source-wordcount: '753'
+source-wordcount: '767'
 ht-degree: 0%
 
 ---
@@ -18,6 +18,10 @@ Door de Manager van de Wolk te vormen om met uw eigen bewaarplaatsen te werken G
 >[!NOTE]
 >
 >Deze functie is alleen beschikbaar voor [het programma voor vroegtijdige adoptie .](/help/release-notes/current.md#early-adoption)
+
+>[!NOTE]
+>
+>Deze eigenschap is exclusief aan openbare GitHub. De steun voor zelf-ontvangen GitHub is niet beschikbaar.
 
 ## Configuratie {#configuration}
 
