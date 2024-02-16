@@ -3,7 +3,7 @@ title: Opmerkingen bij de release 2024.2.0
 description: Dit zijn de opmerkingen bij de release 2024.2.0 voor Cloud Manager.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 524471a87217c15dae96c3e6aee57426b43dcccb
+source-git-commit: cc87246503ab63d6dd60c691f15fc4759fcf6939
 workflow-type: tm+mt
 source-wordcount: '295'
 ht-degree: 0%
@@ -21,7 +21,7 @@ Op deze pagina worden de opmerkingen bij de release voor [!UICONTROL Cloud Manag
 
 ## Releasedatum {#release-date}
 
-De releasedatum voor [!UICONTROL Cloud Manager] release 2024.2.0 is 16 februari 2024. De volgende release is gepland voor 16 maart 2024.
+De releasedatum voor [!UICONTROL Cloud Manager] release 2024.2.0 is 15 februari 2024. De volgende release is gepland voor 16 maart 2024.
 
 ## Wat is er nieuw? {#what-is-new}
 
@@ -41,3 +41,4 @@ Als je deze nieuwe functie wilt testen en je feedback wilt delen, stuur dan een 
 ## Opgeloste problemen {#bug-fixes}
 
 * JDK van de bouwstijlcontainers is bijgewerkt aan een versie die oplost [8313765.](https://bugs.openjdk.org/browse/JDK-8313765)
+§
