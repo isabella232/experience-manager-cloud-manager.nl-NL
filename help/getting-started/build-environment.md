@@ -2,9 +2,9 @@
 title: De Build-omgeving
 description: Meer informatie over de gespecialiseerde ontwikkelomgeving die gebruikers van Cloud Manager gebruiken om uw code te maken en testen.
 exl-id: b3543320-66d4-4358-8aba-e9bdde00d976
-source-git-commit: 2ac254508e4015fea21c4fcd087703ac5fbeeec6
+source-git-commit: dc0b83fa045208fcd333af10f90f9590c2aa96b8
 workflow-type: tm+mt
-source-wordcount: '1283'
+source-wordcount: '1280'
 ht-degree: 0%
 
 ---
@@ -19,12 +19,12 @@ Meer informatie over de gespecialiseerde ontwikkelomgeving die gebruikers van Cl
 De buildomgevingen van Cloud Manager hebben de volgende kenmerken.
 
 * De ontwikkelomgeving is gebaseerd op Linux en is afgeleid van Ubuntu 22.04.
-* Apache Maven 3.8.8 is geïnstalleerd.
+* Apache Maven 3.9.4 is geïnstalleerd.
    * Adobe raadt gebruikers aan [hun Maven repositories bijwerken om HTTPS in plaats van HTTP te gebruiken.](#https-maven)
-* De geïnstalleerde Java-versies zijn Oracle JDK 8u371 en Oracle JDK 11.0.20.
-   * `/usr/lib/jvm/jdk1.8.0_371`
-   * `/usr/lib/jvm/jdk-11.0.20`
-* Standaard worden de `JAVA_HOME`  omgevingsvariabele is ingesteld op `/usr/lib/jvm/jdk1.8.0_371` die Oracle JDK 8u371 bevat. Zie de sectie [JDK-versie van alternatieve uitvoering](#alternate-maven) voor meer informatie.
+* De geïnstalleerde Java-versies zijn Oracle JDK 8u401 en Oracle JDK 11.0.22.
+   * `/usr/lib/jvm/jdk1.8.0_401`
+   * `/usr/lib/jvm/jdk-11.0.22`
+* Standaard worden de `JAVA_HOME`  omgevingsvariabele is ingesteld op `/usr/lib/jvm/jdk1.8.0_401` die Oracle JDK 8u401 bevat. Zie de sectie [JDK-versie van alternatieve uitvoering](#alternate-maven) voor meer informatie.
 * Er zijn enkele extra systeempakketten geïnstalleerd die nodig zijn.
    * `bzip2`
    * `unzip`
@@ -39,7 +39,7 @@ De buildomgevingen van Cloud Manager hebben de volgende kenmerken.
    * `mvn --batch-mode org.jacoco:jacoco-maven-plugin:prepare-agent package`
 * Maven is geconfigureerd op systeemniveau met een `settings.xml` bestand dat automatisch de openbare gegevensopslagruimte voor Adoben bevat met een profiel met de naam `adobe-public`.
    * Zie de [Adobe openbare Maven-opslagplaats](https://repo1.maven.org/) voor meer informatie .
-* Node.js 18 is beschikbaar voor [voorkant en volledige stapelleidingen.](/help/overview/ci-cd-pipelines.md)
+* Node.js 18 is beschikbaar voor [pijpleidingen aan de voorzijde.](/help/overview/ci-cd-pipelines.md)
 
 >[!NOTE]
 >
@@ -117,7 +117,7 @@ De momenteel beschikbare combinaties leverancier/versie zijn:
 
 Het is ook mogelijk om Oracle 8 of Oracle 11 als JDK voor de volledige Geweven uitvoering te selecteren. In tegenstelling tot de opties van toolketins, verandert dit JDK die voor alle stop-ins wordt gebruikt tenzij de toolketenconfiguratie ook wordt geplaatst waarin de toolkettenconfiguratie nog voor toolketens-bewuste Maven plugins wordt toegepast. Hierdoor wordt de Java-versie gecontroleerd en afgedwongen met de [Insteekmodule Apache Maven Enforcer](https://maven.apache.org/enforcer/maven-enforcer-plugin/) werkt.
 
-Hiertoe maakt u een bestand met de naam `.cloudmanager/java-version` in de door de pijpleiding gebruikte vertakking van de git-opslagplaats. Dit bestand kan de inhoud hebben `11` of `8`. Eventuele andere waarden worden genegeerd. Indien `11` wordt gespecificeerd, wordt Oracle 11 gebruikt en `JAVA_HOME` omgevingsvariabele is ingesteld op `/usr/lib/jvm/jdk-11.0.2`. Indien `8` wordt gespecificeerd, wordt Oracle 8 gebruikt en `JAVA_HOME` omgevingsvariabele is ingesteld op `/usr/lib/jvm/jdk1.8.0_202`.
+Hiertoe maakt u een bestand met de naam `.cloudmanager/java-version` in de door de pijpleiding gebruikte vertakking van de git-opslagplaats. Dit bestand kan de inhoud hebben `11` of `8`. Eventuele andere waarden worden genegeerd. Indien `11` wordt gespecificeerd, wordt Oracle 11 gebruikt en `JAVA_HOME` omgevingsvariabele is ingesteld op `/usr/lib/jvm/jdk-11.0.22`. Indien `8` wordt gespecificeerd, wordt Oracle 8 gebruikt en `JAVA_HOME` omgevingsvariabele is ingesteld op `/usr/lib/jvm/jdk1.8.0_401`.
 
 ## Omgevingsvariabelen {#environment-variables}
 
