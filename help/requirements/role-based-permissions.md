@@ -2,10 +2,10 @@
 title: Op rollen gebaseerde machtigingen
 description: Meer informatie over de vooraf geconfigureerde, op rollen gebaseerde machtigingen van Cloud Manager voor het beheren van toegang tot uw cloudbronnen.
 exl-id: b66533fb-db93-40e8-919d-581261fdbf24
-source-git-commit: 522e5fbc650a8159602eb1aeaf42d64f4e23e8b4
+source-git-commit: 10297789ac8f905f242ac52bdc6fc4812b989e8a
 workflow-type: tm+mt
-source-wordcount: '539'
-ht-degree: 4%
+source-wordcount: '576'
+ht-degree: 2%
 
 ---
 
@@ -14,22 +14,28 @@ ht-degree: 4%
 
 [!UICONTROL Cloud Manager] heeft pre-gevormde rollen met aangewezen toestemmingen. Een ontwikkelaar ontwikkelt bijvoorbeeld code en heeft de toestemming om de code door te sturen naar de git-opslagplaats. Een bedrijfseigenaar heeft verschillende toestemmingen die hen toestaan om de belangrijkste prestatiesindicatoren (KPIs) te bepalen en plaatsingen goed te keuren.
 
+>[!NOTE]
+>
+>In deze documentatie worden op rollen gebaseerde machtigingen voor Cloud Manager for Adobe Managed Services (AMS) beschreven.
+>
+>De equivalente documentatie voor AEM as a Cloud Service vindt u in het document [Inleiding tot Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/concepts/cloud-manager-introduction.html#role-based-permissions) in de AEM as a Cloud Service documentatie.
+
 ## Gebruikersrollen {#user-roles}
 
-Rolbeheer voor [!UICONTROL Cloud Manager] wordt uitgevoerd met de [Admin Console.](https://helpx.adobe.com/nl/enterprise/using/admin-console.html) Elke gebruiker van [!UICONTROL Cloud Manager] moet lid zijn van de IMS-organisatie van de klant en de Adobe Managed Services-productcontext hebben. Specifieke rollidmaatschappen worden verstrekt door de gebruiker aan een [!UICONTROL Cloud Manager] productprofiel in de Admin Console.
+Rolbeheer voor [!UICONTROL Cloud Manager] wordt uitgevoerd met de [Admin Console.](https://helpx.adobe.com/nl/enterprise/using/admin-console.html) Elke gebruiker van [!UICONTROL Cloud Manager] moet lid zijn van de IMS-organisatie van de klant en de Adobe Managed Services Product Context hebben. Specifieke rollidmaatschappen worden verstrekt door de gebruiker aan een [!UICONTROL Cloud Manager] productprofiel in de Admin Console.
 
-Zie het document voor meer informatie over het instellen van uw rollen [Gebruikers en rollen instellen.](/help/requirements/users-and-roles.md)
+Meer informatie over hoe te om uw rollen te plaatsen zie het document [Gebruikers en rollen instellen.](/help/requirements/users-and-roles.md)
 
 Deze lijst maakt een lijst van de rollen u in de Admin Console kunt toewijzen.
 
 | [!UICONTROL Cloud Manager] Rol | Beschrijving |
 |---|---|
 | Business Owner | Dit is de primaire gebruiker die de eerste [!UICONTROL Cloud Manager] De opstelling en is verantwoordelijk voor het bepalen van KPIs, het goedkeuren van productieplaatsingen, en het met voeten treden van belangrijke 3-tier mislukkingen wanneer noodzakelijk. |
-| Program Manager | Deze gebruiker gebruikt [!UICONTROL Cloud Manager] om teamopstelling uit te voeren, revisiestatus, KPIs te bekijken, en kan belangrijke 3-rij mislukkingen goedkeuren wanneer noodzakelijk. |
+| Program Manager | Deze gebruiker gebruikt [!UICONTROL Cloud Manager] om teamopstelling uit te voeren, revisiestatus, KPIs te bekijken, en kan belangrijke 3 rijmislukkingen goedkeuren wanneer noodzakelijk. |
 | Deployment Manager | Deze gebruiker beheert de implementatiebewerkingen met [!UICONTROL Cloud Manager] om fase en productieplaatsingen uit te voeren, kan belangrijke drie-laag mislukkingen goedkeuren wanneer nodig, en heeft toegang tot de git bewaarplaats. |
 | Developer | Deze gebruiker ontwikkelt en test de code van de douanetoepassing, hoofdzakelijk gebruik [!UICONTROL Cloud Manager] om plaatsingsstatus te bekijken, en toegang tot de git bewaarplaats te begaan. |
 | Klantsuccesvolle technicus | Deze gebruiker steunt over het algemeen klantensucces voor klanten AMS en wisselt met [!UICONTROL Cloud Manager] voor het uitvoeren van implementaties waarvoor toezicht van de Klant vereist is. |
-| Inhoudsauteur | Deze gebruiker communiceert doorgaans niet met [!UICONTROL Cloud Manager], maar kan de [!UICONTROL Cloud Manager] programma wwitcher (navigeer van [!UICONTROL Experience Cloud]) om toegang te krijgen tot Adobe Experience Manager (AEM). |
+| Inhoudsauteur | Deze gebruiker communiceert doorgaans niet met [!UICONTROL Cloud Manager], maar kan de [!UICONTROL Cloud Manager] programma wwitcher (navigeer van [!UICONTROL Experience Cloud]) voor toegang tot Adobe Experience Manager (AEM). |
 
 ## Gebruikersmachtigingen {#user-permissions}
 
@@ -54,7 +60,7 @@ Elk van de rollen heeft specifieke bijbehorende preconfigured toestemmingen. Dez
 | Pipet gelezen | Zie details over pijpleidingen | x | x | x | x | x |
 | Pipet schrijven | Opstelling/geeft pijpleiding uit. |  | x |  |  |  |
 | Goedkeuring pijpleiding wijzigen | Hiermee kunt u de optie Bedrijfseigenaar bewerken |  | x |  |  |  |
-| De pijpleiding wijzigt Beheerde Plaatsing | Staat het uitgeven van de CSE toezichtoptie toe |  | x |  |  |  |
+| Door pijplijn beheerde implementatie wijzigen | Staat het uitgeven van de CSE toezichtoptie toe |  | x |  |  |  |
 | Pipet verwijderen | Staat pijpleiding toe schrapping |  | x |  |  |  |
 | Stap lezen | Zie de resultaten van de metrische gegevens voor de stapkwaliteit | x | x | x | x | x |
 | Token voor persoonlijke toegang genereren | Toegangsuitrusting |  | x |  | x |  |
