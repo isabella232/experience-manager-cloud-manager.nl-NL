@@ -3,9 +3,9 @@ title: Opmerkingen bij de release 2024.3.0
 description: Dit zijn de opmerkingen bij de release 2024.3.0 voor Cloud Manager.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 95a7a7be3ba20e05311ff90b91bd0773f6e77a07
+source-git-commit: 22730ba281f7c1c4720158a3a813c56b815a0af1
 workflow-type: tm+mt
-source-wordcount: '286'
+source-wordcount: '264'
 ht-degree: 0%
 
 ---
@@ -25,8 +25,7 @@ De releasedatum voor [!UICONTROL Cloud Manager] release 2024.3.0 is 14 maart 202
 
 ## Wat is er nieuw? {#what-is-new}
 
-* U kunt nu de status van servers valideren, logboeken controleren en meer controleren op de instanties die tijdens blauwe/groene implementaties zijn gemaakt.
-   * De details met inbegrip van IP/DNS (FQDN) informatie van de groene servers worden nu getoond in UI in de Manager van de Wolk.
+* De details met inbegrip van IP/DNS (FQDN) informatie van groene servers worden nu getoond in de UI van de Manager van de Wolk.
 
 ## Programma voor vroegtijdige adoptie {#early-adoption}
 
